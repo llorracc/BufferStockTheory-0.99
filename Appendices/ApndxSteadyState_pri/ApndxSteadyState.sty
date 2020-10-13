@@ -1,0 +1,114 @@
+\provideboolean{ifBig}
+\setboolean{ifBig}{true}
+\opt{Biggen}{\setboolean{ifBig}{true}}
+\newcommand{\Biggen}{\ifthenelse{\boolean{ifBig}}{\large}{}}
+
+\provideboolean{showMarginalia}
+\setboolean{showMarginalia}{true}
+\opt{withMarginalia}{\setboolean{showMarginalia}{true}} % Control from command line option
+
+\ifthenelse{\boolean{showMarginalia}}{\usepackage[marginparwidth=125pt,right=150pt]{geometry}}{}
+\newcommand{\mrgn}[1]{\ifthenelse{\boolean{showMarginalia}}{\marginpar{\footnotesize{#1}}}{}}
+
+\provideboolean{NotationAlt}
+\setboolean{NotationAlt}{false}
+\setboolean{NotationAlt}{true}
+
+
+\provideboolean{notaPerm}
+% \setboolean{notaPerm}{true}
+\setboolean{notaPerm}{false}
+
+\ifthenelse{\boolean{notaPerm}}{
+  \renewcommand{\SetPartCnts}{\mu}
+  \renewcommand{\Nxt}{\grave}
+  \renewcommand{\pnt}{\wp}
+  \renewcommand{\DnsPntAprx}{\pLog}
+}{}
+
+\newcommand{\finite}{f}
+\newcommand{\Die}{\mho}
+\newcommand{\Liv}{\Lambda} % Lambda is Greek L for "lives"
+\newcommand{\FutVal}{\Omega}
+\newcommand{\FutPer}{t}
+\newcommand{\NewPer}{i}
+\newcommand{\LooPer}{m}
+\newcommand{\mTon}{n}
+\newcommand{\nTom}{m}
+\newcommand{\tAbs}{\tau}% Absolute  
+\newcommand{\tp}{} % t plus -- to allow shifting time notation up and back
+\newcommand{\mean}{\mu}
+\providecommand{\DnsShk}{\psi} % Probably already exists, but maybe not
+\renewcommand{\DnsShk}{\psi}
+\newcommand{\pShkMean}{\mean_{\DnsShk}}
+\newcommand{\tShkMean}{\mean_{\tShk}}
+\newcommand{\pSim}{\bar{\PLev}}
+\newcommand{\posn}{\ell}
+\newcommand{\wgt}{\koppa}
+\newcommand{\mass}{k} % quantity 
+\newcommand{\Mass}{K} % Quantity
+\newcommand{\Top}{\bar}
+\newcommand{\Bot}{\underline}
+\newcommand{\pDiscBnds}{\Xi}
+\newcommand{\pDiscBelow}{\Bot{\SetPartCnts}}
+\newcommand{\pDiscAbove}{\Top{\SetPartCnts}}
+\newcommand{\Mrkv}{\mathcal{M}}
+\newcommand{\pnt}{s} % 
+\newcommand{\spCon}{\mathcal{S}} % 
+\newcommand{\SetFullCnts}{\mathcal{S}} %
+\newcommand{\LipschitzDnsPntBnd}{\lambda_{0}}
+\newcommand{\LipschitzDnsPntNxtBnd}{\lambda_{f}}
+\newcommand{\KrnPntNxtFmPntNowSetSprtTrnc}{\Gamma}
+\newcommand{\DnsSetNxtFmPntNowBnd}{\epsilon}
+\newcommand{\DnsPntBnd}{\varepsilon}
+\newcommand{\SetTrncCnts}{\Lambda}
+\newcommand{\Borel}{\mathcal{B}}
+\newcommand{\PrbFullCnts}{\mathcal{P}}
+\newcommand{\PrbEvntSqnc}{\mathbb{P}}
+\newcommand{\KrnPntNxtFmPntNow}{\mathfrak{T}} 
+\newcommand{\DnsPntNxtFmPntNow}{\mathfrak{t}} % Mma: DnsPntNxtFmPntNowFunc
+\newcommand{\DnsPnt}{\pi}
+%\newcommand{\DnsNxt}{\daleth}
+\newcommand{\DnsNxtAprx}{\hat{\pi}}
+\newcommand{\DnsSetNxtFmPntNow}{\mathfrak{t}}
+\newcommand{\PrbSetNxtFmPntNow}{\pi}
+\newcommand{\pInit}{\DnsPnt_{0}}
+\newcommand{\SetPartCnts}{A} % "any measurable set" in \SetFullCnts
+\newcommand{\Nxt}{\bar}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\NumAprxStes}{n}
+\newcommand{\NumAprxStesPls}{(\NumAprxStes+1)}
+\newcommand{\TnsMrkv}{\hat{P}}
+\newcommand{\NumInt}{\mathbb{N}}
+\newcommand{\Nteger}{\mathbb{N}}
+\newcommand{\Lebes}{\mathcal{L}} % $\Lebes(\bullet)$ denotes the Lebesgue measure of a set
+\newcommand{\vctr}{\pmb}
+\newcommand{\PrbBinNxtFmPntNowAprx}{\sharp}
+\newcommand{\PrbBinNxtFmPntNow}{\flat}
+\newcommand{\PrbBinNowAprx}{\hat{\aleph}}
+\newcommand{\pmfBinNow}{q}
+\newcommand{\SimPop}{N}
+\newcommand{\thisBin}{i}
+\newcommand{\thatBin}{j}
+\newcommand{\tMax}{T}
+%\newcommand{\pmf}{{\textrm{pmf}}}
+\newcommand{\DnsPntAprx}{\hat{\pi}}
+\newcommand{\ValBinAprx}{\pnt}
+\newcommand{\pDiscAprx}{\pmb{q}}
+\renewcommand{\pLev}{\pmb{\wp}}
+\renewcommand{\pLog}{\wp}
+\newcommand{\LoopA}{i}
+\newcommand{\LoopB}{j}
+\newcommand{\LoopC}{k}
+\newcommand{\LoopD}{s}
+\newcommand{\KrnPntNxtFmPntNowMat}{\Pi}
+%\newcommand{\mean}{z}
+\newcommand{\MrkvVal}{f}
+\newcommand{\pnterp}{\pnt}
+% \newcommand{\Rnorm}{\Rfree (\PGro \Nxt{\DnsShk})^{-1}}
+% \newcommand{\Rnorm}{\mathcal{R}}}
+
+\ifthenelse{\boolean{NotationAlt}}{
+  \renewcommand{\finite}{p}
+%  \renewcommand{\DnsPntAprx}{\mu}
+}{}

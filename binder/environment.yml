@@ -1,0 +1,7 @@
+channels:
+    - conda-forge
+dependencies:
+    - nodejs=9
+    - matplotlib
+    - jupyterlab>=0.33
+      

@@ -1,0 +1,58 @@
+\documentclass{econtex}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{econtexShortcuts}\usepackage{econtexSetup}
+% Define the handles for the various conditions
+\newcommand{\PFGIC}{{\mbox{PF-GIC}}}
+\newcommand{\AIC}{{\mbox{AIC}}}
+\newcommand{\PFFVAC}{{\mbox{PF-FVAC}}}
+\newcommand{\FVAC}{{\mbox{FVAC}}}
+\newcommand{\GIC}{{\mbox{GIC}}}
+\newcommand{\RIC}{{\mbox{RIC}}}
+\newcommand{\WRIC}{{\mbox{WRIC}}}
+\newcommand{\FHWC}{{\mbox{FHWC}}}
+
+\usepackage{tikz, environ, etoolbox}
+\usetikzlibrary{cd, external}
+\tikzexternalize
+% activate the following such that you can check the macro expansion in
+% *-figure0.md5 manually
+%\tikzset{external/up to date check=diff}
+
+\def\temp{&} \catcode`&=\active \let&=\temp
+
+\newcommand{\mytikzcdcontext}[2]{
+  \begin{tikzpicture}[baseline=(maintikzcdnode.base)]
+    \node (maintikzcdnode) [inner sep=0, outer sep=0] {\begin{tikzcd}[#2]
+        #1
+    \end{tikzcd}};
+  \end{tikzpicture}}
+
+\NewEnviron{mytikzcd}[1][]{%
+% In the following, we need \BODY to expanded before \mytikzcdcontext
+% such that the md5 function gets the tikzcd content with \BODY expanded.
+% Howerver, expand it only once, because the \tikz-macros aren't
+% defined at this point yet. The same thing holds for the arguments to
+% the tikzcd-environment.
+\def\myargs{#1}%
+\edef\mydiagram{\noexpand\mytikzcdcontext{\expandonce\BODY}{\expandonce\myargs}}%
+\mydiagram%
+}
+
+\begin{document}
+
+\begin{equation}
+\begin{mytikzcd}[sep=huge]%[row sep=huge,baseline = (B.base)]%
+{{{}} \textbf{\Thorn}} \ar{rr}{{{}} \mathrm{\PFGIC}} \ar{dr}{{{}} \mathsf{\RIC}}& & {{{}} \Gamma} \ar{dl}{{{}} \mathrm{\FHWC}} \\
+ & {{{}} \mathsf{\Rfree}} & {{{}} \mathsf{\Rfree}^{1/\CRRA}\Gamma^{1 - 1/\CRRA}} \ar{l}{{{}} \mathrm{\FHWC}}
+\end{mytikzcd}
+\end{equation}
+
+\end{document}
+
+
+% [row sep=large, column sep=large]
+%  \textbf{\Thorn} \ar{rr}{\mathrm{\PFGIC}} \ar{dr}{\mathrm{\RIC}}& & \Gamma \ar{dl}{\mathrm{\FHWC}} \\
+%  & \mathsf{\Rfree} &
+
+%  \textbf{\Thorn} \ar{r}{\mathrm{\PFGIC}} \ar{d}{\mathrm{\RIC}} \ar{dr}{\mathrm{\PFFVAC}}& \Gamma \ar{d}{\mathrm{\FHWC}} \\
+%   \mathsf{\Rfree} &  \mathsf{\Rfree}^{1/\CRRA}\Gamma^{1 - 1/\CRRA} \ar{l}{\mathrm{\FHWC}}

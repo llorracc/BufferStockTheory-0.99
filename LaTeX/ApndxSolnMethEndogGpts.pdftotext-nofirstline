@@ -1,0 +1,55 @@
+The model is solved using an extension of the method of endogenous gridpoints (?): A
+grid of possible values of end-of-period assets ~a is defined, and at these points, marginal
+end-of-period-t value is computed as the discounted next-period expected marginal
+utility of consumption (which the Envelope theorem says matches expected marginal
+value). The results are then used to identify the corresponding levels of consumption at
+the beginning of the period:1
+u0 (ct (~a)) = Rβ Et [u0 (Γt+1 ct+1 (Rt+1~a + ξt+1 ))]
+
+−1/ρ
+~ct ≡ ct (~a) = Rβ Et (Γt+1 ct+1 (Rt+1~a + ξt+1 ))−ρ
+.
+
+(1)
+
+The dynamic budget constraint can then be used to generate the corresponding m’s:
+m
+~ t = ~a + ~ct .
+An approximation to the consumption function could be constructed by linear interpolation between the {m,
+~ ~c} points. But a vastly more accurate approximation can be
+made (for a given number of gridpoints) if the interpolation is constructed so that it also
+matches the marginal propensity to consume at the gridpoints. Differentiating (1) with
+respect to a (and dropping policy function arguments for simplicity) yields a marginal
+propensity to have consumed ca at each gridpoint:
+u00 (ct )cat = Rβ Et [u00 (Γt+1 ct+1 )Γt+1 cm
+t+1 Rt+1 ]
+00
+m
+= Rβ Et [u (Γt+1 ct+1 )Rct+1 ]
+a
+00
+ct = Rβ Et [u00 (Γt+1 ct+1 )Rcm
+t+1 ]/u (ct )
+
+(2)
+
+and the marginal propensity to consume at the beginning of the period is obtained from
+the marginal propensity to have consumed by noting that, if we define m(a) = c(a) − a,
+c=m−a
+c + 1 = ma
+a
+
+which, together with the chain rule ca = cm ma , yields the MPC from
+cm (ca + 1) = ca
+cm = ca /(1 + ca )
+and we call the vector of MPC’s at the m
+~ t gridpoints ~κt .
+
+References
+
+1
+
+The software can also solve a version of the model with explicit liquidity constraints, where the
+Envelope condition does not hold.
+
+

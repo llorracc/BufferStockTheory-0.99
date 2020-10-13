@@ -1,0 +1,14 @@
+# From /Volumes/Data/Tools/git/gitattributes/gitattributes_make.sh
+
+*.png diff=exif
+*.jpg diff=exif
+*.svg diff=exif
+*.gif diff=exif
+
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+# Force bash scripts to always use lf line endings so that if a repo is accessed
+# in Unix via a file share from Windows, the scripts will work.
+*.sh text eol=lf
+*.pdf diff=pdf

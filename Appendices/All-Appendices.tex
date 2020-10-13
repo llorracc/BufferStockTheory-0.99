@@ -1,0 +1,44 @@
+\input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths}\documentclass[titlepage]{\econtex}\providecommand{\texname}{BufferStockTheory-Appendix}% Indicate the keyname for the bibtex entry corresponding to this paper
+\input{./econtexRoot}
+
+\usepackage{\econtexRoot/LaTeX/BufferStockTheory}
+
+\begin{document}
+
+\renewcommand{\onlyinsubfile}[1]{}
+\renewcommand{\notinsubfile}[1]{#1}
+
+\hypertarget{Appendices}{}
+\appendix \centerline{\LARGE Appendices}\vspace{0.2in}
+\subfile{\ApndxDir/ApndxLiqConstr}
+\subfile{\ApndxDir/ApndxConcaveCFunc}
+\subfile{\ApndxDir/ApndxEuclidian}
+%\subfile{\ApndxDir/ApndxCGroIsPGro}
+\subfile{\ApndxDir/ApndxMPCLimits}
+\subfile{\ApndxDir/ApndxLiqConstrAsLimit}
+\subfile{\ApndxDir/ApndxSolnMethEndogGpts}
+\subfile{\ApndxDir/ApndxSolnMethTermFunc}
+\subfile{\ApndxDir/ApndxConditionDiagrams}
+
+\clearpage\vfill\eject
+
+\normalsize
+
+\bibliography{\econtexRoot/LaTeX/BufferStockTheory,economics}
+
+\end{document}
+
+% Local Variables:
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% eval: (cond ((string-equal system-type "darwin") (progn (setq 'TeX-view-program-list '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n %o %b"))))))
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% End:

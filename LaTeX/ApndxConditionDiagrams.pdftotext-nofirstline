@@ -1,0 +1,43 @@
+The diagrams below illustrate the order of the several conditions in the text:
+PF-GIC
+
+Þ
+
+RIC
+
+Γ
+FHWC
+
+R1/ρ Γ1−1/ρ
+FHWC
+and to further incorporate the Perfect Foresight Finite Value of Autarky Condition:
+PF-GIC
+Þ
+Γ
+R
+
+RIC
+
+PF-FVAC
+
+FHWC
+
+R1/ρ Γ1−1/ρ
+FHWC
+In both diagrams, an arrow means “<”, which indicates the annotated condition holds,
+so if a condition is violated, the corresponding arrow is to be reversed.
+These diagrams also keep track of the hierarchy among the conditions. For example,
+if the right vertical arrow in the second diagram is reversed, then the top right triangle
+
+
+ implies PF-GIC. If the left vertical arrow is reversed, then 
+says PF-FVAC+ 
+FHWC
+RIC
+
+
++ PF-GIC implies 
+FHWC.
+R
+
+
