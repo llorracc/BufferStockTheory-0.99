@@ -289,24 +289,24 @@ Why?  Because it can be shown that
 \subsection{The Target Saving Figure}
 \begin{frame}
 \frametitle{The Target Saving Figure}
-\centerline{\includegraphics[width=4in]{\FigsRaw/cGroTargetFig.pdf}}
+\centerline{\includegraphics[width=4in]{\FigDir/cGroTargetFig.pdf}}
 \end{frame}
 
 \subsection{Bounds On The Consumption Function}
 \begin{frame}
 \frametitle{Bounds On the Consumption Function}
-\centerline{\includegraphics[width=4in]{\FigsRaw/cFuncBounds.pdf}}
+\centerline{\includegraphics[width=4in]{\FigDir/cFuncBounds.pdf}}
 \end{frame}
 
 \begin{frame}
 \frametitle{The Marginal Propensity to Consume}
-\centerline{\includegraphics[width=4in]{\FigsRaw/MPCLimits.pdf}}
+\centerline{\includegraphics[width=4in]{\FigDir/MPCLimits.pdf}}
 \end{frame}
 
 \subsection{The Consumption Function and Target Wealth}
 \begin{frame}
 \frametitle{The Consumption Function and Target Wealth}
-\centerline{\includegraphics[width=4in]{\FigsRaw/cRatTargetFig.pdf}}
+\centerline{\includegraphics[width=4in]{\FigDir/cRatTargetFig.pdf}}
 \end{frame}
 
 
@@ -320,7 +320,7 @@ Why?  Because it can be shown that
 \cite{szeidlInvariant} Proves Existence of an Invariant Distribution of 
 $\mRat, \cRat, \aRat,$ etc.
 
-\centerline{\includegraphics[height=2.5in]{\FigsRaw/SimCDFsConverge.pdf}}
+\centerline{\includegraphics[height=2.5in]{\FigDir/SimCDFsConverge.pdf}}
 
 
 
@@ -407,6 +407,7 @@ Paper Proves:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX")   TeX-command-list))
 % eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t

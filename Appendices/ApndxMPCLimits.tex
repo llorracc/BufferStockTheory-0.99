@@ -1,10 +1,12 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
-\onlyinsubfile{\externaldocument{\econtexRoot/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+%\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
+
 \hypertarget{The-Limiting-MPCs}{}
 \section{The Limiting MPC's}
 \label{sec:MPCLimits}
+
 For $\mRat_{t}>0$ we can define $\eFunc_{t}(\mRat_{t})=\cFunc_{t}(\mRat_{t})/\mRat_{t}$
 and $\aFunc_{t}(\mRat_{t})=\mRat_{t}-\cFunc_{t}(\mRat_{t})$
 and the Euler equation \eqref{\localorexternallabel{eq:scaledeuler}} can be rewritten
@@ -105,6 +107,7 @@ which, combined with the intertemporal budget constraint, yields the usual formu
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
 % eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
@@ -113,4 +116,5 @@ which, combined with the intertemporal budget constraint, yields the usual formu
 % TeX-source-correlate-mode: t
 % TeX-source-correlate-start-server: 0
 % TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
 % End:

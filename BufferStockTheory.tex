@@ -1,28 +1,11 @@
-%%% 2020-10-05: Final edits before sending back to QE
-% QE asked for "clean" version of the main text without the appendices ...
-% ... but with appropriate citations/links to the appendices
-% The "NoAppendix" version will generate such a version,
-% ... with enough repetitions of compiling of:
-% BufferStockTheory.tex
-% BufferStockTheory-Appendix.tex
-% BufferStockTheory-NoAppendix.tex
-%
-% The "appropriate sequence" is instantiated in the "reproduce_text.sh" file
-% which has been tested on a Docker image with Ubuntu Linux installed
-% See: 
-%% 2019-11-15: Final version for QE - make appendix a separate doc
-%% 2019-10-19: Final version for QE?
-%% 2019-10-05: Final tweaks for JHU class
-%% 2019-02-20: Small tweaks in response to feedback from Qingyin 
-%% 2019-02-16: Revision for QE resubmission
-%% 2018-10-20: Revise to allow use of either Mathematica or HARK figures (to use Mma figs, comment out the second \FigsRaw
-%% Modified on 2012/04/21 to fix typo found by Patrick Toche
-%% Modified by CDC to incorporate edits and insights from Jiaxiong Yao, 2012-08-31
-\input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths} % Some setup 
+\input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex} % defined in ./texmf-local
-\providecommand{\texname}{BufferStockTheory}% Indicate the keyname for the paper
+\usepackage{xr-hyper}
 
-\usepackage{\LaTeXFiles/BufferStockTheory}
+\input{\ResourcesDir/owner} % Owned by llorracc or econ-ark?
+
+\providecommand{\texname}{BufferStockTheory}% Keyname for the paper
+\usepackage{\LaTeXFiles/BufferStockTheory}% Put "junk" (generated) LaTeX files here
 
 \begin{document}
 
@@ -32,9 +15,9 @@
 \renewcommand{\onlyinsubfile}[1]{}
 \renewcommand{\notinsubfile}[1]{#1}
 
-\subfile{BufferStockTheory-NoAppendix}
+\subfile{BufferStockTheory-NoAppendix} % First subfile (main body of paper)
 
-\hypertarget{Appendices}{}
+\hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
 \appendix \centerline{\LARGE Appendices}\vspace{0.2in}
 \subfile{\ApndxDir/ApndxLiqConstr}
 \subfile{\ApndxDir/ApndxConcaveCFunc}
@@ -53,10 +36,17 @@
 \bibliography{\LaTeXFiles/BufferStockTheory,economics}
 
 \end{document}
+% Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX")  TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s" TeX-run-BibTeX nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s" TeX-run-BibTeX nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX"                                                                   ) TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX"                                                                   ) TeX-command-list))
 % eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t

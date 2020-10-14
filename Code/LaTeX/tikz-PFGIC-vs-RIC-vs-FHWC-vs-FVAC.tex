@@ -10,6 +10,9 @@
 \newcommand{\RIC}{{\mbox{RIC}}}
 \newcommand{\WRIC}{{\mbox{WRIC}}}
 \newcommand{\FHWC}{{\mbox{FHWC}}}
+\newcommand\cncl[1]{\ensuremath{\cancel{#1}}}
+\providecommand{\Rfree}{\ensuremath{\mathsf{R}}}
+\providecommand{\DiscFac}{\ensuremath{\beta}} % New
 
 \usepackage{tikz, environ, etoolbox}
 \usetikzlibrary{cd, external}
@@ -21,11 +24,20 @@
 \def\temp{&} \catcode`&=\active \let&=\temp
 
 \newcommand{\mytikzcdcontext}[2]{
-  \begin{tikzpicture}[baseline=(maintikzcdnode.base)]
-    \node (maintikzcdnode) [inner sep=0, outer sep=0] {\begin{tikzcd}[#2]
-        #1
-    \end{tikzcd}};
-  \end{tikzpicture}}
+		\begin{tikzpicture}
+		\node (thorn) {$\textbf{\Thorn}$};
+		\node (gamma) [right of = thorn] {$\Gamma$};
+		\node (rfree) [below of = thorn, xshift = 2.5cm, yshift = 2.5cm]{$\mathsf{\Rfree}$};
+		\draw[->] (thorn) to node {$\mathrm{\PFGIC}$} (gamma);
+		\draw[->] (thorn) to node [swap] {$\mathrm{\RIC}$} (rfree);
+		\draw[->] (gamma) to node {$\mathrm{\FHWC}$} (rfree);
+              \end{tikzpicture}
+              }
+  % \begin{tikzpicture}[baseline=(maintikzcdnode.base)]
+  %   \node (maintikzcdnode) [inner sep=0, outer sep=0] {\begin{tikzcd}[#2]
+  %       #1
+  %   \end{tikzcd}};
+  % \end{tikzpicture}}
 
 \NewEnviron{mytikzcd}[1][]{%
 % In the following, we need \BODY to expanded before \mytikzcdcontext
@@ -56,3 +68,14 @@
 
 %  \textbf{\Thorn} \ar{r}{\mathrm{\PFGIC}} \ar{d}{\mathrm{\RIC}} \ar{dr}{\mathrm{\PFFVAC}}& \Gamma \ar{d}{\mathrm{\FHWC}} \\
 %   \mathsf{\Rfree} &  \mathsf{\Rfree}^{1/\CRRA}\Gamma^{1 - 1/\CRRA} \ar{l}{\mathrm{\FHWC}}
+% Local Variables:
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n %o %b"))))))
+% TeX-parse-all-errors: t
+% End:

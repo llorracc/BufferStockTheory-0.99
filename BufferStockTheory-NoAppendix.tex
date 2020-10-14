@@ -4,10 +4,8 @@
 % * Compile this file, then main, then this one again
 % * Keep iterating until neither file changes
 % 0. Being compiled as subfile of main document
-% * Not clear what proper order is; might NOT matter
 
 \onlyinsubfile{\externaldocument{BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
-\input{\LaTeXFiles/onlyinsubfile.sty} 
 
 \begin{document}
 
@@ -15,6 +13,7 @@
 \ifthenelse{\boolean{ifWeb}}{  \renewcommand{\ushort}{\underline}\renewcommand{\versn}{Web} }{} % ushort does not work in tex4ht
 
 
+% Put tiny info header at top to make it easy track git commit that generates it
 \hfill{\tiny \jobname~\versn~\today~{at} \DTMcurrenttime, \input{.git-source-commit}~~\input{.git-public-commit}}
 
 \title{Theoretical Foundations of \\ Buffer Stock Saving}
@@ -24,13 +23,13 @@
 \keywords{Precautionary saving, buffer stock saving, marginal propensity to consume, permanent income hypothesis}
 
 \jelclass{D81, D91, E21\\
-  \href{https://econ-ark.org}{\includegraphics{./Figures/PoweredByEconARK}}
+  \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{October 7, 2020}
+\renewcommand{\forcedate}{October 13, 2020}
 \date{\forcedate}
 
-\maketitle %% Version finally sent back to QE, as MS 354
+\maketitle 
 \hypertarget{abstract}{}
 \begin{abstract}
   This paper builds theoretical foundations for rigorous and intuitive understanding of `buffer stock' saving models, pairing each theoretical result with a quantitative exploration.  After describing conditions under which the consumption function exists, the paper shows that a `target' buffer stock exists only under conditions strictly stronger than those that guarantee convergence of the consumption and value functions.  Furthermore, the average growth rate of consumption equals the average growth rate of permanent income (in a small open economy populated by buffer stock savers).  Together, the (provided) numerical tools and (proven) analytical results constitute a comprehensive toolkit for understanding buffer stock models.
@@ -42,15 +41,13 @@
   \parbox{\textwidth}{
     \begin{center}
       \begin{tabbing}
-        % \texttt{~Archive:~} \= \= \url{https://www.econ2.jhu.edu/people/ccarroll/BufferStockTheory.zip} \\  %
-        \texttt{Dashboard:~} \= \= \url{https://econ-ark.org/materials/BufferStockTheory?dashboard} \\
-        \texttt{~~~~~~PDF:~} \> \> \url{https://llorracc.github.io/BufferStockTheory/BufferStockTheory.pdf} \\
-        \texttt{~~~Slides:~} \> \> \url{https://llorracc.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf} \\
-        \texttt{~~~~~html:~} \> \> \url{https://llorracc.github.io/BufferStockTheory/BufferStockTheory/}    \\
-        \texttt{~Appendix:~} \> \> \url{https://llorracc.github.io/BufferStockTheory/BufferStockTheory\#Appendices}    \\
-        \texttt{~~~bibtex:~} \> \> \url{https://llorracc.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}  \\
-        \texttt{~~~GitHub:~} \> \> \url{https://github.com/llorracc/BufferStockTheory} \\
-        % \texttt{~~~~~~~~~~} \> \> \textit{(In GitHub repo, see \texttt{/Code} for tools for solving and simulating the model)} \\
+        \texttt{Dashboard:~} \= \= \texttt{\href{https://econ-ark.org/materials/BufferStockTheory?dashboard}{https://econ-ark.org/materials/BufferStockTheory?dashboard}} \\
+        \texttt{~~~~~~PDF:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory.pdf}} \\ % Owner is defined in BST preamble
+        \texttt{~~~Slides:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}{https://\owner.github.io/BufferStockTheory/BufferStockTheory-Slides.pdf}} \\
+        \texttt{~~~~~html:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory}{https://\owner.github.io/BufferStockTheory}}    \\
+        \texttt{~Appendix:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory\#Appendices}{https://\owner.github.io/BufferStockTheory\#Appendices}}    \\
+        \texttt{~~~bibtex:~} \> \> \texttt{\href{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}{https://\owner.github.io/BufferStockTheory/LaTeX/BufferStockTheory-Self.bib}}  \\
+        \texttt{~~~GitHub:~} \> \> \texttt{\href{https://github.com/\owner/BufferStockTheory}{https://github.com/\owner/BufferStockTheory}} \\
       \end{tabbing}
     \end{center}
     
@@ -62,7 +59,7 @@
   \name{Contact: \href{mailto:ccarroll@jhu.edu}{\texttt{ccarroll@jhu.edu}}, Department of Economics, 590 Wyman Hall, Johns Hopkins University, Baltimore, MD 21218, \url{http://econ.jhu.edu/people/ccarroll}, and National Bureau of Economic Research.}
 \end{authorsinfo}
 
-\newcommand{\thankstext}{All numerical results were produced using the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit, which can be cited per our references (\cite{carroll_et_al-proc-scipy-2018}); for reference to the toolkit itself see \href{https://econ-ark.org/acknowledging/}{Acknowleding Econ-ARK}.  Thanks to the \href{https://consumerfinance.gov}{Consumer Financial Protection Bureau} for funding the original creation of the \href{https://econ-ark.org}{Econ-ARK} toolkit, whose latest version we used to produce all the results in this paper; and to the \href{https://sloan.org}{Sloan Foundation} for funding Econ-ARK's \href{https://sloan.org/grant-detail/8071}{extensive further development} that brought it to the point where it could be used for this project.  The toolkit can be cited with its digital object identifier, \href{https://doi.org/10.5281/zenodo.1001067}{10.5281/zenodo.1001067}, as is done in the paper's own references as \cite{carroll_et_al-proc-scipy-2018}.  
+\newcommand{\thankstext}{All figures and numerical results \href{https://econ-ark.github.io/nbreproduce}{can be automatically reproduced} using the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit, which can be cited per our references (\cite{carroll_et_al-proc-scipy-2018}); for reference to the toolkit itself see \href{https://econ-ark.org/acknowledging/}{Acknowleding Econ-ARK}.  Thanks to the \href{https://consumerfinance.gov}{Consumer Financial Protection Bureau} for funding the original creation of the \href{https://econ-ark.org}{Econ-ARK} toolkit; and to the \href{https://sloan.org}{Sloan Foundation} for funding Econ-ARK's \href{https://sloan.org/grant-detail/8071}{extensive further development} that brought it to the point where it could be used for this project.  The toolkit can be cited with its digital object identifier, \href{https://doi.org/10.5281/zenodo.1001067}{10.5281/zenodo.1001067}, as is done in the paper's own references as \cite{carroll_et_al-proc-scipy-2018}.  
   Thanks to James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Metin Uyanik, Mateo Velasquez-Griraldo, Weifeng Wu, Xudong Zheng,  and Jiaxiong Yao for comments on earlier versions of this paper, John Boyd for help
   in applying his weighted contraction mapping theorem, Ryoji
   Hiraguchi for extraordinary mathematical insight that improved the
@@ -74,10 +71,6 @@
 \ifthenelse{\boolean{ifWeb}}{}{\thanks{\thankstext}}
 
 \titlepagefinish
-
-
-\newtheorem{defn}{Definition}
-\newtheorem{theorem}{Theorem}
 
 
 % \begin{Web}
@@ -97,17 +90,17 @@
 
 \label{sec:intro}
 
-In the presence of empirically realistic transitory and permanent shocks to income \textit{a la} \cite{friedmanATheory}, one further ingredient is required to construct a testable model of optimal consumption: A description of preferences.  Modelers usually assume geometric discounting of a constant relative risk aversion (CRRA) utility function, because, starting with Zeldes~\citeyearpar{zeldesStochastic} and Deaton~\citeyearpar{deatonLiqConstr}, a large literature has shown that numerical solutions of such models have quantitative predictions that can match microeconomic evidence reasonably well.
+In the presence of empirically realistic transitory and permanent shocks to income \textit{a la} \cite{friedmanATheory}, only one further ingredient is required to construct a testable model of optimal consumption: A description of preferences.  Modelers usually assume geometric discounting of a constant relative risk aversion utility function, because, starting with Zeldes~\citeyearpar{zeldesStochastic} and Deaton~\citeyearpar{deatonLiqConstr}, a large literature has shown that numerical solutions of such models have quantitative predictions that can match microeconomic evidence reasonably well.
 
-A companion theoretical literature has shown that standard numerical solution methods provide good approximations to limiting ``true'' mathematical solutions -- but only for models more complex than the simple case with just shocks and utility.  The extra complexity has been required because standard contraction mapping theorems (beginning with \cite{bellmanDynamicProgramming} and including those building on Stokey et.~al.~\citeyearpar{slpMethods}) cannot be applied when the utility function is unbounded (like CRRA - see \hyperlink{DiffFromLit}{section \ref{subsec:Setup}}).\footnote{It is unclear whether newer methods such as those of \cite{mnUnique} could overcome this problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those methods or any others.}
+A companion theoretical literature has shown that numerical solution methods provide good approximations to limiting ``true'' mathematical solutions -- but only for models more complex than the simple case with just shocks and utility.  The extra complexity has been required because standard contraction mapping theorems (beginning with \cite{bellmanDynamicProgramming} and including those building on Stokey et.~al.~\citeyearpar{slpMethods}) cannot be applied when the utility function is unbounded (like CRRA - see \hyperlink{DiffFromLit}{section \ref{subsec:Setup}}).\footnote{It is unclear whether newer methods such as those of \cite{mnUnique} could overcome this problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those methods or any others.}
 
-This paper's first technical contribution is to articulate the (surprisingly loose) conditions under which the simple problem (without convenient shortcuts like a consumption floor or liquidity constraints) defines a contraction mapping with a nondegenerate consumption function.  The interesting requirement is a \hyperlink{FVAC}{`Finite Value of Autarky'} condition.  Another contribution is to specify the conditions under which the resulting consumption function implies existence of a `target' wealth-to-permanent-income ratio (so that the model exhibits `buffer stock' saving behavior.)  The key requirement is that the model's parameters satisfy a \hyperlink{GIC}{``Growth Impatience Condition''} (equation \eqref{eq:GIC}) that relates preferences and uncertainty to predictable income growth.
+This paper's first technical contribution is to articulate the (loose) conditions under which the simple problem (without convenient shortcuts like a consumption floor or liquidity constraints) defines a contraction mapping with a nondegenerate consumption function.  The interesting requirement is a \hyperlink{FVAC}{`Finite Value of Autarky'} condition.  The second contribution is to specify the conditions under which the resulting consumption function implies existence of a `target' wealth-to-permanent-income ratio (the model exhibits `buffer stock' saving behavior).  Buffer stock behavior arises when the model's parameters satisfy a \hyperlink{GIC}{``Growth Impatience Condition''} (equation \eqref{eq:GIC}) that relates preferences and uncertainty to predictable income growth.
 
 \hypertarget{KMP}{}
 
 Even without a formal proof, target saving of this kind has been intuitively understood to underlie central numerical results from the heterogeneous agent macroeconomics literature; for example, the logic of target saving is central to the explanation by \cite{kmpHandbook} of the fact that, during the Great Recession, middle-class consumers cut their consumption more than the poor or the rich.  The theoretical logic articulated below explains this finding:  Learning that the future has become more uncertain does not change the urgent imperatives of the poor (their high $\uFunc^{\prime}(\cRat)$ means they have little room to maneuver).  And, increased labor income uncertainty does not change the behavior of the rich because it does not threaten their consumption much.  Only people in the middle have both the motivation and the wiggle-room to reduce their discretionary spending.
 
-Conveniently, it turns out that elements required for the convergence proof provide analytical foundations for many other results that have become familiar from the numerical literature.  In this paper, all theoretical conclusions are paired with numerically computed illustrations (using an open-source toolkit available from the \href{https://econ-ark.org}{Econ-ARK} project).  All of the insights of the paper are instantiated in the toolkit, whose \href{https://hark.readthedocs.io/en/stable/reference/ConsumptionSaving/ConsIndShockModel.html}{buffer stock saving module} algorithmically flags parametric choices under which a problem fails to define a contraction mapping; a target level of wealth does not exist; or the solution is otherwise degenerate.
+Conveniently, elements required for the convergence proof also provide analytical foundations for many other results that have become familiar from the numerical literature.  In this paper, all theoretical conclusions are paired with numerically computed illustrations (using the open-source \href{https://econ-ark.org}{Econ-ARK} toolkit).  The insights of the paper are instantiated in the toolkit, whose \href{https://hark.readthedocs.io/en/stable/reference/ConsumptionSaving/ConsIndShockModel.html}{buffer stock saving module} algorithmically flags parametric choices under which a problem fails to define a contraction mapping; a target level of wealth does not exist; or the solution is otherwise degenerate.
 
 The theoretical foundations provided here are valuable both because they provide intuition about the determinants of saving targets, and because they make it easier to develop reliable numerical solution methods (by providing necessary and sufficient restrictions that solutions must satisfy).
 
@@ -115,7 +108,7 @@ The paper proceeds in three parts.
 
 The first part articulates the \hyperlink{Sufficient-Conditions}{conditions required} for the problem to define a nondegenerate limiting consumption function, and explains how the paper's model is more general than models previously considered in the literature.  The conditions required for convergence are interestingly parallel to those required for the \hyperlink{Factors-Defined-And-Compared}{liquidity constrained perfect foresight model}; that parallel is explored and explained.  Next, the paper derives some limiting properties of the consumption function as cash approaches infinity and as it approaches its lower bound; then the theorem is proven explaining when the problem defines a contraction mapping.  Finally, a related class of commonly-used models (exemplified by Deaton~\citeyearpar{deatonLiqConstr}) is shown to constitute a particular limit of this paper's model.
 
-The \hyperlink{AnalysisoftheConvergedConsumptionFunction}{next section} examines five key properties of the model. First, as \hyperlink{LimitsAsmtToInfty}{cash approaches infinity} the expected growth rate of consumption and the marginal propensity to consume (MPC) converge to their values in the perfect foresight case. Second, as \hyperlink{LimitsAsmtToZero}{cash approaches zero} the expected growth rate of consumption approaches infinity, and the MPC approaches a simple analytical limit.  Third, if the consumer is `growth impatient,' a \hyperlink{onetarget}{unique target cash-to-permanent-income ratio} will exist.  Fourth, at the target cash ratio, the \hyperlink{cGroLTpGro}{expected growth rate of consumption} is slightly less than the expected growth rate of permanent noncapital income.  Finally, the expected growth rate of consumption \hyperlink{dcgdxneg}{is declining in the level of cash}. The first four propositions are proven under general assumptions about parameter values; the last is shown to hold if there are no transitory shocks, but may fail in extreme cases if there are both transitory and permanent shocks.
+The \hyperlink{AnalysisoftheConvergedConsumptionFunction}{next section} examines five key properties of the model. First, as \hyperlink{LimitsAsmtToInfty}{cash approaches infinity} the expected growth rate of consumption and the marginal propensity to consume (MPC) converge to their values in the perfect foresight case. Second, as \hyperlink{LimitsAsmtToZero}{cash approaches zero} the expected growth rate of consumption approaches infinity, and the MPC approaches a simple analytical limit.  Third, if the consumer is `growth impatient,' a \hyperlink{onetarget}{unique target cash-to-permanent-income ratio} will exist.  Fourth, at the target cash ratio, the \hyperlink{cGroLTpGro}{expected growth rate of consumption} is slightly less than the expected growth rate of permanent (noncapital) income.  Finally, the expected growth rate of consumption \hyperlink{dcgdxneg}{is declining in the level of cash}. The first four propositions are proven under general assumptions about parameter values; the last is shown to hold if there are no transitory shocks, but may fail in extreme cases if there are both transitory and permanent shocks.
 
 Szeidl~\citeyearpar{szeidlInvariant} has shown that such an economy will be characterized by stable invariant distributions for the consumption ratio, the wealth ratio, and other variables.\footnote{Szeidl's proof supplants the analysis in an earlier draft of this paper, which conjectured the result and provided supportive simulation evidence.}  Using Szeidl's result, the final section discusses conditions under which, even with a fixed aggregate interest rate that differs from the time preference rate, an economy populated by buffer stock consumers converges to a balanced growth equilibrium in which the growth rate of consumption tends toward the (exogenous) growth rate of permanent income.
 
@@ -215,7 +208,7 @@ realization of the transitory shock is inessential, but simplifies the proofs an
 
 \hypertarget{DiffWithLit}{} This model differs from Bewley's~\citeyearpar{bewleyPIH} classic formulation in several ways. The CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well defined, or that $\uP(0)$ is well defined and finite; indeed, neither the value function nor the marginal value function will be bounded.  It differs from Schectman and Escudero~\citeyearpar{seIncFluct} in that they impose liquidity constraints and positive minimum income.  It differs from both of these in that it permits permanent growth in income, and also permanent shocks to income, which a large empirical literature finds are quantitatively important in micro data\footnote{MaCurdy~\citeyearpar{macurdyTimeseries}; Abowd and Card~\citeyearpar{acCovariance}; Carroll and Samwick~\citeyearpar{csNature}; Jappelli and Pistaferri~\citeyearpar{jpCins}; Storesletten, Telmer, and Yaron~\citeyearpar{styConsumption}; \cite{blpRisk}} and which since~\cite{friedmanATheory} have been understood to be far more consequential for household welfare than are transitory fluctuations.  It differs from Deaton~\citeyearpar{deatonLiqConstr} because liquidity constraints are absent; there are separate transitory and permanent shocks ({\it a la} \cite{muthOptimal}); and the transitory shocks here can occasionally cause income to reach zero.\footnote{Below it will become clear that the Deaton model is a particular limit of this paper's model.}  Finally, it differs from models found in Stokey et.\ al.~\citeyearpar{slpMethods} because neither liquidity constraints nor bounds on utility or marginal utility are imposed.\footnote{Similar restrictions to those in the cited literature are made in the well known papers by Scheinkman and Weiss~\citeyearpar{scheinkman&weiss:borrowing} and Clarida~\citeyearpar{claridaErgodic}.  See \cite{tocheUrisk} for an elegant analysis of a related but simpler continuous-time model.}$^{,}$\footnote{\cite{asHomogeneous} relaxed the bounds on the return function, but they address only the deterministic case.}
 
-The incorporation of permanent shocks rules out application of the tools of \cite{mnUnique}, who followed and corrected an error in the fundamental work on the local contraction mapping method developed in \cite{rrExistence}.  \cite{mvExistence} provides a correction to \cite{rrExistence}, and provides conditions that are easier to verify than those of \cite{rrExistence} in many applications, but again only addresses the deterministic case.  
+The incorporation of permanent shocks rules out application of the tools of \cite{mnUnique}, who followed and corrected an error in the fundamental work on the local contraction mapping method developed in \cite{rrExistence}.  \cite{mvExistence} provides a correction to \cite{rrExistence}, and provides conditions that are easier to verify, but again only addresses the deterministic case.  
 
 \hypertarget{The-Problem-Can-Be-Rewritten-in-Ratio-Form}{}
 \subsection{The Problem Can Be Rewritten in Ratio Form}
@@ -239,7 +232,6 @@ x^{1-\CRRA}\uFunc(y)$.
 
 \hypertarget{The-Related-Problem}{}
 Now, in a one-time deviation from the notational convention established in the last paragraph, define nonbold `normalized value' not as $\vLevBF_{t}/\pLevBF_{t}$ but as $\vFunc_{t} = \vLevBF_{t}/\pLevBF_{t}^{1-\CRRA}$, because this allows us to exploit features of the related problem,
-%% \begin{verbatimwrite}{\EqDir/veqn.tex} % Weirdly, if \label{eq:veqn} is in verbatimwritten file, reference is not correctly constructed, so comment out verbatimrwite here
 \begin{align}
   \vFunc_{t}(\mRat_{t})  & = \max_{\{\cFunc\}_{t}^{T}}~  \uFunc(\cFunc_{t}) +\DiscFac \Ex_{t}[\PGro_{t+1}^{1-\CRRA}\vFunc_{t+1}({\mRat}_{t+1})] \notag \\
                          & \mbox{s.t.}  \label{eq:veqn} 
@@ -247,20 +239,19 @@ Now, in a one-time deviation from the notational convention established in the l
   \\ {\bRat}_{t+1}  & = (\Rfree/\PGro_{t+1})\aRat_{t}  ~ = ~ \Rnorm_{t+1}\aRat_{t}  \notag
   \\ \mRat_{t+1}  & = \bRat_{t+1}+\tShkAll_{t+1}  \notag, %
 \end{align}
-%% \end{verbatimwrite}\input{\EqDir/veqn.tex}
 where $\Rnorm_{t+1}\equiv (\Rfree/\PGro_{t+1})$ is a `growth-normalized' return factor, and the new problem's first order condition is
 \begin{align}
   c_{t}^{-\CRRA}  & = \Rfree \DiscFac \Ex_{t}[ {\PGro}_{t+1}^{-\CRRA} {\cRat}
                     _{t+1}^{-\CRRA}].  \label{eq:scaledeuler}
 \end{align}
 
-Since $\vFunc_{T}(\mRat_{T}) = \uFunc(\mRat_{T})$, defining $\vFunc_{T-1}(\mRat_{T-1})$ from \eqref{eq:veqn}, \eqref{eq:vBold} reduces to
+Since $\vFunc_{T}(\mRat_{T}) = \uFunc(\mRat_{T})$, defining $\vFunc_{T-1}(\mRat_{T-1})$ from \eqref{eq:veqn}, we obtain
 \begin{align*}
   \vLevBF_{T-1}(\mLevBF_{T-1},\pLevBF_{T-1})  & = \pLevBF_{T-1}^{1-\CRRA} \vFunc_{T-1}(\underbrace{\mLevBF_{T-1}/\pLevBF_{T-1}}_{=\mRat_{T-1}}).
 \end{align*}
 
 This logic induces to all earlier periods, so that if we solve the
-normalized one-state-variable problem \eqref{eq:veqn} we
+normalized one-state-variable problem \eqref{eq:veqn}, we
 will have solutions to the original problem for any $t<T$
 from:
 \begin{align*}
@@ -281,7 +272,7 @@ where the limiting consumption function is $\cFunc(\mRat)=0$ or $\cFunc(\mRat)=\
 \hypertarget{Perfect-Foresight-Benchmarks}{}
 \subsection{Perfect Foresight Benchmarks}
 
-The familiar analytical solution to the perfect foresight specialization of the model, obtained by setting $\pZero=0$ and $\ushort{\tShkEmp}=\bar{\tShkEmp}=\ushort{\pShk}=\bar{\pShk}=1$, allows us to define some remaining notation and terminology, and to define a convenient reference point.
+The familiar analytical solution to the perfect foresight specialization of the model, obtained by setting $\pZero=0$ and $\ushort{\tShkEmp}=\bar{\tShkEmp}=\ushort{\pShk}=\bar{\pShk}=1$, allows us to define some remaining notation and terminology, providing a convenient reference point.
 
 \hypertarget{Human-Wealth}{}
 \subsubsection{Human Wealth}
@@ -291,10 +282,10 @@ The dynamic budget constraint, strictly positive marginal utility, and the can't
 \end{align}
 where $\bLevBF$ is nonhuman wealth and $\hLevBF_{t}$ is `human wealth,' and with a constant $\Rnorm \equiv \Rfree/\PGro$,
 \begin{align}
-  \hLevBF_{t}  & = \pLevBF_{t}+\Rnorm^{-1} \pLevBF_{t} + \Rnorm^{-2} \pLevBF_{t} + ... + \Rnorm^{t-T} \pLevBF_{t} \notag
-  \\  & = \underbrace{\left(\frac{1-\Rnorm^{-(T-t+1)}}{1-\Rnorm^{-1}}\right)}_{\equiv \hRat_{t}}\pLevBF_{t} \label{eq:HDef}.
+  \hLevBF_{t}  & = \pLevBF_{t}+\Rnorm^{-1} \pLevBF_{t} + \Rnorm^{-2} \pLevBF_{t} + ... + \Rnorm^{t-T} \pLevBF_{t} \label{eq:HDef}
+  \\  & = \underbrace{\left(\frac{1-\Rnorm^{-(T-t+1)}}{1-\Rnorm^{-1}}\right)}_{\equiv \hRat_{t}}\pLevBF_{t} .
 \end{align}
-Equation \eqref{eq:HDef} makes plain that in order for $\hRat \equiv \lim_{n \rightarrow
+This equation makes plain that in order for $\hRat \equiv \lim_{n \rightarrow
   \infty} \hRat_{T-n}$ to be finite, we must
 impose the Finite Human Wealth Condition (`\FHWC'): \hypertarget{FHWC}{}
 \begin{align}
@@ -310,7 +301,6 @@ the interest rate at which that income is being discounted.
 \hypertarget{AIC}{}
 The consumption Euler equation holds in every period; with $\uP(\cLevBF)=\cLevBF^{-\CRRA}$, \hypertarget{Pat}{}
 \begin{align}
-  %% \cLevBF_{t}^{-\CRRA}  & = \Rfree\DiscFac \cLevBF_{t+1}^{-\CRRA} \\ \notag
   \cLevBF_{t+1}/\cLevBF_{t}  & = (\Rfree\DiscFac)^{1/\CRRA} \equiv \Pat   \label{eq:Pat}
 \end{align}
 where the Old English letter `thorn' represents what we will call the
@@ -384,7 +374,6 @@ x^{1-\CRRA}\uFunc(y)$ yields an analytical expression for value:
 which asymptotes to a finite number as $n=T-t$ approaches $+\infty$ if $\DiscFac \Pat^{1-\CRRA} < 1;$\footnote{This is related to a condition in \cite{asHomogeneous}.} with a bit of algebra,\footnote{
   \begin{align*}
     \DiscFac ((\Rfree \DiscFac)^{1/\CRRA})^{1-\CRRA}  & < 1
-    %% \\ \DiscFac (\Rfree\DiscFac)^{(1-\CRRA)/\CRRA}  & < 1
     \\ \DiscFac (\Rfree\DiscFac)^{1/\CRRA}/\Rfree\DiscFac  & < 1
     \\ (\Rfree \DiscFac)^{1/\CRRA} /\Rfree  & < 1
   \end{align*}.
@@ -465,7 +454,7 @@ The most peculiar possibility occurs when the \RIC~fails.  Under these circumsta
 consumption function $\mathring{\cFunc}(\mRat)$ is strictly positive
 and strictly increasing in $\mRat$.  This result interestingly
 reconciles the conflicting intuitions from the unconstrained case,
-where \cncl{\RIC} would suggest a dengenerate limit of
+where \cncl{\RIC} would suggest a degenerate limit of
 $\mathring{\cFunc}(\mRat)=0$ while \cncl{\FHWC} would suggest a
 degenerate limit of $\mathring{\cFunc}(\mRat)=\infty$.
 
@@ -608,7 +597,7 @@ RHS is multiplied by $\uInvEpShkuInv^{1-1/\CRRA}$ which is strictly less than 1.
 \subsection{The Baseline Numerical Solution}
 
 Figure~\ref{fig:cFuncsConverge} depicts the successive consumption
-rules that apply in the last period of life ($\cFunc_{T}(\mRat)$), the
+rules that apply in the last period of life $(\cFunc_{T}(\mRat))$, the
 second-to-last period, and various earlier periods under the
 baseline parameter values listed in Table~\ref{table:Calibration}.
 (The 45 degree line is labelled as $\cFunc_{T}(\mRat) = m$ because in
@@ -627,13 +616,6 @@ resources.)
 \providecommand{\figFile}{cFuncsConverge} %  and on filename
 \hypertarget{\figFile}{}
 \hypertarget{\figName}{}
-%% \begin{verbatimwrite}{\econtexRoot/\FigsTeX/cFuncsConverge} % Store the tex for standalone compilation 
-%%   \begin{figure}[tbp]
-%%     \centerline{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/cFuncsConverge}}
-%%     \caption{Convergence of the Consumption Rules}
-%%     \label{fig:cFuncsConverge}
-%%   \end{figure}
-%% \end{verbatimwrite} % end storing of tex
 \input{\econtexRoot/\FigsTeX/cFuncsConverge} % Read in the tex to generate the figure
 
 In the figure, the consumption rules appear to converge as the horizon
@@ -657,7 +639,7 @@ to have limiting slopes as $\mRat \downarrow 0$ and as $\mRat \uparrow
 slopes, which also turn out to be useful in the contraction
 mapping proof.\footnote{\cite{benhabibWealth} show that the consumption function
 becomes linear as wealth approaches infinity in a model with capital income risk and liquidity
-constraints; their results should generalize to the limits derived here if capital income risk were added to the model.}\footnote{\cite{MaStachurskiToda2020JET} establish the existence and uniqueness of a solution to a general income fluctuation problem with capital income risk in a Markovian setting and use such a model to study the tail behavior of wealth in the presence of risky returns to capital.}
+  constraints; their results should generalize to the limits derived here if capital income risk were added to the model.}$^{,}$\footnote{\cite{MaStachurskiToda2020JET} establish the existence and uniqueness of a solution to a general income fluctuation problem with capital income risk in a Markovian setting and use such a model to study the tail behavior of wealth in the presence of risky returns to capital.}
 
 \newcommand{\NewMaxMinMPC}{\ushort{\MPC}}
 
@@ -861,8 +843,8 @@ constrained consumer with perfect foresight would choose.
 Another way to think about this is just to think of the liquidity
 constraint as being imposed by specifying a component of the utility
 function that is zero whenever the consumer ends the period with
-(weakly) positive assets, but negative infinity if the consumer
-ended the period with (strictly) negative assets.
+(strictly) positive assets, but negative infinity if the consumer
+ended the period with (weakly) negative assets.
 
 See appendix \ref{sec:LiqConstrAsLimit} for the formal proof justifying the
 foregoing intuitive discussion.
@@ -1060,13 +1042,6 @@ would keep $\mRat$ stable (in expectation).
 
 \renewcommand{\figFile}{FVACnotGIC}
 \hypertarget{\figFile}{}
-%% \begin{verbatimwrite}{\econtexRoot/\FigsTeX/FVACnotGIC}
-%%   \begin{figure}[tbp]
-%%     \centerline{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/FVACnotGIC}}
-%%     \caption{Example Solution when \FVAC~Holds but \GIC~Does Not}
-%%     \label{fig:FVACnotGIC}
-%%   \end{figure}
-%% \end{verbatimwrite}
 \input{\econtexRoot/\FigsTeX/FVACnotGIC}
 
 \begin{comment}
@@ -1199,13 +1174,6 @@ present.\footnote{Throughout the remaining analysis I make a final
 
 \renewcommand{\figFile}{cGroTargetFig}
 \hypertarget{\figFile}{}
-%% \begin{verbatimwrite}{\econtexRoot/\FigsTeX/cGroTargetFig}
-%%   \begin{figure}[tbp]
-%%     \centerline{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/cGroTargetFig}}
-%%     \caption{Target $\mRat$, Expected Consumption Growth, and Permanent Income Growth}
-%%     \label{fig:cGroTargetFig}
-%%   \end{figure}
-%% \end{verbatimwrite}
 \input{\econtexRoot/\FigsTeX/cGroTargetFig}
 
 \hypertarget{LimitsAsmtToInfty}{}
@@ -1262,26 +1230,10 @@ plot shows the converged consumption function along with its upper and lower bou
 while the lower plot shows the marginal propensity to consume.
 \renewcommand{\figFile}{mpclimits}
 \hypertarget{\figFile}{}
-%% \begin{verbatimwrite}{\econtexRoot/\FigsTeX/MPCLimits}
-%%   \begin{figure}
-%%     \centerline{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/MPCLimits}}
-%%     \caption{Limiting MPC's}
-%%     \label{fig:mpclimits}
-%%   \end{figure}
-%% \end{verbatimwrite}
 \input{\econtexRoot/\FigsTeX/MPCLimits}
 
 \renewcommand{\figFile}{cFuncBounds}
 \hypertarget{\figFile}{}
-%% \begin{verbatimwrite}{\econtexRoot/\FigsTeX/cFuncBounds}
-%%   \begin{figure}
-%%     \centering
-%%     \subfigure[\large Bounds]{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/cFuncBounds}}
-%%     \subfigure[\large Target $\mRat$]{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/cRatTargetFig}}
-%%     \caption{The Consumption Function}
-%%     \label{fig:cFuncBounds}
-%%   \end{figure}
-%% \end{verbatimwrite}
 \input{\econtexRoot/\FigsTeX/cFuncBounds}
 
 
@@ -1743,6 +1695,11 @@ of numerical results.
 
 Another contribution is integration of the paper's results with the open-source \href{https://econ-ark.org}{Econ-ARK} toolkit, which is used to generate all of the quantitative results of the paper, and which integrally incorporates all of the analytical insights of the paper.
 
+\begin{equation*}
+  \label{eq:Dummy}
+\end{equation*}
+
+
 \clearpage\vfill\eject
 
 \onlyinsubfile{\bibliography{\econtexRoot/LaTeX/BufferStockTheory,economics}}
@@ -1764,8 +1721,5 @@ Another contribution is integration of the paper's results with the open-source 
 % TeX-source-correlate-start-server: 0
 % TeX-parse-self: t
 % eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
 % End:
-
-%%% TeX-view-program-list: (("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b -g %n LaTeX/%o %b"))
-
-%%% (case system-type 	  ((gnu/linux) "notify-send") 	  ((darwin) "growlnotify -a Emacs.app -m"))

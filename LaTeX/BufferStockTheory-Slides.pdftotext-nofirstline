@@ -262,7 +262,7 @@ Surely This Problem Has Been Solved?
 
 No.
 Can’t Use Stokey et. al. theorems because CRRA utility
-Lit thru ? Can’t Handle Permanent Shocks
+Lit thru Matkowski and Nowak (2011) Can’t Handle Permanent Shocks
 Must Use Boyd’s ‘Weighted’ Contraction Mapping Theorem
 Surprisingly Subtle
 Fortunately, the Conclusions Are Simple!
@@ -284,7 +284,7 @@ Surely This Problem Has Been Solved?
 
 No.
 Can’t Use Stokey et. al. theorems because CRRA utility
-Lit thru ? Can’t Handle Permanent Shocks
+Lit thru Matkowski and Nowak (2011) Can’t Handle Permanent Shocks
 Must Use Boyd’s ‘Weighted’ Contraction Mapping Theorem
 Surprisingly Subtle
 Fortunately, the Conclusions Are Simple!
@@ -306,7 +306,7 @@ Surely This Problem Has Been Solved?
 
 No.
 Can’t Use Stokey et. al. theorems because CRRA utility
-Lit thru ? Can’t Handle Permanent Shocks
+Lit thru Matkowski and Nowak (2011) Can’t Handle Permanent Shocks
 Must Use Boyd’s ‘Weighted’ Contraction Mapping Theorem
 Surprisingly Subtle
 Fortunately, the Conclusions Are Simple!
@@ -737,7 +737,7 @@ The Invariant Distribution
 Balanced Growth Equilbrium
 
 Convergence To The Invariant Distribution
-? Proves Existence of an Invariant Distribution of m, c, a, etc.
+Szeidl (2012) Proves Existence of an Invariant Distribution of m, c, a, etc.
 ℱ
 1.0
 ℱ1a ⟶
@@ -913,6 +913,11 @@ The Problem
 Features Of the Solution
 A Small Open Buffer Stock Economy
 Conclusions
+
+Matkowski, Janusz, and Andrzej S. Nowak (2011): “On Discounted Dynamic Programming With Unbounded Returns,”
+Economic Theory, 46, 455–474.
+Szeidl, Adam (2012): “Stable Invariant Distribution in Buffer-Stock Saving and Stochastic Growth Models,” Manuscript,
+Central European University.
 
 Carroll
 

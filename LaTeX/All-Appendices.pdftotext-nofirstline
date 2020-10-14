@@ -258,20 +258,20 @@ If RIC Holds. When the RIC holds, rearranging (15) gives
 
  −n 
 ÞR
-R−1
 ÞΓ
+R−1
 −n
 −R
-+
 =∞
 lim
++
 n→∞
 1 − ÞR
 1 − Þ R R−1 − 1
 
 and for this to be true we need
 
-Þ−1
+Þ −1
 > R−1
 Γ
 Þ > Γ/R
@@ -286,10 +286,9 @@ c
 #
 lim κn# = lim
 (16)
-n
 n→∞
 n→∞
-b#
+bn#
 which with a bit of algebra5 can be shown to asymptote to the MPC in the perfect
 foresight model:6
 (18)
@@ -304,18 +303,18 @@ m→∞
 If RIC Fails. Consider now the 
 RIC
 R
+
 
  −n 
-
 ÞR − 1)
+Þ R (R−1 − 1)
 R−1 (Þ
 ÞΓ
-Þ R (R−1 − 1)
 −n
+lim
 −
 R −
 = ∞.
-lim
 −1
 −1
 n→∞
@@ -425,23 +424,35 @@ Ma and Toda (2020) characterize the limits of MPC in a more general framework th
 
 5
 
-
-1.015
-
+c
+1.016
+1.014
+1.012
 1.010
-
-1.005
-
+1.008
+1.006
+1.004
+1.002
 1.000
+0
+
+1
+
 2
+
+3
 
 4
 
+5
+
 6
+
+7
 
 8
 
-
+b
 
 
 
@@ -469,18 +480,16 @@ function n(z) is ‘nice’ if it satisfies
 Assume that some vt+1 is nice. Our objective is to show that this implies vt is also
 nice; this is sufficient to establish that vt−n is nice by induction for all n > 0 because
 vT (m) = u(m) and u(m) = m1−ρ /(1 − ρ) is nice by inspection.
+Now define an end-of-period value function vt (a) as
+
+ 1−ρ
+vt (a) = β Et Γt+1
+vt+1 (Rt+1 a + ξt+1 ) .
+(22)
 
 6
 
-Now define an end-of-period value function vt (a) as
-
- 1−ρ
-vt+1 (Rt+1 a + ξt+1 ) .
-vt (a) = β Et Γt+1
-
-(22)
-
-Since there is a positive probability that ξt+1 will attain its minimum of zero and since
+Since there is a positive probability that ξt+1 will attain its minimum of zero and since
 Rt+1 > 0, it is clear that lima↓0 vt (a) = −∞ and lima↓0 v0t (a) = ∞. So vt (a) is welldefined iff a > 0; it is similarly straightforward to show the other properties required for
 vt (a) to be nice. (See Hiraguchi (2003).)
 Next define vt (m, c) as
@@ -946,33 +955,93 @@ paper and is therefore left for future work.
 
 11
 
-E The Limiting MPC’s
+E Equality of Aggregate Consumption Growth and
+Income Growth with Transitory Shocks
+Section ?? asserted that in the absence of permanent shocks it is possible to prove that
+the growth factor for aggregate consumption approaches that for aggregate permanent
+income. This section establishes that result.
+First define a(m) as the function that yields optimal end-of-period assets as a function
+of m.
+Suppose the population starts in period t with an arbitrary value for covt (at+1,i , pt+1,i ).
+Then if m̆ is the invariant mean level of m we can define a ‘mean MPS away from m̆’
+function :
+Z m̆+∆
+¯á(∆) = ∆−1
+a0 (z)dz
+m̆
+
+where the combination of the bar and the´are meant to signify that this is the average
+value of the derivative over the interval. Since ψt+1,i = 1, Rt+1,i is a constant at R, if
+we define a as the value of a corresponding to m = m̆, we can write
+mt+1,i
+
+at+1,i
+
+}|
+{
+z
+¯ Rat,i + ξt+1,i −m̆)
+= a + (mt+1,i − m̆)á(
+
+so
+
+¯
+covt (at+1,i , pt+1,i ) = covt á(Ra
+t,i + ξt+1,i − m̆), Γpt,i .
+¯
+But since R−1 (℘Rβ)1/ρ < á(m)
+< ÞR,
+
+Þat+1,i , pt+1,i )|
+|covt ((℘Rβ)1/ρ at+1,i , pt+1,i )| < |covt (at+1,i , pt+1,i )| < |covt (Þ
+
+and for the version of the model with no permanent shocks the GIC says that Þ < Γ,
+while the FHWC says that Γ < R
+|covt (at+1,i , pt+1,i )| < Γ|covt (at,i , pt,i )|.
+This means that from any arbitrary starting value, the relative size of the covariance
+term shrinks to zero over time (compared to the AΓn term which is growing steadily by
+the factor Γ). Thus, limn→∞ At+n+1 /At+n = Γ.
+This logic unfortunately does not go through when there are permanent shocks,
+because the Rt+1,i terms are not independent of the permanent income shocks.
+To see the problem clearly, define R̆ = M [Rt+1,i ] and consider a first order Taylor
+¯ t+1,i ) around m̌t+1,i = R̆at,i + 1,
+expansion of á(m
+¯ m̌t+1,i ) + á¯0 (m̌t+1,i ) (mt+1,i − m̌t+1,i ) .
+á¯t+1,i ≈ á(
+The problem comes from the á¯0 term. The concavity of the consumption function
+implies convexity of the a function, so this term is strictly positive but we have no theory
+¯ We cannot rule out by theory that a
+to place bounds on its size as we do for its level á.
+positive shock to permanent income (which has a negative effect on mt+1,i ) could have
+
+12
+
+a (locally) unboundedly positive effect on á¯0 (as for instance if it pushes the consumer
+arbitrarily close to the self-imposed liquidity constraint).
+
+F The Limiting MPC’s
 For mt > 0 we can define et (mt ) = ct (mt )/mt and at (mt ) = mt − ct (mt ) and the Euler
 equation (??) can be rewritten
+−ρ 
 
 
-−ρ 
 =mt+1 Γt+1
 z
 }|
 {
 
  Ra (m ) + Γ ξ  
-
-
-
- 
-t
-t
-t+1
-t+1
-et (mt )−ρ = βR Et et+1 (mt+1 ) 
+
+ t t
+t+1 t+1  
+−ρ
 (38)
+et (mt ) = βR Et et+1 (mt+1 ) 
  
 mt
+ 
 
 
- 
 
 
 (1 − ℘)βRmρt Et (et+1 (mt+1 )mt+1 Γt+1 )−ρ | ξt+1 > 0
@@ -1013,7 +1082,9 @@ t = β℘R
 
 {
 z }|R
-℘1/ρ R−1 (βR)1/ρ κ̄t = (1 − κ̄t )κ̄t+1
+1/ρ
+1/ρ −1
+℘ R (βR) κ̄t = (1 − κ̄t )κ̄t+1
 |
 {z
 }
@@ -1052,16 +1123,15 @@ Since κ̄T = 1, iterating (41) backward to infinity (because we are interested 
 limiting consumption function) we obtain:
 n→∞
 
-and we will therefore call κ̄ the ‘limiting maximal MPC.’
+13
+
+and we will therefore call κ̄ the ‘limiting maximal MPC.’
 The minimal MPC’s are obtained by considering the case where mt ↑ ∞. If the
 FHWC holds, then as mt ↑ ∞ the proportion of current and future consumption that
 will be financed out of capital approaches 1. Thus, the terms involving ξt+1 in (38) can
-
-12
-
-be neglected, leading to a revised limiting Euler equation
-
+be neglected, leading to a revised limiting Euler equation
 
+
 (mt et (mt ))−ρ = βR Et (et+1 (at (mt )Rt+1 ) (Rat (mt )))−ρ
 and we know from L’Hôpital’s rule that limmt →∞ et (mt ) = κt , and limmt →∞ et+1 (at (mt )Rt+1 ) =
 κt+1 so a further limit of the Euler equation is
@@ -1075,12 +1145,6 @@ and we know from L’Hôpital’s rule that limmt →∞ et (mt ) = κt , and li
 and the same sequence of derivations used above yields the conclusion that if the RIC 0 ≤
 Þ R < 1 holds, then a recursive formula for the minimal marginal propensity to consume
 is given by
-so that
-
-∞
-{κ−1
-T −n }n=0
-
 −1
 κ−1
 t = 1 + κt+1Þ R
@@ -1092,7 +1156,9 @@ T −n
 
 (45)
 
-is also an increasing convergent sequence, and we define
+∞
+so that {κ−1
+T −n }n=0 is also an increasing convergent sequence, and we define
 n↑∞
 
 as the limiting (inverse) marginal MPC. If the RIC does not hold, then limn→∞ κ−1
@@ -1103,9 +1169,9 @@ it is useful further to note that the PDV of consumption is given by
 
 ct 1 + Þ R + Þ 2R + ... = ct κ−1
 T −n .
+|
 {z
 }
-|
 Þ R (1+Þ
 Þ R κ−1
 =1+Þ
@@ -1117,20 +1183,20 @@ ct = (bt + ht )κt
 
 (46)
 
-F The Perfect Foresight Liquidity Constrained
+G The Perfect Foresight Liquidity Constrained
 Solution as a Limit
 Formally, suppose we change the description of the problem by making the following
 two assumptions:
 ℘ =0
 ct ≤ mt ,
-and we designate the solution to this consumer’s problem c̀t (m). We will henceforth refer
+
+14
+
+and we designate the solution to this consumer’s problem c̀t (m). We will henceforth refer
 to this as the problem of the ‘restrained’ consumer (and, to avoid a common confusion,
 we will refer to the consumer as ‘constrained’ only in circumstances when the constraint
 is actually binding).
-
-13
-
-Redesignate the consumption function that emerges from our original problem for a
+Redesignate the consumption function that emerges from our original problem for a
 given fixed ℘ as ct (m; ℘) where we separate the arguments by a semicolon to distinguish
 between m, which is a state variable, and ℘, which is not. The proposition we wish to
 demonstrate is
@@ -1149,10 +1215,9 @@ practice, this will be cT (m) = m), consider the unrestrained optimization probl
 )
 (
 Z θ̄
-∗
+à∗T −1 (m) = arg max u(m − a) +
 vT (a + θ)dFθ .
 (48)
-àT −1 (m) = arg max u(m − a) +
 a
 
 θ
@@ -1184,26 +1249,35 @@ m1# = v̀0T −1 (0)
 
 is the cusp value of m at which the constraint makes the transition between binding and
 non-binding in period T − 1.
-Analogously to (49), defining
-#
+
+15
+
+Analogously to (49), defining
 "
-Z θ̄
+v0T −1 (a; ℘) ≡ ℘a−ρ + (1 − ℘)
+
+Z
+
+#
+
+θ̄
+
 −ρ
-0
-−ρ
-(cT (a + θ/(1 − ℘))) dFθ ,
+
+(cT (a + θ/(1 − ℘)))
+
+dFθ ,
+
 (50)
-vT −1 (a; ℘) ≡ ℘a + (1 − ℘)
+
 θ
 
 the Euler equation for the original consumer’s problem implies
 (m − a)−ρ = v0T −1 (a; ℘)
 
-14
-
 (51)
 
-with solution a∗T −1 (m; ℘). Now note that for any fixed a > 0, lim℘↓0 v0T −1 (a; ℘) = v̀0T −1 (a).
+with solution a∗T −1 (m; ℘). Now note that for any fixed a > 0, lim℘↓0 v0T −1 (a; ℘) = v̀0T −1 (a).
 Since the LHS of (49) and (51) are identical, this means that lim℘↓0 a∗T −1 (m; ℘) =
 à∗T −1 (m). That is, for any fixed value of m > m1# such that the consumer subject
 to the restraint would voluntarily choose to end the period with positive assets, the
@@ -1233,26 +1307,21 @@ lim κ̄ = 1,
 
 which makes sense because the marginal propensity to consume for a constrained restrained consumer is 1 by our definitions of ‘constrained’ and ‘restrained.’
 
-G Endogenous Gridpoints Solution Method
+H Endogenous Gridpoints Solution Method
 The model is solved using an extension of the method of endogenous gridpoints (Carroll
 (2006)): A grid of possible values of end-of-period assets ~a is defined, and at these points,
 marginal end-of-period-t value is computed as the discounted next-period expected
-marginal utility of consumption (which the Envelope theorem says matches expected
+
+16
+
+marginal utility of consumption (which the Envelope theorem says matches expected
 marginal value). The results are then used to identify the corresponding levels of
 consumption at the beginning of the period:11
-
-11
-
-The software can also solve a version of the model with explicit liquidity constraints, where the
-Envelope condition does not hold.
-
-15
-
-u0 (ct (~a)) = Rβ Et [u0 (Γt+1 ct+1 (Rt+1~a + ξt+1 ))]
-
+u0 (ct (~a)) = Rβ Et [u0 (Γt+1 ct+1 (Rt+1~a + ξt+1 ))]
 −1/ρ
-~ct ≡ ct (~a) = Rβ Et (Γt+1 ct+1 (Rt+1~a + ξt+1 ))−ρ
+
 .
+~ct ≡ ct (~a) = Rβ Et (Γt+1 ct+1 (Rt+1~a + ξt+1 ))−ρ
 
 (52)
 
@@ -1270,8 +1339,9 @@ t+1 Rt+1 ]
 00
 m
 = Rβ Et [u (Γt+1 ct+1 )Rct+1 ]
+a
 00
-cat = Rβ Et [u00 (Γt+1 ct+1 )Rcm
+ct = Rβ Et [u00 (Γt+1 ct+1 )Rcm
 t+1 ]/u (ct )
 
 (53)
@@ -1279,33 +1349,33 @@ t+1 ]/u (ct )
 and the marginal propensity to consume at the beginning of the period is obtained from
 the marginal propensity to have consumed by noting that, if we define m(a) = c(a) − a,
 c=m−a
-c + 1 = ma
-a
-
+ca + 1 = ma
 which, together with the chain rule ca = cm ma , yields the MPC from
 cm (ca + 1) = ca
 cm = ca /(1 + ca )
 and we call the vector of MPC’s at the m
 ~ t gridpoints ~κt .
 
-H The Terminal/Limiting Consumption Function
+I The Terminal/Limiting Consumption Function
 For any set of parameter values that satisfy the conditions required for convergence,
 the problem can be solved by setting the terminal consumption function to cT (m) =
 m and constructing {cT −1 , cT −2 , ...} by time iteration (a method that will converge to
 c(m) by standard theorems). But cT (m) = m is very far from the final converged
-consumption rule c(m),12 and thus many periods of iteration will likely be required to
+
+11
+
+The software can also solve a version of the model with explicit liquidity constraints, where the
+Envelope condition does not hold.
+
+17
+
+consumption rule c(m),12 and thus many periods of iteration will likely be required to
 obtain a candidate rule that even remotely resembles the converged function.
 A natural alternative choice for the terminal consumption rule is the solution to the
 perfect foresight liquidity constrained problem, to which the model’s solution converges
 (under specified parametric restrictions) as all forms of uncertainty approach zero (as
 discussed in the main text). But a difficulty with this idea is that the perfect foresight
-12
-
-Unless β ≈ +0.
-
-16
-
-liquidity constrained solution is ‘kinked:’ The slope of the consumption function changes
+liquidity constrained solution is ‘kinked:’ The slope of the consumption function changes
 discretely at the points {m1# , m2# , ...}. This is a practical problem because it rules out
 the use of derivatives of the consumption function in the approximate representation of
 c(m), thereby preventing the enormous increase in efficiency obtainable from a higherorder approximation.
@@ -1342,27 +1412,33 @@ n
 where n is chosen judgmentally in a way calculated to generate a good compromise
 between smoothness of the limiting consumption function c̆(m) and fidelity of that
 function to the c̊(m) (see the actual code for details).
-We thus define the terminal function as
+12
+
+Unless β ≈ +0.
+In practice, we calculate the first and second derivatives of c̊ and use piecewise polynomial
+approximation methods that match the function at these points.
+13
+
+18
+
+We thus define the terminal function as
 
 0
 
-m
 0 < m ≤ m#
 n
-(54)
-cT (m) = m0# < m < m# c̆(m)
+cT (m) = m0# < m < m#
 
  n
 m# < m
+
+m
+c̆(m)
 c̊(m)
-13
 
-In practice, we calculate the first and second derivatives of c̊ and use piecewise polynomial
-approximation methods that match the function at these points.
+(54)
 
-17
-
-Since the precautionary motive implies that in the presence of uncertainty the optimal
+Since the precautionary motive implies that in the presence of uncertainty the optimal
 level of consumption is below the level that is optimal without uncertainty, and since
 c̆(m) ≥ c̊(m), implicitly defining m = eµ (so that µ = log m), we can construct
 χt (µ) = log(1 − ct (eµ )/cT (eµ ))
@@ -1377,9 +1453,10 @@ Differentiating with respect to µ and dropping consumption function arguments y
   c0 c −c c0  
 − t Tc2 t T eµ
 T
+0
 
 (56)
-χ0t (µ) = 
+χt (µ) = 
 1 − ct /cT
 which can be solved for
 c0t = (ct c0T /cT ) − ((cT − ct )/m)χ0t .
@@ -1395,12 +1472,11 @@ ct (m) = 1 − eχt (log m) cT (m).
 Thus, having approximated χt , we can recover from it the level and derivative(s) of
 ct .
 
-H.1 Diagrams for the Perfect Foresight Model
+I.1 Diagrams for the Perfect Foresight Model
 The diagrams below illustrate the order of the several conditions in the text:
-PF-GIC
-
 Þ
 
+PF-GIC
 RIC
 
 Γ
@@ -1409,12 +1485,17 @@ FHWC
 R1/ρ Γ1−1/ρ
 FHWC
 and to further incorporate the Perfect Foresight Finite Value of Autarky Condition:
-PF-GIC
-Þ
-Γ
 R
 
+19
+
+Þ
+
 RIC
+
+PF-GIC
+
+Γ
 
 PF-FVAC
 
@@ -1426,13 +1507,9 @@ In both diagrams, an arrow means “<”, which indicates the annotated conditio
 so if a condition is violated, the corresponding arrow is to be reversed.
 These diagrams also keep track of the hierarchy among the conditions. For example,
 if the right vertical arrow in the second diagram is reversed, then the top right triangle
-R
-
-18
-
-
 
- implies PF-GIC. If the left vertical arrow is reversed, then 
+
+ implies PF-GIC. If the left vertical arrow is reversed, then 
 says PF-FVAC+ 
 FHWC
 RIC
@@ -1440,9 +1517,9 @@ RIC
 
 + PF-GIC implies 
 FHWC.
-
+R
 
-19
+20
 
 Table 1 Taxonomy of Perfect Foresight Liquidity Constrained Model Outcomes
 For constrained c̀ and unconstrained c̄ consumption functions
@@ -1495,7 +1572,7 @@ PF-GIC
 consumption function is degenerate; the next row indicates that whenever the PF-GIC holds, the constraint will
 bind in finite time.
 
-20
+21
 
 References
 Carroll, Christopher D. (2006): “The Method of Endogenous Gridpoints for
@@ -1511,6 +1588,6 @@ Stachurski, John, and Alexis Akira Toda (2019): “An Impossibility Theorem
 for Wealth in Heterogeneous-agent Models with Limited Heterogeneity,” Journal of
 Economic Theory, 182, 1–24.
 
-21
+22
 
 

@@ -50,7 +50,7 @@ shown to be a consequence of (
 PF-GIC
 and RIC). In this case, the consumer’s optimal
 behavior is easy to describe. We can calculate the point at which the unconstrained
-consumer would choose c = m from equation (??):
+consumer would choose c = m from equation (21):
 m# = (m# − 1 + h)κ
 m# (1 − κ) = (h − 1)κ
 
@@ -252,19 +252,19 @@ R −1
 
 If RIC Holds. When the RIC holds, rearranging (15) gives
 
-
  −n 
+
 ÞR
-R−1
 ÞΓ
+R−1
 −n
+lim
 −R
 +
 =∞
-lim
 n→∞
 1 − ÞR
-1 − ÞR R−1 − 1
+1 − Þ R R−1 − 1
 
 and for this to be true we need
 
@@ -300,25 +300,26 @@ m→∞
 If RIC Fails. Consider now the 
 RIC
 R
-
 
  −n 
+
+−1
+−1
 ÞR − 1)
-R−1 (Þ
-Þ R (R−1 − 1)
 ÞΓ
+ÞR (R − 1)
+R (Þ
 −n
 lim
 −
-R −
+R
+−
 = ∞.
-−1
-−1
 n→∞
-ÞR − 1) (R − 1)(Þ
+ÞR − 1) (R−1 − 1)(Þ
 ÞR − 1)
-(R − 1)(Þ
 ÞR − 1
+(R−1 − 1)(Þ
 
 (19)
 
@@ -424,23 +425,35 @@ zero.
 
 5
 
-
-1.015
-
+c
+1.016
+1.014
+1.012
 1.010
-
-1.005
-
+1.008
+1.006
+1.004
+1.002
 1.000
+0
+
+1
+
 2
+
+3
 
 4
 
+5
+
 6
+
+7
 
 8
 
-
+b
 
 
 

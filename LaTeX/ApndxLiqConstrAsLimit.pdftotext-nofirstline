@@ -54,7 +54,7 @@ position will be
 àT −1 (m) = max[0, à∗T −1 (m)],
 
 reflecting the inability of the restrained consumer to spend more than current resources,
-and note (as pointed out by Deaton (?)) that
+and note (as pointed out by Deaton (1991)) that
 −1/ρ
 m1# = v̀0T −1 (0)
 is the cusp value of m at which the constraint makes the transition between binding and
@@ -96,7 +96,7 @@ is the period T − 1 version of (1). But given equality of the period T − 1 c
 functions, backwards recursion of the same arguments demonstrates that the limiting
 consumption functions in previous periods are also identical to the constrained function.
 Note finally that another intuitive confirmation of the equivalence between the two
-problems is that our formula (??) for the maximal marginal propensity to consume
+problems is that our formula (98) for the maximal marginal propensity to consume
 satisfies
 lim κ̄ = 1,
 ℘↓0

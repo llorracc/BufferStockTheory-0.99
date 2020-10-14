@@ -1,7 +1,7 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\econtexRoot/LaTeX/onlyinsubfile.sty}
+\input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
 
-\onlyinsubfile{\externaldocument{\econtexRoot/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
   \subsection{Diagrams for the Perfect Foresight Model}
@@ -31,7 +31,7 @@ In both diagrams, an arrow means ``$<$'', which indicates the annotated conditio
 
 These diagrams also keep track of the hierarchy among the conditions. For example, if the right vertical arrow in the second diagram is reversed, then the top right triangle says \PFFVAC + \cncl{\FHWC} implies \PFGIC. If the left vertical arrow is reversed, then \cncl{\RIC} + {\PFGIC} implies \cncl{\FHWC}. 
 
-\onlyinsubfile{\bibliography{\econtexRoot/BufferStockTheory,economics}}
+%\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
 
 
 \end{document}

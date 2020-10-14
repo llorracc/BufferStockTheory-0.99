@@ -1,15 +1,7 @@
-cd Code/Python
-ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
+#!/bin/bash
 
-# Compile Latex files
-cd ../../
-for file in BufferStockTheory-NoAppendix BufferStockTheory BufferStockTheory-Slides; do
-	pdflatex "$file.tex"
-	bibtex "$file"
-	pdflatex "$file.tex"
-	pdflatex "$file.tex"
-done
+scriptDir="$(dirname "$0")"
 
-for file in BufferStockTheory-NoAppendix BufferStockTheory BufferStockTheory-Slides; do
-    rm "$file.aux" "$file.bbl" "$file.blg" "$file.dep" "$file.log" "$file.out"
-done
+./reproduce_math.sh
+./reproduce_text.sh
+

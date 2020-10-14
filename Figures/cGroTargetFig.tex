@@ -1,5 +1,15 @@
+% Could not get fonts to work right for svg version of this figure for web; so use png
+\hypertarget{cGroTargetFig}{}
+\ifthenelse{\boolean{ifWeb}}{
 \begin{figure}[tbp]
-\centerline{\includegraphics[width=6in]{\econtexRoot/\FigsRaw/cGroTargetFig}}
+\centerline{\includegraphics[width=6in]{\FigDir/cGroTargetFig.png}}
 \caption{Target $\mRat$, Expected Consumption Growth, and Permanent Income Growth}
 \label{fig:cGroTargetFig}
 \end{figure}
+}{
+\begin{figure}[tbp]
+\centerline{\includegraphics[width=6in]{\FigDir/cGroTargetFig}}
+\caption{Target $\mRat$, Expected Consumption Growth, and Permanent Income Growth}
+\label{fig:cGroTargetFig}
+\end{figure}
+}

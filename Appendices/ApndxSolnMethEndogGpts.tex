@@ -3,7 +3,7 @@
 \provideboolean{Metin}\setboolean{Metin}{true}\newcommand{\Metin}[2]{\ifthenelse{\boolean{Metin}}{\marginpar{\large Metin}\{{#1}\} $\rightarrow$ \{{#2}\}}{#2}}% PrivateMsg: Comments by Metin Uyanik
 
 \input{\LaTeXFiles/onlyinsubfile.sty}
-\onlyinsubfile{\externaldocument{\econtexRoot/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 %\begin{verbatimwrite}{\LaTeXFiles/ApndxSolnMethEndogGpts.tex}
@@ -99,13 +99,14 @@ evaluate the function is $\mRat=0$ but $\log 0 = -\infty$ which is difficult for
 %\end{verbatimwrite}%\input {\LaTeXFiles/ApndxSolnMethEndogGpts.tex}
 
 % When compiling main file, bibliography goes at the end of document, not at the end of this appendix
-\onlyinsubfile{\bibliography{\econtexRoot/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
 
 \end{document}
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
 % eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
 % eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t

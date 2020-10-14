@@ -1,10 +1,10 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
-\onlyinsubfile{\externaldocument{\econtexRoot/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 \let\TableWidth\relax
 \newlength\TableWidth
-\providecommand{\FigsRawApndx}{\econtexRoot/Code/Mathematica/Results/BufferStockTheory/Figures}
+\providecommand{\FigDir}{\econtexRoot/Code/Mathematica/Results/BufferStockTheory/Figures}
 
 \section{Perfect Foresight Liquidity Constrained Solution}\label{sec:ApndxLiqConstr}
 
@@ -205,6 +205,7 @@ Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
   \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR}{\PatR-1}-\frac{\Rnorm^{-1}}{\Rnorm^{-1}-1}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty \label{eq:FHWCfails} 
   % \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}-\frac{\Rnorm^{-1}(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty. 
 \end{align}
+\hypertarget{PFGICHoldsFHWCFailsRICFailsDiscuss}{}
 
 \noindent {\bf If \RIC~Holds}.  When the \RIC~holds, rearranging \eqref{\localorexternallabel{eq:FHWCfails}} gives
 \begin{eqnarray*}
@@ -270,8 +271,8 @@ value, and consequently the consumption function is {\it not} the
 degenerate $\grave{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
 
 
-% \input{\FigsRawApndx/PFGICHoldsFHWCFailsRICFails}
-\input{\econtexRoot/\FigsTeX/PFGICHoldsFHWCFailsRICFails.tex}
+% \input{\FigDir/PFGICHoldsFHWCFailsRICFails}
+\input{\FigDir/PFGICHoldsFHWCFailsRICFails.tex}
 
 
 \begin{comment}
@@ -353,7 +354,7 @@ in the absence of uncertainty.
 \cite{MaTodaMPC} characterize the limits of MPC in a more general framework that allows for non-CRRA utility as well as capital and labor income risks in a Markovian setting, and
 find that in that much more general framework the limiting MPC is also zero.
 
-\onlyinsubfile{\bibliography{\econtexRoot/BufferStockTheory,economics}}
+\onlyinsubfile{\pagebreak\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
 \end{document}
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
