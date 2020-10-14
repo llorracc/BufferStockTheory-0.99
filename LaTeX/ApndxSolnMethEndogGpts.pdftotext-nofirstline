@@ -1,9 +1,9 @@
-The model is solved using an extension of the method of endogenous gridpoints (?): A
-grid of possible values of end-of-period assets ~a is defined, and at these points, marginal
-end-of-period-t value is computed as the discounted next-period expected marginal
-utility of consumption (which the Envelope theorem says matches expected marginal
-value). The results are then used to identify the corresponding levels of consumption at
-the beginning of the period:1
+The model is solved using an extension of the method of endogenous gridpoints (Carroll
+(2006)): A grid of possible values of end-of-period assets ~a is defined, and at these points,
+marginal end-of-period-t value is computed as the discounted next-period expected
+marginal utility of consumption (which the Envelope theorem says matches expected
+marginal value). The results are then used to identify the corresponding levels of
+consumption at the beginning of the period:1
 u0 (ct (~a)) = Rβ Et [u0 (Γt+1 ct+1 (Rt+1~a + ξt+1 ))]
 
 −1/ρ
@@ -45,11 +45,16 @@ cm = ca /(1 + ca )
 and we call the vector of MPC’s at the m
 ~ t gridpoints ~κt .
 
-References
-
 1
 
 The software can also solve a version of the model with explicit liquidity constraints, where the
 Envelope condition does not hold.
+
+References
+Carroll, Christopher D. (2006): “The Method of Endogenous Gridpoints for
+Solving Dynamic Stochastic Optimization Problems,” Economics Letters, 91(3), 312–
+320, http://econ.jhu.edu/people/ccarroll/EndogenousGridpoints.pdf.
+
+2
 
 
