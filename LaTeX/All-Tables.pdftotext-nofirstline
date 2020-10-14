@@ -144,7 +144,11 @@ Absolute Patience Factor
 
 ÞΓ
 
-≡ Þ /Γ
+≡ Þ/Γ
+
+i
+
+≡
 
 Return Patience Factor
 PF Growth Patience Factor
@@ -152,20 +156,15 @@ Growth Patience Factor
 Finite Value of Autarky Measure
 
 ÞR
+ÞΓ
 
 ≡ Þ /R
 
 0.961
 
-ÞΓ
-
-≡ Þ/Γ
+≡ Þ /Γ
 
 0.980
-
-i
-
-≡
 
 βΓ1−ρ ψ 1−ρ
 
@@ -226,14 +225,14 @@ Growth Impatience Conditions
 PF-GIC
 Þ /Γ < 1
 
-GIC
-Þ E[ψ −1 ]/Γ < 1
-
 Guarantees that for an unconstrained
 consumer, the ratio of consumption to
 permanent income will fall over time. For
 a constrained consumer, guarantees the
 constraint will eventually be binding.
+
+GIC
+Þ E[ψ −1 ]/Γ < 1
 
 By Jensen’s inequality, stronger than
 the PF-GIC.
@@ -256,11 +255,11 @@ The discounted utility of constrained
 consumers who spend their permanent
 income each period should be finite.
 
+2
+
 By Jensen’s inequality, stronger than the
 PF-FVAC because for ρ > 1 and
 nondegenerate ψ, E[ψ 1−ρ ] > 1.
-
-2
 
 Table 4 Sufficient Conditions for Nondegenerate‡ Solution
 Model
@@ -283,39 +282,29 @@ RIC prevents c̄(m) = 0
 FHWC prevents c̄(m) = ∞
 κ(m) = κ
 If RIC, limm→∞ c̊(m) = c̄(m), limm→∞ κ̊
- lim
 
-κ
+
+κ(m) = 0
 If 
-RIC,
-κ̊
-(m)
-=
-0
-m→∞
+RIC, limm→∞ κ̊
 κ(m) = κ
 FHWC ⇒ limm→∞ c̊(m) = c̄(m), limm→∞ κ̊
 
 
 
-κ
+κ(m) = κ
 FHWC+RIC
-⇒
-lim
-κ̊
-(m)
-=
-κ
+⇒ limm→∞ κ̊
 
-m→∞
- ⇒ lim
 
- 
+
+
+
+
+
 κ(m) = 0
-FHWC+
-RIC
+FHWC+RIC ⇒ limm→∞ κ̊
 
-m→∞ κ̊
 GIC guarantees finite target wealth ratio
 FVAC is stronger than PF-FVAC
 WRIC is weaker than RIC
@@ -324,8 +313,8 @@ WRIC is weaker than RIC
 
 For feasible m, the limiting consumption function defines the unique value of c satisfying 0 < c < ∞. ◦ RIC,
 ((( and RIC, but is identical to the
-FHWC are necessary as well as sufficient. ∗ Solution also exists for (
 PF-GIC
+FHWC are necessary as well as sufficient. ∗ Solution also exists for (
 unconstrained model’s solution for feasible m ≥ 1.
 
 Table 5 Taxonomy of Perfect Foresight Liquidity Constrained Model Outcomes
@@ -335,9 +324,7 @@ Subcondition
 Math
 Outcome, Comments or Results
 (
-(
-(
-(
+(((
 (
 PF-GIC
 1 < Þ /Γ Constraint never binds for m ≥ 1
@@ -346,8 +333,8 @@ and RIC
 FHWC holds (R > Γ); c̀(m) = c̄(m) for m ≥ 1
 
 
-and 
-RIC
+
+and RIC
 1 < Þ /R
 c̀(m) is degenerate: c̀(m) = 0
 PF-GIC
@@ -361,9 +348,11 @@ limm↑∞ c̄(m) − c̀(m) = 0
 limm↑∞ κ̀
 
 
-
-and 
-RIC
+
+
+
+
+and RIC
 1 < Þ /R 
 FHWC
 κ(m) = 0

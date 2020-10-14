@@ -26,7 +26,7 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{October 13, 2020}
+\renewcommand{\forcedate}{October 14, 2020}
 \date{\forcedate}
 
 \maketitle 
@@ -72,6 +72,13 @@
 
 \titlepagefinish
 
+% \begin{Web}
+% If web version, then just incorporate thanks at beginning of text
+% instead of in frontmatter
+\ifthenelse{\boolean{ifWeb}}{\medskip \noindent {\tiny
+    \thankstext \medskip \medskip \medskip
+  }}{\pagebreak 
+} % \end{Web}
 
 % \begin{Web}
 %   If web version, then just incorporate thanks at beginning of text
