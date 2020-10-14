@@ -72,6 +72,13 @@
 
 \titlepagefinish
 
+% \begin{Web}
+% If web version, then just incorporate thanks at beginning of text
+% instead of in frontmatter
+\ifthenelse{\boolean{ifWeb}}{\medskip \noindent {\tiny
+    \thankstext \medskip \medskip \medskip
+  }}{\pagebreak 
+} % \end{Web}
 
 % \begin{Web}
 %   If web version, then just incorporate thanks at beginning of text
