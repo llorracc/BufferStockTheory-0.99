@@ -30,11 +30,11 @@ resources to the next period at return $\Rfree$:\footnote{The point at
   will be defined by
   $\grave{\cFunc}(\mRat)=\min[\mRat,\cRat_{\#}+(\mRat-\cRat_{\#})\MinMPC
   ]$.}
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}    
   \\ 1  & < \Rfree \Discount \PGro^{-\CRRA}
   \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerPFGICFailsEnd}.
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 Similar logic shows that under these circumstances the constraint will
 never bind at $\mRat=1$ for a constrained consumer with a finite horizon of $n$
@@ -44,9 +44,9 @@ unconstrained case examined in the main text.
 If the \RIC~fails ($1 < \PatR$) while the finite human wealth condition
 holds, the limiting value of this consumption function as $n \uparrow
 \infty$ is the degenerate function
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \grave{\cFunc}_{T-n}(\mRat)  & = 0 (\bRat_{t}+\hRat).
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 (that is, consumption is zero for any level of human or nonhuman wealth).
 
 If the \RIC~fails and the \FHWC~fails, human wealth limits to $\hRat =
@@ -67,11 +67,11 @@ the \RIC~(and the \FHWC~can be shown to be a consequence of \cncl{\PFGIC} and \R
 this case, the consumer's optimal behavior is easy to describe.  We
 can calculate the point at which the unconstrained consumer would
 choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}}:
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \mRat_{\#}  & = (\mRat_{\#}-1+\hRat)\MinMPC
   \\ \mRat_{\#}(1-\MinMPC)  & = (\hRat - 1)\MinMPC
   \\ \mRat_{\#}  & = (\hRat - 1)\left(\frac{\MinMPC}{1-\MinMPC}\right)
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 which (under these assumptions) satisfies $0 < \mRat_{\#} < 1$.\footnote{Note that $0 < \mRat_{\#}$ is implied by \RIC~and $ \mRat_{\#}<1$ is implied by \cncl{\PFGIC}.}  For
 $\mRat < \mRat_{\#}$ the unconstrained consumer would choose to
 consume more than $\mRat$; for such $\mRat$, the constrained consumer
@@ -111,24 +111,24 @@ spend more (because constrained), and will not choose to spend less
 We can construct the entire `prehistory' of this consumer leading up to $t$ as follows.
 Maintaining the assumption that the constraint has never bound in the past,
 $\cRat$ must have been growing according to $\PatPGro$, so consumption $n$ periods in the past must have been
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \cRat_{\#}^{n}  & = \PatPGro^{-n} \cRat_{t} = \PatPGro^{-n}. \label{eq:cPreHist}
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 The PDV of consumption from $t-n$ until $t$ can thus be computed as
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ ... + (\Pat/\Rfree)^{n}) \notag
   % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ ... + (\PatPGro/\Rnorm)^{n}) \notag
   \\  & = \cRat_{\#}^{n}(1+\PatR+ ... + \PatR^{n}) \notag
   \\  & = \PatPGro^{-n}\left(\frac{1-\PatR^{n+1}}{1-\PatR}\right) \label{PDVc}
   \\  & = \left(\frac{\PatPGro^{-n}-\PatR}{1-\PatR}\right) 
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 and note that the consumer's human wealth between $t-n$ and $t$ (the relevant
 time horizon, because from $t$ onward the consumer will be constrained
 and unable to access post-$t$ income) is
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \hRat_{\#}^{n}  & = 1+...+\Rnorm^{-n}
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 while the intertemporal budget constraint says
 \begin{eqnarray*}
   \mathbb{C}_{t-n}^{t}  & = \bRat_{\#}^{n}+\hRat_{\#}^{n}
@@ -137,9 +137,9 @@ from which we can solve for the $\bRat_{\#}^{n}$ such that
 the consumer with $\bRat_{t-n} = \bRat_{\#}^{n}$ would
 unconstrainedly plan (in period $t-n$) to arrive in period $t$ with
 $\bRat_{t}=0$:
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \bRat_{\#}^{n} & =  \mathbb{C}_{t-n}^{t} - \overbrace{\left(\frac{1-\Rnorm^{-(n+1)}}{1-\Rnorm^{-1}}\right)}^{\hRat_{\#}^{n}} \label{eq:bPound}.
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 Defining $\mRat_{\#}^{n}=\bRat_{\#}^{n}+1$, consider the function
 $\grave{\cFunc}(\mRat)$ defined by linearly connecting the points
@@ -158,9 +158,9 @@ In order for a unique consumption function to be defined by this
 sequence \eqref{\localorexternallabel{eq:bPound}} for the entire domain of positive real
 values of $b$, we need $\bRat_{\#}^{n}$ to become arbitrarily large with
 $n$.  That is, we need
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{n \rightarrow \infty} \bRat_{\#}^{n} = \infty. \label{eq:bToInfty}
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 \subsubsection{If \FHWC~Holds}
 The \FHWC~requires $\Rnorm^{-1} < 1$, in which case the second term in \eqref{\localorexternallabel{eq:bPound}} limits to a constant as $n \uparrow \infty$, and \eqref{\localorexternallabel{eq:bToInfty}} reduces to a requirement that
@@ -176,9 +176,9 @@ function and the unconstrained consumption function becomes
 vanishingly small, because the date at which the constraint binds
 becomes arbitrarily distant, so the effect of that constraint on current
 behavior shrinks to nothing.  That is,
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{m \rightarrow \infty}\grave{\cFunc}(m) - \bar{\cFunc}(m) = 0.
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 % Finally, the main text shows that the \PFGIC~is a stronger condition than the PF-FVR; that is, \PFGIC~$\Rightarrow$ PF-FVR.
 
@@ -199,12 +199,12 @@ If the \FHWC~fails, matters are a bit more complex.
 
 Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
 
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   % \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \\
   \lim_{n \rightarrow \infty} \left(\frac{\Rnorm^{-n}\PatR-\PatPGro^{-n}}{\PatR-1}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \notag
   \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR}{\PatR-1}-\frac{\Rnorm^{-1}}{\Rnorm^{-1}-1}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty \label{eq:FHWCfails} 
   % \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}-\frac{\Rnorm^{-1}(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty. 
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 \hypertarget{PFGICHoldsFHWCFailsRICFailsDiscuss}{}
 
 \noindent {\bf If \RIC~Holds}.  When the \RIC~holds, rearranging \eqref{\localorexternallabel{eq:FHWCfails}} gives
@@ -219,17 +219,17 @@ and for this to be true we need
 \end{eqnarray*}
 which is merely the \RIC~again.  So the problem has a solution if the \RIC~holds.  Indeed,
 we can even calculate the limiting MPC from
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{n \rightarrow \infty} \MPC^{n}_{\#}  & = \lim_{n \rightarrow \infty} \left(\frac{\cRat_{\#}^{n}}{\bRat_{\#}^{n}}\right) \label{eq:MPCConstrLim}
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 which with a bit of algebra\footnote{
   Calculate the limit of
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \left(\frac{\PatPGro^{-n}}{\PatPGro^{-n}/(1-\PatR) - (1-\Rnorm^{-1}\Rnorm^{-n})/(1-\Rnorm^{-1})}\right)  & = \left(\frac{1}{1/(1-\PatR) + \Rnorm^{-n}\Rnorm^{-1}/(1-\Rnorm^{-1})}\right)
-  \end{align}} can be shown to asymptote to the MPC in the perfect foresight model:\footnote{For an example of this configuration of parameters, see the notebook \texttt{doApndxLiqConstr.nb} in the Mathematica software  archive.}
-\begin{align}
+  \end{aligned}\end{gathered}\end{equation}} can be shown to asymptote to the MPC in the perfect foresight model:\footnote{For an example of this configuration of parameters, see the notebook \texttt{doApndxLiqConstr.nb} in the Mathematica software  archive.}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{m \rightarrow \infty} \grave{\pmb{\MPC}}(\mRat)  & = 1-\PatR.
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 
 \noindent {\bf If \RIC~Fails}.  Consider now the \cncl{\RIC} case, $\PatR > 1$.  We can rearrange \eqref{\localorexternallabel{eq:FHWCfails}}as
 \begin{eqnarray}
@@ -263,9 +263,9 @@ Consequently, while $\lim_{n \uparrow \infty} \bRat_{\#}^{n} = \infty$, the limi
 Thus, surprisingly, the problem has a well defined solution with
 infinite human wealth if the \RIC~fails.  It remains true that \cncl{\RIC}
 implies a limiting MPC of zero,
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \lim_{\mRat \rightarrow \infty} \grave{\pmb{\MPC}}(\mRat)   & = 0,
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 but that limit is approached gradually, starting from a positive
 value, and consequently the consumption function is {\it not} the
 degenerate $\grave{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
@@ -289,32 +289,32 @@ degenerate $\grave{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFa
     \lim_{n \rightarrow \infty} \Rnorm^{n}\mathbb{C}_{t-n}^{t}   & =  \left(\frac{-\PatR}{1-\PatR}\right)
   \end{eqnarray*}
   which means that in the limit
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \lim_{n \rightarrow \infty} \Rnorm^{n}\bRat_{\#}^{n}  & =  \left(\frac{-\PatR}{1-\PatR}\right) - \Rnorm^{n}\left(\frac{1-\Rnorm^{-1}\Rnorm^{-n}}{1-\Rnorm^{-1}}\right) %\label{eq:bPoundLim}
     \\  & = \left(\frac{-\PatR}{1-\PatR} + \frac{-\Rnorm^{-1}}{1-\Rnorm^{-1}}\right) - \left(\frac{\Rnorm^{n}}{1-\Rnorm^{-1}}\right)
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   so we can solve for the limiting $n$ as a function of $\bRat$ via
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \bRat + \left(\frac{1}{1-\Rnorm^{-1}}\right)  & = \Rnorm^{-\hat{n}}\left(\frac{-\PatR}{1-\PatR} + \frac{-\Rnorm^{-1}}{1-\Rnorm^{-1}}\right)
     \\ \log \left(\bRat + \left(\frac{1}{1-\Rnorm^{-1}}\right)\right)  & = -\hat{n} \log \Rnorm + \log \left(\frac{-\PatR}{1-\PatR} + \frac{-\Rnorm^{-1}}{1-\Rnorm^{-1}}\right)
     \\ \frac{\log \left(\frac{-\PatR}{1-\PatR} + \frac{-\Rnorm^{-1}}{1-\Rnorm^{-1}}\right)-\log \left(\bRat + \left(\frac{1}{1-\Rnorm^{-1}}\right)\right)}{\log \Rnorm }  & = \hat{n}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   which defines $\hat{\nFunc}(\bRat)$ which yields an approximation to the
   value of $n$ associated with a given $\bRat$.
 
   We can directly compute
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \nabla  & = \bRat - \bRat_{\#}^{\hat{n}}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   and can obtain a better appxoimation to the correct $n$ from
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \hat{\hat{n}} 
-    & = \end{align}
+    & = \end{aligned}\end{gathered}\end{equation}
 
   We can obtain a more exact approximation to the correct ${n}$ by defining
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \nabla(n) \equiv   \lim_{n \rightarrow \infty}\Rnorm^{n}\mathbb{C}_{t-n}^{t}-\Rnorm^{n}\mathbb{C}_{t-n}^{t}  & =  \left(\frac{\PatR^{-n}}{1-\PatR}\right).
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   from which we can obtain the difference between the approximate and the exact $\mathbb{C}_{t-n}^{t}$ as $\Rnorm^{-n}\nabla(n)$ and
 
 
@@ -328,9 +328,9 @@ degenerate $\grave{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFa
   Our strategy, in this case, is
 
   The limiting difference can be obtained by realizing that
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \nabla(n) \equiv   \lim_{n \rightarrow \infty}\Rnorm^{n}\mathbb{C}_{t-n}^{t}-\Rnorm^{n}\mathbb{C}_{t-n}^{t}  & =  \left(\frac{\PatR^{-n}}{1-\PatR}\right).
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   and so
 
 \end{comment}
