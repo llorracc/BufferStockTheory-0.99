@@ -1,4 +1,4 @@
-To show that (6) defines a sequence of continuously differentiable strictly increasing concave functions {cT , cT −1 , ..., cT −k }, we start with a definition. We will say
+To show that (??) defines a sequence of continuously differentiable strictly increasing concave functions {cT , cT −1 , ..., cT −k }, we start with a definition. We will say
 that a function n(z) is ‘nice’ if it satisfies
 1. n(z) is well-defined iff z > 0
 2. n(z) is strictly increasing
@@ -30,7 +30,7 @@ vt (m, c) = u(c) + vt (m − c)
 (2)
 
 which is C3 since vt and u are both C3 , and note that our problem’s value function
-defined in (6) can be written as
+defined in (??) can be written as
 vt (m) = max vt (m, c).
 c
 
@@ -52,7 +52,7 @@ ct (m) = arg max vt (m, c)
 
 0<c<m
 
-exists and is unique, and (6) has an internal solution that satisfies
+exists and is unique, and (??) has an internal solution that satisfies
 u0 (ct (m)) = v0t (m − ct (m)).
 
 (5)
@@ -262,7 +262,7 @@ t+1 (ât Rt+1 + ξt+1 )
 
 }
 
-which by imposing PF-FVAC (equation (27), which says i < 1) can be rewritten
+which by imposing PF-FVAC (equation (??), which says i < 1) can be rewritten
 as:
 h
 
@@ -283,7 +283,7 @@ But since η is an arbitrary constant that we can pick, the proof thus reduces t
 1
 
 For a fixed mt , recall that mt+1 is just a function of ct and the stochastic shocks.
-Section 2.7 proves existence of a continuously differentiable consumption function, which
+Section ?? proves existence of a continuously differentiable consumption function, which
 implies the existence of a corresponding continuously differentiable assets function.
 3
 The remainder of the proof could be reformulated using the second-to-last line at a small
@@ -395,15 +395,15 @@ i(1 − ℘)ρ θ1−ρ
 (11)
 1−i
 which is a positive finite number under our assumptions.
-The proof that T defines a contraction mapping under the conditions (37) and
-(33) is now complete.
+The proof that T defines a contraction mapping under the conditions (??) and
+(??) is now complete.
 
 3.1 T and v
 In defining our operator T we made the restriction κmt ≤ ct ≤ κ̄mt . However,
-in the discussion of the consumption function bounds, we showed only (in (38))
+in the discussion of the consumption function bounds, we showed only (in (??))
 that κt mt ≤ ct (mt ) ≤ κ̄t mt . (The difference is in the presence or absence of time
 subscripts on the MPC’s.) We have therefore not proven (yet) that the sequence
-of value functions (6) defines a contraction mapping.
+of value functions (??) defines a contraction mapping.
 Fortunately, the proof of that proposition is identical to the proof above, except
 that we must replace κ̄ with κ̄T −1 and the WRIC must be replaced by a slightly
 stronger (but still quite weak) condition. The place where these conditions have
@@ -413,7 +413,7 @@ a sufficient stronger condition is
 (℘β)1/(1−ρ) (1 − κ̄T −1 ) > 1
 (℘β)1/(1−ρ) (1 − (1 + ℘1/ρÞ R )−1 ) > 1
 
-where we have used (36) for κ̄T −1 (and in the second step the reversal of the
+where we have used (??) for κ̄T −1 (and in the second step the reversal of the
 inequality occurs because we have assumed ρ > 1 so that we are exponentiating
 both sides by the negative number 1 − ρ). To see that this is a weak condition,
 note that for small values of ℘ this expression can be further simplified using
@@ -443,7 +443,7 @@ for the original problem define a contraction mapping with a unique v(m). But
 since limn→∞ κT −n = κ and limn→∞ κ̄T −n = κ̄, it must be the case that the v(m)
 toward which these vT −n ’s are converging is the same v(m) that was the endpoint
 of the contraction defined by our operator T. Thus, under our slightly stronger
-(but still quite weak) conditions, not only do the value functions defined by (6)
+(but still quite weak) conditions, not only do the value functions defined by (??)
 converge, they converge to the same unique v defined by T.4
 
 References

@@ -129,7 +129,7 @@ consumption functions, backwards recursion of the same arguments demonstrates
 that the limiting consumption functions in previous periods are also identical to
 the constrained function.
 Note finally that another intuitive confirmation of the equivalence between the
-two problems is that our formula (98) for the maximal marginal propensity to
+two problems is that our formula (??) for the maximal marginal propensity to
 consume satisfies
 lim κ̄ = 1,
 ℘↓0
