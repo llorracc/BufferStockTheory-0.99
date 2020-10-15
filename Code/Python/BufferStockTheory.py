@@ -24,23 +24,7 @@
 #     name: python
 #     nbconvert_exporter: python
 #     pygments_lexer: ipython3
-#     version: 3.6.9
-#   latex_envs:
-#     LaTeX_envs_menu_present: true
-#     autoclose: false
-#     autocomplete: false
-#     bibliofile: biblio.bib
-#     cite_by: apalike
-#     current_citInitial: 1
-#     eqLabelWithNumbers: true
-#     eqNumInitial: 1
-#     hotkeys:
-#       equation: Ctrl-E
-#       itemize: Ctrl-I
-#     labels_anchors: false
-#     latex_user_defs: false
-#     report_style_numbering: false
-#     user_envs_cfg: false
+#     version: 3.7.4
 # ---
 
 # %% [markdown]
@@ -126,8 +110,8 @@ from HARK.utilities import plotFuncsDer, plotFuncs
 # | $\rho$ | Coeﬃcient of Relative Risk Aversion| $\texttt{CRRA}$ | 2 |
 # | $\wp$ | Probability of Unemployment | $\texttt{UnempPrb}$ | 0.005 |
 # | $\theta^{\large u}$ | Income when Unemployed | $\texttt{IncUnemp}$ | 0. |
-# | $\psiStd$ | Std Dev of Log Permanent Shock| $\texttt{PermShkStd}$ | 0.1 |
-# | $\ThetaStd$ | Std Dev of Log Transitory Shock| $\texttt{TranShkStd}$ | 0.1 |
+# | $\sigma_\psi$ | Std Dev of Log Permanent Shock| $\texttt{PermShkStd}$ | 0.1 |
+# | $\sigma_\theta$ | Std Dev of Log Transitory Shock| $\texttt{TranShkStd}$ | 0.1 |
 
 # %% [markdown]
 # For a microeconomic consumer who begins period $t$ with __**m**__arket resources boldface $\mathbf{m}_{t}$ (=net worth plus current income), the amount that remains after __**c**__onsumption of $\mathbf{c}_{t}$ will be end-of-period __**A**__ssets $\mathbf{a}_{t}$, 
@@ -466,7 +450,7 @@ plt.arrow(2.2,1.2,0.3,-0.05,head_width= 0.02,width=0.001,facecolor='black',lengt
 make('FVACnotGIC') # Save figures (if appropriate/possible)
 
 # %% [markdown]
-# In the [interactive dashboard](#interactive-dashboard), see what happens as changes in the time preference rate (or changes in risk $\PsiStd$) change the consumer from _growth-patient_ $(\Phi > \tilde{\Gamma})$ to _growth-impatient_ ($\Phi < \tilde{\Gamma}$)
+# In the [interactive dashboard](#interactive-dashboard), see what happens as changes in the time preference rate (or changes in risk $\sigma_\Psi$) change the consumer from _growth-patient_ $(\Phi > \tilde{\Gamma})$ to _growth-impatient_ ($\Phi < \tilde{\Gamma}$)
 
 # %%
 # Conditions can also be checked without solving the model
@@ -494,9 +478,9 @@ baseAgent_Inf.unpack('cFunc')
 # Conveniently, this can be computed without knowing the _level_ of the consumer's income:
 #
 # \begin{eqnarray}
-# \mathbb{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}] & = & \mathbb{E}_{t}\left[\frac{\mathbf{p}_{t+1}\cRat_{t+1}(m_{t+1})}{\mathbf{p}_{t}\cRat_{t}(m_{t})}\right] \\ 
-# & = & \mathbb{E}_{t}\left[\frac{\Gamma \psi_{t+1} \mathbf{p}_{t}}{\mathbf{p}_{t}}\frac{\cRat_{t+1}(m_{t+1})}{\cRat_{t}(m_{t})}\right] \\
-# & = & \mathbb{E}_{t}\left[\frac{\Gamma \psi_{t+1} \cRat_{t+1}(m_{t+1})}{\cRat_{t}(m_{t})}\right] 
+# \mathbb{E}_{t}[\mathbf{c}_{t+1}/\mathbf{c}_{t}] & = & \mathbb{E}_{t}\left[\frac{\mathbf{p}_{t+1}c_{t+1}(m_{t+1})}{\mathbf{p}_{t}c_{t}(m_{t})}\right] \\ 
+# & = & \mathbb{E}_{t}\left[\frac{\Gamma \psi_{t+1} \mathbf{p}_{t}}{\mathbf{p}_{t}}\frac{c_{t+1}(m_{t+1})}{c_{t}(m_{t})}\right] \\
+# & = & \mathbb{E}_{t}\left[\frac{\Gamma \psi_{t+1} c_{t+1}(m_{t+1})}{c_{t}(m_{t})}\right] 
 # \end{eqnarray}
 #
 
@@ -920,5 +904,3 @@ plt.text(mPlotMax-1+0.05,1,r"$b$",fontsize = 26)
 plt.text(mPlotMin-1,1.017,r"$c$",fontsize = 26)
 plt.xlim(mPlotMin-1,mPlotMax-1)
 plt.ylim(mPlotMin,1.016)
-
-make('PFGICHoldsFHWCFailsRICFails')
