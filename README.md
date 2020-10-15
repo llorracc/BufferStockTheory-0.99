@@ -2,6 +2,8 @@
 Christopher D. Carroll
 Johns Hopkins University
 
+[![DOI](https://zenodo.org/badge/304124725.svg)](https://zenodo.org/badge/latestdoi/304124725)
+
 [![econ-ark.org](https://img.shields.io/badge/Powered%20by-Econ--ARK-3e8acc.svg)](https://econ-ark.org/)
 
 Online resources related to this paper:
