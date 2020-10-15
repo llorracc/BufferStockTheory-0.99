@@ -49,7 +49,7 @@ FHWC can be shown to be a consequence of (
 PF-GIC
 and RIC). In this case, the
 consumer’s optimal behavior is easy to describe. We can calculate the point at
-which the unconstrained consumer would choose c = m from equation (??):
+which the unconstrained consumer would choose c = m from equation (21):
 m# = (m# − 1 + h)κ
 m# (1 − κ) = (h − 1)κ
 
