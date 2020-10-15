@@ -60,7 +60,7 @@
 \end{authorsinfo}
 
 \newcommand{\thankstext}{All figures and numerical results \href{https://econ-ark.github.io/nbreproduce}{can be automatically reproduced} using the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit, which can be cited per our references (\cite{carroll_et_al-proc-scipy-2018}); for reference to the toolkit itself see \href{https://econ-ark.org/acknowledging/}{Acknowleding Econ-ARK}.  Thanks to the \href{https://consumerfinance.gov}{Consumer Financial Protection Bureau} for funding the original creation of the \href{https://econ-ark.org}{Econ-ARK} toolkit; and to the \href{https://sloan.org}{Sloan Foundation} for funding Econ-ARK's \href{https://sloan.org/grant-detail/8071}{extensive further development} that brought it to the point where it could be used for this project.  The toolkit can be cited with its digital object identifier, \href{https://doi.org/10.5281/zenodo.1001067}{10.5281/zenodo.1001067}, as is done in the paper's own references as \cite{carroll_et_al-proc-scipy-2018}.  
-  Thanks to James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Metin Uyanik, Mateo Velasquez-Griraldo, Weifeng Wu, Xudong Zheng,  and Jiaxiong Yao for comments on earlier versions of this paper, John Boyd for help
+  Thanks to James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Metin Uyanik, Mateo Vel\'asquez-Giraldo, Weifeng Wu, Xudong Zheng,  and Jiaxiong Yao for comments on earlier versions of this paper, John Boyd for help
   in applying his weighted contraction mapping theorem, Ryoji
   Hiraguchi for extraordinary mathematical insight that improved the
   paper greatly, David Zervos for early guidance to the literature,
@@ -946,7 +946,7 @@ limiting MPC for any finite value of $\mRat$.  Note
 the close parallel to the conclusion in the perfect foresight
 liquidity constrained model in the
 \{\PFGIC,\cncl{\RIC}\} case (for detailed analysis of this
-case see the appendix).  There, too, the tension between infinite human wealth
+case see appendix \ref{sec:ApndxLiqConstr}).  There, too, the tension between infinite human wealth
 and pathological patience was resolved with a nondegenerate consumption function
 whose limiting MPC was zero.
 
@@ -1389,7 +1389,7 @@ The consumption function exists because we have imposed the conditions (the $\WR
 Section~\ref{sec:cExists} shows that for all $t$, $\aRat_{t-1} = {\mRat}_{t-1} -  \cRat_{t-1} > 0$.  Since ${\mRat}_{t}= {\aRat}_{t-1} \Rnorm_{t} + \yRat_{t}$, even if $\yRat_{t}$ takes on its minimum value of 0, $\aRat_{t-1} \Rnorm_{t} > 0$, since both $\aRat_{t-1}$ and $\Rnorm_{t}$ are strictly positive under our foregoing assumptions.  With $\mRat_{t} > 0$, the ratio $\Ex_t [{\mRat}_{t+1}/\mRat_t]$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
 
 \subsubsection{Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t]=1$.}
-Section~\ref{subsec:LimitsAsmtToZero} shows that $\lim_{\mRat_t \downarrow 0} 
+Section~\ref{subsec:LimitsAsmtToZero} \textcolor{red}{(that section shows that \textbf{consumption} growth goes to infinity. Might want to clarify or say this is just a consequence of $\lim_{\mRat \rightarrow 0} c(\mRat)=0$ and the non-zero probability of positive income)} shows that $\lim_{\mRat_t \downarrow 0} 
 \Ex_t [{\mRat}_{t+1}/\mRat_t] = \infty$, while the limit as $\mRat_{t}$ goes 
 to infinity is
 \begin{align}
@@ -1416,18 +1416,18 @@ Now define \providecommand{\difFunc}{\pmb{\zeta}} $\difFunc(\mRat_t) \equiv
                           1,\nonumber
 \end{align}
 so that $\difFunc(\mTarg)=0$. Our goal is to prove that $\difFunc(\bullet)$ is strictly 
-decreasing on $(0,\infty)$ since
+decreasing on $(0,\infty)$ using the fact that
 \begin{align}
   \difFunc^{\prime}(\mRat_{t}) \equiv  \left( \frac{d}{d\mRat_{t}}\right) \difFunc(\mRat_t)  & = \Ex_{t}\left[
                                                                                                \left( \frac{d}{d\mRat_{t}}\right) \left( 
                                                                                                {\Rnorm}_{t+1}(\mRat_{t}-\cFunc(\mRat_{t}))+%
                                                                                                {\tShkAll}_{t+1} - {\mRat}_t\right) \right] \label{eq:difFuncDecreases} \\
-                                                                                             & = \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1  \notag
+                                                                                             & = \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1.  \notag
 \end{align}
 
 Note that the statement of theorem~\ref{thm:target} did not require the {\RIC} to hold.  Now, we show that (given our other assumptions) $\difFunc^{\prime}(\mRat)$ is decreasing (but for different reasons) whether the {\RIC} holds or fails (\cncl{\RIC}).
 
-\textbf{If {\RIC} holds}.   We show elsewhere that if the {\RIC} holds then $0 < \MinMPC < \cFunc^{\prime}(\mRat_{t}) < 1$ so that 
+\textbf{If {\RIC} holds}.   We show elsewhere \textcolor{red}{elsewhere! (I can not find a single place to point to where this is shown)} that if the {\RIC} holds then $0 < \MinMPC < \cFunc^{\prime}(\mRat_{t}) < 1$ so that 
 \begin{align*}
   \bar{\Rnorm}\left(1-\cFunc^{\prime}({\mRat}_t)\right) - 1 & <  \bar{\Rnorm}(1-\underbrace{(1-\PatR)}_{\MinMPC}) - 1  \\
                                                             & = \bar{\Rnorm}\PatR - 1 \\
