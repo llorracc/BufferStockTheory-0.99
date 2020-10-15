@@ -1,7 +1,7 @@
 
 Theoretical Foundations of
 Buffer Stock Saving
-October 14, 2020
+October 15, 2020
 
 Christopher D. Carroll1
 
@@ -91,7 +91,7 @@ And, increased labor income uncertainty does not change the behavior of the
 problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have
 been tackled by those methods or any others.
 
-Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Metin Uyanik, Mateo VelasquezGriraldo, Weifeng Wu, Xudong Zheng, and Jiaxiong Yao for comments on earlier versions of this paper, John Boyd
+Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Metin Uyanik, Mateo VelásquezGiraldo, Weifeng Wu, Xudong Zheng, and Jiaxiong Yao for comments on earlier versions of this paper, John Boyd
 for help in applying his weighted contraction mapping theorem, Ryoji Hiraguchi for extraordinary mathematical
 insight that improved the paper greatly, David Zervos for early guidance to the literature, and participants in
 a seminar at Johns Hopkins University and a presentation at the 2009 meetings of the Society of Economic
@@ -1093,7 +1093,7 @@ t = 1 + Þ R κt+1 .
 
 2.8.1 Weak RIC Conditions
 There is a parallel expression for the limiting maximal MPC as m ↓ 0: appendix
-equation (96) shows that, as mt ↑ ∞,
+equation (94) shows that, as mt ↑ ∞,
 n
 
 o∞
@@ -1317,8 +1317,8 @@ finite value of m. Note the close parallel to the conclusion in the perfect fore
 
 liquidity constrained model in the {PF-GIC,
 RIC}
-case see the appendix). There, too, the tension between infinite human wealth
-and pathological patience was resolved with a nondegenerate consumption function
+case see appendix A). There, too, the tension between infinite human wealth and
+pathological patience was resolved with a nondegenerate consumption function
 whose limiting MPC was zero.
 2.11.2 The WRIC
 The ‘weakness’ of the additional requirement for contraction, the weak RIC, can
@@ -1868,8 +1868,9 @@ same arguments establish limm↓0 Et [ct+1 /ct ] = ∞ for the problem of the re
 28
 
 3.3.2 Existence of a point where Et [mt+1 /mt ] = 1.
-Section 3.2 shows that limmt ↓0 Et [mt+1 /mt ] = ∞, while the limit as mt goes to
-infinity is
+Section 3.2 (that section shows that consumption growth goes to infinity. Might
+want to clarify or say this is just a consequence of limm→0 c(m) = 0 and the nonzero probability of positive income) shows that limmt ↓0 Et [mt+1 /mt ] = ∞, while
+the limit as mt goes to infinity is
 Rt+1 a(mt ) + ξt+1
 lim Et [mt+1 /mt ] = lim Et
 mt ↑∞
@@ -1899,30 +1900,39 @@ Now define ζ (mt ) ≡ Et [mt+1 ] − mt and note that
 (49)
 
 so that ζ (m̌) = 0. Our goal is to prove that ζ (•) is strictly decreasing on (0, ∞)
-since
+using the fact that
 !
-"
-!
-#
-d
-d
-0
+
 ζ (mt ) ≡
+0
+
+d
 ζ (mt ) = Et
+dmt
+
+"
+
+!
+
+#
+
+d
 (Rt+1 (mt − c(mt )) + ξt+1 − mt )
+dmt
+
 (50)
-dmt
-dmt
-= R̄ (1 − c0 (mt )) − 1
+
+= R̄ (1 − c0 (mt )) − 1.
 Note that the statement of theorem 2 did not require the RIC to hold. Now,
 we show that (given our other assumptions) ζ 0 (m) is decreasing (but for different
 
 
 reasons) whether the RIC holds or fails (
 RIC).
-If RIC holds. We show elsewhere that if the RIC holds then 0 < κ < c0 (mt ) < 1
-so that
-R̄ (1 − c0 (mt )) − 1 < R̄(1 − (1 − ÞR )) − 1
+If RIC holds. We show elsewhere elsewhere! (I can not find a single place to
+point to where this is shown) that if the RIC holds then 0 < κ < c0 (mt ) < 1 so
+that
+R̄ (1 − c0 (mt )) − 1 < R̄(1 − (1 − Þ R )) − 1
 |
 
 {z
@@ -1936,11 +1946,11 @@ R Þ
 = Et
 −1
 Γψ R
-#
 "
+#
 Þ
-−1
 = Et
+−1
 Γψ
 |
 
@@ -1949,22 +1959,21 @@ R Þ
 ÞΓ
 =Þ
 
-which is negative because the GIC says Þ Γ < 1.
-
 29
 
 }
 
 }
 
- recall that lim
+which is negative because the GIC says Þ Γ < 1.
+ recall that lim
 0
 
 If RIC fails. Under 
 RIC,
 m↑∞ c (m) = 0. Concavity of the
-consumption function means that c0 is a decreasing function, so everywhere
-
+0
+consumption function means that c is a decreasing function, so everywhere
 R̄ (1 − c0 (mt )) < R̄
 which means that ζ 0 (mt ) from (50) is guaranteed to be negative if
 "
@@ -2033,21 +2042,20 @@ line representing the growth rate of expected permanent income. This can be
 proven as follows.
 Strict concavity of the consumption function implies that if Et [mt+1 ] = m̌ = mt
 then
-"
 #
 "
 !#
-Γt+1 c(mt+1 )
+"
 Γt+1 (c(m̌) + c0 (m̌)(mt+1 − m̌))
-Et
+Γt+1 c(mt+1 )
 < Et
+Et
 c(mt )
 c(m̌)
 "
 !
 !#
-0
-c (m̌)
+c0 (m̌)
 = Et Γt+1 1 +
 (mt+1 − m̌)
 c(m̌)
