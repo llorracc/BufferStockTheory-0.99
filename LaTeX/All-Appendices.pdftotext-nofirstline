@@ -22,8 +22,6 @@ a marginal unit of resources to the next period at return R:1
 u0 (1) < Rβu0 (Γ).
 
 (1)
-(2)
-(3)
 
 Similar logic shows that under these circumstances the constraint will never bind at
 m = 1 for a constrained consumer with a finite horizon of n periods, so for m ≥ 1
@@ -33,7 +31,7 @@ If the RIC fails (1 < Þ R ) while the finite human wealth condition holds, the 
 value of this consumption function as n ↑ ∞ is the degenerate function
 c̀T −n (m) = 0(bt + h).
 
-(4)
+(2)
 
 (that is, consumption is zero for any level of human or nonhuman wealth).
 If the RIC fails and the FHWC fails, human wealth limits to h = ∞ so the consumption
@@ -42,20 +40,20 @@ with which the MPC approaches zero and human wealth approaches ∞.2
 Thus, the requirement that the consumption function be nondegenerate implies that
 (
 (((
-for a consumer satisfying (
 PF-GIC
 we must impose the RIC (and the FHWC can be
+for a consumer satisfying (
 (
 (((
-shown to be a consequence of (
 PF-GIC
 and RIC). In this case, the consumer’s optimal
+shown to be a consequence of (
 behavior is easy to describe. We can calculate the point at which the unconstrained
 consumer would choose c = m from equation (??):
 m# = (m# − 1 + h)κ
 1
 
-(5)
+(3)
 
 The point at which the constraint would bind (if that point could be attained) is the m = c for
 which u0 (c# ) = Rβu0 (Γ) which is c# = Γ/(Rβ)1/ρ and the consumption function will be defined by
@@ -71,8 +69,8 @@ limiting function is c̀(m) = min[m, 1].
 m# = (h − 1)
 1−κ
 
-(6)
-(7)
+(4)
+(5)
 
 which (under these assumptions) satisfies 0 < m# < 1.3 For m < m# the unconstrained
 consumer would choose to consume more than m; for such m, the constrained consumer
@@ -82,7 +80,7 @@ consumer will choose to spend the same amount as the unconstrained consumer, c̄
 to study the tail behavior of the wealth distribution.)
 
 A.2 If PF-GIC Holds
-Imposition of the PF-GIC reverses the inequality in (3), and thus reverses the conclusion:
+Imposition of the PF-GIC reverses the inequality in (1), and thus reverses the conclusion:
 A consumer who starts with mt = 1 will desire to consume more than 1. Such a consumer
 will be constrained, not only in period t, but perpetually thereafter.
 Now define bn# as the bt such that an unconstrained consumer holding bt = bn# would
@@ -101,7 +99,7 @@ been
 cn# = Þ −n
 Γ ct = Þ Γ .
 
-(8)
+(6)
 
 The PDV of consumption from t − n until t can thus be computed as
 Þ/R)n )
@@ -121,8 +119,8 @@ R
 1 − ÞR
 3
 
-(9)
-(10)
+(7)
+(8)
 
 (((
 Note that 0 < m# is implied by RIC and m# < 1 is implied by (
@@ -140,7 +138,7 @@ horizon, because from t onward the consumer will be constrained and unable to ac
 post-t income) is
 hn# = 1 + ... + R−n
 
-(11)
+(9)
 
 while the intertemporal budget constraint says
 Ctt−n = bn# + hn#
@@ -159,7 +157,7 @@ z
 .
 1 − R−1
 
-(12)
+(10)
 
 Defining mn# = bn# + 1, consider the function c̀(m) defined by linearly connecting the
 points {mn# , cn# } for integer values of n ≥ 0 (and setting c̀(m) = m for m < 1). This
@@ -169,18 +167,18 @@ where the slope discretely changes; for infinitesimal  the MPC of a consumer wi
 m = mn# −  is discretely higher than for a consumer with assets m = mn# +  because
 the latter consumer will spread a marginal dollar over more periods before exhausting
 it.
-In order for a unique consumption function to be defined by this sequence (12) for the
+In order for a unique consumption function to be defined by this sequence (10) for the
 entire domain of positive real values of b, we need bn# to become arbitrarily large with
 n. That is, we need
 lim bn# = ∞.
 
 n→∞
 
-(13)
+(11)
 
 A.2.1 If FHWC Holds
-The FHWC requires R−1 < 1, in which case the second term in (12) limits to a constant
-as n ↑ ∞, and (13) reduces to a requirement that
+The FHWC requires R−1 < 1, in which case the second term in (10) limits to a constant
+as n ↑ ∞, and (11) reduces to a requirement that
  −n
 
 ÞR /Þ
@@ -215,7 +213,7 @@ constrained consumption function and the unconstrained consumption function beco
 
 vanishingly small, because the date at which the constraint binds becomes arbitrarily
 distant, so the effect of that constraint on current behavior shrinks to nothing. That is,
-(14)
+(12)
 
 lim c̀(m) − c̄(m) = 0.
 
@@ -223,7 +221,7 @@ m→∞
 
 A.2.2 If FHWC Fails
 If the FHWC fails, matters are a bit more complex.
-Given failure of FHWC, (13) requires
+Given failure of FHWC, (11) requires
  
 
 R−nÞ R − Þ −n
@@ -251,9 +249,9 @@ R −1
 ÞR − 1
 
 
-(15)
+(13)
 
-If RIC Holds. When the RIC holds, rearranging (15) gives
+If RIC Holds. When the RIC holds, rearranging (13) gives
 
 
  −n 
@@ -285,20 +283,20 @@ n
 c
 #
 lim κn# = lim
-(16)
+(14)
 n→∞
 n→∞
 bn#
 which with a bit of algebra5 can be shown to asymptote to the MPC in the perfect
 foresight model:6
-(18)
+(16)
 
 κ(m) = 1 − Þ R .
 lim κ̀
 
 m→∞
 
- case, Þ > 1. We can rearrange (15)as
+ case, Þ > 1. We can rearrange (13)as
 
 If RIC Fails. Consider now the 
 RIC
@@ -324,7 +322,7 @@ n→∞
 ÞR − 1
 5
 
-(19)
+(17)
 
 Calculate the limit of
 Þ −n
@@ -343,7 +341,7 @@ Calculate the limit of
 1/(1 − Þ R ) + R−n R−1 /(1 − R−1 )
 
 
-(17)
+(15)
 
 For an example of this configuration of parameters, see the notebook doApndxLiqConstr.nb in the
 Mathematica software archive.
@@ -359,7 +357,7 @@ RIC
 R
 −n
 denominators of both terms multiplying R can be seen transparently to be positive.
-So, the terms multiplying R−n in (15) will be positive if
+So, the terms multiplying R−n in (13) will be positive if
 
 
 Þ R R−1 − Þ R > R−1Þ R − R−1
@@ -385,18 +383,18 @@ dominated in the limit by Γ/Þ
 Þ
 Γ/R > Γ/Þ
 
-(20)
+(18)
 
 κ(m) = 0,
 lim κ̀
 
-(21)
+(19)
 
  ⇒ Þ > R.
 
 because 
 RIC
-Consequently, while limn↑∞ bn# = ∞, the limit of the ratio cn# /bn# in (16) is zero. Thus,
+Consequently, while limn↑∞ bn# = ∞, the limit of the ratio cn# /bn# in (14) is zero. Thus,
 surprisingly, the problem has a well defined solution with infinite human wealth if the
  implies a limiting MPC of zero,
 
@@ -485,7 +483,7 @@ Now define an end-of-period value function vt (a) as
  1−ρ
 vt (a) = β Et Γt+1
 vt+1 (Rt+1 a + ξt+1 ) .
-(22)
+(20)
 
 6
 
@@ -493,13 +491,13 @@ vt+1 (Rt+1 a + ξt+1 ) .
 Rt+1 > 0, it is clear that lima↓0 vt (a) = −∞ and lima↓0 v0t (a) = ∞. So vt (a) is welldefined iff a > 0; it is similarly straightforward to show the other properties required for
 vt (a) to be nice. (See Hiraguchi (2003).)
 Next define vt (m, c) as
-(23)
+(21)
 
 vt (m, c) = u(c) + vt (m − c)
 
 which is C3 since vt and u are both C3 , and note that our problem’s value function
 defined in (??) can be written as
-(24)
+(22)
 
 vt (m) = max vt (m, c).
 c
@@ -512,18 +510,18 @@ limc↑m vt (m, c) = −∞, ∂c
 < 0, limc↓0 t∂c = +∞, and limc↑m t∂c = −∞. It
 2
 follows that the ct (m) defined by
-(25)
+(23)
 
 ct (m) = arg max vt (m, c)
 0<c<m
 
 exists and is unique, and (??) has an internal solution that satisfies
-(26)
+(24)
 
 u0 (ct (m)) = v0t (m − ct (m)).
 
 Since both u and vt are strictly concave, both ct (m) and at (m) = m−ct (m) are strictly
-increasing. Since both u and vt are three times continuously differentiable, using (26)
+increasing. Since both u and vt are three times continuously differentiable, using (24)
 we can conclude that ct (m) is continuously differentiable and
 c0t (m) =
 
@@ -531,7 +529,7 @@ v00t (at (m))
 .
 u00 (ct (m)) + v00t (at (m))
 
-(27)
+(25)
 
 Similarly we can easily show that ct (m) is twice continuously differentiable (as is at (m))
 (See Appendix C.) This implies that vt (m) is nice, since vt (m) = u(ct (m)) + vt (at (m)).
@@ -639,7 +637,7 @@ t (at ) [u (ct ) + vt (at )] − vt (at ) [ct u (ct ) + at vt (at )]
 .
 [u00 (ct ) + v00t (at )]2
 
-(28)
+(26)
 
 Since v00t (at (m)) is continuous, c00t (m) is also continuous.
 
@@ -679,7 +677,7 @@ the solution to which is patently u(κ̄mt ). Thus, condition (2) will hold if (
 z-bounded. We use the bounding function
 z(m) = η + m1−ρ ,
 
-(29)
+(27)
 
 for some real scalar η > 0 whose value will be determined in the course of the proof.
 Under this definition of z, {T0}(mt ) = u(κ̄mt ) is clearly z-bounded.
@@ -735,10 +733,10 @@ t
 t+1
 η>
 .
-(30)
+(28)
 1−i
 But since η is an arbitrary constant that we can pick, the proof thus reduces to showing
-that the numerator of (30) is bounded from above:
+that the numerator of (28) is bounded from above:
 
 
  1−ρ
@@ -808,7 +806,7 @@ R
 {z R }
 <1 by WRIC
 
-(31)
+(29)
 
 
 1−ρ
@@ -825,9 +823,9 @@ intuition.
 
 9
 
-We can thus conclude that equation (30) will certainly hold for any:
+We can thus conclude that equation (28) will certainly hold for any:
 i(1 − ℘)ρ θ1−ρ
-(32)
+(30)
 1−i
 which is a positive finite number under our assumptions.
 The proof that T defines a contraction mapping under the conditions (??) and (??)
@@ -843,7 +841,7 @@ defines a contraction mapping.
 Fortunately, the proof of that proposition is identical to the proof above, except that
 we must replace κ̄ with κ̄T −1 and the WRIC must be replaced by a slightly stronger
 (but still quite weak) condition. The place where these conditions have force is in the
-step at (31). Consideration of the prior two equations reveals that a sufficient stronger
+step at (29). Consideration of the prior two equations reveals that a sufficient stronger
 condition is
 ℘β(R(1 − κ̄T −1 ))1−ρ < 1
 
@@ -884,15 +882,15 @@ now show that T also defines a contraction mapping in Euclidian space.
 Calling v∗ the unique fixed point of the operator T, since v∗ (m) = Tv∗ (m),
 kvT −n+1 − v∗ kz ≤ αn−1 kvT − v∗ kz .
 
-(33)
+(31)
 
 |vT −n+1 (m) − v∗ (m)| ≤ καn−1 |z(m)| .
 
-(34)
+(32)
 
 lim vT −n+1 (m) = v∗ (m).
 
-(35)
+(33)
 
 On the other hand, vT − v∗ ∈ Cz (A, B) and κ = kvT − v∗ kz < ∞ because vT and v∗
 are in Cz (A, B). It follows that
@@ -922,7 +920,7 @@ c∗ . By the definition of cT −n (m), we have
 1−ρ
 u(cT −n(i) (m))+β ET −n(i) [Γ1−ρ
 T −n(i)+1 vT −n(i)+1 (m)] ≥ u(cT −n(i) )+β ET −n(i) [ΓT −n(i)+1 vT −n(i)+1 (m)],
-(36)
+(34)
 for any cT −n(i) ∈ [κm, κ̄m]. Now letting n(i) go to infinity, it follows that the left
 hand side converges to u(c∗ ) + β Et [Γ1−ρ
 v(m)], and the right hand side converges to
@@ -938,7 +936,7 @@ c = c(m).
 
 1−ρ
 u(c∗ ) + β Et [Γ1−ρ
-(37)
+(35)
 t+1 v(m)] ≥ u(cT −n(i) ) + β Et [Γt+1 v(m)].
 
 arg max
@@ -1035,7 +1033,7 @@ z
  t t
 t+1 t+1  
 −ρ
-(38)
+(36)
 et (mt ) = βR Et et+1 (mt+1 ) 
  
 mt
@@ -1062,9 +1060,9 @@ et+1 (Rt+1 at (mt ))
 mt
 =
 
-(39)
+(37)
 
-Consider the first conditional expectation in (38), recalling that if ξt+1 > 0 then
+Consider the first conditional expectation in (36), recalling that if ξt+1 > 0 then
 ξt+1 ≡ θt+1 /(1 − ℘). Since limm↓0 at (m) = 0, Et [(et+1 (mt+1 )mt+1 Γt+1 )−ρ | ξt+1 > 0]
 is contained within bounds defined by (et+1 (θ/(1 − ℘))Γψθ/(1 − ℘))−ρ and
 (et+1 (θ̄/(1 − ℘))Γψ̄ θ̄/(1 − ℘))−ρ both of which are finite numbers, implying that
@@ -1089,7 +1087,7 @@ z }|R
 {z
 }
 
-(40)
+(38)
 
 ≡℘1/ρÞ R
 
@@ -1108,18 +1106,18 @@ t+1
 t = 1+℘
 t+1 .
 
-(41)
+(39)
 
 As noted in the main text, we need the WRIC (??) for this to be a convergent sequence:
 0 ≤ ℘1/ρÞ R < 1,
 
-(42)
+(40)
 
 lim κ̄T −n = κ̄ ≡ 1 − ℘1/ρÞ R
 
-(43)
+(41)
 
-Since κ̄T = 1, iterating (41) backward to infinity (because we are interested in the
+Since κ̄T = 1, iterating (39) backward to infinity (because we are interested in the
 limiting consumption function) we obtain:
 n→∞
 
@@ -1128,7 +1126,7 @@ n→∞
 and we will therefore call κ̄ the ‘limiting maximal MPC.’
 The minimal MPC’s are obtained by considering the case where mt ↑ ∞. If the
 FHWC holds, then as mt ↑ ∞ the proportion of current and future consumption that
-will be financed out of capital approaches 1. Thus, the terms involving ξt+1 in (38) can
+will be financed out of capital approaches 1. Thus, the terms involving ξt+1 in (36) can
 be neglected, leading to a revised limiting Euler equation
 
 
@@ -1149,12 +1147,12 @@ is given by
 κ−1
 t = 1 + κt+1Þ R
 
-(44)
+(42)
 
 κ−1 ≡ lim κ−1
 T −n
 
-(45)
+(43)
 
 ∞
 so that {κ−1
@@ -1181,7 +1179,7 @@ which, combined with the intertemporal budget constraint, yields the usual formu
 the perfect foresight consumption function:
 ct = (bt + ht )κt
 
-(46)
+(44)
 
 G The Perfect Foresight Liquidity Constrained
 Solution as a Limit
@@ -1203,7 +1201,7 @@ demonstrate is
 lim ct (m; ℘) = c̀t (m).
 ℘↓0
 
-(47)
+(45)
 
 We will first examine the problem in period T − 1, then argue that the desired result
 propagates to earlier periods. For simplicity, suppose that the interest, growth, and
@@ -1217,7 +1215,7 @@ practice, this will be cT (m) = m), consider the unrestrained optimization probl
 Z θ̄
 à∗T −1 (m) = arg max u(m − a) +
 vT (a + θ)dFθ .
-(48)
+(46)
 a
 
 θ
@@ -1230,10 +1228,10 @@ v̀T −1 (a) ≡
 u0 (cT (a + θ))dFθ ,
 θ
 
-and the solution to (48) will satisfy
+and the solution to (46) will satisfy
 u0 (m − a) = v̀0T −1 (a).
 
-(49)
+(47)
 
 à∗T −1 (m) therefore answers the question “With what level of assets would the restrained
 consumer like to end period T − 1 if the constraint cT −1 ≤ mT −1 did not exist?” (Note
@@ -1252,7 +1250,7 @@ non-binding in period T − 1.
 
 15
 
-Analogously to (49), defining
+Analogously to (47), defining
 "
 v0T −1 (a; ℘) ≡ ℘a−ρ + (1 − ℘)
 
@@ -1268,17 +1266,17 @@ Z
 
 dFθ ,
 
-(50)
+(48)
 
 θ
 
 the Euler equation for the original consumer’s problem implies
 (m − a)−ρ = v0T −1 (a; ℘)
 
-(51)
+(49)
 
 with solution a∗T −1 (m; ℘). Now note that for any fixed a > 0, lim℘↓0 v0T −1 (a; ℘) = v̀0T −1 (a).
-Since the LHS of (49) and (51) are identical, this means that lim℘↓0 a∗T −1 (m; ℘) =
+Since the LHS of (47) and (49) are identical, this means that lim℘↓0 a∗T −1 (m; ℘) =
 à∗T −1 (m). That is, for any fixed value of m > m1# such that the consumer subject
 to the restraint would voluntarily choose to end the period with positive assets, the
 level of end-of-period assets for the unrestrained consumer approaches the level for the
@@ -1286,7 +1284,7 @@ restrained consumer as ℘ ↓ 0. With the same a and the same m, the consumers 
 have the same c, so the consumption functions are identical in the limit.
 Now consider values m ≤ m1# for which the restrained consumer is constrained. It
 is obvious that the baseline consumer will never choose a ≤ 0 because the first term
-in (50) is lima↓0 ℘a−ρ = ∞, while lima↓0 (m − a)−ρ is finite (the marginal value of endof-period assets approaches infinity as assets approach zero, but the marginal utility of
+in (48) is lima↓0 ℘a−ρ = ∞, while lima↓0 (m − a)−ρ is finite (the marginal value of endof-period assets approaches infinity as assets approach zero, but the marginal utility of
 consumption has a finite limit for m > 0). The subtler question is whether it is possible
 to rule out strictly positive a for the unrestrained consumer.
 The answer is yes. Suppose, for some m < m1# , that the unrestrained consumer is
@@ -1296,11 +1294,11 @@ of circumstances in which à∗T −1 (m) < 0, and we showed earlier that lim�
 à∗T −1 (m). So, having assumed a = δ > 0, we have proven that the consumer would
 optimally choose a < 0, which is a contradiction. A similar argument holds for m = m1# .
 These arguments demonstrate that for any m > 0, lim℘↓0 cT −1 (m; ℘) = c̀T −1 (m) which
-is the period T − 1 version of (47). But given equality of the period T − 1 consumption
+is the period T − 1 version of (45). But given equality of the period T − 1 consumption
 functions, backwards recursion of the same arguments demonstrates that the limiting
 consumption functions in previous periods are also identical to the constrained function.
 Note finally that another intuitive confirmation of the equivalence between the two
-problems is that our formula (43) for the maximal marginal propensity to consume
+problems is that our formula (41) for the maximal marginal propensity to consume
 satisfies
 lim κ̄ = 1,
 ℘↓0
@@ -1323,7 +1321,7 @@ u0 (ct (~a)) = Rβ Et [u0 (Γt+1 ct+1 (Rt+1~a + ξt+1 ))]
 .
 ~ct ≡ ct (~a) = Rβ Et (Γt+1 ct+1 (Rt+1~a + ξt+1 ))−ρ
 
-(52)
+(50)
 
 The dynamic budget constraint can then be used to generate the corresponding m’s:
 m
@@ -1331,7 +1329,7 @@ m
 An approximation to the consumption function could be constructed by linear interpolation between the {m,
 ~ ~c} points. But a vastly more accurate approximation can be
 made (for a given number of gridpoints) if the interpolation is constructed so that it also
-matches the marginal propensity to consume at the gridpoints. Differentiating (52) with
+matches the marginal propensity to consume at the gridpoints. Differentiating (50) with
 respect to a (and dropping policy function arguments for simplicity) yields a marginal
 propensity to have consumed ca at each gridpoint:
 u00 (ct )cat = Rβ Et [u00 (Γt+1 ct+1 )Γt+1 cm
@@ -1344,7 +1342,7 @@ a
 ct = Rβ Et [u00 (Γt+1 ct+1 )Rcm
 t+1 ]/u (ct )
 
-(53)
+(51)
 
 and the marginal propensity to consume at the beginning of the period is obtained from
 the marginal propensity to have consumed by noting that, if we define m(a) = c(a) − a,
@@ -1436,14 +1434,14 @@ m
 c̆(m)
 c̊(m)
 
-(54)
+(52)
 
 Since the precautionary motive implies that in the presence of uncertainty the optimal
 level of consumption is below the level that is optimal without uncertainty, and since
 c̆(m) ≥ c̊(m), implicitly defining m = eµ (so that µ = log m), we can construct
 χt (µ) = log(1 − ct (eµ )/cT (eµ ))
 
-(55)
+(53)
 
 which must be a number between −∞ and +∞ (since 0 < ct (m) < c̆(m) for m > 0).
 This function turns out to be much better behaved (as a numerical observation; no formal
@@ -1455,19 +1453,19 @@ Differentiating with respect to µ and dropping consumption function arguments y
 T
 0
 
-(56)
+(54)
 χt (µ) = 
 1 − ct /cT
 which can be solved for
 c0t = (ct c0T /cT ) − ((cT − ct )/m)χ0t .
 
-(57)
+(55)
 
-Similarly, we can solve (55) for
+Similarly, we can solve (53) for
 
 ct (m) = 1 − eχt (log m) cT (m).
 
-(58)
+(56)
 
 Thus, having approximated χt , we can recover from it the level and derivative(s) of
 ct .
