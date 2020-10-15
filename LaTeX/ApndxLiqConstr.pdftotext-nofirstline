@@ -22,8 +22,6 @@ reallocating a marginal unit of resources to the next period at return R:1
 u0 (1) < Rβu0 (Γ).
 
 (1)
-(2)
-(3)
 
 Similar logic shows that under these circumstances the constraint will never
 bind at m = 1 for a constrained consumer with a finite horizon of n periods, so
@@ -33,7 +31,7 @@ If the RIC fails (1 < Þ R ) while the finite human wealth condition holds, the
 limiting value of this consumption function as n ↑ ∞ is the degenerate function
 c̀T −n (m) = 0(bt + h).
 
-(4)
+(2)
 
 (that is, consumption is zero for any level of human or nonhuman wealth).
 If the RIC fails and the FHWC fails, human wealth limits to h = ∞ so the
@@ -61,9 +59,9 @@ m# = (h − 1)
 1−κ
 1
 
+(3)
+(4)
 (5)
-(6)
-(7)
 
 The point at which the constraint would bind (if that point could be attained) is the m = c
 for which u0 (c# ) = Rβu0 (Γ) which is c# = Γ/(Rβ)1/ρ and the consumption function will be
@@ -81,7 +79,7 @@ amount as the unconstrained consumer, c̄(m).
 use it to study the tail behavior of the wealth distribution.)
 
 1.2 If PF-GIC Holds
-Imposition of the PF-GIC reverses the inequality in (3), and thus reverses the
+Imposition of the PF-GIC reverses the inequality in (1), and thus reverses the
 conclusion: A consumer who starts with mt = 1 will desire to consume more than
 1. Such a consumer will be constrained, not only in period t, but perpetually
 thereafter.
@@ -102,7 +100,7 @@ past must have been
 cn# = Þ −n
 Γ ct = Þ Γ .
 
-(8)
+(6)
 
 The PDV of consumption from t − n until t can thus be computed as
 Þ/R)n )
@@ -121,8 +119,8 @@ R
 
 !
 
-(9)
-(10)
+(7)
+(8)
 
 and note that the consumer’s human wealth between t − n and t (the relevant
 time horizon, because from t onward the consumer will be constrained and unable
@@ -143,7 +141,7 @@ will remain constant, even as market wealth and human wealth trend in opposite d
 to access post-t income) is
 hn# = 1 + ... + R−n
 
-(11)
+(9)
 
 while the intertemporal budget constraint says
 Ctt−n = bn# + hn#
@@ -167,7 +165,7 @@ bn# = Ctt−n −
 
 .
 
-(12)
+(10)
 
 Defining mn# = bn# +1, consider the function c̀(m) defined by linearly connecting
 the points {mn# , cn# } for integer values of n ≥ 0 (and setting c̀(m) = m for m < 1).
@@ -177,7 +175,7 @@ with ‘kink points’ where the slope discretely changes; for infinitesimal  t
 of a consumer with assets m = mn# −  is discretely higher than for a consumer
 with assets m = mn# +  because the latter consumer will spread a marginal dollar
 over more periods before exhausting it.
-In order for a unique consumption function to be defined by this sequence (12)
+In order for a unique consumption function to be defined by this sequence (10)
 for the entire domain of positive real values of b, we need bn# to become arbitrarily
 large with n. That is, we need
 lim bn
@@ -185,11 +183,11 @@ n→∞ #
 
 = ∞.
 
-(13)
+(11)
 
 1.2.1 If FHWC Holds
-The FHWC requires R−1 < 1, in which case the second term in (12) limits to a
-constant as n ↑ ∞, and (13) reduces to a requirement that
+The FHWC requires R−1 < 1, in which case the second term in (10) limits to a
+constant as n ↑ ∞, and (11) reduces to a requirement that
 ÞR /Þ
 ÞΓ )nÞ R
 Þ −n
@@ -229,13 +227,13 @@ at which the constraint binds becomes arbitrarily distant, so the effect of that
 constraint on current behavior shrinks to nothing. That is,
 lim c̀(m) − c̄(m) = 0.
 
-(14)
+(12)
 
 m→∞
 
 1.2.2 If FHWC Fails
 If the FHWC fails, matters are a bit more complex.
-Given failure of FHWC, (13) requires
+Given failure of FHWC, (11) requires
 R−nÞ R − Þ −n
 Γ
 ÞR − 1
@@ -265,9 +263,9 @@ R
 
 !
 
-(15)
+(13)
 
-If RIC Holds. When the RIC holds, rearranging (15) gives
+If RIC Holds. When the RIC holds, rearranging (13) gives
 lim
 
 n→∞
@@ -311,18 +309,18 @@ bn#
 
 !
 
-(16)
+(14)
 
 which with a bit of algebra5 can be shown to asymptote to the MPC in the perfect
 foresight model:6
 κ(m) = 1 − Þ R .
 lim κ̀
 
-(18)
+(16)
 
 m→∞
 
- case, Þ > 1. We can rearrange (15)as
+ case, Þ > 1. We can rearrange (13)as
 
 If RIC Fails. Consider now the 
 RIC
@@ -352,7 +350,7 @@ n→∞
 
 !
 
-= ∞. (19)
+= ∞. (17)
 
  ⇒ Þ > 1 the numera
  ⇒ R−1 > 1 and 
@@ -381,7 +379,7 @@ Calculate the limit of
 1/(1 − Þ R ) + R−n R−1 /(1 − R−1 )
 
 
-(17)
+(15)
 
 6
 For an example of this configuration of parameters, see the notebook doApndxLiqConstr.nb
@@ -389,7 +387,7 @@ in the Mathematica software archive.
 
 4
 
-to be positive. So, the terms multiplying R−n in (15) will be positive if
+to be positive. So, the terms multiplying R−n in (13) will be positive if
 Þ R R−1 − Þ R > R−1Þ R − R−1
 R−1 > Þ R
 Γ > Þ
@@ -413,18 +411,18 @@ dominated by Γ/R term and
 Þ
 Γ/R > Γ/Þ
 
-(20)
+(18)
 
 κ(m) = 0,
 lim κ̀
 
-(21)
+(19)
 
  ⇒ Þ > R.
 
 because 
 RIC
-Consequently, while limn↑∞ bn# = ∞, the limit of the ratio cn# /bn# in (16) is zero.
+Consequently, while limn↑∞ bn# = ∞, the limit of the ratio cn# /bn# in (14) is zero.
 Thus, surprisingly, the problem has a well defined solution with infinite human
  implies a limiting MPC of zero,
 
