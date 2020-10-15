@@ -2,6 +2,6 @@
 
 scriptDir="$(dirname "$0")"
 
-./reproduce_math.sh
-./reproduce_text.sh
+./reproduce_compute.sh
+./reproduce_textual.sh
 
