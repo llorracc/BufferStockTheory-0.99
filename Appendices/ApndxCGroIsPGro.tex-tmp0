@@ -1,0 +1,90 @@
+\input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
+\input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
+\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+\begin{document}
+
+\section{Equality of Aggregate Consumption Growth and Income Growth with Transitory Shocks}\label{sec:ApndxCGroIsPGro}
+
+Section \ref{subsec:cGroEqPGroQ} asserted that in the absence of permanent shocks it is possible to prove
+that the growth factor for aggregate consumption approaches that for aggregate permanent
+income.  This section establishes that result.
+
+First define $\aFunc(\mRat)$ as the function that yields optimal end-of-period assets as a function of $\mRat$.
+
+Suppose the population starts in period $t$ with an arbitrary value for
+ $\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})$. 
+ Then if $\mSS$ is the invariant mean level of $\mRat$ we can define a `mean MPS away from $\mSS$' function
+ \newcommand{\AMPS}{\bar{\acute{\aFunc}}}:
+\begin{align}
+ \AMPS(\Delta)  & =  \Delta^{-1}\int_{\mSS}^{\mSS+\Delta} \aFunc^{\prime}(z)
+ dz \label{eq:checkaFunc} \nonumber
+\end{align}
+where the combination of the bar and the $\acute{}$ are meant to signify that this is the average value of the derivative over the interval.
+Since $\pShk_{t+1,i}=1$, $\Rnorm_{t+1,i}$ is a constant at $\Rnorm$, if we define $\aSS$ as the value of $\aRat$ corresponding to $\mRat = \mSS$, we can write
+\begin{align}
+  a_{t+1,i} 
+& =   \aSS+(\mRat_{t+1,i}-\mSS)\AMPS(\overbrace{\Rnorm
+    a_{t,i}+\tShkAll_{t+1,i}}^{\mRat_{t+1,i}}-\mSS) \nonumber
+\end{align}
+so
+\begin{align}
+\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})
+ & = \mbox{cov}_{t}\left(\AMPS(\Rnorm  a_{t,i}+\tShkAll_{t+1,i}-\mSS)
+  ,\PGro   \pLevBF_{t,i}\right). \nonumber
+\end{align}
+
+But since ${\Rfree}^{-1}(\pZero  \Rfree\DiscFac)^{1/\CRRA} < \AMPS(\mRat) < \PatR $,
+\begin{equation}
+  |\mbox{cov}_{t}((\pZero  \Rfree\DiscFac)^{1/\CRRA}a_{t+1,i},\pLevBF_{t+1,i})| <
+  |\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})| <
+  |\mbox{cov}_{t}({\Pat}a_{t+1,i},\pLevBF_{t+1,i})| \nonumber
+\end{equation}
+and for the version of the model with no permanent shocks the \GIC~says that
+${\Pat} < \PGro, $ while the {\FHWC} says that $\PGro < \Rfree$
+\begin{align}
+  |\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})| < \PGro
+  |\mbox{cov}_{t}(a_{t,i},\pLevBF_{t,i})|. \nonumber
+\end{align}
+
+
+This means that from any arbitrary starting value, the relative
+size of the covariance term shrinks to zero over time (compared
+to the $\ASS \PGro^{n}$ term which is growing steadily
+by the factor $\PGro$).  Thus, $\lim_{n \rightarrow \infty} \ALevBF_{t+n+1}/\ALevBF_{t+n} = \PGro$.
+
+This logic unfortunately does not go through when there are permanent
+shocks, because the $\Rnorm _{t+1,i}$ terms are not independent
+of the permanent income shocks.
+
+To see the problem clearly, define $\breve{\Rnorm }=\Mean\left[\Rnorm _{t+1,i}\right]$ and consider a first order Taylor expansion of $\AMPS(\mRat_{t+1,i})$ around $\mTarg_{t+1,i}=\breve{\Rnorm } a_{t,i}+1,$
+\begin{align*}
+  \AMPS_{t+1,i} & \approx 
+  \AMPS(\mTarg_{t+1,i})+\AMPS^{\prime}(\mTarg_{t+1,i})\left(\mRat_{t+1,i}-\mTarg_{t+1,i}\right)
+ \nonumber.
+\end{align*}
+
+
+The problem comes from the $\AMPS^{\prime}$ term.  The
+concavity of the consumption function implies convexity of the
+$\aFunc$ function, so this term is strictly positive but we have no
+theory to place bounds on its size as we do for its level $\AMPS$.
+We cannot rule out by theory that a positive shock to permanent income (which has a
+negative effect on $\mRat_{t+1,i}$) could have a (locally) unboundedly positive
+effect on $\AMPS^{\prime}$ (as for instance if it pushes the
+consumer arbitrarily close to the self-imposed liquidity constraint).
+
+
+\end{document}
+% Local Variables:
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% End:

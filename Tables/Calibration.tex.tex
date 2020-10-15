@@ -1,0 +1,29 @@
+\newsavebox{\Calibration}
+\begin{table}
+  \centering
+\renewcommand{\arraystretch}{1.5}
+\caption{Model Characteristics Calculated from Parameters}\label{table:Calibration}
+\sbox{\Calibration}{
+\begin{tabular}{|c|ccl|c|}
+\hline
+%\multicolumn{5}{|l|}{Model Characteristics Calculated From Parameters}  \\ \hline
+                                            & \multicolumn{3}{c|}{}                                      & Approximate \\
+                                            & \multicolumn{3}{c|}{}                                       & Calculated \\
+Description                                 & \multicolumn{3}{c|}{Symbol and Formula}                       & Value \\ \hline
+Finite Human Wealth Measure                 & $\Rnorm^{-1}$ & $\equiv$ & $\PGro/\Rfree$                    & 0.990 \\
+PF Finite Value of Autarky Measure& $\beth$ & $\equiv$ & $\beta \PGro^{1-\CRRA}$                    & 0.932 \\
+Growth Compensated Permanent Shock            & $\InvEpShkInv $ & $\equiv$ & $ (\EpShkInv)^{-1}$               & 0.990 \\
+Uncertainty-Adjusted Growth                 & $\PGroAdj $ & $\equiv$ & $ \PGro \InvEpShkInv$        & 1.020 \\
+Utility Compensated Permanent Shock                & $\uInvEpShkuInv $ & $\equiv$ & $ (\Ex_{t}[\pShk^{1-\CRRA}])^{1/(1-\CRRA)}$ & 0.990 \\
+Utility Compensated Growth                     & $\PGrouAdj $ & $\equiv$ & $ \PGro \uInvEpShkuInv$        & 1.020 \\
+Absolute Patience Factor                    & $\Pat_{\phantom{\Rfree}} $ & $\equiv$ & $ (\Rfree \beta)^{1/\CRRA}$                & 0.999 \\
+Return Patience Factor                      & $\PatR$ & $\equiv$ & $\Pat/\Rfree $     & 0.961 \\
+PF Growth Patience Factor    & $\PatPGro$ & $\equiv$ & $\Pat/\PGro $      & 0.970 \\
+\phantom{PF~} Growth Patience Factor                      & $\PatPGroAdj$ & $\equiv$ & $ \Pat/\PGroAdj$& 0.980 \\
+Finite Value of Autarky Measure         & $\DiscAltuAdj $ & $\equiv$ & $ \beta \PGro^{1-\CRRA}\uInvEpShkuInv^{1-\CRRA}$       & 0.941 \\ \hline
+\end{tabular}
+} % End \sbox
+\settowidth\TableWidth{\usebox{\Calibration}}
+\usebox{\Calibration}
+
+\end{table}

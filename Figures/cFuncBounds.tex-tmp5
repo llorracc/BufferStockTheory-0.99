@@ -1,0 +1,8 @@
+\hypertarget{cFuncBounds}{}
+\begin{figure}
+\centering
+\subfigure[\large Bounds]{\includegraphics[width=6in]{\FigDir/cFuncBounds}}
+\subfigure[\large Target $\mRat$]{\includegraphics[width=6in]{\FigDir/cRatTargetFig}}
+\caption{The Consumption Function}
+\label{fig:cFuncBounds}
+\end{figure}

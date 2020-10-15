@@ -1,0 +1,74 @@
+\input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
+\input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile}
+\onlyinsubfile{\externaldocument{\econtexRoot/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\begin{document}
+
+%  \large
+  
+\begin{align*}
+\YLevBF_{t+1}/\YLevBF_{t}  & = \Mean\left[\tShkAll_{t+1}\PGro \pShk_{t+1}\pLevBF_{t}\right]/\Mean\left[\pLevBF_{t}\tShkAll_{t}\right]  \\
+                           & = \PGro
+\end{align*}
+because of the independence assumptions we have made about $\tShkAll$ and $\pShk$.
+
+If all consumers were at their target $\mRat$ where $\Ex_{t}[\mRat_{t+1}]=\mRat$, we can show that the growth factor for aggregate assets
+is approximately $\PGro$:
+
+Aggregate assets are:
+\begin{align*}
+  \left(\frac{\ALevBF_{t+1}}{\ALevBF_{t}}\right)  & = \Mean\left[ \frac{a_{t+1,i} \PGro \pLevBF_{t+1,i}}{a_{t,i} \pLevBF_{t,i}} \right]  \notag \\
+  & = \PGro \Mean\left[\frac{a_{t+1}\psi_{t+1}}{a_{t}}\right]
+%\\  & = \PGro \Mean\left[\frac{(m_{t+1}-c_{t+1})\psi_{t+1}}{a_{t}}\right]
+\\  & = \PGro \Mean\left[\frac{(a_{t}\Rnorm_{t+1}+\tShkAll_{t+1}-\cFunc(a_{t}\Rnorm_{t+1}+\tShkAll_{t+1}))\psi_{t+1}}{a_{t}}\right]
+\\  &  \PGro \Mean\left[\frac{(a_{t}\Rfree/\PGro+\pShk_{t+1}\tShkAll_{t+1}-\cFunc(a_{t}\Rnorm_{t+1}+\tShkAll_{t+1})\psi_{t+1}}{a_{t}}\right]
+\\  &  \PGro \Mean\left[\frac{(a_{t}\Rfree/\PGro+\pShk_{t+1}\tShkAll_{t+1}-\left(\cFunc(\Ex_{t}[\mRat_{t+1}])+(\cFunc^{\prime}(\Ex_{t}[\mRat_{t+1}])(\mRat_{t+1}-\Ex_{t}[\mRat_{t+1}]))\right)\psi_{t+1}}{a_{t}}\right]
+\end{align*}
+but the first term reduces to
+\begin{align*}
+   \PGro \Mean\left[\frac{a_{t}\Rfree/\PGro+\pShk_{t+1}\tShkAll_{t+1}}{a_{t}}\right] & = \Rfree + 1/a_{t}
+\end{align*}
+but defining $\bar{\Rnorm}_{t+1} = \Ex_{t}[\Rnorm_{t+1}]$ 
+\begin{equation}\begin{gathered}\begin{aligned}
+   \PGro \Mean\left[\frac{-\cFunc(a_{t}\Rnorm_{t+1}+\tShkAll_{t+1})\psi_{t+1}}{a_{t}}\right]
+  & \approx \PGro \Mean\left[\frac{-\left(\cFunc(\aRat_{t}\bar{\Rnorm}_{t+1}+\tShkAll_{t+1})+\cFunc^{\prime}(\aRat_{t}\bar{\Rnorm}_{t+1}+\tShkAll_{t+1})(\Rnorm_{t+1}-\bar{\Rnorm}_{t+1})\right)\pShk_{t+1}}{a_{t}}\right]
+\\  & = \PGro \Mean\left[\frac{-\left(\cFunc(\aRat_{t}\bar{\Rnorm}_{t+1}+\tShkAll_{t+1})\pShk_{t+1}+\cFunc^{\prime}(\aRat_{t}\bar{\Rnorm}_{t+1}+\tShkAll_{t+1})(\Rfree/\PGro-\bar{\Rnorm}_{t+1}\pShk_{t+1})\right)\pShk_{t+1}}{a_{t}}\right]    
+\end{aligned}\end{gathered}\end{equation}
+
+\begin{equation}\begin{gathered}\begin{aligned}
+   \PGro \Mean\left[\frac{-\cFunc(a_{t}\Rnorm_{t+1}+\tShkAll_{t+1})\psi_{t+1}}{a_{t}}\right]
+& \approx \PGro \Mean\left[\frac{-\left(\cFunc(\Ex_{t}[\mRat_{t+1}])+(\cFunc^{\prime}(\Ex_{t}[\mRat_{t+1}])(\mRat_{t+1}-\Ex_{t}[\mRat_{t+1}]))\right)\\\ & = \PGro \Mean\left[\frac{-\left(\cFunc(\Ex_{t}[\mRat_{t+1}])+(\cFunc^{\prime}(\Ex_{t}[\mRat_{t+1}])(\mRat_{t+1}-\Ex_{t}[\mRat_{t+1}]))\right)\psi_{t+1}}{a_{t}}\right] 
+\end{aligned}\end{gathered}\end{equation}
+
+while the remainder of the expression is
+\begin{equation}\begin{gathered}\begin{aligned}
+   \PGro \Mean\left[\frac{-\cFunc(a_{t}\Rnorm_{t+1}+\tShkAll_{t+1})\psi_{t+1}}{a_{t}}\right]
+& \approx \PGro \Mean\left[\frac{-\left(\cFunc(\Ex_{t}[\mRat_{t+1}])+(\cFunc^{\prime}(\Ex_{t}[\mRat_{t+1}])(\mRat_{t+1}-\Ex_{t}[\mRat_{t+1}]))\right)\\\ & = \PGro \Mean\left[\frac{-\left(\cFunc(\Ex_{t}[\mRat_{t+1}])+(\cFunc^{\prime}(\Ex_{t}[\mRat_{t+1}])(\mRat_{t+1}-\Ex_{t}[\mRat_{t+1}]))\right)\psi_{t+1}}{a_{t}}\right] 
+\end{aligned}\end{gathered}\end{equation}
+
+where $\PLevBF_{t}$ designates the mean level of
+permanent income across all individuals, and we are assuming that $\aRat_{t,i}$
+was distributed according to the
+invariant distribution with a mean value of $\aRat.$
+Since permanent income grows at mean rate $\PGro$ while the
+distribution of $\aRat$ is invariant, if we normalize $\PLevBF_{t}$ to one we
+will similarly have for any period $n \geq 1$
+\begin{equation}\begin{gathered}\begin{aligned}
+  \ALevBF_{t+n}  & = \ASS \PGro^{n} +\mbox{cov}(a_{t+n,i},\pLevBF_{t+n,i}). \notag
+\end{aligned}\end{gathered}\end{equation}
+
+\end{document}
+% Local Variables:
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
+% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
+% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% End:
+
+
