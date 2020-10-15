@@ -294,5 +294,7 @@ div.float{text-align:center;clear:both;overflow:auto;width:100%;margin-bottom:1e
 .subfigure img{display:block; margin-left:auto; margin-right:auto}
 .equation td{text-align:center; }
 td.equation { margin-top:5em; margin-bottom:5em; }
+span#textcolor1{color:#FF0000}
+span#textcolor2{color:#FF0000}
 /* end css.sty */
 

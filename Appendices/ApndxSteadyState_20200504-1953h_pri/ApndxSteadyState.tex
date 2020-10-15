@@ -8,15 +8,15 @@
   Here we derive the dynamics of the distribution of $\pLev_{\FutPer,\posn}$ across locations, and the limiting distribution as $\FutPer \rightarrow \infty$, when each period the agent at each location receives an idiosyncratic shock to $\pLog = \log ~ \pLev$ until `death,' at which point the agent is replaced by a `newborn.'\footnote{This is a discrete version of the `perpetual youth' model of  \cite{blanchardFinite}.} To make the computational instantiation transparent (and debuggable), we are more explicit than usual in denoting sets.
 
   % At a proportion $\Die$ of the locations, the agent `dies' and is replaced by a newborn.  The probability that the agent will live is the cancellation of the probability of death: $\Liv$.  Thus there is a total population after $n$ periods of:
-  % \begin{align}
+  % \begin{equation}\begin{gathered}\begin{aligned}
       %       \Pop_{\FutPer+1} & = \Pop_{\FutPer}\left(\Die+\Liv\right)
                                  %       \\ & = \Pop_{0}\Die\sum_{i=0}^{\FutPer}\left(\frac{1-\Liv^{\FutPer+1}}{1-\Liv}\right).
-                                              %     \end{align}
+                                              %     \end{aligned}\end{gathered}\end{equation}
 
                                               %                                               Defining $\pLev$ as `permanent income' and $\pLog = \log ~ \pLev$ as its log, among the set of survivors from $\tAbs$ to $\tAbs+1$,
-                                              %                                               \begin{align}
+                                              %                                               \begin{equation}\begin{gathered}\begin{aligned}
                                               %                                               \pLog_{\tAbs+1} & = \pLog_{\tAbs} + \pShk_{\tAbs+1}
-                                                                                                                %     \end{align}
+                                                                                                                %     \end{aligned}\end{gathered}\end{equation}
                                                                                                                 %                                                                                                                 Locations where death occurs are repopulated by new agents; the initial permanent income of new agents is $\pLev=1$.
 
                                                                                                                 %                                                                                                                 Here we derive the steady-state distribution of $\pLog$ in an economy like the one described above.
@@ -34,23 +34,23 @@
 
   \item The initial permanent income of newborns is  $\pLev=1$ (formally, $\pLev_{\tAbs,\posn} = 1~\forall~\posn~\in~\{\Die_{\tAbs}\}$)
   \item Next, every location is subjected to a mean-one lognormally distributed shock
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \pShk & \equiv \log \PShk \sim \mathcal{N}(\pShkMean,\sigma^{2}_{\pShk}) \label{eq:pShkDef}
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
     where $\pShkMean = -\sigma^{2}_{\pShk}/2.$  That is, for all $\pLog \in \Liv_{\tAbs}$, 
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \pLog_{\tAbs} & = \pLog_{\tAbs-1}+\pShk_{\tAbs} \label{eq:pRandomwalk}
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
     while for $\posn \in \Die$
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \pLog_{\tAbs} & = \pShk_{\tAbs} \label{eq:pStartsAtZero}
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
     
   \item Under these assumptions, $\Ex_{\{\Liv_{\tAbs}\}}[\pLev_{\tAbs+1,\posn}]=\Ex_{\{\Liv_{\tAbs}\}}[\pLev_{\tAbs,\posn}\PShk_{\tAbs+1,\posn}]=\pLev_{\tAbs,\posn}$ (where $\Ex_{\{\text{[set]}_{\tAbs}\}}$ denotes the expectation of the value of its argument at the \emph{locations} occupied in period $\tAbs$ for the agents in the set, while  $\Ex[\pLev_{\tAbs,\posn}]$ denotes the expectation across all persons and locations)      
   \item Because dying agents are selected at random, the expectation of $\pLev_{\tAbs,\posn}$ for period-$\tAbs$ survivors must match the expectation of $\pLev_{\tAbs}$ for the entire population:
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \Ex_{\{\Liv_{\tAbs}\}}[\pLev_{\tAbs,\posn}]=\Ex[\pLev_{\tAbs,\posn}] \label{eq:pLevLivIsOne}
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
     Thus for an economy in which the average value of $\pLev$ is 1 in period $\tAbs$, the population-mean level of $\pLev$ in period $\tAbs+1$ will remain at $1$:
     \together{
       \begin{eqnarray*}
@@ -59,13 +59,13 @@
       \end{eqnarray*}}
   \end{enumerate}
   At ${\tp}\FutPer$ we denote the locations occupied by persons who have been alive for exactly $\LooPer$ periods as the set $\{\posn_{{\tp}\FutPer}[\LooPer]\}$. Agents for whom $\LooPer=1$ will have experienced only a single shock, the one at the beginning of the period; for $\LooPer>0$ the agents at those locations (that is, for $\posn \in \{\posn_{{\tp}\FutPer}\}[\LooPer]$),
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \pLog_{{\tp}\FutPer,\posn}  & = \sum_{\NewPer=1}^{\LooPer}\pShk_{{\tp}\NewPer,\posn}.
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   For legibility defining $\{\pLog_{{\tp}\FutPer}[\LooPer]\} = \{\pLog_{{\tp}\FutPer,\{\posn_{{\tp}\FutPer}[\LooPer]\}}\}$ as the values of $\pLog$ across the set of agents who in period ${\tp}\FutPer$ have been alive for exactly $\LooPer$ periods, the independence of the $\pShk$'s means that for every $\posn \in \{\posn_{\FutPer}[\LooPer]\}$,
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \pLog_{\FutPer,\posn}[\LooPer] \sim \mathcal{N}(\LooPer \pShkMean,\LooPer \sigma^{2}_{\pShk}) \label{eq:dstpnm}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   because such agents have experienced $\LooPer$ IID permanent shocks (recall that the variance of the sum of independent variables is equal to the sum of their variances).
 
   % expected $\pLog$ is 
@@ -77,11 +77,11 @@
 
   \newcommand{\PDF}{\textrm{PDF}}
   So the PDF of an agent who has been alive for $\LooPer$ periods is the PDF of $\mathcal{N}(\LooPer \pShkMean,\LooPer \sigma^{2}_{\pShk}),$
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PDF(\pLog_{\FutPer}[\LooPer]) & = \left(
       % \frac{1}
                                      {\sigma_{\pShk}\sqrt{\LooPer 2 \pi}}\right)^{-1} \exp\left(-\frac{(\pLog- \pShkMean \LooPer )^{2}}{2 \LooPer \sigma^{2}_{\pShk}}\right)
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   \newpage
   The set of all values of $\pLog$ in period $\FutPer$ will be the union of the $\pLog$'s of persons in the sets of people who have been alive for each possible number of periods (1, for newborns):
@@ -89,11 +89,11 @@
     \{\pLog_{\FutPer}\} & = & \bigcup_{\LooPer=1}^{\FutPer}\{\pLog_{\FutPer}[\LooPer]\}
   \end{eqnarray}
   but since each of the individual $\pLog_{\FutPer,\posn}[\LooPer]$ objects is a set of identical gaussians, the set as a whole will be the corresponding gaussian with a weight equal to the size of its population.  The cohort's population mass starts at size $(1-\Liv)$ and shrinks by a factor $\Liv$ each period:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \mass_{\LooPer} & =  (1-\Liv)\Liv^{\LooPer-1} \label{eq:mass}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   and the total population mass after $\FutPer$ periods is the sum of the masses of the living cohorts:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Mass_{\FutPer} & =  \sum_{\LooPer=1}^{\FutPer}\mass_{\LooPer}
     \\ & =  (1-\Liv)\sum_{\LooPer=1}^{\FutPer}\Liv^{\NewPer-1}
     \\ & =  (1-\Liv)\left(\frac{1-\Liv^{t}}{1-\Liv}\right)
@@ -101,27 +101,27 @@
     % \\ & = \left(\frac{(1+\FutPer)((1+\FutPer)-\Liv(2+\FutPer-\Liv^{\FutPer+1}))}{(1-\Liv)^{2}}\right)
     % \\ & =       \frac{(t+1) \left(-\Lambda  \left(-\Lambda ^{t+1}+t+2\right)+t+1\right)}{(1-\Lambda )^2}
     % \\ & = \frac{(t+1)^2-\frac{\Lambda  \left((t+1) \Lambda ^{t+1}-t-1\right)}{\Lambda -1}}{1-\Lambda }
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   and we use $\wgt$ for the proportion of the population of the population at date $\FutPer$ constituted by agents who have lived $\LooPer$ periods:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \wgt_{\FutPer,\LooPer} & =  \mass_{\LooPer}/\Mass_{\FutPer}
     \\ & = \left(\frac{(1-\Liv)\Liv^{\LooPer-1}}{1-\Liv^{\FutPer}}\right) \label{eq:wgt}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   For example, in the first period of operation of the economy, $\FutPer=\LooPer=1$ and $\wgt_{\FutPer,\LooPer}=1$.
 
   Thus $\pLog_{\FutPer}$ is distributed as a weighted sum of gaussians:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \pLog_{\FutPer} & \sim \sum_{\LooPer=1}^{\FutPer}\wgt_{\FutPer,\LooPer}\mathcal{N}(\LooPer \pShkMean,\LooPer \sigma^{2}_{\pShk})
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   % whose likelihood is
-  % \begin{align}
+  % \begin{equation}\begin{gathered}\begin{aligned}
   %   \PDF_{\tAbs}(\pLog) & = \sum_{\NewPer=1}^{\FutPer} \sum_{\LooPer=1}^{\FutPer}\wgt_{\LooPer}\mathcal{N}(\LooPer \pShkMean,\LooPer \sigma^{2}_{\Psi})
-  % \end{align}
+  % \end{aligned}\end{gathered}\end{equation}
 
   We are finally in a position to derive the results we need.
 
   The set of values of permanent income at all locations at date $\FutPer,\{\pLog_{\FutPer}\}$, is a weighted collection of normally distributed random variables, with the weights corresponding to the population masses of the cohorts of persons who have lived $\LooPer$ periods given by $\wgt_{\FutPer,\LooPer}$.  The PDF of the entire distribution is the weighted sum of the PDFs of the constituent populations:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PDF(\pLog_{\FutPer}) & = \frac{\sum _{\LooPer=1}^{\FutPer}
                             \Liv^{\LooPer-1}
                             \exp({-\frac{(\pLog_{\FutPer}-\LooPer \pShkMean )^2}{2
@@ -132,7 +132,7 @@
                             }_{\left(1-\Liv^{\FutPer}\right)/(1-\Liv)}
                             }
                             % \left[\frac{(1-\Liv)\sum _{\LooPer=1}^{\FutPer} \Liv^{\LooPer-1} \exp\left({-\frac{(\pLog-\pShkMean \LooPer)^2}{2 \LooPer \sigma^2_{\pShk}}{\sqrt{2 \pi \sigma_{\pShk}  \left(1-\Liv^\FutPer\right)}}\right
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   \section{Simulation Algorithm}
 
@@ -143,21 +143,21 @@
   We will repeatedly be using a trick that greatly reduces the number of agents necessary to get well-behaved results.  If there is a normally distributed random variable $\pShk$ that will be drawn for a population of size $\Mass \in \Nteger^{+}$, we first construct the $\Mass-$point equiprobable approximation to the normal distribution, where the probability mass of each element is $1/\Mass$ and the value at location $\posn$ is $\pShk[\posn]$.
 
   The trick is that, rather than actually drawing a value of $\pShk$ independently for each $\posn$, instead we just randomly reshuffle the order of the elements in $\vctr{\pShk}$ (the vector of values of $\pShk$.  In the limit as $\mass \uparrow \infty$ this approaches the asymptote defined by the true distribution.  But in a finite population, we guarantee that the population-mean level and variance of the collection of draws of $\vctr{\pShk}$ matches the theoretical values of these objects:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \mu & = (1/\Mass)\sum_{\posn=1}^{\Mass}\pShk_{\posn}
-  \end{align}
-  \begin{align}
+  \end{aligned}\end{gathered}\end{equation}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \sigma^{2}_{\pShk} & = (1/\Mass)\sum_{\posn=1}^{\Mass}(\pShk_{\posn} - \mu)^{2}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   Call a version of $\vctr{\pShk}$ that has been reshuffled at date $\tAbs$ $\tilde{\vctr{\pShk}}$, and define
 
   \newcommand{\pShkOldRemix}{\tilde{\vctr{\pShk}}_{\Liv}}
   \newcommand{\pShkNewRemix}{\tilde{\vctr{\pShk}}_{\Die}}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \pShkOldRemix & = \text{reshuffled $\pShk$ list of size of suvivors} 
     \\  \pShkNewRemix & = \text{reshuffled $\pShk$ list of size of newborns}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   \subsection{Monte Carlo Simulation Method}
 
@@ -192,38 +192,38 @@
   % That is, (1) $\SetSub$ is bounded and (2) $\Trns$ is the CDF
 
   The initial state of the Markov process $\Mrkv$ is random \mrgn{Could be deterministic instead} and distributed according to the density function $\pDens_{0} : \DistSetSprtFull \rightarrow \reals^{\geq 0}$.  The state distribution of $\Mrkv$ at time $\tAbs \in \Nteger \doteq  \{1,2,3,...\}$ is characterized by a density function $\pDens_{\tAbs} : \mathcal{\DistSetSprtFull} \rightarrow \reals^{\geq 0}$ such that for all $\SetSub \in \Borel({\DistSetSprtFull}),$\mrgn{For all measurable sets, there is a measurable probability of any specific sequence of events leading up to $\tAbs$}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Pmeas(\point(\tAbs) \in \SetSub) & \equiv \int_{\SetSub} \pDens_{\tAbs}(\point)d\point
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   where $\Pmeas$ indicates the probability associated to events over the product space\mrgn{combine $(\tAbs+1)$ of $\DistSetSprtFull$} $\DistSetSprtFull^{\tAbs+1}$ with elements $\vctr{\point}=[\point(0),\point(1),{\dots},\point(\tAbs)]$, where $\vctr{\point}$ indicates a vector of individual values of $\point$ (the same notation applies below).
 
   The state density functions $\pDens_{\tAbs}(\bullet)$ can be computed recursively:\mrgn{prb of $\point_{\tAbs+1}$: sum of ways to get there from all $\point_{t}$}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \pDens_{\tAbs+1}(\Nxt{\point}) &= \int_{\DistSetSprtFull} \trns_{\point}(\Nxt{\point}|\point)\pDens_{\tAbs}(\point)d\point ~~~~ \forall~\Nxt{\point} \in \DistSetSprtFull \label{eq:stateDensity}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   We make further assumptions that correspond to Assumptions 1 and 2 in \cite{saDiscretize}, with the result that their Theorem 3 holds:
   \begin{comment} % Just say assumptions are the same as in 
   \textbf{Assumption \ref{assn:Bounded}} For given sets $\TrnsSetSprtTrnc \subset \DistSetSprtFull^{2}$ and $\DistSetSprtTrnc_{0} \subset \DistSetSprtFull$, there exist positive constants $\epsilon$ and $\epsilon_{0}$, such that $\trns_{\point}(\Nxt{\point}|\point) $ and $\pDens_{0}(\point)$ satisfy the following conditions:
 
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \trns_{\point}(\Nxt{\point}|\point) \leq \epsilon ~~~~\forall(\point,\Nxt{\point})~\in~\DistSetSprtFull \backslash \TrnsSetSprtTrnc, \text{~and~} \pDens_{0}(\point) \leq \epsilon_{0}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   \textbf{Assumption \ref{assn:Lipschitz}} see \cite{eaDiscretize} Assumption 2.
 \end{comment}
 
   \textbf{Theorem 3}: \textit{The functions $\pDens_{\tAbs}(\bullet)$ can  be approximated by piecewise constant functions $\pContAprx(\bullet)$, defined as}
-  \begin{align}\label{eq:PrbBinNxtFmPntNow}
+  \begin{equation}\begin{gathered}\begin{aligned}\label{eq:PrbBinNxtFmPntNow}
     \pContAprx_{\tAbs}(\point) &= \sum_{\ptsLoopC=1}^{\StNum} \frac{\pDistDscr_{\tAbs}(\ptsLoopC)}{\Lebes(\SetSub_{\ptsLoopC})} \mathbb{I}_{\SetSub_{\ptsLoopC}}(\point)~~~~\forall~\tAbs~\in~\Nteger^{+}
-  \end{align}\mrgn{Every $\point$ in $\SetSub_{k}$ has same pty $\pContAprx_{k}$}where $\mathbb{I}_{\SetSub}(\bullet)$ is the indicator function of a set $\SetSub \subseteq \DistSetSprtFull$ (that is, $\mathbb{I}_{\SetSub}(\point) = 1$ if $\point \in \SetSub$; else $\mathbb{I}_{\SetSub}(\point) = 0$).  % The approximation error is upper-bounded by  ... [boring details]
+  \end{aligned}\end{gathered}\end{equation}\mrgn{Every $\point$ in $\SetSub_{k}$ has same pty $\pContAprx_{k}$}where $\mathbb{I}_{\SetSub}(\bullet)$ is the indicator function of a set $\SetSub \subseteq \DistSetSprtFull$ (that is, $\mathbb{I}_{\SetSub}(\point) = 1$ if $\point \in \SetSub$; else $\mathbb{I}_{\SetSub}(\point) = 0$).  % The approximation error is upper-bounded by  ... [boring details]
 
 
   We consider a finite Markov chain $\Mrkv_{f}$ with $n+1$ discrete abstract states over this space characterized by the transition probability matrix $\PTrns = [\PTrns_{\this\that}]$ where the probability of jumping from state $\this$ to state $\that$ $(\PTrns_{\this,\that})$ is computed as:\mrgn{In the case of an unbounded state space, this captures the probability mass of all values of $\point$ not encompassed in $\SetSub$ - values above or below the cutoff values that defined $\SetSub$ as a bounded subset of the original unbounded space}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PTrns_{\this,\that} &= \left(\frac{1}{\Lebes(\SetSub_{\this})}\right)\int_{\SetSub_{\this}}\left(\int_{\SetSub_{\that}}\trns_{\point}(\Nxt{\point}|\point){d\Nxt{\point}}\right){d\point}~~~\forall\that \in~ \Nteger_{\StNum} \label{eq:thisTOthat}
     \\ \PTrns_{\StPls,\this} &= \delta_{\StPls,\this}\notag
-  \end{align}{\mrgn{Reversed the order of integration here; $\that$ first, then $\this$}}
+  \end{aligned}\end{gathered}\end{equation}{\mrgn{Reversed the order of integration here; $\that$ first, then $\this$}}
   
 \noindent for all $\that \in \Nteger_{\StPls}$, and where $\delta_{\StPls,\that}$ is the Kronecker delta function (the abstract state $\StPls$ of $\Mrkv_{f}$ is absorbing) 
   and $\Lebes(\bullet)$ denotes the Lebesgue measure of a set.\footnote{If there are any point masses in the set, they are captured as a case where $\Bot{\SetSub}=\Top{\SetSub}$; that is, all point masses are allocated an ``interval'' of measure zero at the location of the point mass.}
@@ -243,47 +243,47 @@
   % That is for some $\StNum$ we have found a distribution in which $\Lebes(\pContAprx_{\this})=1/\StNum~\forall~\this \in \StNum$.
 
   Per \eqref{eq:thisTOthat}, we can calculate the transition probabilities from:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PTrns_{\this,\that} &= \left(\frac{1}{\underbrace{\Lebes(\SetSub_{\this})}_{\SetSub_{\this}\text{~Pop mass}}}\right)\overbrace{\int_{\SetSub_{\this}}}^{\point\in[\Bot{\SetSub}_{\this},\Top{\SetSub}_{\this})}\left(\underbrace{\overbrace{\int_{\SetSub_{\that}}}^{\Nxt{\point}\in[\Bot{\SetSub}_{\that},\Top{\SetSub}_{\that})}\trns_{\point}(\Nxt{\point}|\point){d\Nxt{\point}}}_{\equiv \Nxt{\pDistDscr}(\that|\point)} \right){d\point}~~~\forall\this\in\Nteger_{\StNum} \label{eq:thispTOthatp}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   where $\Nxt{\pDistDscr}(\that|\point)$ is the probability mass for being in interval $\that$ next period, given that you are at point $\point$ this period.
 
   Defining $\CDF^{\bullet}$ as the cumulative distribution function of $\bullet$, now recall from \eqref{eq:pRandomwalk} that for $\point \in \Liv_{\tAbs+1}$ (locations where the occupant survives),
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\point} & = \point+\pShk
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   so
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \trns_{\point}(\Nxt{\point}|\point, \Nxt{\point} \in \Liv_{\tAbs+1}) &=  d{\CDF^{\pShk}(\Nxt{\point}-\point)}.
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   In words: To get from $\point$ to $\Nxt{\point}$ requires a shock of size $\pShk = \Nxt{\point}-\point$ whose probability density is measured by $d\CDF^{\pShk}(\Nxt{\point}-\point)$.
   For a given $\point$ the probability mass for the set of draws of $\pShk$ that put you in $\SetSub_{\that}$ is therefore:
   \newcommand{\erf}{\text{erf}}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscrAprx}(\that|\point,\Nxt{\point}\in\Liv_{\tAbs+1})  &= \int_{\Bot{\SetSub}_{\that}-\point}^{\Top{\SetSub}_{\that}-\point} d{\CDF^{\pShk}}
     \\ & = \CDF^{\pShk}(\Top{\SetSub}_{\that}-\point)-\CDF^{\pShk}(\Bot{\SetSub}_{\that}-\point) \notag
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   For locations whose occupant is replaced, the calculation is even simpler.  At those locations, permanent income is reset to its starting value of 0 and then a shock is drawn, so
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\point} &= \pShk
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   so
   \renewcommand{\Die}{(1-\Liv)}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscrAprx}(\that|\point,\Nxt{\point}\notin\Liv_{\tAbs+1})  &= \int_{\Bot{\SetSub}_{\that}}^{\Top{\SetSub}_{\that}} d{\CDF^{\pShk}}
     \\ & = \CDF^{\pShk}(\Top{\SetSub}_{\that})-\CDF^{\pShk}(\Bot{\SetSub}_{\that}) \notag
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   so the unconditional transition process is a weighted mixture of the two distributions:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscrAprx}(\that|\point)  &= \Liv\Nxt{\pDistDscrAprx}(\that|\point,\Nxt{\point}\in\Liv_{\tAbs+1}) + (1-\Liv)    \Nxt{\pDistDscrAprx}(\that|\point,\Nxt{\point}\notin\Liv_{\tAbs+1}).
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   
 
   The overall transition probability structure is therefore 
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PTrnsDscr_{\this,\that}& = \left(\frac{1}{\Lebes(\SetSub_{\this})}\right)  \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_{\this}} \Nxt{\pDistDscr}(\that|\point) d\CDF^{\pDens_{\tAbs}}(\point)
 \\ & = \left(\frac{1}{\Lebes(\SetSub_{\this})}\right)  \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_{\this}} \Nxt{\pDistDscrAprx}(\that|\point) d\CDF^{\pContAprx_{\tAbs}}(\point)                              .
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   The idea here is that we are replacing the respective set of shocks that would be sufficient, in the continuous state space, to move from each point in any partition $\this$ to some point in partition $\that$ (weighted by each shock's probability) by, in the discretized state space, a single shock with that same probability that moves the (now assumed to be identical) occupants of discrete bin ${\this}$ to discrete bin ${\that}$.
 
@@ -328,83 +328,83 @@
   \begin{comment}
     Our derivations will be for consumers who are living in the `true' economy.  In that economy, the transition equation for $\aRat$ is:
     \subsection{Transition for $\aRat$}
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \aRat_{\tAbs+1} & = \Rfree (\PGro \pShk_{\tAbs+1})^{-1} \aRat_{\tAbs} + \tShk_{\tAbs+1} - \cFunc_{\tAbs+1}(\Rfree (\PGro \pShk_{\tAbs+1})^{-1}\aRat_{\tAbs}+\tShk_{\tAbs+1})
       \\                \Nxt{_{\tAbs+1}^{\aRat}(\aRat_{\tAbs+1}) & = \CDF_{\tAbs+1}^{\aRat}\left(\Rfree (\PGro \pShk_{\tAbs+1})^{-1} \aRat_{\tAbs} + \tShk_{\tAbs+1} - \cFunc_{\tAbs+1}(\Rfree (\PGro \pShk_{\tAbs+1})^{-1}\aRat_{\tAbs}+\tShk_{\tAbs+1})\right)
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
 
   Designating a next-period variable $\bullet$ by $\Nxt{\bullet}$, for a person who ends the current period with assets $\point$, market resources at the beginning of the next period will be
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\mRat} & = \Nxt{\Rnorm}\point+\Nxt{\tShk}.
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   We assume that we have found converged consumption and asset functions $\aFunc(\mRat)=\mRat-\cFunc(\mRat)$.  
   
 Now we want to calculate the discrete Markov approximation to the true continuous evolution of the economy. 
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\point} & = \aFunc(\Nxt{\Rnorm} \point + \Nxt{\tShk})
     % \\                \pDens(\Nxt{\point}) & = \int_{\SetSub}\left(\pDens(\point)\left(\Nxt{\Rnorm} \point + \Nxt{\tShk} - \cFunc(\Nxt{\Rnorm}\point+\Nxt{\tShk})\right)\right) d\point
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   % and the state density function analogous to \eqref{eq:stateDensity} is:
 
   % \renewcommand{\point}{\aRat}
 
   The period-$\tAbs$ distribution of $\Mrkv_{f}$ is defined by a probability mass function (\pmf)$~\vctr{\pDistDscr}_{\tAbs} = [\pDistDscr_{\tAbs}(1),\pDistDscr_{\tAbs}(2),\dots,\pDistDscr_{\tAbs}\StPls]$.\footnote{If the consumption rule has a target $\Target{\aRat}$, a natural starting point is to have all of the population mass at $\Target{\aRat}$.}  The transition matrix is 
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PTrns_{\this,\that} &= \left(\frac{1}{\Lebes(\SetSub_{\this})}\right)\overbrace{\int_{\SetSub_{\this}}}^{\point\in[\Bot{\SetSub}_{\this},\Top{\SetSub}_{\this})}\underbrace{\overbrace{\int_{\SetSub_{\that}}}^{\Nxt{\point}\in[\Bot{\SetSub}_{\that},\Top{\SetSub}_{\that})}\trns_{\point}(\Nxt{\point}|\point){d\Nxt{\point}}}_{\equiv \Nxt{\pDistDscr}(\that|\point)} {d\point}~~~\forall\this\in\Nteger_{\StNum} \label{eq:thispTOthatp}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   where $\Nxt{\pDistDscr}(\that|\point)$ is the probability of being in interval $\that$ next period, given that you are at point $\point$ this period.
   The only structural difference with the case above is that the transition function $\trns_{\point}$ now depends on two shocks, $\Nxt{\pShk}$ and $\Nxt{\tShk}$, instead of just one ($\Nxt{\pShk}$).
 
   \begin{comment}
     Equation \eqref{eq:stateDensity} translates to
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \pDens_{\tAbs+1}(\Nxt{\point}) &= \int_{\DistSetSprtFull} \trns_{\point}(\Nxt{\point}|\point)\pDens_{\tAbs}(\point)d\point ~~~~ \forall~\Nxt{\point} \in \DistSetSprtFull \label{eq:stateDensity}
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
 
   We now want to inspect $\Nxt{\pDistDscr}(\that|\point)$ more closely:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscrAprx}(\that|\point) &=   \int_{\Bot{\SetSub}_{\that}}^{\Top{\SetSub}_{\that}}\trns_{\point}(\Nxt{\point}|\point) d\Nxt{\point}
     % \\ & =  \int_{\Bot{\SetSub}_{\that}}^{\Top{\SetSub}_{\that}}                                     \left(\Nxt{\Rnorm} \aRat + \Nxt{\tShk} - \cFunc(\Nxt{\Rnorm}\aRat+\Nxt{\tShk})\right)\pDens_{\tAbs}(\point)d\point
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   In words, we integrate over the combinations of realizations of $\Nxt{\pShk}$ and $\Nxt{\tShk}$ such that, if we start at $\point$, $\Nxt{\point} \in \SetSub_{j}$.  For the moment, let's take $\Nxt{\Rnorm}$ as fixed and consider which values of $\tShk$ would lead to some $\Nxt{\point} \in \SetSub_{\that}$. Because $\aFunc(\bullet)$ is not an analytical function, for any $\Nxt{\Rnorm}(\pShk)$ (equivalently, for any $\pShk$) we must search numerically for the $\{\Bot{\Nxt{\tShk}}(\point,\pShk,\that),\Top{\Nxt{\tShk}}(\point,\pShk,\that)\}$ such that $\Nxt{\point}$ arrives respectively at $\{\Bot{\SetSub}_{\that},\Top{\SetSub}_{\that}\}$.\footnote{See the appendix for a sketch of a procedure for doing this.}
 
   % Defining the functions that return the minimum and maximum realization of $\tShk$ such that $\Nxt{\point} \in \SetSub_{\that}$ as $\Bot{\tShk}(\pShk,\that)$  and $\Top{\tShk}(\pShk,\that)$, the
 
   Various characteristics of the $\aFunc$ function (continuity; monotonicity; concavity; limits) mean that $\Nxt{\point}$ is monotonically increasing in $\tShk$, so the {\pmf} $\Nxt{\pDistDscr}(\that|\point)$  for arriving in state $\that$ as a function of $\pShk$ is simply:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscr}(\that|\point,\Nxt{\pShk}) & = \CDF^{\tShk}(\Top{\tShk}(\that|\point,\Nxt{\pShk}))-\CDF^{\tShk}(\Bot{\tShk}(\that|\point,\Nxt{\pShk})).
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   so the probability mass for arrival in $\that$ is
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscr}(\that | \point) & = \int_{\Bot{\pShk}}^{\Top{\pShk}} \Nxt{\pDistDscr}(\that|\point,\Nxt{\pShk}) d\CDF^{\Nxt{\pShk}}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   We now have the {\pmf} of $\SetSub_{\that}$ for any fixed $\point$,\footnote{We are assuming that $\log \tShk \sim \mathcal{N}(\mu,\sigma^{2})$, so we can use the fact that:
     $\CDF^{\tShk}(\tShk) = \frac{1}{2}\left(1+\erf\left(\frac{\tShk-\mu}{\sigma \sqrt{2}}\right)\right)$
   } so in order to calculate the probability of arriving in $\SetSub_\that$ from any point in $\SetSub_\this$ all we need to do is integrate the conditional probability over all possible values of $\point \in \SetSub_{\this}$:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PTrns_{\this,\that} &=\left(\frac{1}{\Lebes(\SetSub_{\this})}\right) \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_\this} \Nxt{\pDistDscr}(\that|\point) d\CDF^{\point}. \label{eq:PTrns}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   Our approximation scheme relies upon the substitution, for each $\point \in \SetSub_{i}$ a point that is the weighted mean, $\hat{\point}_{\this} = \int_{\SetSub_{i}}\point d\CDF^{\point}$.  But without having the CDF $\CDF$ of the continuous distribution, we have no way to compute these values.
 
   Fortunately, \cite{eaDiscretize} describe a recursive procedure that is guaranteed to result in bounded errors.
 
   \textit{\textbf{Theorem 1}}. The functions $\pDens_{\tAbs}$ satisfy the bound\mrgn{$\pDens$ is small for $\point$ in $\DistSetSprtFull$ that are excluded from $\DistSetSprtTrnc$}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     0 & \leq \pDens_{\tAbs}(\point) \leq \varepsilon_{\tAbs}~~~~\forall \point \in \DistSetSprtFull \backslash \DistSetSprtTrnc_{\tAbs}
-  \end{align}\mrgn{bounds grow as you go farther and farther}
+  \end{aligned}\end{gathered}\end{equation}\mrgn{bounds grow as you go farther and farther}
 \noindent where the quantities $\{\varepsilon_{\tAbs}\}_{\tAbs=0}^{N}$ are defined recursively by
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \varepsilon_{\tAbs+1} &= \epsilon + \mathrm{M}_{f}\varepsilon_{\tAbs},
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   whereas the support sets $\{\DistSetSprtTrnc\}_{\tAbs=0}^{N}$ are computed as\mrgn{You expand the size of the support}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \DistSetSprtTrnc_{\tAbs+1} &= \Pi_{\Nxt{\point}}\left(\TrnsSetSprtTrnc \cap (\DistSetSprtTrnc \times \DistSetSprtFull)\right)
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   where $\Pi_{\Nxt{\point}}$ denotes the projection map along the second set of coordinates.\mrgn{By the amount given by the outcomes of the stochastic shocks}
   This means that we can start with an arbitrary distribution, and if we iterate long enough we can construct support sets that are large enough to guarantee the errors are bounded arbitrarily tightly.
 
@@ -414,23 +414,23 @@ Now we want to calculate the discrete Markov approximation to the true continuou
 
   \begin{comment}
 
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       % & =    \int_{\underline{\Nxt{\point}}_{\this}}^{\bar{\Nxt{\point}}_{\this}}\left(\Nxt{\Rnorm} \point + \Nxt{\tShk} - \cFunc_{\tAbs+1}(\Nxt{\Rnorm}\point+\Nxt{\tShk})\right) d{\CDF(\tShk)}
       % \\ & = \CDF^{\tShk}(\Top{\SetSub}_{\this}-\Bot{\SetSub}_{\this})-\CDF^{\tShk}(\Bot{\SetSub}_{\this}-\Bot{\SetSub}_{\this})
            & = \left(\frac{1}{2}\right)\left(\erf(\Top{\SetSub}_{\this}-\Bot{\SetSub}_{\this})-\erf(\Bot{\SetSub}_{\this}-\Bot{\SetSub}_{\this})\right)
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
 
   \begin{comment}
     Finally, for $a < b$ defining 
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \mathfrak{C}(a,b) & \equiv  \CDF^{\tShk}(b)-\CDF^{\tShk}(a)
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
 
     so
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \PTrns_{\this,\that} &= \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_{\this}} \mathfrak{C}(\point-\underline{\point}_{\that},\point-\bar{\point}_{\that})d\CDF^{\point}
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
 
   \section{Backwards}
@@ -441,35 +441,35 @@ Now we want to calculate the discrete Markov approximation to the true continuou
   The main thing that makes this problem different from the former one is that the consumption function now depends on time, $\aFunc_{\tAbs}$.  In the last period $\aFunc_{\last}(\mRat) = 0$, and for prior periods it will be obtained by solving the dynamic stochastic optimization problem.
 
   Assuming that the distribution of the shocks does not change with the time period, 
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \PTrns_{\this,\that}[\tAbs] &= \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_{\this}} \Nxt{\pDistDscr}[\tAbs](\that|\point) d\CDF^{\point}_{\tAbs}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   Rewriting \eqref{eq:aThisThat}
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \point_{\tAbs+1} & = \aFunc_{\tAbs+1}(\Rnorm_{\tAbs+1} \point_{\tAbs} + \tShk_{\tAbs+1})
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   we again must solve numerically for $\Top{\tShk}[\tAbs](\that|\point_{\tAbs},\pShk_{\tAbs+1})$ and $\Bot{\tShk}[\tAbs](\that|\point_{\tAbs},\pShk_{\tAbs+1})$ functions, which will now yield a
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Nxt{\pDistDscr}[\tAbs](\that|\point_{\tAbs},\pShk_{\tAbs+1}) & = \CDF^{\tShk}(\Top{\tShk}[\tAbs](\that|\point_{\tAbs},\pShk_{\tAbs+1}))-\CDF^{\tShk}(\Bot{\tShk}[\tAbs](\that|\point_{\tAbs},\pShk_{\tAbs+1})),
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   and the formula for $\Nxt{\pDistDscr}$ is again given by \eqref{eq:}
 
   \begin{comment} % Already produced this formula above 
     We now have the {\pmf} of $\SetSub_{\that}$ for any fixed $\point_{\tAbs}$, so all we need to do is integrate over all possible values of $\point_{\tAbs} \in \SetSub_{\this}$:
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \PTrns_{\this,\that}[\tAbs] &= \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_{\this}} \Nxt{\pDistDscr}[\tAbs](\that|\point_{\tAbs}) d\CDF^{\pShk}_{\tAbs}.
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
 
 
   \section{Intervals}
 
   As before, suppose we have a prespecified set of boundaries on the real number line: $\Bot{\SetSub}_{\this},\Top{\SetSub}_{\this}$ for $\this \in \Nteger_{\StNum+1}$ points that define the boundaries of the intervals we want to use in constructing our Markov chain.  Then the transition probabilities are again
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \point_{\this} & \equiv \int_{\Bot{\SetSub}_{\this}}^{\Top{\SetSub}_{\this+1}} \point d\CDF^{\point}
     \\ \Nxt{\pDistDscr}[\tAbs](\that|\point_{\tAbs},\pShk_{\tAbs+1}) &= 
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
 
 
@@ -481,14 +481,14 @@ Now we want to calculate the discrete Markov approximation to the true continuou
   Per the discussion above, our consumers do not believe themselves to be living in a discretization of their economy; they believe they are living in the original continuous economy.
 
   For any period-$\tAbs$ ending value of $\point_{\tAbs}$, expected marginal utility will be:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \vEnd^{\prime}_{\tAbs}(\point_{\tAbs}) & \equiv \Ex_{\tAbs}[\uFunc^{\prime}\left(\cFunc(\Rnorm_{\tAbs+1} \point_{\tAbs} + \tShk_{\tAbs+1})\right)]
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   which as usual yields consumption and beginning-of-period market resources from
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \cRat_{\tAbs} & = (\uFunc^{\prime})^{-1}(\vEnd^{\prime}_{\tAbs})
     \\ \mRat_{\tAbs} & = \point_{\tAbs}+\cRat_{\tAbs}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   \pagebreak
 
@@ -500,40 +500,40 @@ Now we want to calculate the discrete Markov approximation to the true continuou
 
   But we do have analytical lower and upper bounds for $\cFunc$, which in turn can be used to give us lower and upper bounds for the search region.
   \begin{comment}
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \Nxt{\point}-\Nxt{\Rnorm} \point + \cFunc(\Nxt{\Rnorm}\point+\Nxt{\tShk})& = \Nxt{\tShk} 
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
 
   Since $\Nxt{\point}$ is continuous and strictly increasing in the realization of $\tShk$ and $\SetSub_{\that} \in [\Bot{\SetSub}_{\that},\Top{\SetSub}_{\that}]$, for any given $\Nxt{\Rnorm}$ we can find the lower bound such that ${\Nxt{\point}}=\Bot{\SetSub}_{\that}$ and the upper bound such that ${\Nxt{\point}}=\Top{\SetSub}_{\that}$
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Bot{\SetSub}_{\that}(\Nxt{\Rnorm}) & =  \Nxt{\Rnorm} \point + \Bot{\Nxt{\tShk}} - \cFunc(\Nxt{\Rnorm}\point+\Bot{\Nxt{\tShk}})
     \\  \Top{\SetSub}_{\that}(\Nxt{\Rnorm}) & =  \Nxt{\Rnorm} \point + \Top{\Nxt{\tShk}} - \cFunc(\Nxt{\Rnorm}\point+\Top{\Nxt{\tShk}})
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
 
   \begin{comment}
     For any given current value $\point$ (and treating $\Nxt{\pShk}$ and $\Nxt{\Rnorm}=\Rfree (\PGro \Nxt{\pShk})^{-1}$ as predetermined).
-    \begin{align}
+    \begin{equation}\begin{gathered}\begin{aligned}
       \Target{\point}(\tShk) & = 
                                \Nxt{\Rnorm} \point + \Nxt{\tShk} - \cFunc(\Nxt{\Rnorm}\point+\Nxt{\tShk})
                                \label{eq:implicit}
                                % \\  \Nxt{\point} - \tShk & = \left(\Nxt{\Rnorm} \point  - \cFunc(\Nxt{\Rnorm}\point+\Nxt{\tShk})\right)
-    \end{align}
+    \end{aligned}\end{gathered}\end{equation}
   \end{comment}
   Because $\cFunc$ is not an analytical expression, this is an implicit function, but for `small' $\tShk$ can be approximated by
   a first order Taylor expansion:
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \cFunc(\Rnorm \point + \tShk) & \approx   \cFunc(\Rnorm \point + 1)+ (\tShk-1)\cFunc^{\prime}(\Rnorm \point + 1)
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   and shortening $\cFunc^{\prime}(\Rnorm \point + 1)$ to $\cFunc^{\prime}$,
-  \begin{align}
+  \begin{equation}\begin{gathered}\begin{aligned}
     \Target{\point} & \approx \left(
                       \Nxt{\Rnorm} \point  - \cFunc(\Nxt{\Rnorm}\point+1)
                       \right)
                       +\Nxt{\tShk}+(\Nxt{\tShk}-1)\cFunc^{\prime}(\Rnorm \point + 1)
     \\ \Target{\point} -(\cFunc^{\prime}+1)\Nxt{\tShk} & \approx  \left(\Nxt{\Rnorm} \point  - (\cFunc(\Nxt{\Rnorm}\point+1)\right)-\cFunc^{\prime}
     \\  (\cFunc^{\prime}+1)\Nxt{\tShk} & \approx \Target{\point}- \left(\Nxt{\Rnorm} \point  - (\cFunc(\Nxt{\Rnorm}\point+1))\right)+\cFunc^{\prime}                                             \\  \Nxt{\tShk} & \approx  (1+\cFunc^{\prime})^{-1}\left\{\Target{\point}- \left(\Nxt{\Rnorm} \point  - (\cFunc(\Nxt{\Rnorm}\point+1)\right)+\cFunc^{\prime})\right\}
-  \end{align}
+  \end{aligned}\end{gathered}\end{equation}
   which can serve as the starting point for a numerical search for the `true' value of $\Nxt{\tShk}$ that satisfies \eqref{eq:implicit}.
 
 
@@ -543,7 +543,7 @@ Now we want to calculate the discrete Markov approximation to the true continuou
 
 So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ that puts you in $\pDiscBnds_{\that}$ is
 So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ that puts you in $\pDiscBnds_{\that}$ is
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   & =    \int_{\underline{\Nxt{\point}}_{\this}}^{\bar{\Nxt{\point}}_{\this}}\left(\Nxt{\Rnorm} \point + \Nxt{\tShk} - \cFunc_{\tAbs+1}(\Nxt{\Rnorm}\point+\Nxt{\tShk})\right) d{\CDF(\tShk)}
   % \\ & = \CDF^{\tShk}(\bar{\Nxt{\point}}_{\this}-\pDiscBnds_{\this})-\CDF^{\tShk}(\underline{\Nxt{\point}}_{\this}-\pDiscBnds_{\this})
   % \\ & = \left(\frac{1}{2}\right)\left(\erf(\bar{\Nxt{\point}}_{\this}-\pDiscBnds_{\this})-\erf(\underline{\Nxt{\point}}_{\this}-\pDiscBnds_{\this})\right)
@@ -551,14 +551,14 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
 
          Suppose we fix the size of the permanent shock at $\pShk[\ptsLoopC]$.  Then the CDF of $\aRat_{\tAbs+1}$ is
 
-         \begin{align}
+         \begin{equation}\begin{gathered}\begin{aligned}
            \CDF^{\pShk[\ptsLoopC]}(\aRat[\ptsLoopB]|\pShk_{\tAbs+1}=\pShk[\ptsLoopC]) & = \CDF\left(\Rfree (\PGro \pShk[\ptsLoopC])^{-1} \aRat_{\ptsLoopA} + \tShk_{\tAbs+1} - \cFunc_{\tAbs+1}(\Rfree (\PGro \pShk[\ptsLoopC])^{-1}\aRat_{\ptsLoopA}+\tShk_{\tAbs+1})\right)
-         \end{align}
+         \end{aligned}\end{gathered}\end{equation}
                                                                                     which can be calculated easily enough numerically since we know that the RHS is monotonic in $\tShk$.
                                                                                     The CDF across all possible values of $\pShk$ is therefore
-                                                                                    \begin{align}
+                                                                                    \begin{equation}\begin{gathered}\begin{aligned}
                                                                                       \CDF(\aRat[\ptsLoopB]) & = \sum_{k=1}^{\ptsLoopD}\CDF\left(\Rfree (\PGro \pShk[\ptsLoopC])^{-1} \aRat_{\ptsLoopA} + \tShk_{\tAbs+1} - \cFunc_{\tAbs+1}(\Rfree (\PGro \pShk[\ptsLoopC])^{-1}\aRat_{\ptsLoopA}+\tShk_{\tAbs+1})\right)
-                                                                                    \end{align}
+                                                                                    \end{aligned}\end{gathered}\end{equation}
 
 
 
@@ -572,9 +572,9 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
                                                                                                                such that $\underline{\sharp}[0]$ is the minimum possible realization of $\aRat_{\tAbs+1}$ and $\bar{{\sharp}}[-1]$ is the maximum possible realization of $\aRat$.  Furthermore, define the a set of points ${\sharp}[\ptsLoopB]=\int_{\aRat[\ptsLoopB-1]}^{\aRat[\ptsLoopB]}d\CDF(\aRat)\aRat$.  That is, the ${\sharp}[\ptsLoopB]$ constitute the mean value of $\aRat$ conditional on $\aRat$ being in the interval between $\aRat[\ptsLoopB-1]$ and $\aRat[\ptsLoopB]$.  Then we can define the probability mass function as the set of probabilities $\PMF[\ptsLoopB]$ such that, for each point on the interior of ${\sharp}[\ptsLoopB]$, the probability mass is split half and half between the two adjacent points.  For the bottom and top $\PMF$ values, we need to integrate between $\underline{\sharp}[0]$ and $\aRat[1]$ or between $\aRat[-1]$ and $\bar{{\sharp}}$ to obtain the remaining mass associated with the bottommost and topmost points in the $\aRat[\ptsLoopB]$ list.
                                                                                                                \end{document}
 
-                                                                                                               \begin{align}
+                                                                                                               \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                  \CDF(\underline{\sharp}[0]) & = 
-                                                                                                               \end{align}
+                                                                                                               \end{aligned}\end{gathered}\end{equation}
 
                                                                                                              \end{document}
                                                                                                              hithere
@@ -592,27 +592,27 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
                                                                                                              \end{align*}
                                                                                                              where $\pLog_{\FutPer}[\LooPer] \sim \mathcal{N}(\LooPer \pShkMean,\LooPer \sigma^{2}_{\pShkMean})$. The mean 
                                                                                                              of $\pLog_{\FutPer}$ is therefore:
-                                                                                                             \begin{align}
+                                                                                                             \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                \bar{\pLog}_{\FutPer} & = \sum_{\LooPer=1}^{\FutPer} \Liv^{\LooPer} \LooPer \pShkMean
                                                                                                                \\  & =\pShkMean \sum_{\LooPer=1}^{\FutPer} \Liv^{\LooPer} \LooPer 
-                                                                                                             \end{align}
+                                                                                                             \end{aligned}\end{gathered}\end{equation}
                                                                                                              and since the variance of a normal variable multiplied by $\Liv^{\LooPer}$ is $(\Liv^{\LooPer})^{2}$,
-                                                                                                             \begin{align}
+                                                                                                             \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                \var({\pLog}_{\FutPer}) & = \sigma^{2}_{\pShk}\sum_{\LooPer=1}^{\FutPer} (\Liv^{\LooPer})^{2} \LooPer
                                                                                                                \\ & = \sigma^{2}_{\pShk}\sum_{\LooPer=1}^{\FutPer} (\Liv^{2})^{\LooPer} \LooPer                             
-                                                                                                             \end{align}
+                                                                                                             \end{aligned}\end{gathered}\end{equation}
                                                                                                              but 
-                                                                                                             \begin{align}
+                                                                                                             \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                \sum_{\LooPer=1}^{\FutPer} \bullet^{\LooPer} \LooPer  & =  \underbrace{\left(\frac{\bullet +((\bullet -1) \FutPer-1) \bullet ^{\FutPer+1}}{(1-\bullet )^2}\right)}  \label{eq:nGeomSum}
-                                                                                                             \end{align}
+                                                                                                             \end{aligned}\end{gathered}\end{equation}
                                                                                                              and note that for $0 < \Liv < 1$ the exponentiated $\Liv$ term approaches zero as $n \uparrow \infty$.  So the limiting value is the remarkably simple formula:
-                                                                                                             \begin{align}
+                                                                                                             \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                \sum_{\LooPer=1}^{\infty} \bullet^{\LooPer} \LooPer  & = \underbrace{\left(\frac{\bullet}{(1-\bullet)^{2}}\right)}_{\equiv \FutVal(\bullet)} \label{eq:infGeomSum}
-                                                                                                             \end{align}
+                                                                                                             \end{aligned}\end{gathered}\end{equation}
                                                                                                              and we conclude that the steady-state distribution is 
-                                                                                                             \begin{align}
+                                                                                                             \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                \pLog_{\infty} \sim \mathcal{N}(\FutVal(\Liv)\pShkMean,\FutVal(\Liv^{2})\sigma^{2}_{\pShk}).
-                                                                                                             \end{align}
+                                                                                                             \end{aligned}\end{gathered}\end{equation}
 
                                                                                                              \pagebreak
                                                                                                              \onlyinsubfile{\bibliography{\econtexRoot/BufferStockTheory,economics}}
@@ -649,9 +649,9 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
                                                                                                                         \left(\frac{\left(1-\Liv ^{\FutPer+1}\right)\left(\Liv -n(1-\Liv ) \Liv ^{\FutPer+1}-\Liv ^{\FutPer+1}\right)}{(1-\Liv )^3}       \right) \label{eq:FutVal}
                                                                                                                \end{align*}
                                                                                                                or, recalling that $\Die = 1-\Liv$, it will be convenient to define:
-                                                                                                               \begin{align}
+                                                                                                               \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                  \FutVal_{n}(\Liv) & = \left(\frac{\left(1-\Liv ^{\FutPer+1}\right)\left(\Liv -n(1-\Liv ) \Liv ^{\FutPer+1}-\Liv ^{\FutPer+1}\right)}{(1-\Liv )^2}       \right)
-                                                                                                               \end{align}
+                                                                                                               \end{aligned}\end{gathered}\end{equation}
                                                                                                                so that the expression in \eqref{eq:FutVal} can be compactly written as $\pShkMean \FutVal_{n}(\Liv)$.
                                                                                                              }
                                                                                                            \end{comment}
@@ -662,69 +662,69 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
                                                                                                              \\  & = \pShkMean \sum_{\LooPer=1}^{\FutPer}\Liv^{\LooPer} \LooPer 
                                                                                                            \end{align*}
                                                                                                            but
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \sum_{\LooPer=0}^{\FutPer}\Liv^{\LooPer} \LooPer & = \frac{\Liv +((\Liv -1) \FutPer-1) \Liv ^{\FutPer+1}}{(1-\Liv )^2} \label{eq:nGeomSum}
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
                                                                                                            so
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \bar{\pLog}_{\FutPer}[\LooPer] & =  \left(\frac{\Liv +((\Liv -1) \FutPer-1) \Liv ^{\FutPer+1}}{(1-\Liv )^2}\right)\pShkMean.
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
                                                                                                            Now note that for $0 < \Liv < 1$ the exponentiated $\Liv$ term approaches zero as $n \uparrow \infty$.  So the limiting value is the remarkably simple formula:
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \bar{\pLog}_{\infty} & = \left(\frac{\Liv}{(1-\Liv)^{2}}\right).
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
-                                                                                                           % \begin{align}
+                                                                                                           % \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                            %   \Ex[\{\pLog_{n}\}] & = \Ex[(\sum_{m=0}^{n} \Liv^{\LooPer} (\pLog_{\FutPer,\posn}[\LooPer]))^{2}]
                                                                                                            %   \\ & = \Ex[(\sum_{m=0}^{n} (\Liv^{\LooPer})^{2} (\var(\pLog_{n}[m])+\Ex[\pLog_{n}[m]^{2}])]                       
-                                                                                                           % \end{align}
+                                                                                                           % \end{aligned}\end{gathered}\end{equation}
 
                                                                                                            Because $\{\pLog_{{\tp}\FutPer}\}$ is a set of sets of independent normal variables and death is IID, we can also derive the cross-sectional variance as the weighted sum of a set of normal distributions:
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \var(\pLog_{n}) & = \var(\sum_{\LooPer=1}^{\FutPer}\{\pLog_{\FutPer}[\LooPer]\})
                                                                                                              \\ & = \var(\sum_{\LooPer=1}^{\FutPer}\{\pLog_{\FutPer}[\LooPer]\})                    
                                                                                                              \\ & = \var(\sum_{\LooPer=1}^{\FutPer})                    
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
 
                                                                                                            Across $\posn$, $\pLog_{\FutPer,\posn}[\LooPer]$ is a sum of normally distributed $\pShk$'s:
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \var(\{\pLog_{\FutPer}\}) & = \sum_{m=0}^{n} \Liv^{\LooPer} \Ex[\{\pLog_{\FutPer}[\LooPer]\}^{2}] -\left(\sum_{m=0}^{n} \Liv^{\LooPer}(\pShkMean \LooPer)\right)^{2}
                                                                                                              \\  & =  \sum_{m=0}^{n} \Liv^{\LooPer} (\LooPer^{2} \sigma^{2} + \LooPer^{2} \pShkMean^{2})  -\left(\sum_{m=0}^{n} \Liv^{\LooPer}(\pShkMean \LooPer)\right)^{2}
                                                                                                              \\  & =  \sum_{m=0}^{n} \Liv^{\LooPer} \LooPer \sigma^{2}_{\pShk} -\left(\sum_{m=0}^{n} \Liv^{\LooPer}(\pShkMean \LooPer)\right)^{2}
                                                                                                              \\  & =  \sum_{m=0}^{n} \Liv^{\LooPer}\left( \LooPer \sigma^{2}_{\pShk} + (\LooPer \pShkMean)^{2}\right) -\left(\sum_{m=0}^{n} \Liv^{\LooPer}(\pShkMean \LooPer)\right)^{2}
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
 
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \var(\{\pLog_{\FutPer}\}) & = \var(\sum_{m=0}^{n} \Liv^{\LooPer} (\pLog_{\FutPer,\posn}[\LooPer]))
                                                                                                              \\ & = \sum_{\LooPer=0}^{\FutPer}(\Liv^{\LooPer})^{2} \LooPer \sigma^{2}_{\pShk}                              
                                                                                                              \\ & = \sum_{\LooPer=0}^{\FutPer}(\Liv^{2})^{\LooPer} \LooPer \sigma^{2}_{\pShk}
                                                                                                              \\ & =  \sigma^{2}_{\pShk}\left(\frac{\Liv^{2}(1-(\Liv^{2})^{\FutPer}-\FutPer (\Liv^{2})^{\FutPer}+\FutPer (\Liv^{2})^{1+\FutPer})}{(-1+\Liv^{2})^{2}}\right)
                                                                                                              \\ & =  \sigma^{2}_{\pShk}\left(\frac{\Liv^{2}(1-(\Liv^{2})^{\FutPer}+\FutPer (\Liv^{2})^{\FutPer}(\Liv^{2}-1))}{(\Liv^{2}-1)^{2}}\right)       
                                                                                                              % \\  & = \var(\sum_{m=0}^{n} \Liv^{\FutPer} (\sum_{i=0}^{\LooPer}\pShk_{\LooPer,\posn}))
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \var(\{\pLog_{\FutPer}\}) & = \var(\sum_{m=0}^{n} \Liv^{\LooPer} (\pLog_{\FutPer,\posn}[\LooPer]))
                                                                                                              \\ & = \sum_{\LooPer=0}^{\FutPer}(\Liv^{\LooPer})^{2} \LooPer \sigma^{2}_{\pShk}                              
                                                                                                              \\ & = \sum_{\LooPer=0}^{\FutPer}(\Liv^{2})^{\LooPer} \LooPer \sigma^{2}_{\pShk}
                                                                                                              \\ & =  \sigma^{2}_{\pShk}\left(\frac{\Liv^{2}(1-(\Liv^{2})^{\FutPer}-\FutPer (\Liv^{2})^{\FutPer}+\FutPer (\Liv^{2})^{1+\FutPer})}{(-1+\Liv^{2})^{2}}\right)
                                                                                                              \\ & =  \sigma^{2}_{\pShk}\left(\frac{\Liv^{2}(1-(\Liv^{2})^{\FutPer}+\FutPer (\Liv^{2})^{\FutPer}(\Liv^{2}-1))}{(\Liv^{2}-1)^{2}}\right)       
                                                                                                              % \\  & = \var(\sum_{m=0}^{n} \Liv^{\FutPer} (\sum_{i=0}^{\LooPer}\pShk_{\LooPer,\posn}))
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
                                                                                                            and since the weighted sum of independent random variables is 
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \var(\{\pLog_{0}\}) & = 0
                                                                                                              \\ \var(\{\pLog_{1}\}) & = \var(\Die \pLog_{0} + \Liv \pLog_{1})
                                                                                                              \\ \var(\{\pLog_{1}\}) & = \Liv \Ex[(\pLog_{1}-\pShkMean)^{2}]
                                                                                                              \\ \var(\{\pLog_{2}\}) & = \Liv^{2} \Ex[(\pLog_{2}-2 \pShkMean)^{2}]
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
                                                                                                            Because the variance of the sum of independent variables is the sum of the variances, for each location $\posn$ in the set $\{\posn_{{\tp}\FutPer}[\LooPer]\}$,
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \var\left(\pLog_{{\tp}\FutPer,\posn}\right) &= \var\left[\sum_{\LooPer=0}^{\FutPer}\pShk_{{\tp}\FutPer,\posn}\right] = \FutPer \sigma^{2}_{\pShk}.
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
                                                                                                            \begin{comment}
 
@@ -736,10 +736,10 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
                                                                                                                \Ex_{\tAbs}[\var(\{\pLog_{{\tp}\FutPer,\posn}\})] & = & \Ex_{\tAbs}[\LivThru^{\FutPer}_{\tAbs,\posn}(\pLog_{{\tp}\FutPer,\posn}-\FutPer\pShkMean)^{2}+(1-\LivThru^{\FutPer}_{\tAbs,\posn})\times 0]
                                                                                                              \end{eqnarray}
                                                                                                              but $\LivThru^{\FutPer}_{\tAbs,\posn}$ and $\pLog_{{\tp}\FutPer,\posn}$ are independent random variables and $\Ex_{\tAbs} \LivThru^{\FutPer}_{\FutPer,\posn}=\Liv^{\FutPer}$, so this reduces to 
-                                                                                                             \begin{align}
+                                                                                                             \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                \Ex_{\tAbs}[\var(\{\pLog_{{\tp}\FutPer,\posn}\})] & =  \Ex_{\tAbs}[(\Liv^{\FutPer}(\pLog_{{\tp}\FutPer,\posn}-\pShkMean)^{2}]
                                                                                                                \\ & =  \Liv^{\FutPer} \FutPer \sigma^{2}_{\pShk}.
-                                                                                                             \end{align}
+                                                                                                             \end{aligned}\end{gathered}\end{equation}
 
                                                                                                            \end{comment}
 
@@ -750,9 +750,9 @@ So for a given $\pDiscBnds_{\this}$ the probability mass for a draw of $\tShk$ t
                                                                                                            which is exactly the same formula as for the mean, but substituting $\sigma^{2}_{\pShk}$ for $\pShkMean$.
 
                                                                                                            The upshot is that 
-                                                                                                           \begin{align}
+                                                                                                           \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                              \lim_{\FutPer \rightarrow \infty} \pLog_{{\tp}\FutPer} &  \sim \mathcal{N}(\pShkMean \FutVal_{\infty}(\Liv), \sigma^{2}_{\pShk} \FutVal_{\infty}(\Liv))
-                                                                                                           \end{align}
+                                                                                                           \end{aligned}\end{gathered}\end{equation}
 
                                                                                                            \pagebreak
                                                                                                            \subsubsection{Mathematica Verification of Derivations}
@@ -784,15 +784,15 @@ Sum[p^m,{m,0,n}] Sum[m p^m,{m,0,n}]-((1-p^(1+\FutPer))
                                                                                                            \\ \pLog_{\tAbs,n}& =&  \Liv^{\LooPer}\left(n \sum_{\FutPer=1}^{\LooPer}\pShk_{\tAbs-\FutPer,\FutPer}\right)
                                                                                                          \end{eqnarray*}
                                                                                                          so aggregate income of the cohorts born $k$ periods ago and later is given by the double sum
-                                                                                                         \begin{align}
+                                                                                                         \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                            \PLev_{\tAbs}^{k} & = \sum_{\LooPer=0}^{k} \Liv^{\LooPer}\left(n \pShkMean \sum_{\FutPer=1}^{\LooPer}\pShk_{\tAbs-\FutPer,\FutPer}\right)
-                                                                                                         \end{align}
+                                                                                                         \end{aligned}\end{gathered}\end{equation}
                                                                                                          but since the permanent shocks are all iid ($\Ex[\pShk_{\tAbs,\FutPer}]=-\sigma^{2}/2 ~~ \forall ~t,\FutPer$),
                                                                                                          the ergodic expected level of permanent income is
-                                                                                                         \begin{align}
+                                                                                                         \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                            \Ex[\PLev_{\tAbs}] & =  \sum_{\LooPer=0}^{\infty} \Liv^{\LooPer}n\left( \pGro - \sigma^{2}_{\pShk}/2\right)
                                                                                                            \\ = & \left(\frac{\Liv}{(1-\Liv)^{2}}\right)(\pGro-\sigma^{2}_{\pShk}/2)
-                                                                                                         \end{align}
+                                                                                                         \end{aligned}\end{gathered}\end{equation}
 
                                                                                                          \newpage
                                                                                                          It is often more useful, in these kinds of problems, to express everything in `per capita' terms.  In the limit, the population size will be
@@ -845,28 +845,28 @@ Sum[p^m,{m,0,n}] Sum[m p^m,{m,0,n}]-((1-p^(1+\FutPer))
 
                                                                                                                                                                                                                                                   \end{tabular}
                                                                                                                                                                                                                                                   and this sequence can be captured by
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     \text{cohort n in period 0} & = \Liv^{\LooPer} \sum_{i=0}^{\LooPer} \pShk_{\LooPer,\posn-n}
-                                                                                                                                                                                                                                                  \end{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                   so the total is given by
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     \sum_{i=0}^{\infty} \Liv^{i} \sum_{j=0}^{i} \pShk_{i,j}
-                                                                                                                                                                                                                                                  \end{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                   and since the $\pShk$ are iid with mean $\mu$, the expectation of this is
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     \Ex_{0}[\sum_{i=0}^{\infty} \Liv^{i} i \mu] & = \left(\frac{1}{1-\Liv}\right)
-                                                                                                                                                                                                                                                  \end{align}
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     \text{var} & =\Ex_{0}[\sum_{i=0}^{\infty} \Liv^{2 i} \sigma^{2}_{\pShk}]
-                                                                                                                                                                                                                                                  \end{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                   
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     1    & \mu
                                                                                                                                                                                                                                                     \\2 & \mu + \aleph (2 \mu)
                                                                                                                                                                                                                                                           3  \\ & \mu + \aleph (2 \mu) + \aleph^{2}(3 \mu) +
-                                                                                                                                                                                                                                                  \end{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                   This would be easy to add up for, say, 10000 periods
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     \var_{0}  & = 0
                                                                                                                                                                                                                                                     \\ \var_{1} & = \aleph(\sigma^{2})
                                                                                                                                                                                                                                                     \\ \var_{2} & = \aleph (\var_{1}+\sigma^{2})
@@ -881,15 +881,15 @@ Sum[p^m,{m,0,n}] Sum[m p^m,{m,0,n}]-((1-p^(1+\FutPer))
                                                                                                                                                                                                                                                     \\ \var_{3} & = (\aleph^{3}+\aleph^{2}+\aleph)\sigma^{2}
                                                                                                                                                                                                                                                     \\  & = \aleph^{3}3\sigma^{2}+\aleph^{2}2\sigma^{2}+\aleph\sigma^{2}
                                                                                                                                                                                                                                                     \\          & = \sigma^{2}\sum_{\LooPer=1}^{t} \aleph^{2 n}n
-                                                                                                                                                                                                                                                  \end{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                   
-                                                                                                                                                                                                                                                  \begin{align}
+                                                                                                                                                                                                                                                  \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                     \var_{1} & = \var(\aleph x_{1,0})
                                                                                                                                                                                                                                                     \\ \var_{2} &= \var(\aleph x_{2,1}) + \var (\aleph^{2}(x_{1,0}+x_{2,0})))
                                                                                                                                                                                                                                                     \\ \var_{3} &= \var(\aleph x_{3,2}) + \var (\aleph^{2}(x_{2,1}+x_{3,1}))) + \var (\aleph^{3}(x_{1,0}+x_{2,0}+x_{3,0})))
                                                                                                                                                                                                                                                                   c/    \\ & = \aleph^{2} \sigma^{2} + \aleph^{4}(2 \sigma^{2}) + \aleph^{6} (3 \sigma^{2})
                                                                                                                                                                                                                                                     \\ & = \sigma^{2} \sum_{\LooPer=1}^{t} \aleph^{2 n} n         
-                                                                                                                                                                                                                                                  \end{align}
+                                                                                                                                                                                                                                                  \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                   \providecommand{\pLog}{\ensuremath{p}}
 
 
@@ -897,17 +897,17 @@ Sum[p^m,{m,0,n}] Sum[m p^m,{m,0,n}]-((1-p^(1+\FutPer))
 
 
                                                                                                                                                                                                                                                 Per-capita income will be the total amount of income divided by the size of the population:  
-                                                                                                                                                                                                                                                \begin{align}
+                                                                                                                                                                                                                                                \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                   \pSim_{0} & = \Pop^{-1}_{0}\left(\Liv^{0}\pLog_{0}\right)
                                                                                                                                                                                                                                                   \\ \pSim_{1} & = \Pop^{-1}_{1}\left(\Liv^{0}\pLog_{0}+\Liv^{1}\pLog_{1}\right)
                                                                                                                                                                                                                                                   \\ \pSim_{2} & = \Pop^{-1}_{2}\left(\Liv^{0}\pLog_{0}+\Liv^{1}\pLog_{1}+\Liv^{2}\pLog_{2}\right)
                                                                                                                                                                                                                                                   \\ \vdots & = \vdots
                                                                                                                                                                                                                                                   \\ \pSim_{\FutPer} & = \Pop^{-1}_{\FutPer}\left(\sum_{i=0}^{\FutPer}\Liv^{i}\pLog_{i}\right)
-                                                                                                                                                                                                                                                \end{align}
+                                                                                                                                                                                                                                                \end{aligned}\end{gathered}\end{equation}
 
                                                                                                                                                                                                                                                 And the cross-sectional mean and variance will be:
-                                                                                                                                                                                                                                                \begin{align}
+                                                                                                                                                                                                                                                \begin{equation}\begin{gathered}\begin{aligned}
                                                                                                                                                                                                                                                   \Ex[\pSim_{\FutPer}] & = 
-                                                                                                                                                                                                                                                \end{align}
+                                                                                                                                                                                                                                                \end{aligned}\end{gathered}\end{equation}
                                                                                                                                                                                                                                                 
                                                                                                                                                                                                                                                 
