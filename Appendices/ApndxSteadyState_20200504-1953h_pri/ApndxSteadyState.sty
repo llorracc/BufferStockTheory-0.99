@@ -1,0 +1,104 @@
+% \newcommand{\Die}{D}
+% \newcommand{\Liv}{\bcancel{\Die}}
+% \newcommand{\Die}{\mathrm{V}}
+\newcommand{\Die}{\mho}
+\newcommand{\Liv}{\Lambda} % Lambda is Greek L for "lives"
+\newcommand{\FutVal}{\Omega}
+\newcommand{\FutPer}{t}
+\newcommand{\NewPer}{i}
+\newcommand{\LooPer}{m}
+\newcommand{\mTon}{n}
+\newcommand{\nTom}{m}
+% \newcommand{\tAbs}{\mathfrak{t}}% Absolute
+% \newcommand{\tAbs}{t}% Absolute  
+\newcommand{\tAbs}{\tau}% Absolute  
+% \newcommand{\tp}{\tAbs+}
+\newcommand{\tp}{} % t plus
+\newcommand{\pShkMean}{\mu}
+\newcommand{\tShkMean}{\mu_{\tShk}}
+\newcommand{\pSim}{\bar{\PLev}}
+\newcommand{\posn}{\ell}
+\newcommand{\wgt}{\koppa}
+\newcommand{\mass}{k} % quantity 
+\newcommand{\Mass}{K} % Quantity 
+\provideboolean{ifBig}
+\setboolean{ifBig}{true}
+\opt{Biggen}{\setboolean{ifBig}{true}}
+\newcommand{\Biggen}{\ifthenelse{\boolean{ifBig}}{\large}{}}
+
+\provideboolean{showMarginalia}
+\setboolean{showMarginalia}{true}
+\opt{withMarginalia}{\setboolean{showMarginalia}{true}} % Control from command line option
+\newcommand{\mrgn}[1]{\ifthenelse{\boolean{showMarginalia}}{\marginpar{\tiny{#1}}}{}}
+
+\provideboolean{NotationCDC}
+\setboolean{NotationCDC}{false}
+% \setboolean{NotationCDC}{true}
+
+
+  \provideboolean{notaPerm}
+  % \setboolean{notaPerm}{true}
+  \setboolean{notaPerm}{false}
+
+  \ifthenelse{\boolean{notaPerm}}{
+    \renewcommand{\SetSub}{\mu}
+    % \renewcommand{\trns}{\mathcal{T}}
+    \renewcommand{\Nxt}{\grave}
+    \renewcommand{\point}{\wp}
+    \renewcommand{\pContAprx}{\pLog}
+  }{}
+
+\ifthenelse{\boolean{NotationCDC}}{
+}{
+  \newcommand{\Mrkv}{\mathcal{M}}
+  \newcommand{\point}{s} % 
+  \newcommand{\spCon}{\mathcal{S}} % 
+  \newcommand{\DistSetSprtFull}{\mathcal{S}} % 
+  \newcommand{\TrnsSetSprtTrnc}{\Gamma}
+  \newcommand{\DistSetSprtTrnc}{\Lambda}
+  \newcommand{\Borel}{\mathcal{B}}
+  \newcommand{\Pcurl}{\mathcal{P}}
+  \newcommand{\Pmeas}{\mathbb{P}}
+  \newcommand{\Trns}{\mathfrak{T}} 
+  \newcommand{\trns}{\mathfrak{t}}
+  \newcommand{\pDens}{\pi}
+  \newcommand{\pInit}{\pDens_{0}}
+  \newcommand{\SetSub}{A} % "any measurable set" in \DistSetSprtFull
+  \newcommand{\Nxt}{\bar}
+  \newcommand{\reals}{\mathbb{R}}
+  \newcommand{\StNum}{n}
+  \newcommand{\StPls}{(\StNum+1)}
+  \newcommand{\PTrns}{P}
+  \newcommand{\PTrnsDscr}{\hat{P}}
+  \newcommand{\NumInt}{\mathbb{N}}
+  \newcommand{\Nteger}{\mathbb{N}}
+  \newcommand{\Lebes}{\mathcal{L}} % $\Lebes(\bullet)$ denotes the Lebesgue measure of a set
+  \newcommand{\vctr}{\pmb}
+  \newcommand{\pDistDscr}{q}
+  \newcommand{\pDistDscrAprx}{\hat{q}}
+  \newcommand{\this}{i}
+  \newcommand{\that}{j}
+  \newcommand{\pmf}{{\textrm{pmf}}}
+  \newcommand{\pContAprx}{\hat{\pi}}
+  \newcommand{\pDiscAprx}{\pmb{q}}
+  \renewcommand{\pLev}{\pmb{\wp}}
+  \renewcommand{\pLog}{\wp}
+  \newcommand{\ptsLoopA}{i}
+  \newcommand{\ptsLoopB}{j}
+  \newcommand{\ptsLoopC}{k}
+  \newcommand{\ptsLoopD}{s}
+  \newcommand{\TrnsMat}{\Pi}
+  % \newcommand{\Rnorm}{\Rfree (\PGro \Nxt{\pShk})^{-1}}
+  % \newcommand{\Rnorm}{\mathcal{R}}}
+}
+
+% \renewcommand{\point}{\aRat}
+% \renewcommand{\pContAprx}{\tilde{\aRat}}
+% \newcommand{\pDiscBnds}{\sharp}
+\newcommand{\Top}{\bar}
+\newcommand{\Bot}{\underline}
+
+\newcommand{\pDiscBnds}{\mu}
+\newcommand{\pDiscBelow}{\Bot{\SetSub}}
+\newcommand{\pDiscAbove}{\Top{\SetSub}}
+
