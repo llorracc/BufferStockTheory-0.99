@@ -1,5 +1,0 @@
-econ-ark==0.10.7
-numpy==1.19.2
-voila==0.2.2
-matplotlib==3.3.2
-ipywidgets==7.5.1
