@@ -8,8 +8,8 @@
 #     text_representation:
 #       extension: .py
 #       format_name: percent
-#       format_version: '1.3'
-#       jupytext_version: 1.6.0
+#       format_version: '1.2'
+#       jupytext_version: 1.2.1
 #   kernelspec:
 #     display_name: Python 3
 #     language: python
@@ -23,7 +23,7 @@
 #     name: python
 #     nbconvert_exporter: python
 #     pygments_lexer: ipython3
-#     version: 3.7.4
+#     version: 3.6.9
 #   latex_envs:
 #     LaTeX_envs_menu_present: true
 #     autoclose: false
@@ -129,7 +129,7 @@ cGroTargetFig_widget
 # [The next figure](https://econ.jhu.edu/people/ccarroll/papers/BufferStockTheory/#cFuncBounds)
 # illustrates theoretical bounds for the consumption function.
 #
-# We define two useful variables: lower bound of $\MPC$ (marginal propensity to consume) and limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function \underline{_c_}$(m)$.
+# We define two useful variables: lower bound of $\kappa$ (the marginal propensity to consume) and the limit of $h$ (Human wealth), along with some functions such as the limiting perfect foresight consumption function $\bar{c}(m)$, the upper bound function $\bar{\bar c}(m)$, and the lower bound function \underline{_c_}$(m)$.
 #
 # Recall that the Perfect Forsight Return Impatience Condition is:
 # \begin{eqnarray}
@@ -137,7 +137,9 @@ cGroTargetFig_widget
 # \\ \beta & < & R^{\rho-1}
 # \end{eqnarray}
 #
-# In the figure below, we set $R$ and $\Gamma$ to fixed values of 1.0.  Explore what happens to the consumption function as you move the parameters as far as you can toward the perfect foresight model and the time preference factor up toward 1 (warning: the model takes longer to solve if the RIC is close to failing; be patient).  What would you expect to see if the upper boundary of the figure were extended far enough?
+# In the figure below, we set $R$ and $\Gamma$ to fixed values of 1.0.  Explore what happens to the consumption function as you move the parameters as far as you can toward the perfect foresight model and the time preference factor up toward 1 (warning: the model takes longer to solve if the RIC is close to failing; be patient).  What would you expect to see if the upper boundary of the figure were extended far enough?  
+#
+# Notice that the model with uncertainty gets very close to the perfect foresight model only when the uncertainty is tuned down to the very lowest possible levels and the time preference rate is set to a high number.
 
 # %%
 cFuncBounds_widget = interactive(
