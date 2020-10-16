@@ -36,28 +36,29 @@ Figure 2 Name of diagram 2
 0.1 Commutative Diagrams for the Perfect Foresight Model
 The diagrams below illustrate the order of the several conditions in the text:
 and to further incorporate the Perfect Foresight Finite Value of Autarky Condition:
-In both diagrams, an arrow means “<”, which indicates the annotated condition
-holds, so if a condition is violated, the corresponding arrow is to be reversed.
-These diagrams also keep track of the hierarchy among the conditions. For
-example, if the right vertical arrow in the second diagram is reversed, then the
- implies PF-GIC. If the left vertical
-top right triangle says PF-FVAC+ 
+In both diagrams, an arrow means “<”, which indicates the annotated condition holds,
+so if a condition is violated, the corresponding arrow is to be reversed.
+These diagrams also keep track of the hierarchy among the conditions. For example,
+if the right vertical arrow in the second diagram is reversed, then the top right triangle
+
+
+ implies PF-GIC. If the left vertical arrow is reversed, then 
+says PF-FVAC+ 
 FHWC
-
- + PF-GIC implies FHWC.
-
-arrow is reversed, then 
 RIC
-
+
+
++ PF-GIC implies 
+FHWC.
 
 Γ
 GIC
 
 ℘1/ρ Þ
 
-PF-GIC
-
 Þ
+
+PF-GIC
 
 Γ
 

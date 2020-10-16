@@ -15,15 +15,11 @@ unchanged by their introduction.
 Absolute Impatience Condition (AIC)
 Þ<1
 Þ<1
-
-The unconstrained consumer is
-sufficiently impatient that the level of
-consumption will be declining over time:
-
 If wealth is large enough, the expectation
+The unconstrained consumer is
 of consumption next period will be
-smaller than this period’s consumption:
-
+sufficiently impatient that the level of
+consumption will be declining over time: smaller than this period’s consumption:
 ct+1 < ct
 
 limmt →∞ Et [ct+1 ] < ct
@@ -40,9 +36,9 @@ event is ℘ = 1 then income is always zero
 factor R, so that the PDV of current and and the condition becomes identical to
 future consumption will be finite:
 the RIC. Otherwise, weaker.
-c0 (m) = 1 − Þ/R < 1
+c0 (m) = 1 − Þ /R < 1
 
-c0 (m) < 1 − ℘1/ρÞ/R < 1
+c0 (m) < 1 − ℘1/ρÞ /R < 1
 
 Growth Impatience Conditions
 PF-GIC

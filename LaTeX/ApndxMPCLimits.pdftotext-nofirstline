@@ -1,8 +1,5 @@
-For mt > 0 we can define et (mt ) = ct (mt )/mt and at (mt ) = mt − ct (mt ) and the
-Euler equation (??) can be rewritten
-
-et (mt )−ρ =
-
+For mt > 0 we can define et (mt ) = ct (mt )/mt and at (mt ) = mt − ct (mt ) and the Euler
+equation (??) can be rewritten
 
 
 −ρ 
@@ -11,95 +8,77 @@ z
 }|
 {
 
+ Ra (m ) + Γ ξ  
+
+
 
  
-
- Rat (mt ) + Γt+1 ξt+1  
-
- 
-βR Et et+1 (mt+1 ) 
-
- 
-
-mt
-
- 
-
-
-h
-
+t
+t
+t+1
+t+1
+et (mt )−ρ = βR Et et+1 (mt+1 ) 
 (1)
-
-i
-
-(1 − ℘)βRmρt Et (et+1 (mt+1 )mt+1 Γt+1 )−ρ | ξt+1 > 0
-
-=
-
-
-
-mt − ct (mt )
-+ ℘βR1−ρ Et  et+1 (Rt+1 at (mt ))
+ 
 mt
-
-
-
-!−ρ
-
-| ξt+1 = 0 .
+
+
+ 
+
+
+(1 − ℘)βRmρt Et (et+1 (mt+1 )mt+1 Γt+1 )−ρ | ξt+1 > 0
+"
+#
+−ρ
+m
+−
+c
+(m
+)
+t
+t
+t
++ ℘βR1−ρ Et
+et+1 (Rt+1 at (mt ))
+| ξt+1 = 0 .
+mt
+=
 
 (2)
 
 Consider the first conditional expectation in (1), recalling that if ξt+1 > 0 then
-ξt+1 ≡ θt+1 /(1 − ℘). Since limm↓0 at (m) = 0, Et [(et+1 (mt+1 )mt+1 Γt+1 )−ρ | ξt+1 >
-0] is contained within bounds defined by (et+1 (θ/(1 − ℘))Γψθ/(1 − ℘))−ρ and
+ξt+1 ≡ θt+1 /(1 − ℘). Since limm↓0 at (m) = 0, Et [(et+1 (mt+1 )mt+1 Γt+1 )−ρ | ξt+1 > 0]
+is contained within bounds defined by (et+1 (θ/(1 − ℘))Γψθ/(1 − ℘))−ρ and
 (et+1 (θ̄/(1 − ℘))Γψ̄ θ̄/(1 − ℘))−ρ both of which are finite numbers, implying that
 the whole term multiplied by (1 − ℘) goes to zero as mρt goes to zero. As mt ↓ 0
 −ρ
 the expectation in the other term goes to κ̄−ρ
-t+1 (1 − κ̄t ) . (This follows from the
-strict concavity and differentiability of the consumption function.) It follows that
+t+1 (1 − κ̄t ) . (This follows from the strict
+concavity and differentiability of the consumption function.) It follows that the limiting
 1−ρ −ρ
-the limiting κ̄t satisfies κ̄−ρ
-κ̄t+1 (1 − κ̄t )−ρ . Exponentiating by ρ, we can
+κ̄t satisfies κ̄−ρ
+κ̄t+1 (1 − κ̄t )−ρ . Exponentiating by ρ, we can conclude that
 t = β℘R
-conclude that
 κ̄t = ℘−1/ρ (βR)−1/ρ R(1 − κ̄t )κ̄t+1
-1/ρ
-
-℘
-|
-
-z
-
-ÞR
-
-}|
-
-−1
+Þ
 
 {
-
-1/ρ
-
-R (βR)
+z }|R
+℘1/ρ R−1 (βR)1/ρ κ̄t = (1 − κ̄t )κ̄t+1
+|
 {z
-
-≡℘1/ρÞ R
-
-κ̄t = (1 − κ̄t )κ̄t+1
+}
 
 (3)
 
-}
+≡℘1/ρÞ R
 
-which yields a useful recursive formula for the maximal marginal propensity to
-consume:
+which yields a useful recursive formula for the maximal marginal propensity to consume:
 (℘1/ρÞ R κ̄t )−1 = (1 − κ̄t )−1 κ̄−1
 t+1
 1/ρ
-ÞR κ̄−1
 κ̄−1
+Þ R κ̄−1
 t (1 − κ̄t ) = ℘
 t+1
 
@@ -111,8 +90,7 @@ t+1 .
 
 (4)
 
-As noted in the main text, we need the WRIC (??) for this to be a convergent
-sequence:
+As noted in the main text, we need the WRIC (??) for this to be a convergent sequence:
 0 ≤ ℘1/ρÞ R < 1,
 
 (5)
@@ -121,34 +99,37 @@ lim κ̄T −n = κ̄ ≡ 1 − ℘1/ρÞ R
 
 (6)
 
-Since κ̄T = 1, iterating (4) backward to infinity (because we are interested in
-the limiting consumption function) we obtain:
+Since κ̄T = 1, iterating (4) backward to infinity (because we are interested in the
+limiting consumption function) we obtain:
 n→∞
 
 and we will therefore call κ̄ the ‘limiting maximal MPC.’
 The minimal MPC’s are obtained by considering the case where mt ↑ ∞. If the
-FHWC holds, then as mt ↑ ∞ the proportion of current and future consumption
+FHWC holds, then as mt ↑ ∞ the proportion of current and future consumption that
+will be financed out of capital approaches 1. Thus, the terms involving ξt+1 in (1) can
 
-that will be financed out of capital approaches 1. Thus, the terms involving ξt+1
-in (1) can be neglected, leading to a revised limiting Euler equation
-h
-
+be neglected, leading to a revised limiting Euler equation
+
+
 (mt et (mt ))−ρ = βR Et (et+1 (at (mt )Rt+1 ) (Rat (mt )))−ρ
-
-i
-
 and we know from L’Hôpital’s rule that limmt →∞ et (mt ) = κt , and limmt →∞ et+1 (at (mt )Rt+1 ) =
 κt+1 so a further limit of the Euler equation is
-(mt κt )−ρ = βR (κt+1 R(1 − κt )mt )−ρ
+−ρ
+(mt κt )−ρ = βR κt+1 R(1 − κt )mt
 −1
-|R {z Þ} κt = (1 − κt )κt+1
-
+|R {zÞ} κt = (1 − κt )κt+1
 Þ R =(1−κ)
 ≡Þ
 
-and the same sequence of derivations used above yields the conclusion that if
-the RIC 0 ≤ Þ R < 1 holds, then a recursive formula for the minimal marginal
-propensity to consume is given by
+and the same sequence of derivations used above yields the conclusion that if the RIC 0 ≤
+Þ R < 1 holds, then a recursive formula for the minimal marginal propensity to consume
+is given by
+so that
+
+∞
+{κ−1
+T −n }n=0
+
 −1
 κ−1
 t = 1 + κt+1Þ R
@@ -160,35 +141,27 @@ T −n
 
 (8)
 
-∞
-so that {κ−1
-T −n }n=0 is also an increasing convergent sequence, and we define
+is also an increasing convergent sequence, and we define
 n↑∞
 
-as the limiting (inverse) marginal MPC. If the RIC does not hold, then
-limn→∞ κ−1
-T −n = ∞ and so the limiting MPC is κ = 0.
-For the purpose of constructing the limiting perfect foresight consumption function, it is useful further to note that the PDV of consumption is given by
-
-
-
-
-ct 1 + Þ R + Þ 2R + ...
-|
-
+as the limiting (inverse) marginal MPC. If the RIC does not hold, then limn→∞ κ−1
+T −n =
+∞ and so the limiting MPC is κ = 0.
+For the purpose of constructing the limiting perfect foresight consumption function,
+it is useful further to note that the PDV of consumption is given by
+
+ct 1 + Þ R + Þ 2R + ... = ct κ−1
+T −n .
 {z
-
+}
+|
 Þ R (1+Þ
 Þ R κ−1
 =1+Þ
 t+2 )...
 
-= ct κ−1
-T −n .
-
-}
-
-which, combined with the intertemporal budget constraint, yields the usual formula for the perfect foresight consumption function:
+which, combined with the intertemporal budget constraint, yields the usual formula for
+the perfect foresight consumption function:
 ct = (bt + ht )κt
 
 2

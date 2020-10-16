@@ -2,7 +2,6 @@
 \documentclass[titlepage]{\econtex} % defined in ./texmf-local
 \usepackage{xr-hyper}
 
-\usepackage{fancyhdr}\fancyhf{}\cfoot{\thepage}\pagestyle{fancy}\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage[twoside,marginparwidth=0in,left=1.25in,right=1.25in,top=1.25in,bottom=1.25in]{geometry}\usepackage{layouts} % Add these to see if they somehow fix failure of thankstext to appear before body
 
 
 \input{\ResourcesDir/owner} % Owned by llorracc or econ-ark?
@@ -36,7 +35,7 @@
 
 \normalsize
 
-\bibliography{BufferStockTheory,economics}
+\bibliography{\LaTeXFiles/BufferStockTheory,economics}
 
 \end{document}
 % Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
