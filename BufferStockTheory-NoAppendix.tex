@@ -12,6 +12,7 @@
 \providecommand{\versn}{} % Version; like, web or pdf or journal submission
 \ifthenelse{\boolean{ifWeb}}{  \renewcommand{\ushort}{\underline}\renewcommand{\versn}{Web} }{} % ushort does not work in tex4ht
 
+
 % Put tiny info header at top to make it easy track git commit that generates it
 \hfill{\tiny \jobname~\versn~\today~{at} \DTMcurrenttime, \input{\ResourcesDir/.git-source-commit}~~\input{\ResourcesDir/.git-public-commit}}
 
@@ -357,6 +358,7 @@ so that
                   .
 \end{align}
 
+
 The {\RIC} thus imposes a second kind of `impatience:' The consumer cannot be so pathologically patient as to wish, in the limit as the horizon approaches infinity, to spend nothing today out of an increase in current wealth; that is, the condition rules out the degenerate limiting solution $\bar{\cFunc}(\mRat)=0$.  Because the return patience factor $\PatR$ is the absolute patience factor divided by the return, we call equation \eqref{eq:RIC} the `return impatience condition' or \RIC; we will say that a consumer who satisfies the condition is `return impatient.'
 
 Given that the \RIC~holds, and defining limiting objects by the absence of a time subscript (e.g., $\bar{\cFunc}(\mRat)=\lim_{n \uparrow \infty} \bar{\cFunc}_{T-n}(\mRat)$), the limiting consumption function will be
@@ -383,6 +385,7 @@ which asymptotes to a finite number as $n=T-t$ approaches $+\infty$ if $\DiscFac
     \\ (\Rfree \DiscFac)^{1/\CRRA} /\Rfree  & < 1
   \end{align*}.
 } this requirement can be shown to be equivalent to the {\RIC}.  Thus, the same conditions that guarantee a nondegenerate limiting consumption function also guarantee a nondegenerate limiting value function (which, interestingly, will \textit{not} be true in the version of the model below that incorporates uncertainty).
+
 
 \hypertarget{Constrained-Solution}{}
 \subsubsection{Constrained Solution}
@@ -472,14 +475,21 @@ but the absence of liquidity constraints (correspondingly tabulated)).  The mode
 \subsection{Uncertainty-Modified Conditions}
 \subsubsection{Impatience}
 
+
+
+Now define $\isp \equiv \psi^{-1}$ and $\bar{\isp} = \Ex_{t}[\isp_{t+1}]$.  % PrivateMsg
+
+
 When uncertainty is introduced, the expectation of $\bRat_{t+1}$ can be rewritten as:  
 \begin{align}
   \Ex_{t}[\bRat_{t+1}]  & =  \aRat_{t}\Ex_{t}[\Rnorm_{t+1}] = \aRat_{t}\Rnorm\Ex_{t}[\pShk_{t+1}^{-1}] \label{eq:EbRat}
+  \\ & = \aRat_{t}\Rnorm\Ex_{t}[\isp_{t+1}] = \aRat_{t}\Rnorm\bar{\isp}  \notag % PrivateMsg
 \end{align}
 where Jensen's inequality guarantees that the expectation of the inverse of the permanent
 shock is strictly greater than one.  It will be convenient to define the object \hypertarget{InvEpShkInv}{}
 \begin{align*}
   \InvEpShkInv  & \equiv  (\EpShkInv)^{-1}
+  \\ &                  \equiv \bar{\isp}^{-1}  % PrivateMsg
 \end{align*}
 because this permits us to write expressions like the RHS of
 \eqref{eq:EbRat} compactly as, e.g., $\aRat_{t}\Rnorm/
@@ -504,6 +514,7 @@ and a compensated Growth Patience Pactor (GPF):\hypertarget{GIF}{}
 \begin{verbatimwrite}{\EqDir/PatPGroAdj}
   \begin{align}
     \PatPGroAdj  & = \Pat/\PGroAdj \label{eq;GPF}
+    \\ & = \bar{\isp}\PatPGro  \notag % PrivateMsg  
     \\ & = \Ex\left(\frac{\Pat}{\PGro \psi}\right) \notag
   \end{align}
 \end{verbatimwrite}
@@ -587,6 +598,7 @@ RHS is multiplied by $\uInvEpShkuInv^{1-1/\CRRA}$ which is strictly less than 1.
   Deaton~\citeyearpar{deatonLiqConstr} imposed to guarantee that his
   problem defined a contraction mapping.
 \end{comment}
+
 
 \hypertarget{Baseline-Numerical-Solution}{}
 \subsection{The Baseline Numerical Solution}
@@ -773,6 +785,7 @@ Using this, we introduce the mapping \textit{$\TMap:\mathcal{C}_{\phiFunc }\left
                                   } \max
                                   \uFunc(c_{t})+\DiscFac \left( \{\EEndMap \zFunc \}(\mRat_{t}-c_{t}) \right)  \label{definitionmappingT}.
 \end{align}
+
 
 \begin{comment}
   Unpacking the definitions, our mapping $\TMap$ can be written more explicitly as
@@ -1008,6 +1021,7 @@ The more interesting case is where the \GIC~fails.
     \DiscFac \PGro^{1-\CRRA} & < 1 < (\Rfree\DiscFac)^{1/\CRRA}/\PGro. \label{eq:PFFVACnotPFGIC}
   \end{align}
 
+
   Suppose $\PGro=1$, $\CRRA=2$ and $\pshk$ is lognormally distributed with $\sigma^{2}_{\pshk}=0.01$ (that is, $\log \pshk \sim \mathcal{N}(-\sigma_{\psi}^{2}/2,\sigma_{\psi}^{2})$) so that $\Ex_{t}[\pshk_{t+1}^{1-\CRRA}] =\Ex_{t}[\pshk_{t+1}^{-1}] =\exp(\sigma^{2}_{\psi})=e^{0.01}.$  Then the condition becomes
   \begin{align}
     \DiscFac e^{0.01} & < 1 < (\Rfree \DiscFac)^{1/2}e^{-0.01}
@@ -1229,6 +1243,7 @@ while the lower plot shows the marginal propensity to consume.
 \hypertarget{\figFile}{}
 \input{\econtexRoot/\FigsTeX/cFuncBounds}
 
+
 Next we establish the limit of the expected consumption growth factor
 as $\mRat_{t} \uparrow \infty$:
 \begin{align}
@@ -1440,6 +1455,7 @@ and multiplying all three elements by $\Rfree/\Pat$ gives
 \end{align*}
 which satisfies our requirement in \eqref{eq:RbarBelowOne}.\footnote{An interesting sidenote is that \eqref{eq:RbarBelowOne} is a close cousin to the {\FHWC}: instead of $\Rfree/\PGro < 1$ we have $(\Rfree/\PGro)\isp < 1$.}
 
+
 % where the bound on the marginal propensity to consume in the third line  is guaranteed by the $RIC$ \eqref{eq:RIC} (see section~\ref{subsec:LimitsAsmtToInfty}) \textcolor{red}{Is the FHWC needed?}. Therefore, we can be sure that $\difFunc(\bullet)$ crosses 0 exactlyonce at $\mTarg$, and through \eqref{eq:difRatioEquiv} this implies that the target is unique. Additionally, we can conclude that$\difFunc({\mRat}_t)>0$ for ${\mRat}_t<\mTarg$ and $\difFunc({\mRat}_t)>0$ for ${\mRat}_t > \mTarg$, which coupled with \eqref{eq:difRatioEquiv} yields our desired stability result \eqref{eq:stability}.
 
 The foregoing arguments rely on the continuous differentiability of
@@ -1558,6 +1574,7 @@ in the covariance, leading to a negative covariance with the second
 term.  (Analogously, a lower permanent shock $\pShk_{t+1}$ can also
 lead a negative correlation.)
 
+
 The software archive associated with this paper presents an example in
 which this perverse effect dominates.  However, extreme assumptions
 were required (in particular, a very small probability of the
@@ -1566,6 +1583,7 @@ $\pmb{\Upsilon}_{t+1}^{\prime} > 0$ was tiny.  In practice, for
 plausible parametric choices,
 $\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]<0$ should generally hold.
 
+
 % \ifthenelse{\boolean{showBody}}{
 
 \hypertarget{The-Aggregate-and-Idiosyncratic-Relationship-Between-Consumption-Growth-and-Income-Growth}{}
@@ -1573,6 +1591,7 @@ $\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]<0$ should generally hold.
   Consumption Growth and Income Growth}
 
 This section examines the behavior of large collections of buffer-stock consumers with identical parameter values. Such a collection can be thought of as either a subset of the population within a single country (say, members of a given education or occupation group), or as the whole population in a small open economy.\footnote{We will continue to take the aggregate interest rate as exogenous and constant. It is also possible, and only slightly more difficult, to solve for the steady-state of a closed-economy version of the model where the interest rate is endogenous.}
+
 
 Formally, we assume a continuum of {\it ex ante} identical households
 on the unit interval, with constant total mass normalized to one and
@@ -1592,6 +1611,7 @@ distribution of $\mRat$ that induces invariant distributions for $\cRat$ and
 $\aRat$; designate these $\mathcal{F}^{\mRat}$, $\mathcal{F}^{\aRat}$, and
 $\mathcal{F}^{\cRat}$.\footnote{Szeidl's proof supplants simulation evidence of ergodicity
   that appeared in an earlier version of this paper.}
+
 
 \hypertarget{Consumption-and-Income-Growth-at-the-Household-Level}{}
 \subsection{Consumption and Income Growth at the Household Level}
@@ -1685,6 +1705,7 @@ Another contribution is integration of the paper's results with the open-source 
 \begin{equation*}
   \label{eq:Dummy}
 \end{equation*}
+
 
 \clearpage\vfill\eject
 
