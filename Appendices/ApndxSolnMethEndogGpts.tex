@@ -11,13 +11,13 @@
 
 The model is solved using an extension of the method of endogenous gridpoints (\cite{carrollEGM}): A grid of possible values of end-of-period assets $\vec{\aRat}$ is defined, and at these points, marginal end-of-period-$t$ value is computed as the discounted next-period expected marginal utility of consumption (which the Envelope theorem says matches expected marginal value).  The results are then used to identify the corresponding levels of consumption at the beginning of the period:\footnote{The software can also solve a version of the model with explicit liquidity constraints, where the Envelope condition does not hold.}
 
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \uP(\cEndFunc_{t}(\vec{\aRat}))  & = \Rfree \beta \Ex_{t}[ \uP(\PGro_{t+1}
   \cFunc_{t+1}(\Rnorm_{t+1}\vec{\aRat} + \tShk_{t+1}))] \label{eq:cEulerEndog}
 \\ \vec{c}_{t} \equiv \cEndFunc_{t}(\vec{\aRat})  & = \left(\Rfree \beta \Ex_{t}\left[ \left(\PGro_{t+1}
       \cFunc_{t+1}(\Rnorm_{t+1}\vec{\aRat} +
       \tShk_{t+1})\right)^{-\CRRA}\right]\right)^{-1/\CRRA}. \notag
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 The dynamic budget constraint can then be used to generate the corresponding $\mRat$'s:
 \begin{eqnarray*}
@@ -32,11 +32,11 @@ also matches the marginal propensity to consume at the gridpoints. Differentiati
 with respect to $\aRat$ (and dropping policy function arguments for
 simplicity) yields a marginal propensity to {\it have consumed} $\cEndFunc^{\aRat}$ at
 each gridpoint:
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
 \uPP(\cEndFunc_{t})\cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1})\PGro_{t+1} \cFunc^{\mRat}_{t+1}\Rnorm_{t+1}] \notag
 \\  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}] \notag
 \\ \cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1}  \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}]/\uPP(\cEndFunc_{t}) \label{eq:MPTHC}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 and the marginal propensity to consume at the beginning of the period is obtained from the marginal
 propensity to have consumed by noting that, if we define $\mathfrak{m}(a) = \cEndFunc(a)-a$,
 \begin{align*}
@@ -64,35 +64,35 @@ the true consumption function within the grid.  But if any such interpolation is
 boundaries defined by the minimum and maximum gridpoints, it is sure to go badly astray.
 
 A solution to this problem is given by defining a `precautionary savings function':
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \sFunc_{t}(\mRat)  & = \bar{\cFunc}_{t}(\mRat) - \cFunc_{t}(\mRat)
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 which measures the difference between the unconstrained perfect foresight solution to the problem (which
 will always exist for any finite horizon) and the solution in the presence of uncertainty.
 Note further that
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \sFunc_{t}^{\prime}(\mRat)  & = \MinMPC_{t} - \MPC_{t}(\mRat).
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 It turns out, conveniently, that the limiting relationship between $\log \sFunc_{t}(\mRat)$ and
 $\mu \equiv \log \mRat$ is linear.  Thus we can define
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \varsigma_{t}(\mu)  & = \log \sFunc_{t}(\exp(\mu))
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 so that
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \varsigma_{t}^{\prime}  & = \left(\frac{d \varsigma_{t}(\mRat)}{d \mRat}\frac{d \mRat}{d \mu}\right)
 \\  & = \left(\frac{\sFunc_{t}^{\prime}(\mRat)}{\sFunc_{t}(\mRat)}\frac{d e^{\mu}}{d \mu}\right)
 \\  & = \left(\frac{\sFunc_{t}^{\prime}(\mRat)e^{\mu}}{\sFunc_{t}(\mRat)}\right)
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 so that we can approximate the $\sFunc$ function by assembling
 the level and first derivative of the $\varsigma$ function at the $\vec{m}$ gridpoints, and
 using standard polynomial interpolation methods for the value of the function between the points.
 Designating the approximated function by $\hat{\varsigma}_{t}$, the level of consumption can
 be obtained from\footnote{The actual procedure adds 1 to $\mRat$ before constructing the approximating function, to avoid problems caused by the fact that the lowest value of $\mRat$ for which we want to be able to
 evaluate the function is $\mRat=0$ but $\log 0 = -\infty$ which is difficult for the computer to handle.}
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \hat{\cFunc}_{t}(\mRat)  & = \bar{\cFunc}_{t}(\mRat)-\exp(\hat{\varsigma}_{t}(\log \mRat)).
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 \end{comment}
 
 
@@ -104,15 +104,14 @@ evaluate the function is $\mRat=0$ but $\log 0 = -\infty$ which is difficult for
 \end{document}
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
+% tex-bibtex-command: "bibtex ../LaTeX/*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
 % LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
 % TeX-source-correlate-mode: t
-% TeX-source-correlate-start-server: 0
 % TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
 % End:

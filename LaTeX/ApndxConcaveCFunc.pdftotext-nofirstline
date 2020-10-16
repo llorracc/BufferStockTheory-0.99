@@ -1,5 +1,6 @@
-To show that (6) defines a sequence of continuously differentiable strictly increasing concave functions {cT , cT −1 , ..., cT −k }, we start with a definition. We will say
-that a function n(z) is ‘nice’ if it satisfies
+To show that (6) defines a sequence of continuously differentiable strictly increasing
+concave functions {cT , cT −1 , ..., cT −k }, we start with a definition. We will say that a
+function n(z) is ‘nice’ if it satisfies
 1. n(z) is well-defined iff z > 0
 2. n(z) is strictly increasing
 3. n(z) is strictly concave
@@ -7,23 +8,18 @@ that a function n(z) is ‘nice’ if it satisfies
 5. n(z) < 0
 6. limz↓0 n(z) = −∞.
 (Notice that an implication of niceness is that limz↓0 n0 (z) = ∞.)
-Assume that some vt+1 is nice. Our objective is to show that this implies vt is
-also nice; this is sufficient to establish that vt−n is nice by induction for all n > 0
-because vT (m) = u(m) and u(m) = m1−ρ /(1 − ρ) is nice by inspection.
+Assume that some vt+1 is nice. Our objective is to show that this implies vt is also
+nice; this is sufficient to establish that vt−n is nice by induction for all n > 0 because
+vT (m) = u(m) and u(m) = m1−ρ /(1 − ρ) is nice by inspection.
 Now define an end-of-period value function vt (a) as
-i
-
-h
-
-vt (a) = β Et Γ1−ρ
-t+1 vt+1 (Rt+1 a + ξt+1 ) .
-
+ 1−ρ
+
+vt (a) = β Et Γt+1
+vt+1 (Rt+1 a + ξt+1 ) .
 (1)
-
-Since there is a positive probability that ξt+1 will attain its minimum of zero
-and since Rt+1 > 0, it is clear that lima↓0 vt (a) = −∞ and lima↓0 v0t (a) = ∞. So
-vt (a) is well-defined iff a > 0; it is similarly straightforward to show the other
-properties required for vt (a) to be nice. (See Hiraguchi (2003).)
+Since there is a positive probability that ξt+1 will attain its minimum of zero and since
+Rt+1 > 0, it is clear that lima↓0 vt (a) = −∞ and lima↓0 v0t (a) = ∞. So vt (a) is welldefined iff a > 0; it is similarly straightforward to show the other properties required for
+vt (a) to be nice. (See Hiraguchi (2003).)
 Next define vt (m, c) as
 vt (m, c) = u(c) + vt (m − c)
 
@@ -40,12 +36,10 @@ vt is well-defined if and only if 0 < c < m. Furthermore, limc↓0 vt (m, c) =
 ∂ 2 vt (m,c)
 ∂v (m,c)
 ∂v (m,c)
-limc↑m vt (m, c) = −∞,
-< 0, limc↓0 t∂c
-= +∞, and limc↑m t∂c
-=
-∂c2
-−∞. It follows that the ct (m) defined by
+limc↑m vt (m, c) = −∞, ∂c
+< 0, limc↓0 t∂c = +∞, and limc↑m t∂c = −∞. It
+2
+follows that the ct (m) defined by
 ct (m) = arg max vt (m, c)
 
 (4)
@@ -57,9 +51,10 @@ u0 (ct (m)) = v0t (m − ct (m)).
 
 (5)
 
-Since both u and vt are strictly concave, both ct (m) and at (m) = m − ct (m) are
-strictly increasing. Since both u and vt are three times continuously differentiable,
-using (5) we can conclude that ct (m) is continuously differentiable and
+Since both u and vt are strictly concave, both ct (m) and at (m) = m−ct (m) are strictly
+increasing. Since both u and vt are three times continuously differentiable, using (5) we
+
+can conclude that ct (m) is continuously differentiable and
 c0t (m) =
 
 v00t (at (m))
@@ -68,12 +63,11 @@ u00 (ct (m)) + v00t (at (m))
 
 (6)
 
-Similarly we can easily show that ct (m) is twice continuously differentiable
-(as is at (m)) (See Appendix 2.) This implies that vt (m) is nice, since vt (m) =
-u(ct (m)) + vt (at (m)).
+Similarly we can easily show that ct (m) is twice continuously differentiable (as is at (m))
+(See Appendix 2.) This implies that vt (m) is nice, since vt (m) = u(ct (m)) + vt (at (m)).
 
 2 ct(m) is Twice Continuously Differentiable
-First we show that ct (m) is C1 . Define y as y ≡ m+dm. Since u0 (ct (y))−u0 (ct (m)) =
+First we show that ct (m) is C1 . Define y as y ≡ m + dm. Since u0 (ct (y)) − u0 (ct (m)) =
 t (m)
 t (m)
 = 1 − ct (y)−c
@@ -84,6 +78,8 @@ dm
 v0t (at (y)) − v0t (at (m))
 =
 at (y) − at (m)
+
+
 
 u0 (ct (y)) − u0 (ct (m)) v0t (at (y)) − v0t (at (m))
 +
@@ -99,41 +95,47 @@ lim
 
 < 0 are satisfied. Then
 
+u0 (c
+
+
+
+ct (y) − ct (m)
+dm
+
 u0 (ct (y))−u0 (ct (m))
 ct (y)−ct (m)
 dm→+0
 
 lim
 
-u0 (ct (y))−u0 (ct (m))
-+
+(y))−u0 (c
+
+t
+t (m))
 ct (y)−ct (m)
 
-!
-
-ct (y) − ct (m)
-dm
++
 
 < 0 and
 
 v0t (at (y))−v0t (at (m))
 at (y)−at (m)
 
-<0
+< 0 for
 
-for sufficiently small dm. Hence we obtain a well-defined equation:
+sufficiently small dm. Hence we obtain a well-defined equation:
 ct (y) − ct (m)
 =
 dm
 
 v0t (at (y))−v0t (at (m))
 at (y)−at (m)
-.
-v0t (at (y))−v0t (at (m))
+v0 (a (y))−v0 (at (m))
 u0 (ct (y))−u0 (ct (m))
-+
++ t at t (y)−att (m)
 ct (y)−ct (m)
-at (y)−at (m)
+
+.
 
 This implies that the right-derivative, c0+
 t (m) is well-defined and
@@ -147,9 +149,9 @@ u00 (ct (m)) + v00t (at (m))
 0−
 0
 Similarly we can show that c0+
-t (m) = ct (m), which means ct (m) exists. Since
-vt is C3 , c0t (m) exists and is continuous. c0t (m) is differentiable because v00t is C1 ,
-ct (m) is C1 and u00 (ct (m)) + v00t (at (m)) < 0. c00t (m) is given by
+t (m) = ct (m), which means ct (m) exists. Since vt is
+C3 , c0t (m) exists and is continuous. c0t (m) is differentiable because v00t is C1 , ct (m) is C1
+and u00 (ct (m)) + v00t (at (m)) < 0. c00t (m) is given by
 
 c00t (m) =
 
@@ -169,75 +171,54 @@ Since v00t (at (m)) is continuous, c00t (m) is also continuous.
 
 3 Proof that T Is a Contraction Mapping
 We must show that our operator T satisfies all of Boyd’s conditions.
-Boyd’s operator T maps from Cz (A, B) to C(A, B). A preliminary requirement
-is therefore that {Tz} be continuous for any z−bounded z, {Tz} ∈ C(R++ , R).
-This is not difficult to show; see Hiraguchi (2003).
-Consider condition (1). For this problem,
-{Tx}(mt ) is
-{Ty}(mt ) is
-
-max
-
-n
-
-h
-
-io
-
-max
-
-n
-
-h
-
-io
-
-ct ∈[κmt ,κ̄mt ]
-ct ∈[κmt ,κ̄mt ]
-
-u(ct ) + β Et Γ1−ρ
-t+1 x (mt+1 )
-u(ct ) + β Et Γ1−ρ
-t+1 y (mt+1 )
+Boyd’s operator T maps from Cz (A, B) to C(A, B). A preliminary requirement is
+therefore that {Tz} be continuous for any z−bounded z, {Tz} ∈ C(R++ , R). This is
+not difficult to show; see Hiraguchi (2003).
 
 2
 
+Consider condition (1). For this problem,
+
+
+
+{Tx}(mt ) is max
+u(ct ) + β Et Γ1−ρ
+t+1 x (mt+1 )
+ct ∈[κmt ,κ̄mt ]
+
+
+
+{Ty}(mt ) is max
+u(ct ) + β Et Γ1−ρ
 ,
-
-so x(•) ≤ y(•) implies {Tx}(mt ) ≤ {Ty}(mt ) by inspection.1
-Condition (2) requires that {T0} ∈ Cz (A, B). By definition,
-(
-
-{T0}(mt ) =
-
-max
-
+t+1 y (mt+1 )
 ct ∈[κmt ,κ̄mt ]
 
-c1−ρ
-t
+so x(•) ≤ y(•) implies {Tx}(mt ) ≤ {Ty}(mt ) by inspection.1
+Condition (2) requires that {T0} ∈ Cz (A, B). By definition,
+ 1−ρ 
+
+ct
+{T0}(mt ) =
+max
 + β0
+ct ∈[κmt ,κ̄mt ]
 1−ρ
-!
-
-)
-
-the solution to which is patently u(κ̄mt ). Thus, condition (2) will hold if (κ̄mt )1−ρ
-is z-bounded. We use the bounding function
+the solution to which is patently u(κ̄mt ). Thus, condition (2) will hold if (κ̄mt )1−ρ is
+z-bounded. We use the bounding function
 z(m) = η + m1−ρ ,
 
 (8)
 
-for some real scalar η > 0 whose value will be determined in the course of the
-proof. Under this definition of z, {T0}(mt ) = u(κ̄mt ) is clearly z-bounded.
-Finally, we turn to condition (3), {T(z + ζz)}(mt ) ≤ {Tz}(mt ) + ζαz(mt ).
-The proof will be more compact if we define c̆ and ă as the consumption and
-assets functions2 associated with Tz and ĉ and â as the functions associated with
-T(z + ζz); using this notation, condition (3) can be rewritten
+for some real scalar η > 0 whose value will be determined in the course of the proof.
+Under this definition of z, {T0}(mt ) = u(κ̄mt ) is clearly z-bounded.
+Finally, we turn to condition (3), {T(z + ζz)}(mt ) ≤ {Tz}(mt ) + ζαz(mt ). The proof
+will be more compact if we define c̆ and ă as the consumption and assets functions2
+associated with Tz and ĉ and â as the functions associated with T(z + ζz); using this
+notation, condition (3) can be rewritten
 u(ĉ) + β{E(z + ζz)}(â) ≤ u(c̆) + β{Ez}(ă) + ζαz.
-Now note that if we force the ^ consumer to consume the amount that is
-optimal for the ∧ consumer, value for the ^ consumer must decline (at least
-weakly). That is,
+Now note that if we force the ^ consumer to consume the amount that is optimal for
+the ∧ consumer, value for the ^ consumer must decline (at least weakly). That is,
 u(ĉ) + β{Ez}(â) ≤ u(c̆) + β{Ez}(ă).
 Thus, condition (3) will certainly hold under the stronger condition
 u(ĉ) + β{E(z + ζz)}(â) ≤ u(ĉ) + β{Ez}(â) + ζαz
@@ -251,209 +232,175 @@ Using z(m) = η + m1−ρ and defining ât = â(mt ), this condition is
 1−ρ
 )
 β Et [Γ1−ρ
-] − mt1−ρ < η(1 − β Et Γt+1
-t+1 (ât Rt+1 + ξt+1 )
-
-|
-
-{z
-
-=i
-
-}
-
-which by imposing PF-FVAC (equation (27), which says i < 1) can be rewritten
-as:
-h
-
-i
-
-1−ρ
-β Et Γ1−ρ
-− m1−ρ
+] − m1−ρ
+< η(1 − β Et Γt+1
 t
 t+1 (ât Rt+1 + ξt+1 )
-
-.
-(9)
-1−i
-But since η is an arbitrary constant that we can pick, the proof thus reduces to
-η>
+| {z }
+=i
 
 1
 
 For a fixed mt , recall that mt+1 is just a function of ct and the stochastic shocks.
-Section 2.7 proves existence of a continuously differentiable consumption function, which
-implies the existence of a corresponding continuously differentiable assets function.
+Section 2.7 proves existence of a continuously differentiable consumption function, which implies
+the existence of a corresponding continuously differentiable assets function.
 3
-The remainder of the proof could be reformulated using the second-to-last line at a small
-cost to intuition.
+The remainder of the proof could be reformulated using the second-to-last line at a small cost to
+intuition.
 2
 
 3
 
-showing that the numerator of (9) is bounded from above:
-h
-
-i
-
-h
-
-i
-
+which by imposing PF-FVAC (equation (27), which says i < 1) can be rewritten as:
+
+
 1−ρ
-1−ρ
-(1 − ℘)β Et Γ1−ρ
-+ ℘β Et Γ1−ρ
 − m1−ρ
+β Et Γ1−ρ
 t
-t+1 (ât Rt+1 + θt+1 /(1 − ℘))
+t+1 (ât Rt+1 + ξt+1 )
+η>
+.
+(9)
+1−i
+But since η is an arbitrary constant that we can pick, the proof thus reduces to showing
+that the numerator of (9) is bounded from above:
+
+
+
+
+1−ρ
+1−ρ
+− m1−ρ
++ ℘β Et Γ1−ρ
+(1 − ℘)β Et Γ1−ρ
+t
 t+1 (ât Rt+1 )
-
-h
-
-i
-
+t+1 (ât Rt+1 + θt+1 /(1 − ℘))
+
+ 1−ρ
 1−ρ
-≤(1 − ℘)β Et Γ1−ρ
-+ ℘βR1−ρ ((1 − κ̄)mt )1−ρ − m1−ρ
+1−ρ
+1−ρ
++ ℘βR ((1 − κ̄)mt )
+− m1−ρ
+≤(1 − ℘)β Et Γt+1 ((1 − κ̄)mt Rt+1 + θt+1 /(1 − ℘))
 t
-t+1 ((1 − κ̄)mt Rt+1 + θt+1 /(1 − ℘))
-
-
-
-=(1 − ℘)β
-
-h
-
-Et Γ1−ρ
-t+1 ((1
-
-1−ρ
-
-− κ̄)mt Rt+1 + θt+1 /(1 − ℘))
-
-h
-
-i
-
-+
-
-i
-
-m1−ρ
-t
-
-1−ρ
-
-℘βR
-
-℘
-
+!
+
+1−ρ
 1/ρ
-1/ρ (Rβ)
-
-
-
-
-
-
-
-
-
-
-(Rβ)1/ρ
-
-−1
-
-{z R }
-
-1−ρ
-℘1/ρ
-=(1 − ℘)β Et Γ1−ρ
-+ m1−ρ
+ 1−ρ
+
+(Rβ)
+=(1 − ℘)β Et Γt+1 ((1 − κ̄)mt Rt+1 + θt+1 /(1 − ℘))1−ρ + m1−ρ
+℘βR1−ρ ℘1/ρ
+−1
 t
-t+1 ((1 − κ̄)mt Rt+1 + θt+1 /(1 − ℘))
-
+R
+
+
+1/ρ
+
+
+
+
+1−ρ  1/ρ (Rβ)
+1−ρ
+
++
+m
+−1
+((1
+−
+κ̄)m
+R
++
+θ
+/(1
+−
+℘))
+℘
+=(1 − ℘)β Et Γ1−ρ
+t
+t+1
+t+1
+t
+t+1
+
+
+R
+{z
+}
 |
-
 <1 by WRIC
 
 (10)
-h
-
-i
-
+
+
 1−ρ
 <(1 − ℘)β Et Γ1−ρ
 = i(1 − ℘)ρ θ1−ρ .
 t+1 (θ/(1 − ℘))
-
 We can thus conclude that equation (9) will certainly hold for any:
 i(1 − ℘)ρ θ1−ρ
-η>η=
 (11)
 1−i
 which is a positive finite number under our assumptions.
-The proof that T defines a contraction mapping under the conditions (37) and
-(33) is now complete.
+The proof that T defines a contraction mapping under the conditions (37) and (33) is
+now complete.
+η>η=
 
 3.1 T and v
-In defining our operator T we made the restriction κmt ≤ ct ≤ κ̄mt . However,
-in the discussion of the consumption function bounds, we showed only (in (38))
-that κt mt ≤ ct (mt ) ≤ κ̄t mt . (The difference is in the presence or absence of time
-subscripts on the MPC’s.) We have therefore not proven (yet) that the sequence
-of value functions (6) defines a contraction mapping.
-Fortunately, the proof of that proposition is identical to the proof above, except
-that we must replace κ̄ with κ̄T −1 and the WRIC must be replaced by a slightly
-stronger (but still quite weak) condition. The place where these conditions have
-force is in the step at (10). Consideration of the prior two equations reveals that
-a sufficient stronger condition is
+In defining our operator T we made the restriction κmt ≤ ct ≤ κ̄mt . However, in the
+discussion of the consumption function bounds, we showed only (in (38)) that κt mt ≤
+ct (mt ) ≤ κ̄t mt . (The difference is in the presence or absence of time subscripts on the
+MPC’s.) We have therefore not proven (yet) that the sequence of value functions (6)
+defines a contraction mapping.
+Fortunately, the proof of that proposition is identical to the proof above, except that
+we must replace κ̄ with κ̄T −1 and the WRIC must be replaced by a slightly stronger
+(but still quite weak) condition. The place where these conditions have force is in the
+step at (10). Consideration of the prior two equations reveals that a sufficient stronger
+condition is
 ℘β(R(1 − κ̄T −1 ))1−ρ < 1
 (℘β)1/(1−ρ) (1 − κ̄T −1 ) > 1
 (℘β)1/(1−ρ) (1 − (1 + ℘1/ρÞ R )−1 ) > 1
 
-where we have used (36) for κ̄T −1 (and in the second step the reversal of the
-inequality occurs because we have assumed ρ > 1 so that we are exponentiating
-both sides by the negative number 1 − ρ). To see that this is a weak condition,
-note that for small values of ℘ this expression can be further simplified using
-(1 + ℘1/ρÞ R )−1 ≈ 1 − ℘1/ρÞ R so that it becomes
-(℘β)1/(1−ρ) ℘1/ρÞ R > 1
-(℘β)℘(1−ρ)/ρÞ R1−ρ < 1
 4
 
-R
+where we have used (36) for κ̄T −1 (and in the second step the reversal of the inequality
+occurs because we have assumed ρ > 1 so that we are exponentiating both sides by the
+negative number 1 − ρ). To see that this is a weak condition, note that for small values
+of ℘ this expression can be further simplified using (1 + ℘1/ρÞ R )−1 ≈ 1 − ℘1/ρÞ R so that
+it becomes
+(℘β)1/(1−ρ) ℘1/ρÞR > 1
+(℘β)℘(1−ρ)/ρÞ R1−ρ < 1
 
-!1−ρ
+β℘1/ρÞ R1−ρ < 1.
 
-
-
-− 1
-
-β℘1/ρÞ R1−ρ < 1.
-
-Calling the weak return patience factor Þ ℘R = ℘1/ρÞ R and recalling that the
+Calling the weak return patience factor Þ℘R = ℘1/ρÞR and recalling that the WRIC was
 Þ−ρ
-WRIC was Þ ℘R < 1, the expression on the LHS above is βÞ
-R times the WRPF.
-Since we usually assume β not far below 1 and parameter values such that Þ R ≈ 1,
-this condition is clearly not very different from the WRIC.
-The upshot is that under these slightly stronger conditions the value functions
-for the original problem define a contraction mapping with a unique v(m). But
-since limn→∞ κT −n = κ and limn→∞ κ̄T −n = κ̄, it must be the case that the v(m)
-toward which these vT −n ’s are converging is the same v(m) that was the endpoint
-of the contraction defined by our operator T. Thus, under our slightly stronger
-(but still quite weak) conditions, not only do the value functions defined by (6)
-converge, they converge to the same unique v defined by T.4
+Þ ℘R < 1, the expression on the LHS above is βÞ
+R times the WRPF. Since we usually
+assume β not far below 1 and parameter values such that Þ R ≈ 1, this condition is
+clearly not very different from the WRIC.
+The upshot is that under these slightly stronger conditions the value functions for
+the original problem define a contraction mapping with a unique v(m). But since
+limn→∞ κT −n = κ and limn→∞ κ̄T −n = κ̄, it must be the case that the v(m) toward which
+these vT −n ’s are converging is the same v(m) that was the endpoint of the contraction
+defined by our operator T. Thus, under our slightly stronger (but still quite weak)
+conditions, not only do the value functions defined by (6) converge, they converge to the
+same unique v defined by T.4
 
 References
-Hiraguchi, Ryoji (2003): “On the Convergence of Consumption Rules,”
-Manuscript, Johns Hopkins University.
+Hiraguchi, Ryoji (2003): “On the Convergence of Consumption Rules,” Manuscript,
+Johns Hopkins University.
 
 4
-It seems likely that convergence of the value functions for the original problem could be
-proven even if only the WRIC were imposed; but that proof is not an essential part of the
-enterprise of this paper and is therefore left for future work.
+
+It seems likely that convergence of the value functions for the original problem could be proven
+even if only the WRIC were imposed; but that proof is not an essential part of the enterprise of this
+paper and is therefore left for future work.
 
 5
 

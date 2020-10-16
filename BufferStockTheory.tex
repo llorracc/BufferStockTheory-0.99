@@ -1,8 +1,7 @@
 \input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex} % defined in ./texmf-local
 \usepackage{xr-hyper}
-
-\usepackage{fancyhdr}\fancyhf{}\cfoot{\thepage}\pagestyle{fancy}\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage[twoside,marginparwidth=0in,left=1.25in,right=1.25in,top=1.25in,bottom=1.25in]{geometry}\usepackage{layouts} % Add these to see if they somehow fix failure of thankstext to appear before body
+\input{\econtexRoot/LaTeX/econtexPaths}
 
 
 \input{\ResourcesDir/owner} % Owned by llorracc or econ-ark?
@@ -36,21 +35,15 @@
 
 \normalsize
 
-\bibliography{BufferStockTheory,economics}
+\bibliography{\LaTeXFiles/BufferStockTheory,economics}
 
 \end{document}
 % Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
+
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX")  TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s" TeX-run-BibTeX nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "bibtex %s" TeX-run-BibTeX nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode)  :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX"                                                                   ) TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX"                                                                   ) TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
+% tex-bibtex-command: "bibtex LaTeX/*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t

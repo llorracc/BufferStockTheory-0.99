@@ -1,147 +1,113 @@
 Solution as a Limit
-Formally, suppose we change the description of the problem by making the following two assumptions:
+Formally, suppose we change the description of the problem by making the following
+two assumptions:
 ℘ =0
 ct ≤ mt ,
-and we designate the solution to this consumer’s problem c̀t (m). We will henceforth refer to this as the problem of the ‘restrained’ consumer (and, to avoid a
-common confusion, we will refer to the consumer as ‘constrained’ only in circumstances when the constraint is actually binding).
-Redesignate the consumption function that emerges from our original problem
-for a given fixed ℘ as ct (m; ℘) where we separate the arguments by a semicolon
-to distinguish between m, which is a state variable, and ℘, which is not. The
-proposition we wish to demonstrate is
+and we designate the solution to this consumer’s problem c̀t (m). We will henceforth refer
+to this as the problem of the ‘restrained’ consumer (and, to avoid a common confusion,
+we will refer to the consumer as ‘constrained’ only in circumstances when the constraint
+is actually binding).
+Redesignate the consumption function that emerges from our original problem for a
+given fixed ℘ as ct (m; ℘) where we separate the arguments by a semicolon to distinguish
+between m, which is a state variable, and ℘, which is not. The proposition we wish to
+demonstrate is
 lim ct (m; ℘) = c̀t (m).
+℘↓0
 
 (1)
 
-℘↓0
-
-We will first examine the problem in period T − 1, then argue that the desired
-result propagates to earlier periods. For simplicity, suppose that the interest,
-growth, and time-preference factors are β = R = Γ = 1, and there are no
-permanent shocks, ψ = 1; the results below are easily generalized to the fullfledged version of the problem.
-The solution to the restrained consumer’s optimization problem can be obtained
-as follows. Assuming that the consumer’s behavior in period T is given by cT (m)
-(in practice, this will be cT (m) = m), consider the unrestrained optimization
-problem
+We will first examine the problem in period T − 1, then argue that the desired result
+propagates to earlier periods. For simplicity, suppose that the interest, growth, and
+time-preference factors are β = R = Γ = 1, and there are no permanent shocks, ψ = 1;
+the results below are easily generalized to the full-fledged version of the problem.
+The solution to the restrained consumer’s optimization problem can be obtained as
+follows. Assuming that the consumer’s behavior in period T is given by cT (m) (in
+practice, this will be cT (m) = m), consider the unrestrained optimization problem
+)
 (
-
-àT∗ −1 (m)
-
-= arg max u(m − a) +
+Z θ̄
+à∗T −1 (m) = arg max u(m − a) +
+vT (a + θ)dFθ .
+(2)
 a
 
-Z θ̄
 θ
-
-)
-
-vT (a + θ)dFθ .
-
-(2)
 
 As usual, the envelope theorem tells us that vT0 (m) = u0 (cT (m)) so the expected
 marginal value of ending period T − 1 with assets a can be defined as
-v̀0T −1 (a)
-
-≡
-
 Z θ̄
-θ
-
+0
 u0 (cT (a + θ))dFθ ,
+v̀T −1 (a) ≡
+θ
 
 and the solution to (2) will satisfy
 u0 (m − a) = v̀0T −1 (a).
 
 (3)
 
-àT∗ −1 (m) therefore answers the question “With what level of assets would the
-restrained consumer like to end period T − 1 if the constraint cT −1 ≤ mT −1 did
-not exist?” (Note that the restrained consumer’s income process remains different
-from the process for the unrestrained consumer so long as ℘ > 0.) The restrained
-consumer’s actual asset position will be
-àT −1 (m) = max[0, àT∗ −1 (m)],
-reflecting the inability of the restrained consumer to spend more than current
+à∗T −1 (m) therefore answers the question “With what level of assets would the restrained
+consumer like to end period T − 1 if the constraint cT −1 ≤ mT −1 did not exist?” (Note
+that the restrained consumer’s income process remains different from the process for
+the unrestrained consumer so long as ℘ > 0.) The restrained consumer’s actual asset
+position will be
+àT −1 (m) = max[0, à∗T −1 (m)],
 
-resources, and note (as pointed out by Deaton (1991)) that
-−1/ρ
-
-
-
+reflecting the inability of the restrained consumer to spend more than current resources,
+and note (as pointed out by Deaton (1991)) that
+−1/ρ
 m1# = v̀0T −1 (0)
-
-is the cusp value of m at which the constraint makes the transition between binding
-and non-binding in period T − 1.
+is the cusp value of m at which the constraint makes the transition between binding and
+non-binding in period T − 1.
 Analogously to (3), defining
-"
-
-v0T −1 (a; ℘)
-
-−ρ
-
-≡ ℘a
-
-+ (1 − ℘)
-
-Z θ̄
-θ
-
-−ρ
-
-(cT (a + θ/(1 − ℘)))
-
 #
-
-dFθ ,
-
+"
+Z θ̄
+(cT (a + θ/(1 − ℘)))−ρ dFθ ,
 (4)
+v0T −1 (a; ℘) ≡ ℘a−ρ + (1 − ℘)
+θ
 
 the Euler equation for the original consumer’s problem implies
 (m − a)−ρ = v0T −1 (a; ℘)
 
 (5)
 
-with solution aT∗ −1 (m; ℘). Now note that for any fixed a > 0, lim℘↓0 v0T −1 (a; ℘) =
-v̀0T −1 (a).
-Since the LHS of (3) and (5) are identical, this means that
-∗
-lim℘↓0 aT −1 (m; ℘) = àT∗ −1 (m). That is, for any fixed value of m > m1#
-such that the consumer subject to the restraint would voluntarily choose to
-end the period with positive assets, the level of end-of-period assets for the
-unrestrained consumer approaches the level for the restrained consumer as ℘ ↓ 0.
-With the same a and the same m, the consumers must have the same c, so the
+with solution a∗T −1 (m; ℘). Now note that for any fixed a > 0, lim℘↓0 v0T −1 (a; ℘) = v̀0T −1 (a).
+Since the LHS of (3) and (5) are identical, this means that lim℘↓0 a∗T −1 (m; ℘) = à∗T −1 (m).
+That is, for any fixed value of m > m1# such that the consumer subject to the restraint
+would voluntarily choose to end the period with positive assets, the level of end-of-period
+assets for the unrestrained consumer approaches the level for the restrained consumer
+as ℘ ↓ 0. With the same a and the same m, the consumers must have the same c, so the
 consumption functions are identical in the limit.
-Now consider values m ≤ m1# for which the restrained consumer is constrained.
-It is obvious that the baseline consumer will never choose a ≤ 0 because the first
-term in (4) is lima↓0 ℘a−ρ = ∞, while lima↓0 (m−a)−ρ is finite (the marginal value of
-end-of-period assets approaches infinity as assets approach zero, but the marginal
-utility of consumption has a finite limit for m > 0). The subtler question is
-whether it is possible to rule out strictly positive a for the unrestrained consumer.
-The answer is yes. Suppose, for some m < m1# , that the unrestrained consumer
-is considering ending the period with any positive amount of assets a = δ > 0. For
-any such δ we have that lim℘↓0 v0T −1 (a; ℘) = v̀0T −1 (a). But by assumption we are
-considering a set of circumstances in which àT∗ −1 (m) < 0, and we showed earlier
-that lim℘↓0 aT∗ −1 (m; ℘) = àT∗ −1 (m). So, having assumed a = δ > 0, we have proven
-that the consumer would optimally choose a < 0, which is a contradiction. A
-similar argument holds for m = m1# .
-These arguments demonstrate that for any m > 0, lim℘↓0 cT −1 (m; ℘) = c̀T −1 (m)
-which is the period T − 1 version of (1). But given equality of the period T − 1
-consumption functions, backwards recursion of the same arguments demonstrates
-that the limiting consumption functions in previous periods are also identical to
-the constrained function.
-Note finally that another intuitive confirmation of the equivalence between the
-two problems is that our formula (96) for the maximal marginal propensity to
-consume satisfies
+Now consider values m ≤ m1# for which the restrained consumer is constrained. It
+is obvious that the baseline consumer will never choose a ≤ 0 because the first term
+in (4) is lima↓0 ℘a−ρ = ∞, while lima↓0 (m − a)−ρ is finite (the marginal value of endof-period assets approaches infinity as assets approach zero, but the marginal utility of
+consumption has a finite limit for m > 0). The subtler question is whether it is possible
+to rule out strictly positive a for the unrestrained consumer.
+The answer is yes. Suppose, for some m < m1# , that the unrestrained consumer is
+considering ending the period with any positive amount of assets a = δ > 0. For any such
+δ we have that lim℘↓0 v0T −1 (a; ℘) = v̀0T −1 (a). But by assumption we are considering a set
+of circumstances in which à∗T −1 (m) < 0, and we showed earlier that lim℘↓0 a∗T −1 (m; ℘) =
+à∗T −1 (m). So, having assumed a = δ > 0, we have proven that the consumer would
+optimally choose a < 0, which is a contradiction. A similar argument holds for m = m1# .
+These arguments demonstrate that for any m > 0, lim℘↓0 cT −1 (m; ℘) = c̀T −1 (m) which
+is the period T − 1 version of (1). But given equality of the period T − 1 consumption
+functions, backwards recursion of the same arguments demonstrates that the limiting
+consumption functions in previous periods are also identical to the constrained function.
+Note finally that another intuitive confirmation of the equivalence between the two
+problems is that our formula (96) for the maximal marginal propensity to consume
+satisfies
 lim κ̄ = 1,
 ℘↓0
 
-which makes sense because the marginal propensity to consume for a constrained
-restrained consumer is 1 by our definitions of ‘constrained’ and ‘restrained.’
+which makes sense because the marginal propensity to consume for a constrained restrained consumer is 1 by our definitions of ‘constrained’ and ‘restrained.’
 
 2
 
 References
-Deaton, Angus S. (1991): “Saving and Liquidity Constraints,” Econometrica,
-59, 1221–1248, http://www.jstor.org/stable/2938366.
+Deaton, Angus S. (1991): “Saving and Liquidity Constraints,” Econometrica, 59,
+1221–1248, http://www.jstor.org/stable/2938366.
 
 3
 

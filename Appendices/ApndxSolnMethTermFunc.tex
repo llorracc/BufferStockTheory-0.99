@@ -79,37 +79,37 @@ Since the precautionary motive implies that in the presence of
 uncertainty the optimal level of consumption is below the level that is
 optimal without uncertainty, and since $\breve{\cFunc}(\mRat) \geq \mathring{\cFunc}(\mRat)$,
 implicitly defining $\mRat = e^{\mu}$ (so that $\mu = \log m$), we can construct
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  \chi_{t}(\mu)  & = \log (1-\cFunc_{t}(e^{\mu})/\cFunc_{T}(e^{\mu}))  \label{eq:ChiDef}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 which must be a number between $-\infty$ and $+\infty$ (since $0 < \cFunc_{t}(\mRat) < \breve{\cFunc}(\mRat)$ for $\mRat > 0$).  This function turns out to be much better behaved (as
 a numerical observation; no formal proof is offered) than the level of the optimal consumption rule $\cFunc_{t}(m)$.  In particular, $\chi_{t}(\mu)$ is well approximated by linear functions both as $\mRat \downarrow 0$ and as $\mRat \uparrow \infty$.
 
 Differentiating with respect to $\mu$ and dropping consumption function arguments
 yields
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  \chi^{\prime}_{t}(\mu)  & = \left(\frac{-\left(\frac{\cFunc^{\prime}_{t}\cFunc_{T}-\cFunc_{t}\cFunc_{T}^{\prime}}{\cFunc_{T}^{2}}e^{\mu}\right)}{1-\cFunc_{t}/\cFunc_{T}}\right) \label{eq:ChiPDef}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 which can be solved for
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
 % \chi^{\prime}(\mu) \cFunc_{T}^{2} (1-\cFunc_{t}/\cFunc_{T})e^{-\mu}  & = (\cFunc_{t}\cFunc_{T}^{\prime}-\cFunc^{\prime}_{t}\cFunc_{T})
 %\\ \cFunc^{\prime}_{t}\cFunc_{T}  & = \cFunc_{t}\cFunc_{T}^{\prime}-\chi^{\prime}(\mu) \cFunc_{T}^{2} (1-\cFunc_{t}/\cFunc_{T})e^{-\mu} \\
  \cFunc^{\prime}_{t}  & = (\cFunc_{t}\cFunc_{T}^{\prime}/\cFunc_{T})-((\cFunc_{T}-\cFunc_{t})/\mRat)\chi^{\prime}_{t} \label{eq:cFuncPFromChi}.
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 \begin{comment} % The derivation below shows basically that $\chi^{\prime}$ is undefined at $\mu_{t}=-\infinity$ (where $\cFunc(m) \rightarrow \cFunc^{\prime}m$ and similarly for $\cFunc_{T}(m)$; this demonstrates the necessity of using L'Hopital's rule to obtain a limit
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  \lim_{\mu \downarrow -\infty} \chi^{\prime}(\mu)  & = \left(\frac{-\left(\frac{\cFunc^{\prime}_{t}\cFunc_{T}^{\prime}\mRat-\cFunc_{t}^{\prime}\mRat\cFunc_{T}^{\prime}}{(\cFunc_{T}^{\prime}\mRat)^{2}}\mRat\right)}{(\cFunc_{T}^{\prime}\mRat-\cFunc_{t}^{\prime}\mRat)/\cFunc_{T}^{\prime}\mRat}\right)
 \\  & = \left(\frac{-\left(\frac{\cFunc^{\prime}_{t}\cFunc_{T}^{\prime}-\cFunc_{t}^{\prime}\cFunc_{T}^{\prime}}{(\cFunc_{T}^{\prime})^{2}}\right)}{(\cFunc_{T}^{\prime}-\cFunc_{t}^{\prime})/\cFunc_{T}^{\prime}}\right)
 \\  & = \left(\frac{-\left(\cFunc^{\prime}_{t}\cFunc_{T}^{\prime}-\cFunc_{t}^{\prime}\cFunc_{T}^{\prime}\right)}{(\cFunc_{T}^{\prime}-\cFunc_{t}^{\prime})\cFunc_{T}^{\prime}}\right)
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 \end{comment}
 
 Similarly, we can solve \eqref{\localorexternallabel{eq:ChiDef}} for
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
     \cFunc_{t}(\mRat)  & = \left(1-e^{\chi_{t}(\log \mRat)}\right)\cFunc_{T}(\mRat) \label{eq:cFuncFromChi}.
 %\\ \cFunc_{t}^{\prime}(e^{\mu})e^{\mu}  & = -e^{\chi(\mu)}\chi^{\prime}\cFunc_{T}(e^{\mu})+\left(1-e^{\chi(\mu)}\right)\cFunc_{T}(e^{\mu})
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 Thus, having approximated $\chi_{t}$, we can recover from it
 the level and derivative(s) of $\cFunc_{t}$.
@@ -119,14 +119,14 @@ the level and derivative(s) of $\cFunc_{t}$.
 \end{document}
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
+% tex-bibtex-command: "bibtex ../LaTeX/*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
 % LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
 % TeX-source-correlate-mode: t
-% TeX-source-correlate-start-server: 0
 % TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
 % End:

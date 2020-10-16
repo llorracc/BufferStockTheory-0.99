@@ -1,6 +1,6 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
-\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \section{Equality of Aggregate Consumption Growth and Income Growth with Transitory Shocks}\label{sec:ApndxCGroIsPGro}
@@ -15,23 +15,23 @@ Suppose the population starts in period $t$ with an arbitrary value for
  $\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})$. 
  Then if $\mSS$ is the invariant mean level of $\mRat$ we can define a `mean MPS away from $\mSS$' function
  \newcommand{\AMPS}{\bar{\acute{\aFunc}}}:
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  \AMPS(\Delta)  & =  \Delta^{-1}\int_{\mSS}^{\mSS+\Delta} \aFunc^{\prime}(z)
  dz \label{eq:checkaFunc} \nonumber
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 where the combination of the bar and the $\acute{}$ are meant to signify that this is the average value of the derivative over the interval.
 Since $\pShk_{t+1,i}=1$, $\Rnorm_{t+1,i}$ is a constant at $\Rnorm$, if we define $\aSS$ as the value of $\aRat$ corresponding to $\mRat = \mSS$, we can write
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   a_{t+1,i} 
 & =   \aSS+(\mRat_{t+1,i}-\mSS)\AMPS(\overbrace{\Rnorm
     a_{t,i}+\tShkAll_{t+1,i}}^{\mRat_{t+1,i}}-\mSS) \nonumber
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 so
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
 \mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})
  & = \mbox{cov}_{t}\left(\AMPS(\Rnorm  a_{t,i}+\tShkAll_{t+1,i}-\mSS)
   ,\PGro   \pLevBF_{t,i}\right). \nonumber
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 But since ${\Rfree}^{-1}(\pZero  \Rfree\DiscFac)^{1/\CRRA} < \AMPS(\mRat) < \PatR $,
 \begin{equation}
@@ -41,10 +41,10 @@ But since ${\Rfree}^{-1}(\pZero  \Rfree\DiscFac)^{1/\CRRA} < \AMPS(\mRat) < \Pat
 \end{equation}
 and for the version of the model with no permanent shocks the \GIC~says that
 ${\Pat} < \PGro, $ while the {\FHWC} says that $\PGro < \Rfree$
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   |\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})| < \PGro
   |\mbox{cov}_{t}(a_{t,i},\pLevBF_{t,i})|. \nonumber
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 
 This means that from any arbitrary starting value, the relative
@@ -75,16 +75,18 @@ consumer arbitrarily close to the self-imposed liquidity constraint).
 
 
 \end{document}
+
+
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
+% tex-bibtex-command: "bibtex ../LaTeX/*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
 % LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
 % TeX-source-correlate-mode: t
-% TeX-source-correlate-start-server: 0
 % TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
 % End:

@@ -24,9 +24,9 @@ problem for a given fixed $\pZero$ as $\cFunc_{t}(\mRat;\pZero)$ where we
 separate the arguments by a semicolon to distinguish between $\mRat$,
 which is a state variable, and $\pZero$, which is not.  The
 proposition we wish to demonstrate is
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \lim_{\pZero \downarrow 0} \cFunc_{t}(\mRat;\pZero)  & = \grave{\cFunc}_{t}(\mRat). \label{eq:RestrEqUnrestr} 
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 We will first examine the problem in period $T-1$, then
 argue that the desired result propagates to earlier periods.
@@ -39,21 +39,21 @@ The solution to the restrained consumer's optimization problem can be
 obtained as follows.  Assuming that the consumer's behavior in period
 $T$ is given by $\cFunc_{T}(\mRat)$ (in practice, this will be
 $\cFunc_{T}(\mRat)=m$), consider the unrestrained optimization problem
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \grave{\aFunc}^{*}_{T-1}(\mRat)  & = \underset{\aRat}{\arg \max} \left\{\uFunc(\mRat-\aRat) +  \int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \vFunc_{T}(a+\tShkEmp) d\CDF_{\tShkEmp} \right\}. \label{eq:vUnconstr}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 As usual, the envelope theorem tells us that
 $\vFunc_{T}^{\prime}(\mRat)=\uP(\cFunc_{T}(\mRat))$ so the expected marginal
 value of ending period $T-1$ with assets $\aRat$ can be defined as
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \grave{\mathfrak{v}}_{T-1}^{\prime}(a)  & \equiv  \int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \uP(\cFunc_{T}(a+\tShkEmp)) d\CDF_{\tShkEmp}, \notag
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 and the solution to \eqref{\localorexternallabel{eq:vUnconstr}} will satisfy
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \uP(\mRat-\aRat)  & =  \grave{\mathfrak{v}}_{T-1}^{\prime}(a) \label{eq:uPConstr}.
 %
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 $\grave{\aFunc}_{T-1}^{*}(\mRat)$ therefore answers the question ``With what
 level of assets would the restrained consumer like to end period $T-1$
@@ -61,26 +61,26 @@ if the constraint $c_{T-1} \leq \mRat_{T-1}$ did not exist?''  (Note that
 the restrained consumer's income process remains different from the
 process for the unrestrained consumer so long as $\pZero>0$.)  The
 restrained consumer's actual asset position will be
- \begin{equation}\begin{gathered}\begin{aligned}
+ \begin{align}
   \grave{\aFunc}_{T-1}(\mRat)  & = \max[0,\grave{\aFunc}^{*}_{T-1}(\mRat)], \notag
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 reflecting the inability of the restrained consumer to spend more than
 current resources, and note (as pointed out by
 Deaton~\citeyearpar{deatonLiqConstr}) that
- \begin{equation}\begin{gathered}\begin{aligned}
+ \begin{align}
   \mRat^{1}_{\#}  & = \left( \grave{\mathfrak{v}}_{T-1}^{\prime}(0)\right)^{-1/\CRRA} \notag
- \end{aligned}\end{gathered}\end{equation}
+ \end{align}
 is the cusp value of $\mRat$ at which the constraint makes the
 transition between binding and non-binding in period $T-1$.
 
 Analogously to \eqref{\localorexternallabel{eq:uPConstr}}, defining
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \mathfrak{v}_{T-1}^{\prime}(a;\pZero)  & \equiv  \left[\pZero \aRat^{-\CRRA}+\pNotZero\int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \left(\cFunc_{T}(a+\tShkEmp/\pNotZero)\right)^{-\CRRA} d\CDF_{\tShkEmp}\right], \label{eq:vFrakPrime}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 the Euler equation for the original consumer's problem implies
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  (\mRat-\aRat)^{-\CRRA}  & = \mathfrak{v}_{T-1}^{\prime}(a;\pZero) \label{eq:uPUnconstr}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 with solution $\aFunc_{T-1}^{*}(\mRat;\pZero)$.  Now note that for any
 fixed $\aRat>0$, $\lim_{\pZero \downarrow 0}
 \mathfrak{v}_{T-1}^{\prime}(a;\pZero) =
@@ -138,16 +138,3 @@ constrained restrained consumer is 1 by our definitions of
 \onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
 
 \end{document}
-% Local Variables:
-% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
-% TeX-PDF-mode: t
-% TeX-file-line-error: t
-% TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
-% TeX-source-correlate-mode: t
-% TeX-source-correlate-start-server: 0
-% TeX-parse-self: t
-% End:
