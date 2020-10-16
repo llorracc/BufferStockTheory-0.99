@@ -1,5 +1,5 @@
 For mt > 0 we can define et (mt ) = ct (mt )/mt and at (mt ) = mt − ct (mt ) and the Euler
-equation (??) can be rewritten
+equation (7) can be rewritten
 
 
 −ρ 
@@ -90,7 +90,7 @@ t+1 .
 
 (4)
 
-As noted in the main text, we need the WRIC (??) for this to be a convergent sequence:
+As noted in the main text, we need the WRIC (37) for this to be a convergent sequence:
 0 ≤ ℘1/ρÞ R < 1,
 
 (5)

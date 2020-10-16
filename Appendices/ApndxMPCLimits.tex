@@ -1,6 +1,6 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
-%\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \hypertarget{The-Limiting-MPCs}{}
@@ -105,16 +105,14 @@ which, combined with the intertemporal budget constraint, yields the usual formu
 \end{document}
 % Local Variables:
 % eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) %s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("BibTeX" "%(bibtex) LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
+% tex-bibtex-command: "bibtex ../LaTeX/*"
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
 % LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
 % TeX-source-correlate-mode: t
-% TeX-source-correlate-start-server: 0
 % TeX-parse-self: t
 % eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% TeX-parse-all-errors: t
 % End:

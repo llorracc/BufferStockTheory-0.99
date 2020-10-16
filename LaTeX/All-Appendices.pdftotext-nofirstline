@@ -49,7 +49,7 @@ PF-GIC
 and RIC). In this case, the consumer’s optimal
 shown to be a consequence of (
 behavior is easy to describe. We can calculate the point at which the unconstrained
-consumer would choose c = m from equation (??):
+consumer would choose c = m from equation (21):
 m# = (m# − 1 + h)κ
 1
 
@@ -465,7 +465,7 @@ setting, and find that in that much more general framework the limiting MPC is a
 zero.
 
 B Existence of a Concave Consumption Function
-To show that (??) defines a sequence of continuously differentiable strictly increasing
+To show that (6) defines a sequence of continuously differentiable strictly increasing
 concave functions {cT , cT −1 , ..., cT −k }, we start with a definition. We will say that a
 function n(z) is ‘nice’ if it satisfies
 1. n(z) is well-defined iff z > 0
@@ -496,7 +496,7 @@ Next define vt (m, c) as
 vt (m, c) = u(c) + vt (m − c)
 
 which is C3 since vt and u are both C3 , and note that our problem’s value function
-defined in (??) can be written as
+defined in (6) can be written as
 (22)
 
 vt (m) = max vt (m, c).
@@ -515,7 +515,7 @@ follows that the ct (m) defined by
 ct (m) = arg max vt (m, c)
 0<c<m
 
-exists and is unique, and (??) has an internal solution that satisfies
+exists and is unique, and (6) has an internal solution that satisfies
 (24)
 
 u0 (ct (m)) = v0t (m − ct (m)).
@@ -715,7 +715,7 @@ t+1 (ât Rt+1 + ξt+1 )
 | {z }
 =i
 
-which by imposing PF-FVAC (equation (??), which says i < 1) can be rewritten as:
+which by imposing PF-FVAC (equation (27), which says i < 1) can be rewritten as:
 
 
 1−ρ
@@ -815,7 +815,7 @@ R
 t+1 (θ/(1 − ℘))
 8
 
-Section ?? proves existence of a continuously differentiable consumption function, which implies
+Section 2.7 proves existence of a continuously differentiable consumption function, which implies
 the existence of a corresponding continuously differentiable assets function.
 9
 The remainder of the proof could be reformulated using the second-to-last line at a small cost to
@@ -828,15 +828,15 @@ i(1 − ℘)ρ θ1−ρ
 (30)
 1−i
 which is a positive finite number under our assumptions.
-The proof that T defines a contraction mapping under the conditions (??) and (??)
-is now complete.
+The proof that T defines a contraction mapping under the conditions (37) and (33) is
+now complete.
 η>η=
 
 D.1 T and v
 In defining our operator T we made the restriction κmt ≤ ct ≤ κ̄mt . However, in the
-discussion of the consumption function bounds, we showed only (in (??)) that κt mt ≤
+discussion of the consumption function bounds, we showed only (in (38)) that κt mt ≤
 ct (mt ) ≤ κ̄t mt . (The difference is in the presence or absence of time subscripts on the
-MPC’s.) We have therefore not proven (yet) that the sequence of value functions (??)
+MPC’s.) We have therefore not proven (yet) that the sequence of value functions (6)
 defines a contraction mapping.
 Fortunately, the proof of that proposition is identical to the proof above, except that
 we must replace κ̄ with κ̄T −1 and the WRIC must be replaced by a slightly stronger
@@ -849,7 +849,7 @@ condition is
 
 (℘β)1/(1−ρ) (1 − (1 + ℘1/ρÞ R )−1 ) > 1
 
-where we have used (??) for κ̄T −1 (and in the second step the reversal of the inequality
+where we have used (36) for κ̄T −1 (and in the second step the reversal of the inequality
 occurs because we have assumed ρ > 1 so that we are exponentiating both sides by the
 negative number 1 − ρ). To see that this is a weak condition, note that for small values
 of ℘ this expression can be further simplified using (1 + ℘1/ρÞ R )−1 ≈ 1 − ℘1/ρÞ R so that
@@ -873,8 +873,8 @@ defined by our operator T. Thus, under our slightly stronger (but still quite we
 
 10
 
-conditions, not only do the value functions defined by (??) converge, they converge to
-the same unique v defined by T.10
+conditions, not only do the value functions defined by (6) converge, they converge to the
+same unique v defined by T.10
 
 D.2 Convergence of vt in Euclidian Space
 Boyd’s theorem shows that T defines a contraction mapping in a z-bounded space. We
@@ -955,7 +955,7 @@ paper and is therefore left for future work.
 
 E Equality of Aggregate Consumption Growth and
 Income Growth with Transitory Shocks
-Section ?? asserted that in the absence of permanent shocks it is possible to prove that
+Section 4.2 asserted that in the absence of permanent shocks it is possible to prove that
 the growth factor for aggregate consumption approaches that for aggregate permanent
 income. This section establishes that result.
 First define a(m) as the function that yields optimal end-of-period assets as a function
@@ -1019,7 +1019,7 @@ arbitrarily close to the self-imposed liquidity constraint).
 
 F The Limiting MPC’s
 For mt > 0 we can define et (mt ) = ct (mt )/mt and at (mt ) = mt − ct (mt ) and the Euler
-equation (??) can be rewritten
+equation (7) can be rewritten
 −ρ 
 
 
@@ -1108,7 +1108,7 @@ t+1 .
 
 (39)
 
-As noted in the main text, we need the WRIC (??) for this to be a convergent sequence:
+As noted in the main text, we need the WRIC (37) for this to be a convergent sequence:
 0 ≤ ℘1/ρÞ R < 1,
 
 (40)
