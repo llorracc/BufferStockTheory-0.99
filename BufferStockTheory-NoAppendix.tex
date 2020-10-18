@@ -88,6 +88,8 @@
 % If web version, then just incorporate thanks at beginning of text instead of in frontmatter
 \ifthenelse{\boolean{ifWeb}}{\medskip \noindent {\footnotesize \thankstext} \\  {\centering \medskip \medskip \medskip  \noindent \hrule height 0.4pt depth 0.0pt width \textwidth \relax}}{\pagebreak } % \end{Web}
 
+\ifthenelse{\boolean{ifWeb}}{\thankstext}{}
+
 \hrule height 0.4pt depth 0.0pt width \textwidth \relax
 
 \medskip \medskip
@@ -448,8 +450,8 @@ More useful is the case where the perfect foresight growth and return impatience
 \end{align}
 which will be finite whenever 
 \begin{align}
-  \overbrace{\DiscFac \PGro^{1-\CRRA} }^{\equiv \DiscAlt}  & < 1 \label{eq:PFFVAC}
-  \\ \DiscFac \Rfree \PGro^{-\CRRA}  & < \Rfree/\PGro \nonumber
+  \overbrace{\DiscFac \PGro^{1-\CRRA} }^{\equiv \DiscAlt}  & < 1 \nonumber
+  \\ \DiscFac \Rfree \PGro^{-\CRRA}  & < \Rfree/\PGro \label{eq:PFFVAC} 
   \\ \PatPGro  & < (\Rfree/\PGro)^{1/\CRRA}, \nonumber
 \end{align}
 which we call the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter (that is, for $n > 0)$.  The consumer's value function is therefore nondegenerate.
@@ -464,11 +466,17 @@ where \cncl{\RIC} would suggest a degenerate limit of
 $\mathring{\cFunc}(\mRat)=0$ while \cncl{\FHWC} would suggest a
 degenerate limit of $\mathring{\cFunc}(\mRat)=\infty$.
 
-Tables~\ref{table:Comparison} and \ref{table:Required} (and appendix
-table~\ref{table:LiqConstrScenarios}) codify the key points to help
-the reader keep them straight (and to facilitate upcoming comparisons
-with the results in the presence of uncertainty
-but the absence of liquidity constraints (correspondingly tabulated)).  The model without constraints but with uncertainty will turn out to be a close parallel to the model with constraints but without uncertainty.
+Table~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify the key points to help the reader keep them straight (and to facilitate upcoming comparisons with the results in the presence of uncertainty but the absence of liquidity constraints (correspondingly tabulated)).
+
+An intuitive representation of the relations of the conditions is presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC} (for the perfect foresight case).  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way of writing the {\PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, and this is captured by the diagonal arrow.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, {\cncl{\FHWC}} would correspond to reversing the directon of the bottommost arrow.  This would allow us to follow the arrows in a counterclockwise direction from $\Pat$ to the bottom right node, leading to the conclusion that the combination of {\RIC} and \cncl{FHWC} implies that the \PFFVAC holds.  (Readers unfamiliar with digrams of this kind may wish to consult the expanded discussion in Appendix~\ref{sec:ApndxConditionDiagrams}).
+
+\providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
+\providecommand{\figFile}{\figName} %  and on filename
+\hypertarget{\figFile}{}
+\hypertarget{\figName}{}
+\input{\FigDir/\figName} % Read in the tex to generate the figure
+
+We now turn to the case with uncertainty.  The model without constraints but with uncertainty will turn out to be a close parallel to the model with constraints but without uncertainty.
 
 \hypertarget{Uncertainty-Modified-Conditions}{}
 \subsection{Uncertainty-Modified Conditions}
@@ -476,19 +484,16 @@ but the absence of liquidity constraints (correspondingly tabulated)).  The mode
 
 
 
-Now define $\isp \equiv \psi^{-1}$ and $\bar{\isp} = \Ex_{t}[\isp_{t+1}]$.  % PrivateMsg
 
 
 When uncertainty is introduced, the expectation of $\bRat_{t+1}$ can be rewritten as:  
 \begin{align}
   \Ex_{t}[\bRat_{t+1}]  & =  \aRat_{t}\Ex_{t}[\Rnorm_{t+1}] = \aRat_{t}\Rnorm\Ex_{t}[\pShk_{t+1}^{-1}] \label{eq:EbRat}
-  \\ & = \aRat_{t}\Rnorm\Ex_{t}[\isp_{t+1}] = \aRat_{t}\Rnorm\bar{\isp}  \notag % PrivateMsg
 \end{align}
 where Jensen's inequality guarantees that the expectation of the inverse of the permanent
 shock is strictly greater than one.  It will be convenient to define the object \hypertarget{InvEpShkInv}{}
 \begin{align*}
   \InvEpShkInv  & \equiv  (\EpShkInv)^{-1}
-  \\ &                  \equiv \bar{\isp}^{-1}  % PrivateMsg
 \end{align*}
 because this permits us to write expressions like the RHS of
 \eqref{eq:EbRat} compactly as, e.g., $\aRat_{t}\Rnorm/
@@ -513,7 +518,6 @@ and a compensated Growth Patience Pactor (GPF):\hypertarget{GIF}{}
 \begin{verbatimwrite}{\EqDir/PatPGroAdj}
   \begin{align}
     \PatPGroAdj  & = \Pat/\PGroAdj \label{eq;GPF}
-    \\ & = \bar{\isp}\PatPGro  \notag % PrivateMsg  
     \\ & = \Ex\left(\frac{\Pat}{\PGro \psi}\right) \notag
   \end{align}
 \end{verbatimwrite}
@@ -857,6 +861,17 @@ foregoing intuitive discussion.
 
 \hypertarget{Discussion-of-Parametric-Restrictions}{}
 \subsection{Discussion of Parametric Restrictions}\label{sec:discussConvergence}
+
+The full relationship among all the conditions articulated above is represented in \eqref{eq:Inequalities}.
+Though the diagram looks complex, it is merely a modified version of the earlier diagram with further 
+(mostly intermediate) inequalities inserted.  Again readers unfamiliar with such diagrams should Appendix~\ref{sec:ApndxConditionDiagrams}) for a more detailed explanation.
+
+\renewcommand{\figName}{Inequalities} % Allows generic definition of hypertargets based on title of figure
+\renewcommand{\figFile}{\figName} %  and on filename
+\hypertarget{\figFile}{}
+\hypertarget{\figName}{}
+\input{\FigDir/\figName} % Read in the tex to generate the figure
+
 
 \begin{comment}
   \subsubsection{Perfect Foresight Case}
@@ -1453,7 +1468,7 @@ and multiplying all three elements by $\Rfree/\Pat$ gives
 \begin{align*}
   \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\right] & < \Rfree/\Pat < 1
 \end{align*}
-which satisfies our requirement in \eqref{eq:RbarBelowOne}.\footnote{An interesting sidenote is that \eqref{eq:RbarBelowOne} is a close cousin to the {\FHWC}: instead of $\Rfree/\PGro < 1$ we have $(\Rfree/\PGro)\isp < 1$.}
+which satisfies our requirement in \eqref{eq:RbarBelowOne}.\footnote{An interesting sidenote is that \eqref{eq:RbarBelowOne} is a close cousin to the {\FHWC}: instead of $\Rfree/\PGro < 1$ we have $(\Rfree/\PGro)\InvEpShkInv < 1$.}
 
 
 % where the bound on the marginal propensity to consume in the third line  is guaranteed by the $RIC$ \eqref{eq:RIC} (see section~\ref{subsec:LimitsAsmtToInfty}) \textcolor{red}{Is the FHWC needed?}. Therefore, we can be sure that $\difFunc(\bullet)$ crosses 0 exactlyonce at $\mTarg$, and through \eqref{eq:difRatioEquiv} this implies that the target is unique. Additionally, we can conclude that$\difFunc({\mRat}_t)>0$ for ${\mRat}_t<\mTarg$ and $\difFunc({\mRat}_t)>0$ for ${\mRat}_t > \mTarg$, which coupled with \eqref{eq:difRatioEquiv} yields our desired stability result \eqref{eq:stability}.
@@ -1715,10 +1730,16 @@ Another contribution is integration of the paper's results with the open-source 
 
 \end{document}
 
+% Delete up to four existing variants of BibTeX 
+
 % Local Variables:
-% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
-% tex-bibtex-command: "bibtex LaTeX/*"
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t

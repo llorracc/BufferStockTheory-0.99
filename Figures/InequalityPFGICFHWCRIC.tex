@@ -1,0 +1,18 @@
+\hypertarget{InequalityPFGICFHWCRIC}{}
+\tikzset{node distance=6cm, auto, >=latex}
+\begin{figure}[h]
+  \label{fig:InequalityPFGICFHWCRIC}
+  \centerline{
+    \begin{tikzpicture}
+      \node (thorn) {$\left((\Rfree \DiscFac)^{1/\CRRA} \equiv \right) \Pat$};
+      \node (gamma) [right of = thorn] {$\PGro$};
+      \node (rfree) [below of = thorn, xshift = 3.35cm, yshift = 3cm]{$\mathsf{\Rfree}$};
+      \draw[->] (thorn.north east) to [out = 10,  in=160] node[above]{\PFGIC $\left(\equiv \Pat< \PGro\right) $} (gamma.north west);
+      \draw[->] (gamma) to [out = 200, in=-10] node[below]{$\cncl{\PFGIC}$} (thorn); %  \Thorn  > \PGro
+      \draw[->] (thorn.south east) to node [swap] {$\left(\Pat < \Rfree \equiv\right) \mathrm{\RIC}$} (rfree);
+      \draw[->] (gamma) to node {$\mathrm{\FHWC}\left(\equiv \PGro < \Rfree\right) $} (rfree);
+    \end{tikzpicture}
+  }
+  \caption{Relation of {\RIC}, {\PFGIC}, and {\FHWC} in Perfect Foresight Model}
+  \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$, indicates that $\PGro > \Pat$.}
+\end{figure}

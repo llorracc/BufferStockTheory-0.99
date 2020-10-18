@@ -1,0 +1,20 @@
+\tikzset{node distance=5cm, auto, >=latex}
+\begin{figure}[h]
+  \hypertarget{RelatePFGICFHWCRICPFFVAC}{}
+  \centerline{
+    \begin{tikzpicture}
+      \node (thorn) {$\Pat$};
+      \node (gamma) [right of = thorn] {$\PGro$};
+      \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
+      \node (pffvacFac) [right of = rfree]
+      {$\Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} $}; % \left(\equiv (\Rfree \PGro)^{1/\CRRA}\PGro\right)
+      \draw[->] (thorn) to node {$\mathrm{\PFGIC}$} (gamma);
+      \draw[->] (thorn) to node [swap] {$\mathrm{\RIC}$} (rfree);
+      \draw[->] (thorn) to node [swap] {$\mathrm{\PFFVAC}$} (pffvacFac);
+      \draw[->] (gamma) to node {$\mathrm{\FHWC}$} (pffvacFac);
+      \draw[->] (pffvacFac) to node {$\mathrm{\FHWC}$} (rfree);
+    \end{tikzpicture}
+  }
+  \caption{Relation of \PFGIC, \FHWC, \RIC, and \PFFVAC} \label{fig:RelatePFGICFHWCRICPFFVAC}
+  \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$ indicates that $\PGro > \Pat$.}
+\end{figure}

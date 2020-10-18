@@ -1,5 +1,5 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\LaTeXFiles/onlyinsubfile.sty}
+\input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile}
 % \RequirePackage[quiet]{fontspec}
 % \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 % \usetikzlibrary{cd}
@@ -10,31 +10,34 @@
 % \tikzset{every picture/.style={/utils/exec={\tipa}}}
 \onlyinsubfile{\externaldocument{BufferStockTheory}}
 
-\begin{document}
+\begin{document}\label{sec:ApndxConditionDiagrams}
 
 \section{Relational Diagrams for the Inequality Conditions}
 
 \subsection{For the Unconstrained Perfect Foresight Model}
 
+\begin{verbatimwrite}{\FigDir/InequalityPFGICFHWCRIC}
 \hypertarget{InequalityPFGICFHWCRIC}{}
-
 \tikzset{node distance=6cm, auto, >=latex}
-\begin{figure}[tbp]
+\begin{figure}[h]
   \label{fig:InequalityPFGICFHWCRIC}
   \centerline{
     \begin{tikzpicture}
       \node (thorn) {$\left((\Rfree \DiscFac)^{1/\CRRA} \equiv \right) \Pat$};
       \node (gamma) [right of = thorn] {$\PGro$};
-      \node (rfree) [below of = thorn, xshift = 3.2cm, yshift = 3cm]{$\mathsf{\Rfree}$};
+      \node (rfree) [below of = thorn, xshift = 3.35cm, yshift = 3cm]{$\mathsf{\Rfree}$};
       \draw[->] (thorn.north east) to [out = 10,  in=160] node[above]{\PFGIC $\left(\equiv \Pat< \PGro\right) $} (gamma.north west);
       \draw[->] (gamma) to [out = 200, in=-10] node[below]{$\cncl{\PFGIC}$} (thorn); %  \Thorn  > \PGro
       \draw[->] (thorn.south east) to node [swap] {$\left(\Pat < \Rfree \equiv\right) \mathrm{\RIC}$} (rfree);
       \draw[->] (gamma) to node {$\mathrm{\FHWC}\left(\equiv \PGro < \Rfree\right) $} (rfree);
     \end{tikzpicture}
   }
-  \caption{Relation of \RIC, \PFGIC, and \FHWC in Perfect Foresight Model} 
+  \caption{Relation of {\RIC}, {\PFGIC}, and {\FHWC} in Perfect Foresight Model}
+  \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$, indicates that $\PGro > \Pat$.}
 \end{figure}
-\tikzset{node distance=5cm, auto, >=latex}
+\end{verbatimwrite}
+\input{\FigDir/InequalityPFGICFHWCRIC}
+
 
 Figure~\ref{fig:InequalityPFGICFHWCRIC} should be read as follows.  The three nodes represent the values of the absolute patience factor \Thorn, the growth factor for permanent income $\PGro$, and the riskfree interest factor $\Rfree$.  The arrows between these quantities represent imposition of the labeled condition.  For example, the uppermost arrow, pointing from {$\Pat$} to $\PGro$, reflects imposition of the {\PFGIC} condition.  To make interpretation of the diagram easy, the mathematical representation of the condition is expressed in parentheses as being equivalent ($\equiv$) to the condition.
 
@@ -52,7 +55,9 @@ which illustrates another aspect of the diagram: If all arrows are reversed in a
 For clarity, further diagrams will omit multiple arrows indicating reversal of causality (in Figure~\ref{fig:InequalityPFGICFHWCRIC} there would, for example, be only a single arrow, from {$\Pat$} to $\PGro$, at the top level of the diagram).  And definitions of conditions will also be omitted henceforth.
 
 Under these conventions, we can extend the diagram to incorporate the $\PFFVAC$ (see Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}).\footnote{For readers familiar with the \href{https://en.wikipedia.org/wiki/Commutative_diagram}{commutative diagrams}, it should be noted that this diagram is NOT commutative, because the three ways of arriving at the conclusion embodied in the diagonal arrow (the {\PFFVAC}) are NOT identical in their other implications.}
-\begin{figure}[htbp]
+\begin{verbatimwrite}{\FigDir/RelatePFGICFHWCRICPFFVAC}
+\tikzset{node distance=5cm, auto, >=latex}
+\begin{figure}[h]
   \hypertarget{RelatePFGICFHWCRICPFFVAC}{}
   \centerline{
     \begin{tikzpicture}
@@ -69,7 +74,10 @@ Under these conventions, we can extend the diagram to incorporate the $\PFFVAC$ 
     \end{tikzpicture}
   }
   \caption{Relation of \PFGIC, \FHWC, \RIC, and \PFFVAC} \label{fig:RelatePFGICFHWCRICPFFVAC}
+  \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$ indicates that $\PGro > \Pat$.}
 \end{figure}
+\end{verbatimwrite}
+\input{\FigDir/RelatePFGICFHWCRICPFFVAC}
 
 This diagram can be interpreted, for example, as saying  that it is possible to derive the $\PFFVAC$\footnote{in the form $\Pat < (\Rfree/\PGro)^{1/\CRRA}\PGro$} by imposing both the {\PFGIC} and the {\FHWC}; or by imposing {\RIC} and \cncl{\FHWC}.  Or, starting at the $\PGro$ node, we can follow the imposition of the {\FHWC} (twice) and then $\cncl{\RIC}$ to reach the conclusion that $\Pat < (\Rfree \PGro)^{1/\CRRA} \PGro$.  Algebraically,
 \begin{align}
@@ -87,7 +95,9 @@ Multiplying the \RPF (which exceeds 1 because \cncl{\RIC}) by a number greater t
 which is one way of writing $\cncl{\PFFVAC}$.
 
 After the warmup of constructing these conditions for the perfect foresight case, we can represent the relationships between all the conditions in both the perfect foresight case and the case with uncertainty as shown in Figure~\ref{fig:Inequalities}.
-\begin{figure}[tbp]
+\begin{verbatimwrite}{\FigDir/Inequalities}
+\tikzset{node distance=5cm, auto, >=latex}
+\begin{figure}[h]
   \hypertarget{Inequalities}{}
   \centerline{
     \begin{tikzpicture}
@@ -97,12 +107,8 @@ After the warmup of constructing these conditions for the perfect foresight case
       \node (pffvacFac) [right of = rfree] 
       {$\mathsf{\Rfree}^{1/\CRRA}\PGro^{1 - 1/\CRRA}$};
       \node (pThorn) [left of = thorn] {$\pZero^{1/\rho}\Pat$};
-      \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm] 
-      {$\PGroAdj$};
-      \node (fvacFac) [right of = thorn, yshift = -2cm] 
-      {$\mathsf{\Rfree}^{1/\CRRA}\PGrouAdj^{1 
-          - 1/\CRRA}$};
-      
+      \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{$\PGroAdj$};
+      \node (fvacFac) [right of = thorn, yshift = -2cm]{$\mathsf{\Rfree}^{1/\CRRA}\PGrouAdj^{1 - 1/\CRRA}$};
       \draw[->] (thorn) to node {$\mathrm{\PFGIC}$} (gamma);
       \draw[->] (thorn) to node [swap] {$\mathrm{\RIC}$} (rfree);
       \draw[->] (thorn) to node [swap] {$\mathrm{\PFFVAC}$} (pffvacFac);
@@ -118,6 +124,8 @@ After the warmup of constructing these conditions for the perfect foresight case
   }
   \caption{Relation of All Inequality Conditions} \label{fig:Inequalities}
 \end{figure}
+\end{verbatimwrite}
+\input{\FigDir/Inequalities}
 
 These diagrams also keep track of the hierarchy among the conditions. For example, if the right vertical arrow in the second diagram is reversed, then the top right triangle says \PFFVAC + \cncl{\FHWC} implies \PFGIC. If the left vertical arrow is reversed, then \cncl{\RIC} + {\PFGIC} implies \cncl{\FHWC}. 
 
@@ -127,9 +135,13 @@ These diagrams also keep track of the hierarchy among the conditions. For exampl
 \end{document}
 
 % Local Variables:
-% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  t  :help "Run Biber") TeX-command-list))
-% tex-bibtex-command: "bibtex ../LaTeX/*"
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil t                                                                              :help "Run BibTeX") t)
+% eval: (add-to-list 'TeX-command-list '("BibTeX" "bibtex ../LaTeX/%s" TeX-run-BibTeX nil (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode context-mode) :help "Run BibTeX") t)
 % TeX-PDF-mode: t
 % TeX-file-line-error: t
 % TeX-debug-warnings: t
