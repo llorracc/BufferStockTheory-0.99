@@ -535,8 +535,6 @@ Definitions: ‘Uncertainty-Adjusted’ Growth:
 (9)
 
 Þ Γ = Þ /Γ
-ψ̄
-= ÞΓ
  
 Þ
 =E
@@ -556,11 +554,13 @@ Why? Because it can be shown that
 
 
 mt+1
-Buffer Stock
-lim ECarroll
-= Theory
-ÞΓ
-t
+lim Et
+= ÞΓ
+mt →∞
+mt
+Carroll
+
+Buffer Stock Theory
 
 (12)
 
