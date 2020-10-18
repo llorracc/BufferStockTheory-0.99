@@ -1,0 +1,926 @@
+Chris Carroll
+Johns Hopkins University
+
+September 12, 2019
+Powered By
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Drawbacks of Numerical Solutions
+A Black Box
+Can Construct Solution to Model Without Really Understanding It
+Hard Even To Be Sure Your Numerical Solution Is Right
+Little Intuition for How Results Might Change With
+Calibration
+Structure
+
+Very Hard To Teach!
+I Am A Big Fan Of Numerical Methods
+Have Done A Good Deal Of Work With Them Myself
+But As A Result, Have Felt All These Drawbacks Keenly
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Drawbacks of Numerical Solutions
+A Black Box
+Can Construct Solution to Model Without Really Understanding It
+Hard Even To Be Sure Your Numerical Solution Is Right
+Little Intuition for How Results Might Change With
+Calibration
+Structure
+
+Very Hard To Teach!
+I Am A Big Fan Of Numerical Methods
+Have Done A Good Deal Of Work With Them Myself
+But As A Result, Have Felt All These Drawbacks Keenly
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Drawbacks of Numerical Solutions
+A Black Box
+Can Construct Solution to Model Without Really Understanding It
+Hard Even To Be Sure Your Numerical Solution Is Right
+Little Intuition for How Results Might Change With
+Calibration
+Structure
+
+Very Hard To Teach!
+I Am A Big Fan Of Numerical Methods
+Have Done A Good Deal Of Work With Them Myself
+But As A Result, Have Felt All These Drawbacks Keenly
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Drawbacks of Numerical Solutions
+A Black Box
+Can Construct Solution to Model Without Really Understanding It
+Hard Even To Be Sure Your Numerical Solution Is Right
+Little Intuition for How Results Might Change With
+Calibration
+Structure
+
+Very Hard To Teach!
+I Am A Big Fan Of Numerical Methods
+Have Done A Good Deal Of Work With Them Myself
+But As A Result, Have Felt All These Drawbacks Keenly
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+The Gap This Paper Fills
+
+Foundations For Microeconomic Household’s Problem With
+Uncertain Labor Income
+No Liquidity Constraints
+CRRA Utility
+(Problem with Liquidity Constraints Is A Limiting Case)
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+The Gap This Paper Fills
+
+Foundations For Microeconomic Household’s Problem With
+Uncertain Labor Income
+No Liquidity Constraints
+CRRA Utility
+(Problem with Liquidity Constraints Is A Limiting Case)
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Key Result
+
+Restrictions On Parameter Values Such That
+Problem Defines A Contraction Mapping
+⇒ ∃ A Unique Consumption Function c(m)
+
+There Is A ‘Target’ Ratio Of Assets to Permanent Income
+Requires A Key ‘Impatience’ Condition To Hold
+Good News
+Condition Is Weaker (Easier To Satisfy) Than Previous Papers Imposed
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Key Result
+
+Restrictions On Parameter Values Such That
+Problem Defines A Contraction Mapping
+⇒ ∃ A Unique Consumption Function c(m)
+
+There Is A ‘Target’ Ratio Of Assets to Permanent Income
+Requires A Key ‘Impatience’ Condition To Hold
+Good News
+Condition Is Weaker (Easier To Satisfy) Than Previous Papers Imposed
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Motivation
+
+Key Result
+
+Restrictions On Parameter Values Such That
+Problem Defines A Contraction Mapping
+⇒ ∃ A Unique Consumption Function c(m)
+
+There Is A ‘Target’ Ratio Of Assets to Permanent Income
+Requires A Key ‘Impatience’ Condition To Hold
+Good News
+Condition Is Weaker (Easier To Satisfy) Than Previous Papers Imposed
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Limit as horizon T goes to infinity of
+
+at = mt − ct
+
+(1)
+
+bt+1 = at R
+
+pt+1 = pt Γψt+1
+| {z }
+≡Γt+1
+
+mt+1 = bt+1 + pt+1 ξt+1 ,
+
+ξt+n
+
+(
+0
+=
+θt+n /(1 − ℘)
+
+with probability ℘ > 0
+with probability (1 − ℘)
+
+(2)
+
+u(•) = •1−ρ /(1 − ρ); Et [ψt+n ] = Et [ξt+n ] = 1 ∀ n > 0; β < 1, ρ > 1
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Surely This Problem Has Been Solved?
+
+No.
+Can’t Use Stokey et. al. theorems because CRRA utility
+Lit thru Matkowski and Nowak (2011) Can’t Handle Permanent Shocks
+Must Use Boyd’s ‘Weighted’ Contraction Mapping Theorem
+Surprisingly Subtle
+Fortunately, the Conclusions Are Simple!
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Surely This Problem Has Been Solved?
+
+No.
+Can’t Use Stokey et. al. theorems because CRRA utility
+Lit thru Matkowski and Nowak (2011) Can’t Handle Permanent Shocks
+Must Use Boyd’s ‘Weighted’ Contraction Mapping Theorem
+Surprisingly Subtle
+Fortunately, the Conclusions Are Simple!
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Surely This Problem Has Been Solved?
+
+No.
+Can’t Use Stokey et. al. theorems because CRRA utility
+Lit thru Matkowski and Nowak (2011) Can’t Handle Permanent Shocks
+Must Use Boyd’s ‘Weighted’ Contraction Mapping Theorem
+Surprisingly Subtle
+Fortunately, the Conclusions Are Simple!
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Benchmark: Perfect Foresight Model
+
+Definitions:
+Absolute Patience Factor
+Return Patience Factor
+Perfect Foresight Growth Patience Factor
+Name
+(AIC ) Absolute Impatience Condition
+(RIC ) Return Impatience Condition
+(PFGIC ) Growth Impatience Condition
+
+Carroll
+
+Þ
+ÞR
+ÞΓ
+
+=
+=
+=
+
+Condition
+Þ
+< 1
+ÞR < 1
+ÞΓ < 1
+
+Buffer Stock Theory
+
+(Rβ)1/ρ
+Þ /R
+Þ /Γ
+
+Implication
+c ↓ over time
+c/a ↓ over time
+c/pp ↓ over time
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+When Does A Useful Limiting Solution Exist?
+
+Finite Human Wealth (FHWC ) condition:
+Γ < R
+
+(3)
+
+ÞR < R
+
+(4)
+
+Return Impatience Condition:
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+When Does A Useful Limiting Solution Exist?
+
+Finite Human Wealth (FHWC ) condition:
+Γ < R
+
+(3)
+
+ÞR < R
+
+(4)
+
+Return Impatience Condition:
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+What If There Are Liquidity Constraints?
+
+FHWC is not necessary for solution to exist
+Other Key Condition For Useful Solution is
+‘Perfect Foresight Finite Value of Autarky Condition (PFFVAC )’:
+βΓ1−ρ < 1
+Without RIC , Constraints Are Irrelevant
+Because Wealth Always Wants To Rise, So Constraint Never Binds
+
+Carroll
+
+Buffer Stock Theory
+
+(5)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+What If There Are Liquidity Constraints?
+
+FHWC is not necessary for solution to exist
+Other Key Condition For Useful Solution is
+‘Perfect Foresight Finite Value of Autarky Condition (PFFVAC )’:
+βΓ1−ρ < 1
+Without RIC , Constraints Are Irrelevant
+Because Wealth Always Wants To Rise, So Constraint Never Binds
+
+Carroll
+
+Buffer Stock Theory
+
+(5)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Liquidity Constraints and Uncertainty
+
+Introduce permanent shocks to income
+Finite Value of Autarky Condition Becomes
+≡i
+
+z }| {
+βΓ1−ρ < 1
+
+(6)
+ρ−1
+
+β<Γ
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Contraction Mapping Requirements
+Finite Value of Autarky Condition: Same As In Liq Constr Problem!
+≡i
+
+z }| {
+βΓ1−ρ < 1
+
+(7)
+ρ−1
+
+β<Γ
+
+‘Weak Return Impatience Condition’ (WRIC )
+0 ≤ ℘1/ρÞ R < 1
+
+Carroll
+
+Buffer Stock Theory
+
+(8)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Perfect Foresight Problem
+The Real Problem
+
+Requirement For Existence Of A Target
+Definitions: ‘Uncertainty-Adjusted’ Growth:
+Γ = Γψ
+
+(9)
+
+Þ Γ = Þ /Γ
+ψ̄
+= ÞΓ
+ 
+Þ
+=E
+Γψ
+
+(10)
+
+ÞΓ < 1
+
+(11)
+
+Adjusted Growth Patience Factor:
+
+Growth Impatience Condition:
+
+Why? Because it can be shown that
+
+
+mt+1
+Buffer Stock
+lim ECarroll
+= Theory
+ÞΓ
+t
+
+(12)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Five Propositions
+The Target Saving Figure
+Bounds On The Consumption Function
+The Consumption Function and Target Wealth
+
+Five Propositions
+
+1
+2
+3
+4
+5
+
+limmt →∞ Et [ct+1 /ct ] = Þ
+limmt →0 Et [ct+1 /ct ] = ∞
+
+∃ a unique target value of m, called m̌
+Et [ct+1 /ct |mt = m̌] = Γ − 
+
+
+dEt [ct+1 /ct ]
+<0
+dmt
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Five Propositions
+The Target Saving Figure
+Bounds On The Consumption Function
+The Consumption Function and Target Wealth
+
+The Target Saving Figure
+Growth Rate
+
+Γ
+
+Et[ct+1/ct]
+Þ = (Rβ)1/ρ
+
+mt
+
+m̌
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Five Propositions
+The Target Saving Figure
+Bounds On The Consumption Function
+The Consumption Function and Target Wealth
+
+Bounds On the Consumption Function
+c
+c(m) = κm = (1 − ℘1/ρÞ R)m
+Upper Bound = Min [c(m), c(m)]
+
+c(m) = (m − 1 + h)κ
+
+c(m)
+
+Lower Bound: c(m) = (1 − Þ R )κm
+
+m
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Five Propositions
+The Target Saving Figure
+Bounds On The Consumption Function
+The Consumption Function and Target Wealth
+
+The Marginal Propensity to Consume
+1.0
+
+(1 − ℘1/ρÞ ) ≡ κ
+0.8
+
+κ(m) ≡ c0(m)
+
+0.6
+
+0.4
+
+0.2
+
+κ ≡ (1 − Þ R)
+0.0
+0
+
+1
+
+2
+
+3
+
+Carroll
+
+4
+
+5
+
+6
+
+Buffer Stock Theory
+
+7
+
+8
+
+m
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Five Propositions
+The Target Saving Figure
+Bounds On The Consumption Function
+The Consumption Function and Target Wealth
+
+The Consumption Function and Target Wealth
+c
+
+c(mt)
+Et[∆mt+1] = 0
+
+m
+m̌
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Invariant Distribution
+Balanced Growth Equilbrium
+
+Convergence To The Invariant Distribution
+Szeidl (2012) Proves Existence of an Invariant Distribution of m, c, a, etc.
+ℱ
+1.0
+ℱ1a ⟶
+ℱ4a ⟶
+
+0.8
+
+a
+⟵ ℱ10
+
+0.6
+
+a
+a
+⟵ ℱ40
+≈ ℱ∞
+
+0.4
+
+0.2
+
+0.0
+0.0
+
+0.2
+
+0.4
+
+0.6
+Carroll
+
+0.8
+
+1.0
+
+Buffer Stock Theory
+
+1.2
+
+
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Invariant Distribution
+Balanced Growth Equilbrium
+
+Balanced Growth Equilibrium
+Achieved When Cross Section Distribution Reaches Invariance
+Yt+1 /Yt = Ct+1 /Ct
+
+= Γ
+
+(13)
+
+Fisherian Separation Fails, Even Without Liquidity Constraints!
+Insight:
+Precautionary Saving ≈ Liquidity Constraints
+If c̀(m) is solution for constrained consumer,
+lim c(m; ℘) = c̀(m)
+℘↓0
+
+Carroll
+
+Buffer Stock Theory
+
+(14)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Invariant Distribution
+Balanced Growth Equilbrium
+
+Balanced Growth Equilibrium
+Achieved When Cross Section Distribution Reaches Invariance
+Yt+1 /Yt = Ct+1 /Ct
+
+= Γ
+
+(13)
+
+Fisherian Separation Fails, Even Without Liquidity Constraints!
+Insight:
+Precautionary Saving ≈ Liquidity Constraints
+If c̀(m) is solution for constrained consumer,
+lim c(m; ℘) = c̀(m)
+℘↓0
+
+Carroll
+
+Buffer Stock Theory
+
+(14)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Invariant Distribution
+Balanced Growth Equilbrium
+
+Balanced Growth Equilibrium
+Achieved When Cross Section Distribution Reaches Invariance
+Yt+1 /Yt = Ct+1 /Ct
+
+= Γ
+
+(13)
+
+Fisherian Separation Fails, Even Without Liquidity Constraints!
+Insight:
+Precautionary Saving ≈ Liquidity Constraints
+If c̀(m) is solution for constrained consumer,
+lim c(m; ℘) = c̀(m)
+℘↓0
+
+Carroll
+
+Buffer Stock Theory
+
+(14)
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+The Invariant Distribution
+Balanced Growth Equilbrium
+
+The MPC Out Of Permanent Shocks
+
+http://econ.jhu.edu/people/ccarroll/papers/MPCPerm.pdf
+Lots of Recent Papers Trying to Measure the MPCP
+Paper Proves:
+MPCP < 1
+But not a lot less:
+0.75 to 0.95 (annual rate) for wide range of parameter values
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Defined Conditions Under Which Widely Used Problem Has Solution
+Finite Value of Autarky Condition Guarantees Contraction (with WRIC )
+Growth Impatience Condition Prevents m → ∞
+
+Economy Of Buffer Stock Consumers Exhibits Balanced Growth
+Even In Absence of General Equilibrium Adj of Interest Rate
+
+Carroll
+
+Buffer Stock Theory
+
+Introduction
+The Problem
+Features Of the Solution
+A Small Open Buffer Stock Economy
+Conclusions
+
+Matkowski, Janusz, and Andrzej S. Nowak (2011): “On Discounted Dynamic Programming With Unbounded Returns,”
+Economic Theory, 46, 455–474.
+Szeidl, Adam (2012): “Stable Invariant Distribution in Buffer-Stock Saving and Stochastic Growth Models,” Manuscript,
+Central European University.
+
+Carroll
+
+Buffer Stock Theory
+
+

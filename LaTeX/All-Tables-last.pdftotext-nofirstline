@@ -1,0 +1,380 @@
+Calibrated Parameters
+Description
+
+Parameter
+
+Value
+
+Source
+
+Permanent Income Growth Factor
+
+Γ
+
+1.03
+
+PSID: Carroll (1992)
+
+Interest Factor
+
+R
+
+1.04
+
+Conventional
+
+Time Preference Factor
+
+β
+
+0.96
+
+Conventional
+
+Coefficient of Relative Risk Aversion
+
+ρ
+
+2
+
+Conventional
+
+Probability of Zero Income
+
+℘
+
+0.005
+
+PSID: Carroll (1992)
+
+Std Dev of Log Permanent Shock
+
+σψ
+
+0.1
+
+PSID: Carroll (1992)
+
+Std Dev of Log Transitory Shock
+
+σθ
+
+0.1
+
+PSID: Carroll (1992)
+
+Table 2 Model Characteristics Calculated from Parameters
+Approximate
+Calculated
+Description
+
+Symbol and Formula
+
+Value
+
+Finite Human Wealth Measure
+
+R−1
+
+≡
+
+Γ/R
+
+0.990
+
+PF Finite Value of Autarky Measure
+
+i
+
+≡
+
+βΓ1−ρ
+
+0.932
+
+Growth Compensated Permanent Shock
+
+ψ
+
+≡
+
+(E[ψ −1 ])−1
+
+0.990
+
+Uncertainty-Adjusted Growth
+
+Γ
+
+≡
+
+Γψ
+
+1.020
+
+Utility Compensated Permanent Shock
+
+ψ
+
+≡
+
+(Et [ψ 1−ρ ])1/(1−ρ)
+
+0.990
+
+Utility Compensated Growth
+
+Γ
+
+≡
+
+Γψ
+
+1.020
+
+Absolute Patience Factor
+
+Þ
+
+≡
+
+(Rβ)1/ρ
+
+0.999
+
+ÞΓ
+
+≡ Þ /Γ
+
+Return Patience Factor
+PF Growth Patience Factor
+Growth Patience Factor
+Finite Value of Autarky Measure
+
+ÞR
+
+≡ Þ /R
+
+0.961
+
+ÞΓ
+
+≡ Þ/Γ
+
+0.980
+
+i
+
+≡
+
+βΓ1−ρ ψ 1−ρ
+
+0.970
+
+0.941
+
+Table 3 Definitions and Comparisons of Conditions
+Perfect Foresight Versions
+Uncertainty Versions
+Finite Human Wealth Condition (FHWC)
+Γ/R < 1
+Γ/R < 1
+The growth factor for permanent income
+Γ must be smaller than the discounting
+factor R for human wealth to be finite.
+
+The model’s risks are mean-preserving
+spreads, so the PDV of future income is
+unchanged by their introduction.
+
+Absolute Impatience Condition (AIC)
+Þ<1
+Þ<1
+
+The unconstrained consumer is
+sufficiently impatient that the level of
+consumption will be declining over time:
+
+If wealth is large enough, the expectation
+of consumption next period will be
+smaller than this period’s consumption:
+
+ct+1 < ct
+
+limmt →∞ Et [ct+1 ] < ct
+
+Return Impatience Conditions
+Return Impatience Condition (RIC)
+Weak RIC (WRIC)
+Þ /R < 1
+℘1/ρÞ /R < 1
+The growth factor for consumption Þ
+must be smaller than the discounting
+factor R, so that the PDV of current and
+future consumption will be finite:
+
+If the probability of the zero-income
+event is ℘ = 1 then income is always zero
+and the condition becomes identical to
+the RIC. Otherwise, weaker.
+
+c0 (m) = 1 − Þ /R < 1
+
+c0 (m) < 1 − ℘1/ρÞ /R < 1
+
+Growth Impatience Conditions
+PF-GIC
+Þ /Γ < 1
+
+GIC
+Þ E[ψ −1 ]/Γ < 1
+
+Guarantees that for an unconstrained
+consumer, the ratio of consumption to
+permanent income will fall over time. For
+a constrained consumer, guarantees the
+constraint will eventually be binding.
+
+By Jensen’s inequality, stronger than
+the PF-GIC.
+Ensures consumers will not
+expect to accumulate m unboundedly.
+
+limmt →∞ Et [mt+1 /mt ] = Þ Γ
+
+Finite Value of Autarky Conditions
+PF-FVAC
+FVAC
+1−ρ
+1−ρ
+βΓ
+<1
+βΓ E[ψ 1−ρ ] < 1
+equivalently Þ /Γ < (R/Γ)1/ρ
+
+The discounted utility of constrained
+consumers who spend their permanent
+income each period should be finite.
+
+By Jensen’s inequality, stronger than the
+PF-FVAC because for ρ > 1 and
+nondegenerate ψ, E[ψ 1−ρ ] > 1.
+
+2
+
+Table 4 Sufficient Conditions for Nondegenerate‡ Solution
+Model
+PF Unconstrained
+
+Conditions
+RIC, FHWC◦
+
+PF Constrained
+
+PF-GIC∗
+
+Buffer Stock Model
+
+FVAC, WRIC
+
+Comments
+RIC ⇒ |v(m)| < ∞; FHWC ⇒ 0 < |v(m)|
+RIC prevents c̄(m) = 0
+FHWC prevents c̄(m) = ∞
+κ(m) = κ
+If RIC, limm→∞ c̊(m) = c̄(m), limm→∞ κ̊
+ lim
+
+κ
+If 
+RIC,
+κ̊
+(m)
+=
+0
+m→∞
+κ(m) = κ
+FHWC ⇒ limm→∞ c̊(m) = c̄(m), limm→∞ κ̊
+
+
+
+κ
+FHWC+RIC
+⇒
+lim
+κ̊
+(m)
+=
+κ
+
+m→∞
+ ⇒ lim
+
+ 
+κ(m) = 0
+FHWC+
+RIC
+
+m→∞ κ̊
+GIC guarantees finite target wealth ratio
+FVAC is stronger than PF-FVAC
+WRIC is weaker than RIC
+
+‡
+
+For feasible m, the limiting consumption function defines the unique value of c satisfying 0 < c < ∞. ◦ RIC,
+((( and RIC, but is identical to the
+FHWC are necessary as well as sufficient. ∗ Solution also exists for (
+PF-GIC
+unconstrained model’s solution for feasible m ≥ 1.
+
+Table 5 Taxonomy of Perfect Foresight Liquidity Constrained Model Outcomes
+For constrained c̀ and unconstrained c̄ consumption functions
+Main Condition
+Subcondition
+Math
+Outcome, Comments or Results
+(
+(
+(
+(
+(
+PF-GIC
+1 < Þ /Γ Constraint never binds for m ≥ 1
+and RIC
+Þ /R < 1
+FHWC holds (R > Γ); c̀(m) = c̄(m) for m ≥ 1
+
+
+and 
+RIC
+1 < Þ /R
+c̀(m) is degenerate: c̀(m) = 0
+PF-GIC
+Þ /Γ < 1
+Constraint binds in finite time for any m
+and RIC
+Þ /R < 1
+FHWC may or may not hold
+limm↑∞ c̄(m) − c̀(m) = 0
+κ(m) = κ
+limm↑∞ κ̀
+
+
+
+and 
+RIC
+1 < Þ /R 
+FHWC
+κ(m) = 0
+limm↑∞ κ̀
+Conditions are applied from left to right; for example, the second row indicates conclusions in the case where
+((( and RIC both hold, while the third row indicates that when the PF-GIC and the RIC both fail, the
+(
+PF-GIC
+consumption function is degenerate; the next row indicates that whenever the PF-GIC holds, the constraint will
+bind in finite time.
+
+3
+
+
