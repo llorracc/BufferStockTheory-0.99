@@ -1,3 +1,6 @@
+1.1 For the Unconstrained Perfect Foresight Model
+
+
 (Rβ)1/ρ ≡ Þ
 
 PF-GIC(≡ Þ < Γ)
@@ -13,10 +16,10 @@ FHWC (≡ Γ < R)
 (Þ
 R
 
-Figure 1 Relation of RIC, PF-GIC, and FHWCin Perfect Foresight Model
+Figure 1 Relation of RIC, PF-GIC, and FHWC in Perfect Foresight Model
+Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
+being compared. For example, the topmost arrow, pointing from Þ to Γ, indicates that Γ > Þ .
 
-1 Relational Diagrams for the Inequality Conditions
-1.1 For the Unconstrained Perfect Foresight Model
 Figure 1.1 should be read as follows. The three nodes represent the values of the
 absolute patience factor Þ, the growth factor for permanent income Γ, and the riskfree
 interest factor R. The arrows between these quantities represent imposition of the labeled
@@ -45,7 +48,7 @@ FHWC,
 (((
 that would reverse the arrow connecting R and Γ. If we were then to impose (
 PF-GIC,
-we would follow the arrow to Þ . But
+we would follow the arrow to Þ. But
  :
 FHWC
 
@@ -68,11 +71,11 @@ R < Þ,
 which illustrates another aspect of the diagram: If all arrows are reversed in a partial
 traversal of the diagram leading to a final step, then the arrow for the final step must
 also be reversed. In this case, since both conditions leading to R have had their arrows
-reversed, the arrow coming out of R should also be reversed, implying the negation of
+
+reversed, the arrow coming out of R should also be reversed, implying the negation of
 the RIC – as (1) proved.
 For clarity, further diagrams will omit multiple arrows indicating reversal of causality
-
-(in Figure 1.1 there would, for example, be only a single arrow, from Þ to Γ, at the top
+(in Figure 1.1 there would, for example, be only a single arrow, from Þ to Γ, at the top
 level of the diagram). And definitions of conditions will also be omitted henceforth.
 Under these conventions, we can extend the diagram to incorporate the PF-FVAC
 (see Figure 2).1
@@ -95,6 +98,9 @@ FHWC
 R1/ρ Γ1−1/ρ
 
 Figure 2 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
+Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
+being compared. For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ.
+
 This diagram can be interpreted, for example, as saying that it is possible to derive
 the PF-FVAC2 by imposing both the PF-GIC and the FHWC; or by imposing RIC and
  Or, starting at the Γ node, we can follow the imposition of the FHWC (twice)
@@ -133,17 +139,6 @@ is raised to a negative power the result is greater than one. Multiplying the RP
 
 exceeds 1 because 
 RIC)
-greater than one:
-
-
->1 from 
-RIC
-z }| { >1 from FHWC
-z }| {
-(Rβ)1/ρ
-(Γ/R)1/ρ−1
-1<
-R
 
 1
 
@@ -157,14 +152,49 @@ in the form Þ < (R/Γ)1/ρ Γ
 
 2
 
-Γ
+greater than one:
+
+>1 from 
+RIC
+
+
+
+}| { >1 from FHWC
+z }| {
+(Rβ)1/ρ
+1<
+(Γ/R)1/ρ−1
+R
+
+
+(Rβ)1/ρ
+1<
+(R/Γ)1/ρ RΓ/R
+= (R/Γ)1/ρ Γ < Þ
+z
+
+R1/ρ Γ1−1/ρ
+
+(3)
+
+(
+(
+
+(((
+which is one way of writing (
+PF-FVAC.
+After the warmup of constructing these conditions for the perfect foresight case, we
+can represent the relationships between all the conditions in both the perfect foresight
+case and the case with uncertainty as shown in Figure 3.
+
+Γ
 GIC
 
 ℘1/ρÞ
 
-PF-GIC
-
 Þ
+
+PF-GIC
 
 Γ
 
@@ -186,24 +216,6 @@ FHWC
 R1/ρ Γ1−1/ρ
 
 Figure 3 Relation of All Inequality Conditions
-
-1<
-R1/ρ Γ1−1/ρ = (R/Γ)1/ρ Γ < Þ
-(
-(
-
-(Rβ)1/ρ
-(R/Γ)1/ρ RΓ/R
-
-
-(3)
-
-(((
-PF-FVAC.
-which is one way of writing (
-After the warmup of constructing these conditions for the perfect foresight case, we
-can represent the relationships between all the conditions in both the perfect foresight
-case and the case with uncertainty as shown in Figure 3.
 These diagrams also keep track of the hierarchy among the conditions. For example,
 if the right vertical arrow in the second diagram is reversed, then the top right triangle
 
