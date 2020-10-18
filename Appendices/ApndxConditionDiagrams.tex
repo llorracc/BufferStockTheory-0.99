@@ -1,13 +1,5 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile}
-% \RequirePackage[quiet]{fontspec}
-% \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-% \usetikzlibrary{cd}
-% \usepackage[utf8]{inputenc}
-% \usepackage[OT1,T1]{fontenc}
-% \usepackage{tipa}
-
-% \tikzset{every picture/.style={/utils/exec={\tipa}}}
 \onlyinsubfile{\externaldocument{BufferStockTheory}}
 
 \begin{document}\label{sec:ApndxConditionDiagrams}
@@ -16,7 +8,8 @@
 
 \subsection{For the Unconstrained Perfect Foresight Model}
 
-\begin{verbatimwrite}{\FigDir/InequalityPFGICFHWCRIC}
+\providecommand{\figName}{InequalityPFGICFHWCRIC}
+\begin{verbatimwrite}{\LaTeXFiles/\figName}
 \hypertarget{InequalityPFGICFHWCRIC}{}
 \tikzset{node distance=6cm, auto, >=latex}
 \begin{figure}[h]
@@ -36,7 +29,7 @@
   \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$, indicates that $\PGro > \Pat$.}
 \end{figure}
 \end{verbatimwrite}
-\input{\FigDir/InequalityPFGICFHWCRIC}
+\input{\LaTeXFiles/\figName}
 
 
 Figure~\ref{fig:InequalityPFGICFHWCRIC} should be read as follows.  The three nodes represent the values of the absolute patience factor \Thorn, the growth factor for permanent income $\PGro$, and the riskfree interest factor $\Rfree$.  The arrows between these quantities represent imposition of the labeled condition.  For example, the uppermost arrow, pointing from {$\Pat$} to $\PGro$, reflects imposition of the {\PFGIC} condition.  To make interpretation of the diagram easy, the mathematical representation of the condition is expressed in parentheses as being equivalent ($\equiv$) to the condition.
@@ -55,7 +48,7 @@ which illustrates another aspect of the diagram: If all arrows are reversed in a
 For clarity, further diagrams will omit multiple arrows indicating reversal of causality (in Figure~\ref{fig:InequalityPFGICFHWCRIC} there would, for example, be only a single arrow, from {$\Pat$} to $\PGro$, at the top level of the diagram).  And definitions of conditions will also be omitted henceforth.
 
 Under these conventions, we can extend the diagram to incorporate the $\PFFVAC$ (see Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}).\footnote{For readers familiar with the \href{https://en.wikipedia.org/wiki/Commutative_diagram}{commutative diagrams}, it should be noted that this diagram is NOT commutative, because the three ways of arriving at the conclusion embodied in the diagonal arrow (the {\PFFVAC}) are NOT identical in their other implications.}
-\begin{verbatimwrite}{\FigDir/RelatePFGICFHWCRICPFFVAC}
+\begin{verbatimwrite}{\LaTeXFiles/RelatePFGICFHWCRICPFFVAC}
 \tikzset{node distance=5cm, auto, >=latex}
 \begin{figure}[h]
   \hypertarget{RelatePFGICFHWCRICPFFVAC}{}
@@ -77,7 +70,7 @@ Under these conventions, we can extend the diagram to incorporate the $\PFFVAC$ 
   \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$ indicates that $\PGro > \Pat$.}
 \end{figure}
 \end{verbatimwrite}
-\input{\FigDir/RelatePFGICFHWCRICPFFVAC}
+\input{\LaTeXFiles/RelatePFGICFHWCRICPFFVAC}
 
 This diagram can be interpreted, for example, as saying  that it is possible to derive the $\PFFVAC$\footnote{in the form $\Pat < (\Rfree/\PGro)^{1/\CRRA}\PGro$} by imposing both the {\PFGIC} and the {\FHWC}; or by imposing {\RIC} and \cncl{\FHWC}.  Or, starting at the $\PGro$ node, we can follow the imposition of the {\FHWC} (twice) and then $\cncl{\RIC}$ to reach the conclusion that $\Pat < (\Rfree \PGro)^{1/\CRRA} \PGro$.  Algebraically,
 \begin{align}
@@ -95,7 +88,7 @@ Multiplying the \RPF (which exceeds 1 because \cncl{\RIC}) by a number greater t
 which is one way of writing $\cncl{\PFFVAC}$.
 
 After the warmup of constructing these conditions for the perfect foresight case, we can represent the relationships between all the conditions in both the perfect foresight case and the case with uncertainty as shown in Figure~\ref{fig:Inequalities}.
-\begin{verbatimwrite}{\FigDir/Inequalities}
+\begin{verbatimwrite}{\LaTeXFiles/Inequalities}
 \tikzset{node distance=5cm, auto, >=latex}
 \begin{figure}[h]
   \hypertarget{Inequalities}{}
@@ -125,7 +118,7 @@ After the warmup of constructing these conditions for the perfect foresight case
   \caption{Relation of All Inequality Conditions} \label{fig:Inequalities}
 \end{figure}
 \end{verbatimwrite}
-\input{\FigDir/Inequalities}
+\input{\LaTeXFiles/Inequalities}
 
 These diagrams also keep track of the hierarchy among the conditions. For example, if the right vertical arrow in the second diagram is reversed, then the top right triangle says \PFFVAC + \cncl{\FHWC} implies \PFGIC. If the left vertical arrow is reversed, then \cncl{\RIC} + {\PFGIC} implies \cncl{\FHWC}. 
 

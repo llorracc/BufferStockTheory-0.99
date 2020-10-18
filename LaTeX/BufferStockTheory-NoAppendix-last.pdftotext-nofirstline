@@ -1199,10 +1199,9 @@ consumer ended the period with (weakly) negative assets.
 See appendix G for the formal proof justifying the foregoing intuitive discussion.
 
 2.11 Discussion of Parametric Restrictions
-The full relationship among all the conditions articulated above is represented in (??).
-Though the diagram looks complex, it is merely a modified version of the earlier diagram
-with further (mostly intermediate) inequalities inserted. Again readers unfamiliar with
-such diagrams should Appendix ) for a more detailed explanation.
+The full relationship among all the conditions articulated above is represented in Figure 3. Though the diagram looks complex, it is merely a modified version of the
+earlier diagram with further (mostly intermediate) inequalities inserted. Again readers
+unfamiliar with such diagrams should Appendix ) for a more detailed explanation.
 2.11.1 The RIC
 In the perfect foresight unconstrained problem (section 2.4.2), the RIC was required for
 existence of a nondegenerate solution. It is surprising, therefore, that in the presence
