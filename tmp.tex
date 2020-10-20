@@ -1,0 +1,47 @@
+\documentclass[BufferStockTheory]{subfiles}\input{./econtexRoot}
+% WARNING: Different execution depending on whether
+% 0. Being compiled as standalone document
+% * Compile this file, then main, then this one again
+% * Keep iterating until neither file changes
+% 0. Being compiled as subfile of main document
+
+%\onlyinsubfile{\externaldocument{BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+
+\begin{document}
+
+\providecommand{\figName}{InequalityPFGICFHWCRIC}
+\hypertarget{InequalityPFGICFHWCRIC}{}
+\tikzset{node distance=6cm, auto, >=latex}
+\begin{figure}[h]
+  \label{fig:InequalityPFGICFHWCRIC}
+  \centerline{
+      \begin{tikzpicture}
+        \input{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Figures/InequalityPFGICFHWCRIC.tikz}
+      \end{tikzpicture}
+  }
+  \caption{Relation of {\RIC}, {\PFGIC}, and {\FHWC} in Perfect Foresight Model}
+  \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$, indicates that $\PGro > \Pat$.}
+\end{figure}
+
+\end{document}
+
+
+\providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
+\providecommand{\figFile}{\figName} %  and on filename
+\hypertarget{\figFile}{}
+\hypertarget{\figName}{}
+\input{\FigDir/\figName} % Read in the tex to generate the figure
+
+
+\providecommand{\figName}{Convergence-of-the-Consumption-Rules} % Allows generic definition of hypertargets based on title of figure
+\providecommand{\figName}{cFuncsConverge} %  and on filename
+\providecommand{\figFile}{cFuncsConverge} %  and on filename
+\hypertarget{\figFile}{}
+\hypertarget{\figName}{}
+\input{\FigDir/\figName} % Read in the tex to generate the figure
+
+\renewcommand{\figName}{Inequalities} % Allows generic definition of hypertargets based on title of figure
+\renewcommand{\figFile}{\figName} %  and on filename
+\hypertarget{\figFile}{}
+\hypertarget{\figName}{}
+\input{\FigDir/\figName} % Read in the tex to generate the figure
