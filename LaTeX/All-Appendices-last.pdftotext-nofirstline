@@ -1468,19 +1468,12 @@ ct .
 
 J Relational Diagrams for the Inequality Conditions
 J.1 For the Unconstrained Perfect Foresight Model
-Figure 2 Relation of RIC, PF-GIC, and FHWC in Perfect Foresight Model
-Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
-being compared. For example, the topmost arrow, pointing from Þ to Γ, indicates that Γ > Þ .
-
 Figure J.1 should be read as follows. The three nodes represent the values of the
 absolute patience factor Þ, the growth factor for permanent income Γ, and the riskfree
 interest factor R. The arrows between these quantities represent imposition of the labeled
 condition. For example, the uppermost arrow, pointing from Þ to Γ, reflects imposition
 of the PF-GIC condition. To make interpretation of the diagram easy, the mathematical
-
-19
-
-representation of the condition is expressed in parentheses as being equivalent (≡) to
+representation of the condition is expressed in parentheses as being equivalent (≡) to
 the condition.
 The imposition of the negation of the PF-GIC (the lower curved arrow pointing from Γ
 (
@@ -1493,6 +1486,29 @@ of an arrow pointing in one direction is an arrow pointing in the opposite direc
 
 for example, the negation of the RIC is 
 RIC
+
+19
+
+
+(Rβ)1/ρ ≡ Þ
+
+PF-GIC(≡ Þ < Γ)
+Γ
+(
+(((
+(
+PF-GIC
+
+FHWC (≡ Γ < R)
+
+Þ < R ≡) RIC
+(Þ
+R
+
+Figure 2 Relation of RIC, PF-GIC, and FHWC in Perfect Foresight Model
+Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
+being compared. For example, the topmost arrow, pointing from Þ to Γ, indicates that Γ > Þ .
+
 the arrowhead from the bottom right to the top left of the line segment connecting Þ
 and R.
 Because they reflect inequalities, the implications of the arrows accumulate as the
@@ -1501,17 +1517,16 @@ diagram is traversed. For example, if we were to start at R and then impose 
 FHWC,
 (
 (((
-that would reverse the arrow connecting R and Γ. If we were then to impose (
 PF-GIC,
+that would reverse the arrow connecting R and Γ. If we were then to impose (
 we would follow the arrow to Þ . But
  :
 FHWC
 
 (
-(((
-(
-PF-GIC
-:
+((((
+
+PF-GIC :
 :
 
 ⇒
@@ -1543,33 +1558,10 @@ FHWC.
 and then 
 RIC
 FHWC :
-:
-
-
-RIC
+
+14
 
 Γ<R
-R<Þ
-Γ<Þ
-
-(58)
-
-(
-(((
-PF-GIC
-is obtained
-which leads to the negation of the two conditions leading into Þ: (
-(
-(
-(((
-directly by dividing both sides of (58) and (
-PF-FVAC
-follows if we start by multipling the
-Þ/R) by the FHWF(=Γ/R) raised to the power 1/ρ − 1,
-Return Patience Factor (RPF=Þ
-which is negative since we imposed ρ > 1. FHWC implies FHWF < 1 so when FHWF
-is raised to a negative power the result is greater than one. Multiplying the RPF(which
-14
 
 For readers familiar with the commutative diagrams, it should be noted that this diagram is NOT
 commutative, because the three ways of arriving at the conclusion embodied in the diagonal arrow (the
@@ -1579,19 +1571,19 @@ in the form Þ < (R/Γ)1/ρ Γ
 
 20
 
-PF-GIC
-
-Φ
+Þ
 
 RIC
+
+PF-GIC
+
+Γ
 
 FHWC
 
 PF-FVAC
 
 R
-
-Γ
 
 FHWC
 
@@ -1600,6 +1592,29 @@ R1/ρ Γ1−1/ρ
 Figure 3 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
 Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
 being compared. For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ .
+:
+
+
+RIC
+
+R<Þ
+Γ<Þ
+
+(58)
+
+((( is obtained
+PF-GIC
+which leads to the negation of the two conditions leading into Þ : (
+(
+(
+(((
+PF-FVAC
+follows if we start by multipling the
+directly by dividing both sides of (58) and (
+Þ
+Return Patience Factor (RPF=Þ /R) by the FHWF(=Γ/R) raised to the power 1/ρ − 1,
+which is negative since we imposed ρ > 1. FHWC implies FHWF < 1 so when FHWF
+is raised to a negative power the result is greater than one. Multiplying the RPF(which
  by a number greater than one yields a product that must be
 
 exceeds 1 because 
@@ -1612,8 +1627,8 @@ RIC
 z }| { >1 from FHWC
 z }| {
 (Rβ)1/ρ
-(Γ/R)1/ρ−1
 1<
+(Γ/R)1/ρ−1
 R
 
 
@@ -1625,9 +1640,11 @@ R1/ρ Γ1−1/ρ = (R/Γ)1/ρ Γ < Þ
 (
 (
 
+(
+
 (((
-PF-FVAC.
 which is one way of writing (
+PF-FVAC.
 After the warmup of constructing these conditions for the perfect foresight case, we
 can represent the relationships between all the conditions in both the perfect foresight
 case and the case with uncertainty as shown in Figure 4.

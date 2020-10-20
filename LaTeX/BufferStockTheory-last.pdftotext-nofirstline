@@ -649,11 +649,13 @@ uncertainty.
 
 11
 
-Φ
+PF-GIC
+
+Þ
 
 RIC
 
-PF-GIC
+Γ
 
 FHWC
 
@@ -661,15 +663,13 @@ PF-FVAC
 
 R
 
-Γ
-
 FHWC
 
 R1/ρ Γ1−1/ρ
 
 Figure 1 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
 Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.
-For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ .
+For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ.
 
 2.5 Uncertainty-Modified Conditions
 2.5.1 Impatience
@@ -695,7 +695,7 @@ growth factor’
 (29)
 
 and a compensated Growth Patience Pactor (GPF):
-ÞΓ = Þ/Γ
+Þ Γ = Þ /Γ
  
 Þ
 =E
@@ -703,17 +703,17 @@ and a compensated Growth Patience Pactor (GPF):
 
 (30)
 
+and a straightforward derivation ((44) below) yields the conclusion that
+lim Et [mt+1 /mt ] = Þ Γ ,
+
+mt →∞
+
 20 One way to think of ψ is as a particular kind of a ‘certainty equivalent’ of the shock; this captures the intuition that
 mean-one shock renders a given mean level of income less valuable than if the shock did not exist, so that ψ < 1.
 
 12
 
-and a straightforward derivation ((44) below) yields the conclusion that
-lim Et [mt+1 /mt ] = Þ Γ ,
-
-mt →∞
-
-which implies that if we wish to prevent m from heading to infinity (that is, if we want
+which implies that if we wish to prevent m from heading to infinity (that is, if we want
 m to be expected to fall for some large enough value of m) we must impose a generalized
 version of the Perfect Foresight Growth Impatience Condition (25); we call the ‘growth
 impatience condition’ (GIC) the requirement that the Growth Patience Factor must be
@@ -734,12 +734,12 @@ vt = Et u(pt ) + βu(pt Γt+1 ) + ... + β T −t u(pt Γt+1 ...ΓT )
 
 1−ρ
 T −t
-= u(pt ) 1 + β Et [Γ1−ρ
 Et [Γ1−ρ
-t+1 ] + ... + β
+= u(pt ) 1 + β Et [Γ1−ρ
 t+1 ]... Et [ΓT ]
-
+t+1 ] + ... + β
 
+
 1 − (βΓ1−ρ E[ψ 1−ρ ])T −t+1
 = u(pt )
 1 − βΓ1−ρ E[ψ 1−ρ ]
@@ -759,10 +759,8 @@ z }| {
 βΓ1−ρ < 1
 
 (33)
-ρ−1
 
-β<Γ
-
+β < Γρ−1
 which we call the ‘finite value of autarky’ condition (FVAC) because it guarantees that
 value is finite for a consumer who always consumes their (now stochastic) permanent
 income. For nondegenerate ψ, this condition is stronger (harder to satisfy in the sense
@@ -773,6 +771,8 @@ of requiring lower β) than the perfect foresight version (27) because Γ < Γ.2
 to guarantee that his problem defined a contraction mapping.
 22 To see this, rewrite (33) as
 βR < RΓρ−1
+(βR)1/ρ < R1/ρ Γ1−1/ρ ψ 1−1/ρ
+Þ Γ < (R/Γ)1/ρ ψ 1−1/ρ
 
 13
 
@@ -870,8 +870,7 @@ all periods t < T because a consumer who spent all available resources would arr
 period t + 1 with balances bt+1 of zero, and then might earn zero noncapital income over
 the remaining horizon (an unbroken series of zero-income events is unlikely but possible).
 In such a case, the budget constraint and the can’t-die-in-debt condition mean that the
-(βR)1/ρ < R1/ρ Γ1−1/ρ ψ 1−1/ρ
-Þ Γ < (R/Γ)1/ρ ψ 1−1/ρ
+consumer would be forced to spend zero, incurring negative infinite utility. To avoid
 
 where the last equation is the same as the PF-FVAC condition except that the RHS is multiplied by ψ 1−1/ρ which is
 strictly less than 1.
@@ -1002,8 +1001,7 @@ Figure 2 Convergence of the Consumption Rules
 
 16
 
-consumer would be forced to spend zero, incurring negative infinite utility. To avoid
-this disaster, the consumer never spends everything. (This is an example of the ‘natural
+this disaster, the consumer never spends everything. (This is an example of the ‘natural
 borrowing constraint’ induced by a precautionary motive, per Zeldes (1989)).25
 
 2.8 Bounds for the Consumption Functions
@@ -1036,8 +1034,8 @@ There is a parallel expression for the limiting maximal MPC as m ↓ 0: appendix
 1/ρ
 ℘ Þ R satisfies:
 1/ρ
-ÞR κ̄−1
 κ̄−1
+Þ R κ̄−1
 t = 1+℘
 t+1 .
 
@@ -1049,6 +1047,7 @@ a condition that we dub the ‘Weak Return Impatience Condition’ (WRIC) becaus
 ÞR < 1).
 ℘ < 1 it will hold more easily (for a larger set of parameter values) than the RIC (Þ
 The essence of the argument is that as wealth approaches zero, the overriding consideration that limits consumption is the (recursive) fear of the zero-income events.
+
 25 It would perhaps be better to call it the ‘utility-induced borrowing constraint’ as it follows from the assumptions on
 the utility function (in particular, limc↓0 u(c) = −∞); for example, no such constraint arises if utility is of the (implausible)
 Constant Absolute Risk Aversion form.
@@ -3788,19 +3787,12 @@ ct .
 
 J Relational Diagrams for the Inequality Conditions
 J.1 For the Unconstrained Perfect Foresight Model
-Figure 9 Relation of RIC, PF-GIC, and FHWC in Perfect Foresight Model
-Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
-being compared. For example, the topmost arrow, pointing from Þ to Γ, indicates that Γ > Þ .
-
 Figure J.1 should be read as follows. The three nodes represent the values of the
 absolute patience factor Þ, the growth factor for permanent income Γ, and the riskfree
 interest factor R. The arrows between these quantities represent imposition of the labeled
 condition. For example, the uppermost arrow, pointing from Þ to Γ, reflects imposition
 of the PF-GIC condition. To make interpretation of the diagram easy, the mathematical
-
-58
-
-representation of the condition is expressed in parentheses as being equivalent (≡) to
+representation of the condition is expressed in parentheses as being equivalent (≡) to
 the condition.
 The imposition of the negation of the PF-GIC (the lower curved arrow pointing from Γ
 (
@@ -3813,6 +3805,29 @@ of an arrow pointing in one direction is an arrow pointing in the opposite direc
 
 for example, the negation of the RIC is 
 RIC
+
+58
+
+
+(Rβ)1/ρ ≡ Þ
+
+PF-GIC(≡ Þ < Γ)
+Γ
+(
+(((
+(
+PF-GIC
+
+FHWC (≡ Γ < R)
+
+Þ < R ≡) RIC
+(Þ
+R
+
+Figure 9 Relation of RIC, PF-GIC, and FHWC in Perfect Foresight Model
+Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
+being compared. For example, the topmost arrow, pointing from Þ to Γ, indicates that Γ > Þ .
+
 the arrowhead from the bottom right to the top left of the line segment connecting Þ
 and R.
 Because they reflect inequalities, the implications of the arrows accumulate as the
@@ -3821,17 +3836,16 @@ diagram is traversed. For example, if we were to start at R and then impose 
 FHWC,
 (
 (((
-that would reverse the arrow connecting R and Γ. If we were then to impose (
 PF-GIC,
+that would reverse the arrow connecting R and Γ. If we were then to impose (
 we would follow the arrow to Þ . But
  :
 FHWC
 
 (
-(((
-(
-PF-GIC
-:
+((((
+
+PF-GIC :
 :
 
 ⇒
@@ -3863,33 +3877,10 @@ FHWC.
 and then 
 RIC
 FHWC :
-:
-
-
-RIC
+
+58
 
 Γ<R
-R<Þ
-Γ<Þ
-
-(115)
-
-(
-(((
-PF-GIC
-is obtained
-which leads to the negation of the two conditions leading into Þ: (
-(
-(
-(((
-directly by dividing both sides of (115) and (
-PF-FVAC
-follows if we start by multipling
-Þ/R) by the FHWF(=Γ/R) raised to the power
-the Return Patience Factor (RPF=Þ
-1/ρ − 1, which is negative since we imposed ρ > 1. FHWC implies FHWF < 1 so when
-FHWF is raised to a negative power the result is greater than one. Multiplying the
-58
 
 For readers familiar with the commutative diagrams, it should be noted that this diagram is NOT
 commutative, because the three ways of arriving at the conclusion embodied in the diagonal arrow (the
@@ -3899,19 +3890,19 @@ in the form Þ < (R/Γ)1/ρ Γ
 
 59
 
-PF-GIC
-
-Φ
+Þ
 
 RIC
+
+PF-GIC
+
+Γ
 
 FHWC
 
 PF-FVAC
 
 R
-
-Γ
 
 FHWC
 
@@ -3920,6 +3911,33 @@ R1/ρ Γ1−1/ρ
 Figure 10 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
 Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
 being compared. For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ .
+:
+
+
+RIC
+
+R<Þ
+Γ<Þ
+
+(115)
+
+(
+(((
+PF-GIC
+is obtained
+which leads to the negation of the two conditions leading into Þ : (
+(
+(
+(
+(
+(
+PF-FVAC
+follows if we start by multipling
+directly by dividing both sides of (115) and (
+Þ
+the Return Patience Factor (RPF=Þ /R) by the FHWF(=Γ/R) raised to the power
+1/ρ − 1, which is negative since we imposed ρ > 1. FHWC implies FHWF < 1 so when
+FHWF is raised to a negative power the result is greater than one. Multiplying the
  by a number greater than one yields a product that
 
 RPF(which exceeds 1 because 
@@ -3932,8 +3950,8 @@ RIC
 z }| { >1 from FHWC
 z }| {
 (Rβ)1/ρ
-(Γ/R)1/ρ−1
 1<
+(Γ/R)1/ρ−1
 R
 
 
@@ -3944,8 +3962,8 @@ R
 R1/ρ Γ1−1/ρ = (R/Γ)1/ρ Γ < Þ
 
 (((
-PF-FVAC.
 which is one way of writing (
+PF-FVAC.
 After the warmup of constructing these conditions for the perfect foresight case, we
 can represent the relationships between all the conditions in both the perfect foresight
 case and the case with uncertainty as shown in Figure 11.
