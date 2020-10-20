@@ -15,22 +15,15 @@
 \begin{figure}[h]
   \label{fig:InequalityPFGICFHWCRIC}
   \centerline{
-    \begin{tikzpicture}
-      \node (thorn) {$\left((\Rfree \DiscFac)^{1/\CRRA} \equiv \right) \Pat$};
-      \node (gamma) [right of = thorn] {$\PGro$};
-      \node (rfree) [below of = thorn, xshift = 3.35cm, yshift = 3cm]{$\mathsf{\Rfree}$};
-      \draw[->] (thorn.north east) to [out = 10,  in=160] node[above]{\PFGIC $\left(\equiv \Pat< \PGro\right) $} (gamma.north west);
-      \draw[->] (gamma) to [out = 200, in=-10] node[below]{$\cncl{\PFGIC}$} (thorn); %  \Thorn  > \PGro
-      \draw[->] (thorn.south east) to node [swap] {$\left(\Pat < \Rfree \equiv\right) \mathrm{\RIC}$} (rfree);
-      \draw[->] (gamma) to node {$\mathrm{\FHWC}\left(\equiv \PGro < \Rfree\right) $} (rfree);
-    \end{tikzpicture}
+      \begin{tikzpicture}
+        \input{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Figures/InequalityPFGICFHWCRIC.tikz}
+      \end{tikzpicture}
   }
   \caption{Relation of {\RIC}, {\PFGIC}, and {\FHWC} in Perfect Foresight Model}
   \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$, indicates that $\PGro > \Pat$.}
 \end{figure}
 \end{verbatimwrite}
-\input{\LaTeXFiles/\figName}
-
+\input{\FigDir/\figName}
 
 Figure~\ref{fig:InequalityPFGICFHWCRIC} should be read as follows.  The three nodes represent the values of the absolute patience factor \Thorn, the growth factor for permanent income $\PGro$, and the riskfree interest factor $\Rfree$.  The arrows between these quantities represent imposition of the labeled condition.  For example, the uppermost arrow, pointing from {$\Pat$} to $\PGro$, reflects imposition of the {\PFGIC} condition.  To make interpretation of the diagram easy, the mathematical representation of the condition is expressed in parentheses as being equivalent ($\equiv$) to the condition.
 
@@ -51,28 +44,19 @@ Under these conventions, we can extend the diagram to incorporate the $\PFFVAC$ 
 
 \renewcommand{\figName}{RelatePFGICFHWCRICPFFVAC}
 \begin{verbatimwrite}{\figName}
-\tikzset{node distance=5cm, auto, >=latex}
-\begin{figure}[h]
+  \tikzset{node distance=5cm, auto, >=latex}
+  \begin{figure}[h]
   \hypertarget{\figName}{}
-  \centerline{
-    \begin{tikzpicture}
-      \node (thorn) {$\Pat$};
-      \node (gamma) [right of = thorn] {$\PGro$};
-      \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
-      \node (pffvacFac) [right of = rfree] 
-      {$\Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} $}; % \left(\equiv (\Rfree \PGro)^{1/\CRRA}\PGro\right)
-      \draw[->] (thorn) to node {$\mathrm{\PFGIC}$} (gamma);
-      \draw[->] (thorn) to node [swap] {$\mathrm{\RIC}$} (rfree);
-      \draw[->] (thorn) to node [swap] {$\mathrm{\PFFVAC}$} (pffvacFac);
-      \draw[->] (gamma) to node {$\mathrm{\FHWC}$} (pffvacFac);
-      \draw[->] (pffvacFac) to node {$\mathrm{\FHWC}$} (rfree);
-    \end{tikzpicture}
-  }
-  \caption{Relation of \PFGIC, \FHWC, \RIC, and \PFFVAC} \label{fig:RelatePFGICFHWCRICPFFVAC}
-  \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$ indicates that $\PGro > \Pat$.}
-\end{figure}
+    \centerline{
+      \begin{tikzpicture}
+        \input{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Figures/RelatePFGICFHWCRICPFFVAC.tikz}
+      \end{tikzpicture}
+    }
+    \caption{Relation of \PFGIC, \FHWC, \RIC, and \PFFVAC} \label{fig:RelatePFGICFHWCRICPFFVAC}
+    \footnotesize{Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.  For example, the topmost arrow, pointing from $\Pat$ to $\PGro$ indicates that $\PGro > \Pat$.}
+  \end{figure}
 \end{verbatimwrite}
-\input{\LaTeXFiles/\figName}
+\input{\FigDir/\figName}
 
 This diagram can be interpreted, for example, as saying  that it is possible to derive the $\PFFVAC$\footnote{in the form $\Pat < (\Rfree/\PGro)^{1/\CRRA}\PGro$} by imposing both the {\PFGIC} and the {\FHWC}; or by imposing {\RIC} and \cncl{\FHWC}.  Or, starting at the $\PGro$ node, we can follow the imposition of the {\FHWC} (twice) and then $\cncl{\RIC}$ to reach the conclusion that $\Pat < (\Rfree \PGro)^{1/\CRRA} \PGro$.  Algebraically,
 \begin{align}
@@ -92,40 +76,20 @@ which is one way of writing $\cncl{\PFFVAC}$.
 After the warmup of constructing these conditions for the perfect foresight case, we can represent the relationships between all the conditions in both the perfect foresight case and the case with uncertainty as shown in Figure~\ref{fig:Inequalities}.
 \renewcommand{\figName}{Inequalities}
 \begin{verbatimwrite}{\figName}
-\tikzset{node distance=5cm, auto, >=latex}
-\begin{figure}[h]
-  \hypertarget{\figName}{}
-  \centerline{
-    \begin{tikzpicture}
-      \node (thorn) {$\Pat$};
-      \node (gamma) [right of = thorn, xshift = 5cm] {$\PGro$};
-      \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
-      \node (pffvacFac) [right of = rfree] 
-      {$\mathsf{\Rfree}^{1/\CRRA}\PGro^{1 - 1/\CRRA}$};
-      \node (pThorn) [left of = thorn] {$\pZero^{1/\rho}\Pat$};
-      \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{$\PGroAdj$};
-      \node (fvacFac) [right of = thorn, yshift = -2cm]{$\mathsf{\Rfree}^{1/\CRRA}\PGrouAdj^{1 - 1/\CRRA}$};
-      \draw[->] (thorn) to node {$\mathrm{\PFGIC}$} (gamma);
-      \draw[->] (thorn) to node [swap] {$\mathrm{\RIC}$} (rfree);
-      \draw[->] (thorn) to node [swap] {$\mathrm{\PFFVAC}$} (pffvacFac);
-      \draw[->] (gamma) to node {$\mathrm{\FHWC}$} (pffvacFac);
-      \draw[->] (pffvacFac) to node {$\mathrm{\FHWC}$} (rfree);
-      \draw[->] (pThorn) to node {} (thorn);
-      \draw[->] (pThorn) to node [swap] {$\mathrm{\WRIC}$} (rfree);
-      \draw[->] (gamma) to node {} (compgamma);
-      \draw[->] (thorn) to node {$\mathrm{\GIC}$} (compgamma);
-      \draw[->] (fvacFac) to node {} (pffvacFac);
-      \draw[->] (thorn) to node {$\mathrm{\FVAC}$} (fvacFac);
-    \end{tikzpicture}	
-  }
-  \caption{Relation of All Inequality Conditions} \label{fig:Inequalities}
-\end{figure}
+  \tikzset{node distance=5cm, auto, >=latex}
+  \begin{figure}[h]
+    \hypertarget{Inequalities}{}
+    \centerline{
+      \begin{tikzpicture}
+        \input{/Volumes/Data/Papers/BufferStockTheory/BufferStockTheory-Latest/Figures/Inequalities.tikz}
+      \end{tikzpicture}	
+    }
+    \caption{Relation of All Inequality Conditions} \label{fig:Inequalities}
+  \end{figure}
 \end{verbatimwrite}
-\input{\LaTeXFiles/\figName}
+\input{\FigDir/\figName}
 
-These diagrams also keep track of the hierarchy among the conditions. For example, if the right vertical arrow in the second diagram is reversed, then the top right triangle says \PFFVAC + \cncl{\FHWC} implies \PFGIC. If the left vertical arrow is reversed, then \cncl{\RIC} + {\PFGIC} implies \cncl{\FHWC}. 
-
-%\onlyinsubfile{\bibliography{BufferStockTheory,economics}}
+% \onlyinsubfile{\bibliography{BufferStockTheory,economics}}
 
 
 \end{document}

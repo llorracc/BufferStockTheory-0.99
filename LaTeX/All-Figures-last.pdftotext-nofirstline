@@ -1,3 +1,25 @@
+
+RIC
+
+PF-GIC
+
+PF-FVAC
+
+R
+
+FHWC
+
+Γ
+
+FHWC
+
+R1/ρ Γ1−1/ρ
+
+Figure 1 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
+Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities
+being compared. For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ .
+
+c
 cT (m) = 45 degree line
 cT −1(m)
 
@@ -7,9 +29,41 @@ c(m)
 
 m
 
-Figure 1 Convergence of the Consumption Rules
+Figure 2 Convergence of the Consumption Rules
 
-c
+2
+
+Γ
+GIC
+
+℘1/ρÞ
+
+PF-GIC
+
+Þ
+
+Γ
+
+FVAC
+R1/ρ Γ1−1/ρ
+
+WRIC
+
+RIC
+
+FHWC
+
+PF-FVAC
+
+R
+
+FHWC
+
+R1/ρ Γ1−1/ρ
+
+Figure 3 Relation of All Inequality Conditions
+
+c
 
 Et[∆mt+1] = 0
 
@@ -17,9 +71,9 @@ c(mt)
 
 m
 
-Figure 2 Example Solution when FVAC Holds but GIC Does Not
+Figure 4 Example Solution when FVAC Holds but GIC Does Not
 
-2
+3
 
 Growth Rate
 
@@ -32,9 +86,9 @@ mt
 
 m̌
 
-Figure 3 Target m, Expected Consumption Growth, and Permanent Income Growth
+Figure 5 Target m, Expected Consumption Growth, and Permanent Income Growth
 
-3
+4
 
 1.0
 
@@ -63,9 +117,9 @@ Figure 3 Target m, Expected Consumption Growth, and Permanent Income Growth
 
 5
 
-Figure 4 Limiting MPC’s
+Figure 6 Limiting MPC’s
 
-4
+5
 
 6
 
@@ -102,9 +156,9 @@ m̌
 
 Target m
 
-Figure 5 The Consumption Function
+Figure 7 The Consumption Function
 
-5
+6
 
 c
 1.016
@@ -139,11 +193,11 @@ b
 
 
  and 
-Figure 6 Nondegenerate Consumption Function with 
+Figure 8 Nondegenerate Consumption Function with 
 FHWC
 RIC
 
 
-6
+7
 
 
