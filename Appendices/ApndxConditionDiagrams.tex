@@ -30,12 +30,12 @@ Figure~\ref{fig:InequalityPFGICFHWCRIC} should be read as follows.  The three no
 The imposition of the negation of the $\PFGIC$ (the lower curved arrow pointing from $\PGro$ to {$\Pat$}, labeled \cncl{\PFGIC}) could have been left out, under the convention that the negation of an arrow pointing in one direction is an arrow pointing in the opposite direction.  So, for example, the negation of the {\RIC} is $\cncl{\RIC} \equiv \Pat > \Rfree$ but could be represented by moving the arrowhead from the bottom right to the top left of the line segment connecting {$\Pat$} and $\Rfree$.
 
 Because they reflect inequalities, the implications of the arrows accumulate as the diagram is traversed.  For example, if we were to start at $\Rfree$ and then impose $\cncl{\FHWC}$, that would reverse the arrow connecting $\Rfree$ and $\PGro$.  If we were then to impose $\cncl{\PFGIC}$, we would follow the arrow to {$\Pat$}.  But  
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   \cncl{\FHWC}:~~~~  \Rfree & < \PGro \notag  
   \\ \cncl{\PFGIC}:~~~~ \PGro & < \Pat %~\left(\equiv (\Rfree \DiscFac)^{1/\CRRA}\right)
                                 \label{eq:cnclRIC}
   \\ \Rightarrow \cncl{\RIC}:~~~~\Rfree & < \Pat \notag,
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 which illustrates another aspect of the diagram: If all arrows are reversed in a partial traversal of the diagram leading to a final step, then the arrow for the final step must also be reversed.  In this case, since both conditions leading to $\Rfree$ have had their arrows reversed, the arrow coming out of $\Rfree$ should also be reversed, implying the negation of the {\RIC} -- as \eqref{eq:cnclRIC} proved.
 
 For clarity, further diagrams will omit multiple arrows indicating reversal of causality (in Figure~\ref{fig:InequalityPFGICFHWCRIC} there would, for example, be only a single arrow, from {$\Pat$} to $\PGro$, at the top level of the diagram).  And definitions of conditions will also be omitted henceforth.
@@ -59,18 +59,18 @@ Under these conventions, we can extend the diagram to incorporate the $\PFFVAC$ 
 %\input{\FigDir/\figName}
 
 This diagram can be interpreted, for example, as saying  that it is possible to derive the $\PFFVAC$\footnote{in the form $\Pat < (\Rfree/\PGro)^{1/\CRRA}\PGro$} by imposing both the {\PFGIC} and the {\FHWC}; or by imposing {\RIC} and \cncl{\FHWC}.  Or, starting at the $\PGro$ node, we can follow the imposition of the {\FHWC} (twice) and then $\cncl{\RIC}$ to reach the conclusion that $\Pat < (\Rfree \PGro)^{1/\CRRA} \PGro$.  Algebraically,
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   {\FHWC}:~~~ \PGro & < \Rfree \notag
   \\ \cncl{\RIC}:~~~ \Rfree & < \Pat \notag
   \\ \PGro & < \Pat \label{eq:cnclPFGIC}
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 which leads to the negation of the two conditions leading into $\Pat$: \cncl{\PFGIC} is obtained directly by dividing both sides of \eqref{eq:cnclPFGIC} and \cncl{\PFFVAC} follows if we start by multipling the Return Patience Factor ({\RPF}=$\Pat/\Rfree$) by the \FHWF (=$\PGro/\Rfree$) raised to the power $1/\CRRA-1$, which is negative since we imposed $\CRRA > 1$.  {\FHWC} implies {\FHWF} $< 1$ so when {\FHWF} is raised to a negative power the result is greater than one.
 Multiplying the \RPF (which exceeds 1 because \cncl{\RIC}) by a number greater than one yields a product that must be greater than one:
-\begin{align}
+\begin{equation}\begin{gathered}\begin{aligned}
   1  & < \overbrace{\left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{\Rfree}\right)}^{>1 \text{~from~}\cncl{\RIC}}\overbrace{\left(\PGro/\Rfree\right)^{1/\CRRA-1}}^{\phantom{...}>1~\text{~from~} \FHWC} \notag
   \\ 1  & < \left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{(\Rfree/\PGro)^{1/\CRRA}\Rfree\PGro/\Rfree}\right) \label{eq:cnclFHWFAndcnclRICImplycnclPFFVAC}
   \\ \Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} = (\Rfree/\PGro)^{1/\CRRA} \PGro  & < \Pat \notag
-\end{align}
+\end{aligned}\end{gathered}\end{equation}
 which is one way of writing $\cncl{\PFFVAC}$.
 
 After the warmup of constructing these conditions for the perfect foresight case, we can represent the relationships between all the conditions in both the perfect foresight case and the case with uncertainty as shown in Figure~\ref{fig:Inequalities}.
