@@ -83,7 +83,10 @@ articulated below explains why: Learning that the future has become more uncerta
 does not change the urgent imperatives of the poor (their high u0 (c) means they have
 little room to maneuver). And, increased labor income uncertainty does not change the
 behavior of the rich because it does not threaten their consumption much. Only people
-1 It is unclear whether newer methods such as those of Matkowski and Nowak (2011) could overcome this problem,
+in the middle have both the motivation and the wiggle-room to reduce their discretionary
+spending.
+Conveniently, elements required for the convergence proof also provide analytical
+foundations for many other results that have become familiar from the numerical litera1 It is unclear whether newer methods such as those of Matkowski and Nowak (2011) could overcome this problem,
 or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those
 methods or any others.
 
@@ -97,10 +100,7 @@ the Society of Economic Dynamics for their insights.
 
 2
 
-in the middle have both the motivation and the wiggle-room to reduce their discretionary
-spending.
-Conveniently, elements required for the convergence proof also provide analytical
-foundations for many other results that have become familiar from the numerical literature. In this paper, all theoretical conclusions are paired with numerically computed
+ture. In this paper, all theoretical conclusions are paired with numerically computed
 illustrations (using the open-source Econ-ARK toolkit). The insights of the paper
 are instantiated in the toolkit, whose buffer stock saving module algorithmically flags
 parametric choices under which a problem fails to define a contraction mapping; a target
@@ -132,16 +132,15 @@ distributions for the consumption ratio, the wealth ratio, and other variables.2
 Szeidl’s result, the final section discusses conditions under which, even with a fixed
 aggregate interest rate that differs from the time preference rate, an economy populated
 by buffer stock consumers converges to a balanced growth equilibrium in which the
+growth rate of consumption tends toward the (exogenous) growth rate of permanent
+income.
 
 2 Szeidl’s proof supplants the analysis in an earlier draft of this paper, which conjectured the result and provided
 supportive simulation evidence.
 
 3
 
-growth rate of consumption tends toward the (exogenous) growth rate of permanent
-income.
-
-2 The Problem
+2 The Problem
 2.1 Setup
 The consumer solves a standard optimization problem from the current period t until
 the end of life at T :
@@ -182,6 +181,7 @@ noncapital income pt+1 multiplied by a mean-one iid transitory income shock fact
 ξt+1 ; future transitory shocks are assumed to satisfy Et [ξt+n ] = 1 ∀ n ≥ 1). Permanent
 noncapital income in period t + 1 is equal to its previous value, multiplied by a growth
 factor Γ, modified by a mean-one iid shock ψt+1 , Et [ψt+n ] = 1 ∀ n ≥ 1 satisfying
+
 3 The main results also hold for logarithmic utility which is the limit as ρ → 1 but incorporating the logarithmic
 special case in the proofs is cumbersome and therefore omitted.
 4 We will define the infinite horizon solution as the limit of the finite horizon problem as the horizon T − t approaches
@@ -624,7 +624,7 @@ RIC
  would suggest a degenerate limit of c̊(m) = ∞.
 limit of c̊(m) = 0 while 
 FHWC
-Table 3 and 4 (and appendix table 5) codify the key points to help the reader keep
+Table 3 and 4 (and appendix table ??) codify the key points to help the reader keep
 them straight.
 An intuitive representation of the relations of the conditions is presented in Figure 1
 (for the perfect foresight case). Each node represents a quantity considered in the
@@ -642,7 +642,7 @@ This would allow us to follow the arrows in a counterclockwise direction from Þ
 bottom right node, leading to the conclusion that the combination of RIC and 
 FHWC
 implies that the PF-FVAC holds. (Readers unfamiliar with digrams of this kind may
-wish to consult the expanded discussion in Appendix ).
+wish to consult the expanded discussion in Appendix ??).
 We now turn to the case with uncertainty. The model without constraints but with
 uncertainty will turn out to be a close parallel to the model with constraints but without
 uncertainty.
@@ -1026,7 +1026,7 @@ t = 1 + Þ R κt+1 .
 
 2.8.1 Weak RIC Conditions
 There is a parallel expression for the limiting maximal MPC as m ↓ 0: appendix equation
-(94) shows that, as mt ↑ ∞,
+(96) shows that, as mt ↑ ∞,
 
 (36)
  −1 ∞
@@ -1191,7 +1191,7 @@ See appendix G for the formal proof justifying the foregoing intuitive discussio
 2.11 Discussion of Parametric Restrictions
 The full relationship among all the conditions articulated above is represented in Figure 3. Though the diagram looks complex, it is merely a modified version of the
 earlier diagram with further (mostly intermediate) inequalities inserted. Again readers
-unfamiliar with such diagrams should Appendix ) for a more detailed explanation.
+unfamiliar with such diagrams should Appendix ??) for a more detailed explanation.
 2.11.1 The RIC
 In the perfect foresight unconstrained problem (section 2.4.2), the RIC was required for
 existence of a nondegenerate solution. It is surprising, therefore, that in the presence
