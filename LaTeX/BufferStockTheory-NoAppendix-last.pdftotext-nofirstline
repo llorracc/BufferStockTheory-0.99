@@ -624,7 +624,7 @@ RIC
  would suggest a degenerate limit of c̊(m) = ∞.
 limit of c̊(m) = 0 while 
 FHWC
-Table 3 and 4 (and appendix table ??) codify the key points to help the reader keep
+Table 3 and 4 (and appendix table 5) codify the key points to help the reader keep
 them straight.
 An intuitive representation of the relations of the conditions is presented in Figure 1
 (for the perfect foresight case). Each node represents a quantity considered in the
@@ -642,7 +642,7 @@ This would allow us to follow the arrows in a counterclockwise direction from Þ
 bottom right node, leading to the conclusion that the combination of RIC and 
 FHWC
 implies that the PF-FVAC holds. (Readers unfamiliar with digrams of this kind may
-wish to consult the expanded discussion in Appendix ??).
+wish to consult the expanded discussion in Appendix ).
 We now turn to the case with uncertainty. The model without constraints but with
 uncertainty will turn out to be a close parallel to the model with constraints but without
 uncertainty.
@@ -1191,7 +1191,7 @@ See appendix G for the formal proof justifying the foregoing intuitive discussio
 2.11 Discussion of Parametric Restrictions
 The full relationship among all the conditions articulated above is represented in Figure 3. Though the diagram looks complex, it is merely a modified version of the
 earlier diagram with further (mostly intermediate) inequalities inserted. Again readers
-unfamiliar with such diagrams should Appendix ??) for a more detailed explanation.
+unfamiliar with such diagrams should Appendix ) for a more detailed explanation.
 2.11.1 The RIC
 In the perfect foresight unconstrained problem (section 2.4.2), the RIC was required for
 existence of a nondegenerate solution. It is surprising, therefore, that in the presence
@@ -2303,142 +2303,5 @@ necessary as well as sufficient. ∗ Solution also exists for (
 feasible m ≥ 1.
 
 39
-
-References
-Abowd, John M., and David Card (1989): “On the Covariance Structure of Earnings
-and Hours Changes,” Econometrica, 57, 411–445.
-Alvarez, Fernando, and Nancy L Stokey (1998): “Dynamic programming with
-homogeneous functions,” Journal of economic theory, 82(1), 167–189.
-Attanasio, Orazio, and Guglielmo Weber (1995): “Is Consumption Growth
-Consistent with Intertemporal Optimization?
-Evidence from the Consumer
-Expenditure Survey,” Journal of Political Economy, 103(6), 1121–57.
-Bellman, Richard (1957): Dynamic Programming. Princeton University Press,
-Princeton, NJ, USA, 1 edn.
-Benhabib, Jess, Alberto Bisin, and Shenghao Zhu (2015): “The wealth
-distribution in Bewley economies with capital income risk,” Journal of Economic
-Theory, 159, 489–515, Available at https://www.nber.org/papers/w20157.pdf.
-Bewley, Truman (1977): “The Permanent Income Hypothesis:
-Formulation,” Journal of Economic Theory, 16, 252–292.
-
-A Theoretical
-
-Blanchard, Olivier J. (1985): “Debt, Deficits, and Finite Horizons,” Journal of
-Political Economy, 93(2), 223–247.
-Blundell, Richard, Hamish Low, and Ian Preston (2008): “Decomposing
-Changes in Income Risk Using Consumption Data,” Manusscript, University College
-London.
-Boyd, John H. (1990): “Recursive Utility and the Ramsey Problem,” Journal of
-Economic Theory, 50(2), 326–345.
-Brown, Jeffrey R, Jeffrey R Kling, Sendhil Mullainathan, and Marian V
-Wrobel (2008): “Why don’t people insure late-life consumption? A framing
-explanation of the under-annuitization puzzle,” American Economic Review, 98(2),
-304–09.
-Carroll, Christopher D., Karsten Chipeniuk, Kiichi Tokuoka, and
-Weifeng Wu (2020): “The Method of Moderation,” Manuscript, Johns Hopkins
-University.
-Carroll, Christopher D., Alexander M. Kaufman, Jacqueline L. Kazil,
-Nathan M. Palmer, and Matthew N. White (2018): “The Econ-ARK and
-HARK: Open Source Tools for Computational Economics,” in Proceedings of the 17th
-Python in Science Conference, ed. by Fatih Akici, David Lippa, Dillon Niederhut, and
-M Pacer, pp. 25 – 30. doi: 10.5281/zenodo.1001067.
-
-40
-
-Carroll, Christopher D., and Miles S. Kimball (1996):
-“On the
-Concavity of the Consumption Function,” Econometrica, 64(4), 981–992, http:
-//econ.jhu.edu/people/ccarroll/concavity.pdf.
-Carroll, Christopher D., and Andrew A. Samwick (1997): “The Nature of
-Precautionary Wealth,” Journal of Monetary Economics, 40(1), 41–71.
-Carroll, Christopher D, Jiri Slacalek, and Kiichi Tokuoka (2015): “Bufferstock saving in a Krusell–Smith world,” Economics Letters, 132, 97–100, At
-http://econ.jhu.edu/people/ccarroll/papers/BSinKS.pdf.
-Carroll, Christopher D., Jiri Slacalek, Kiichi Tokuoka, and
-Matthew N. White (2017):
-“The Distribution of Wealth and the
-Marginal Propensity to Consume,” Quantitative Economics, 8, 977–1020, At
-http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.
-Clarida, Richard H. (1987): “Consumption, Liquidity Constraints, and Asset
-Accumulation in the Face of Random Fluctuations in Income,” International Economic
-Review, XXVIII, 339–351.
-Deaton, Angus S. (1991): “Saving and Liquidity Constraints,” Econometrica, 59,
-1221–1248, http://www.jstor.org/stable/2938366.
-(1992): Understanding Consumption. Oxford University Press, New York.
-Durán, Jorge (2003): “Discounting long run average growth in stochastic dynamic
-programs,” Economic Theory, 22(2), 395–413.
-Friedman, Milton A. (1957): A Theory of the Consumption Function. Princeton
-University Press.
-Hendricks, Lutz (2016): “Wealth Distribution and Bequests,” Lecture Notes,
-Economics 821, University of North Carolina.
-Jappelli, Tullio, and Luigi Pistaferri (2000): “Intertemporal Choice and
-Consumption Mobility,” Econometric Society World Congress 2000 Contributed Paper
-Number 0118.
-Krueger, Dirk, Kurt Mitman, and Fabrizio Perri (2016): “Macroeconomics
-and Household Heterogeneity,” Handbook of Macroeconomics, 2, 843–921.
-Li, Huiyu, and John Stachurski (2014): “Solving the income fluctuation problem
-with unbounded rewards,” Journal of Economic Dynamics and Control, 45, 353–365.
-Ma, Qingyin, John Stachurski, and Alexis Akira Toda (2018): “The Income
-Fluctuation Problem with Capital Income Risk: Optimality and Stability,” arXiv
-preprint arXiv:1812.01320.
-
-41
-
-(2020): “The Income Fluctuation Problem and the Evolution of Wealth,”
-Journal of Economic Theory, 187, 105003.
-MaCurdy, Thomas (1982): “The Use of Time Series Processes to Model the Error
-Structure of Earnings in a Longitudinal Data Analysis,” Journal of Econometrics,
-18(1), 83–114.
-Martins-da Rocha, V Filipe, and Yiannis Vailakis (2010): “Existence and
-uniqueness of a fixed point for local contractions,” Econometrica, 78(3), 1127–1141.
-Matkowski, Janusz, and Andrzej S. Nowak (2011): “On Discounted Dynamic
-Programming With Unbounded Returns,” Economic Theory, 46, 455–474.
-Modigliani, Franco (1966): “The Life Cycle Hypothesis, the Demand for Wealth,
-and the Supply of Capital,” Social Research, 33, 160–217.
-Muth, John F. (1960): “Optimal Properties of Exponentially Weighted Forecasts,”
-Journal of the American Statistical Association, 55(290), 299–306.
-Pashchenko, Svetlana (2013): “Accounting for non-annuitization,” Journal of Public
-Economics, 98, 53–67.
-Rabault, Guillaume (2002): “When do borrowing constraints bind? Some new
-results on the income fluctuation problem,” Journal of Economic Dynamics and
-Control, 26(2), 217–245.
-Ramsey, Frank (1928): “A Mathematical Theory of Saving,” Economic Journal,
-38(152), 543–559.
-Rincón-Zapatero, Juan Pablo, and Carlos Rodríguez-Palmero (2003):
-“Existence and uniqueness of solutions to the Bellman equation in the unbounded
-case,” Econometrica, 71(5), 1519–1555.
-Schechtman, Jack, and Vera Escudero (1977): “Some results on ‘An Income
-Fluctuation Problem’,” Journal of Economic Theory, 16, 151–166.
-Scheinkman, José, and Laurence Weiss (1986): “Borrowing Constraints and
-Aggregate Economic Activity,” Econometrica, 54(1), 23–46.
-Stokey, Nancy L., Robert E. Lucas, and Edward C. Prescott (1989):
-Recursive Methods in Economic Dynamics. Harvard University Press.
-Storesletten, Kjetil, Chris I. Telmer, and Amir Yaron (2004): “Consumption
-and Risk Sharing Over the Life Cycle,” Journal of Monetary Economics, 51(3), 609–
-633.
-Szeidl, Adam (2012): “Stable Invariant Distribution in Buffer-Stock Saving and
-Stochastic Growth Models,” Manuscript, Central European University.
-
-42
-
-Toche,
-Patrick
-(2005):
-“A
-Tractable
-Model
-of
-Precautionary
-Saving in Continuous Time,”
-Economics Letters,
-87(2),
-267–272,
-http://ideas.repec.org/a/eee/ecolet/v87y2005i2p267-272.html.
-Yao, Jiaxiong (2012): “The Theoretical Foundations of Buffer Stock Saving: A Note,”
-Manuscript, Johns Hopkins University.
-Zeldes, Stephen P. (1989): “Optimal Consumption with Stochastic Income:
-Deviations from Certainty Equivalence,” Quarterly Journal of Economics, 104(2),
-275–298.
-
-43
 
 

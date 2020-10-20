@@ -1648,18 +1648,6 @@ PF-FVAC.
 After the warmup of constructing these conditions for the perfect foresight case, we
 can represent the relationships between all the conditions in both the perfect foresight
 case and the case with uncertainty as shown in Figure 4.
-These diagrams also keep track of the hierarchy among the conditions. For example,
-if the right vertical arrow in the second diagram is reversed, then the top right triangle
-
-
- implies PF-GIC. If the left vertical arrow is reversed, then 
-says PF-FVAC+ 
-FHWC
-RIC
-
-
-+ PF-GIC implies 
-FHWC.
 
 21
 
