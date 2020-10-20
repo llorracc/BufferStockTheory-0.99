@@ -52,9 +52,9 @@ Next define $\underline{\vFunc}_{t}(\mRat,\cRat)$ as
 which is $\mathbf{C}^{3}$ since $\mathfrak{v}_{t}$ and $\uFunc$ are both
 $\mathbf{C}^{3},$ and note that our problem's value function defined
 in \eqref{\localorexternallabel{eq:veqn}} can be written as
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
 \vFunc_{t}(\mRat)  & =  \max_{\cRat}~\underline{\vFunc}_{t}(\mRat,\cRat).
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 $\underline{\vFunc}_{t}$ is well-defined if and only if $0<c<m$.  Furthermore,
 $\lim_{c \downarrow
@@ -62,9 +62,9 @@ $\lim_{c \downarrow
 <0$, $\lim_{c \downarrow 0}\frac{\partial \underline{\vFunc}_{t}(\mRat,\cRat)}{\partial c}%
 =+\infty $, and $\lim_{c\uparrow m} \frac{\partial \underline{\vFunc}_{t}(\mRat,\cRat)}{%
 \partial c}=-\infty $. It follows that the $\cFunc_{t}(\mRat)$ defined by
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
 \cFunc_{t}(\mRat)  & = \underset{0<c<m}{\arg \max }~\underline{\vFunc}_{t}(\mRat,\cRat)
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 exists and is unique, and \eqref{\localorexternallabel{eq:veqn}} has an internal
 solution that satisfies
 \begin{equation}
@@ -77,9 +77,9 @@ $\cFunc_{t}(\mRat)$ and $\aFunc_{t}(\mRat)=\mRat-\cFunc_{t}(\mRat)$
 are strictly increasing. Since both $\uFunc$ and $\mathfrak{v}_{t}$ are
 three times continuously differentiable, using \eqref{\localorexternallabel{eq:consumptionf}} we can conclude that
 $\cFunc_{t}(\mRat)$ is continuously differentiable and
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
 \cFunc_{t}^{\prime }(\mRat)  & = \frac{\mathfrak{v}_{t}^{\prime \prime }({\aFunc}_{t}(\mRat))  }{\uFunc^{\prime \prime }(\cFunc_{t}(\mRat))+\mathfrak{v}_{t}^{\prime \prime }({\aFunc}_{t}(\mRat))}.
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 Similarly we can easily show that $\cFunc_{t}(\mRat)$ is twice
 continuously differentiable (as is $\aFunc_{t}(\mRat)$) (See
@@ -187,10 +187,10 @@ the solution to which is patently
 $\uFunc(\MaxMPC \mRat_{t})$. Thus, condition (2)
 will hold if $(\MaxMPC \mRat_{t})^{1-\CRRA}$ is $\phiFunc$-bounded.  We use
 the bounding function
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
   \label{eq:phiFunc}
   \phiFunc(\mRat)  & = \eta + \mRat^{1-\CRRA},
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 for some real scalar $\eta > 0$ whose value will be determined in the
 course of the proof. Under this definition of $\phiFunc$,
 $\{\TMap\mathbf{0}\}(\mRat_{t})= \uFunc(\MaxMPC \mRat_{t})$
@@ -234,12 +234,12 @@ and defining $\hat{\aRat}_{t}=\hat{\aFunc}(\mRat_{t})$, this condition is
 \DiscFac \Ex_{t}[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkAll_{t+1})^{1-\CRRA}]-\mRat_{t}^{1-\CRRA}  & < \eta(1-\underbrace{\DiscFac\Ex_{t}{\PGro}_{t+1}^{1-\CRRA}}_{=\DiscAlt})
 \end{align*}
 which by imposing \PFFVAC~(equation \eqref{\localorexternallabel{eq:PFFVAC}}, which says $\DiscAlt<1$) can be rewritten as:
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  \eta>\frac{\DiscFac \Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkAll_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}}{1-\DiscAlt}\label{eq:KeyCondition}.
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 But since $\eta$ is an arbitrary constant that we can pick, the proof thus reduces to showing that the numerator of \eqref{\localorexternallabel{eq:KeyCondition}} is bounded from above:
-\begin{equation}\begin{gathered}\begin{aligned}%
+\begin{align}%
   \lefteqn{\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
  +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}\notag~~~}  \\ 
  ~~~\leq & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
@@ -251,12 +251,12 @@ But since $\eta$ is an arbitrary constant that we can pick, the proof thus reduc
        \WRIC}}-1\right) \label{eq:WRICBites} \\
  ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\underline{\tShkEmp}/\pNotZero)^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA} \notag
  .
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 
 We can thus conclude that equation \eqref{\localorexternallabel{eq:KeyCondition}} will certainly hold for any:
-\begin{equation}\begin{gathered}\begin{aligned}
+\begin{align}
  \eta>\underline{\eta}=\frac{\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA}}{1-\DiscAlt}
-\end{aligned}\end{gathered}\end{equation}
+\end{align}
 which is a positive finite number under our assumptions.
 
 The proof that $\TMap$ defines a contraction mapping under the
