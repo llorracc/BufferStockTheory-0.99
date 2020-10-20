@@ -9,7 +9,6 @@ for file in BufferStockTheory BufferStockTheory-NoAppendix BufferStockTheory-Sli
     pdflatex -output-directory=LaTeX "$file"
     bibtex LaTeX/"$file"
     pdflatex -output-directory=LaTeX "$file"
-    open "$file"
 done
 
 # Compile All-Figures and All-Tables
@@ -18,7 +17,6 @@ for type in Figures Tables; do
     [[ -e LaTeX/"$type/All-$type" ]] && bibtex LaTeX/"$type/All-$type" && pdflatex -output-directory=LaTeX "$type/All-$type"
     pdflatex -output-directory=LaTeX "$type/All-$type"
     mv "LaTeX/All-$type.pdf" "$type"
-    open "$type/All-$type.pdf"
 done
 
 # All the appendices can be compiled as standalone documents (they are "subfiles")
@@ -38,6 +36,5 @@ while read appendixName; do
     fi
     pdflatex --output-directory=LaTeX "$appendixName"
     mv "LaTeX/$filename.pdf" Appendices
-    open "Appendices/$filename.pdf"
 done < /tmp/appendices
 rm /tmp/appendices economics.bib # Cleanup
