@@ -78,7 +78,7 @@ For clarity, further diagrams will omit multiple arrows indicating reversal of c
 (in Figure 1.1 there would, for example, be only a single arrow, from Þ to Γ, at the top
 level of the diagram). And definitions of conditions will also be omitted henceforth.
 Under these conventions, we can extend the diagram to incorporate the PF-FVAC
-(see Figure 2).1
+(see Figure 4).1
 Þ
 
 RIC
@@ -185,7 +185,7 @@ which is one way of writing (
 PF-FVAC.
 After the warmup of constructing these conditions for the perfect foresight case, we
 can represent the relationships between all the conditions in both the perfect foresight
-case and the case with uncertainty as shown in Figure 3.
+case and the case with uncertainty as shown in Figure 6.
 
 Γ
 GIC
