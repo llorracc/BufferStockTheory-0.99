@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="BufferStockTheory.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="452.79276pt" height="237.70616pt" viewBox="-160.67912 -158.55899 452.79276 237.70616 "> 
+<g transform="translate(0,79.14717 ) scale(1,-1) translate(0,158.55899 )"> 
+                               <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g transform="translate(-4.08334,-4.125)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(4.08334,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="wasy" font-size="10">Þ</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(280.85677,-4.09999)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.67079,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmr" font-size="12">Γ</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-3.78119,-146.43044)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.78119,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmss" font-size="12">R</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(116.0282,-147.44113)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(26.23558,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmss" font-size="12">R</tspan><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmmi" font-size="8">∕ρ</tspan></tspan><tspan font-family="cmr" font-size="12">Γ</tspan><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmsy" font-size="8">−</tspan><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmmi" font-size="8">∕ρ</tspan></tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-156.76384,-4.0107)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(14.50006,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="12">℘</tspan><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmmi" font-size="8">∕ρ</tspan> </tspan> <tspan font-family="wasy" font-size="10">Þ</tspan> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(138.59299,67.0319)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.67079,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <span class="underline"><tspan font-family="cmr" font-size="12">Γ</tspan></span> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(116.0282,-62.08286)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(26.23558,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmss" font-size="12">R</tspan><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmmi" font-size="8">∕ρ</tspan> </tspan> <span class="underline"><span class="underline"><tspan font-family="cmr" font-size="12">Γ</tspan></span> </span><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmsy" font-size="8">−</tspan><tspan font-family="cmr" font-size="8">1</tspan><tspan font-family="cmmi" font-size="8">∕ρ</tspan></tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 8.19862 0.0 L 273.14154 0.0  " fill="none"/>
+ <g transform="translate(273.14154,0.0)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(121.71333,4.11528)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(20.75671,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> PF-GIC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 0.0 -8.24028 L 0.0 -130.3819  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,0.0,-130.3819)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(-25.48225,-75.24338)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(10.68349,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> RIC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 8.19862 -8.18423 L 130.43907 -130.4256  " fill="none"/>
+ <g transform="matrix(0.7071,-0.7071,0.7071,0.7071,130.43907,-130.4256)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(14.77095,-82.95761)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(25.85269,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> PF-FVAC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 276.74149 -7.7724 L 154.08849 -130.4256  " fill="none"/>
+ <g transform="matrix(-0.7071,-0.7071,0.7071,-0.7071,154.08849,-130.4256)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(218.25749,-82.7517)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(18.34967,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> FHWC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 111.91292 -142.26378 L 11.49641 -142.26378  " fill="none"/>
+ <g transform="matrix(-1.0,0.0,0.0,-1.0,11.49641,-142.26378)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(41.55502,-154.6437)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(18.34967,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> FHWC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M -123.64844 0.0 L -11.79857 0.0  " fill="none"/>
+ <g transform="translate(-11.79857,0.0)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(-65.92354,4.11528)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M -131.82045 -10.45929 L -10.44202 -131.83334  " fill="none"/>
+ <g transform="matrix(0.7071,-0.70708,0.70708,0.7071,-10.44202,-131.83333)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(-107.40996,-84.79895)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.71811,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> WRIC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 276.74149 3.89066 L 153.2695 65.63461  " fill="none"/>
+ <g transform="matrix(-0.89436,0.44722,-0.44722,-0.89436,153.26952,65.6346)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(209.2804,31.45233)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 8.19862 4.0968 L 131.25806 65.63461  " fill="none"/>
+ <g transform="matrix(0.89436,0.44722,-0.44722,0.89436,131.25804,65.6346)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(45.28383,39.78596)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(10.96953,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> GIC </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 142.26378 -66.19814 L 142.26378 -129.3712  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,142.26378,-129.3712)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(146.37906,-99.58464)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 8.19862 -3.27602 L 115.70331 -46.27603  " fill="none"/>
+ <g transform="matrix(0.92845,-0.37135,0.37135,0.92845,115.7033,-46.27602)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(67.73743,-21.32916)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(16.0655,0)" text-anchor="middle"  font-size="12"> 
+<g fill="#000">
+ <g stroke="none"> FVAC </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                                                                                      </g> 
+</svg> 
