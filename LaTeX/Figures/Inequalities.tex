@@ -2,27 +2,7 @@
 \begin{figure}[h]
   \hypertarget{Inequalities}{}
   \centerline{
-    \begin{tikzpicture}
-      \node (thorn) {$\Pat$};
-      \node (gamma) [right of = thorn, xshift = 5cm] {$\PGro$};
-      \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
-      \node (pffvacFac) [right of = rfree]
-      {$\mathsf{\Rfree}^{1/\CRRA}\PGro^{1 - 1/\CRRA}$};
-      \node (pThorn) [left of = thorn] {$\pZero^{1/\rho}\Pat$};
-      \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{$\PGroAdj$};
-      \node (fvacFac) [right of = thorn, yshift = -2cm]{$\mathsf{\Rfree}^{1/\CRRA}\PGrouAdj^{1 - 1/\CRRA}$};
-      \draw[->] (thorn) to node {$\mathrm{\PFGIC}$} (gamma);
-      \draw[->] (thorn) to node [swap] {$\mathrm{\RIC}$} (rfree);
-      \draw[->] (thorn) to node [swap] {$\mathrm{\PFFVAC}$} (pffvacFac);
-      \draw[->] (gamma) to node {$\mathrm{\FHWC}$} (pffvacFac);
-      \draw[->] (pffvacFac) to node {$\mathrm{\FHWC}$} (rfree);
-      \draw[->] (pThorn) to node {} (thorn);
-      \draw[->] (pThorn) to node [swap] {$\mathrm{\WRIC}$} (rfree);
-      \draw[->] (gamma) to node {} (compgamma);
-      \draw[->] (thorn) to node {$\mathrm{\GIC}$} (compgamma);
-      \draw[->] (fvacFac) to node {} (pffvacFac);
-      \draw[->] (thorn) to node {$\mathrm{\FVAC}$} (fvacFac);
-    \end{tikzpicture}	
+    \includegraphics{\FigDir/Inequalities}
   }
   \caption{Relation of All Inequality Conditions} \label{fig:Inequalities}
 \end{figure}
