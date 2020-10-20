@@ -649,13 +649,11 @@ uncertainty.
 
 11
 
-PF-GIC
-
-Þ
+Φ
 
 RIC
 
-Γ
+PF-GIC
 
 FHWC
 
@@ -663,13 +661,15 @@ PF-FVAC
 
 R
 
+Γ
+
 FHWC
 
 R1/ρ Γ1−1/ρ
 
 Figure 1 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
 Arrows reflect the direction of the relationship; an arrowhead points to the larger of the two quantities being compared.
-For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ.
+For example, the topmost arrow, pointing from Þ to Γ indicates that Γ > Þ .
 
 2.5 Uncertainty-Modified Conditions
 2.5.1 Impatience
@@ -695,7 +695,7 @@ growth factor’
 (29)
 
 and a compensated Growth Patience Pactor (GPF):
-Þ Γ = Þ /Γ
+ÞΓ = Þ/Γ
  
 Þ
 =E
@@ -703,17 +703,17 @@ and a compensated Growth Patience Pactor (GPF):
 
 (30)
 
-and a straightforward derivation ((44) below) yields the conclusion that
-lim Et [mt+1 /mt ] = Þ Γ ,
-
-mt →∞
-
 20 One way to think of ψ is as a particular kind of a ‘certainty equivalent’ of the shock; this captures the intuition that
 mean-one shock renders a given mean level of income less valuable than if the shock did not exist, so that ψ < 1.
 
 12
 
-which implies that if we wish to prevent m from heading to infinity (that is, if we want
+and a straightforward derivation ((44) below) yields the conclusion that
+lim Et [mt+1 /mt ] = Þ Γ ,
+
+mt →∞
+
+which implies that if we wish to prevent m from heading to infinity (that is, if we want
 m to be expected to fall for some large enough value of m) we must impose a generalized
 version of the Perfect Foresight Growth Impatience Condition (25); we call the ‘growth
 impatience condition’ (GIC) the requirement that the Growth Patience Factor must be
@@ -734,12 +734,12 @@ vt = Et u(pt ) + βu(pt Γt+1 ) + ... + β T −t u(pt Γt+1 ...ΓT )
 
 1−ρ
 T −t
-Et [Γ1−ρ
 = u(pt ) 1 + β Et [Γ1−ρ
-t+1 ]... Et [ΓT ]
+Et [Γ1−ρ
 t+1 ] + ... + β
-
+t+1 ]... Et [ΓT ]
 
+
 1 − (βΓ1−ρ E[ψ 1−ρ ])T −t+1
 = u(pt )
 1 − βΓ1−ρ E[ψ 1−ρ ]
@@ -759,8 +759,10 @@ z }| {
 βΓ1−ρ < 1
 
 (33)
+ρ−1
 
-β < Γρ−1
+β<Γ
+
 which we call the ‘finite value of autarky’ condition (FVAC) because it guarantees that
 value is finite for a consumer who always consumes their (now stochastic) permanent
 income. For nondegenerate ψ, this condition is stronger (harder to satisfy in the sense
@@ -771,8 +773,6 @@ of requiring lower β) than the perfect foresight version (27) because Γ < Γ.2
 to guarantee that his problem defined a contraction mapping.
 22 To see this, rewrite (33) as
 βR < RΓρ−1
-(βR)1/ρ < R1/ρ Γ1−1/ρ ψ 1−1/ρ
-Þ Γ < (R/Γ)1/ρ ψ 1−1/ρ
 
 13
 
@@ -870,7 +870,8 @@ all periods t < T because a consumer who spent all available resources would arr
 period t + 1 with balances bt+1 of zero, and then might earn zero noncapital income over
 the remaining horizon (an unbroken series of zero-income events is unlikely but possible).
 In such a case, the budget constraint and the can’t-die-in-debt condition mean that the
-consumer would be forced to spend zero, incurring negative infinite utility. To avoid
+(βR)1/ρ < R1/ρ Γ1−1/ρ ψ 1−1/ρ
+Þ Γ < (R/Γ)1/ρ ψ 1−1/ρ
 
 where the last equation is the same as the PF-FVAC condition except that the RHS is multiplied by ψ 1−1/ρ which is
 strictly less than 1.
@@ -1001,7 +1002,8 @@ Figure 2 Convergence of the Consumption Rules
 
 16
 
-this disaster, the consumer never spends everything. (This is an example of the ‘natural
+consumer would be forced to spend zero, incurring negative infinite utility. To avoid
+this disaster, the consumer never spends everything. (This is an example of the ‘natural
 borrowing constraint’ induced by a precautionary motive, per Zeldes (1989)).25
 
 2.8 Bounds for the Consumption Functions
@@ -1034,8 +1036,8 @@ There is a parallel expression for the limiting maximal MPC as m ↓ 0: appendix
 1/ρ
 ℘ Þ R satisfies:
 1/ρ
+ÞR κ̄−1
 κ̄−1
-Þ R κ̄−1
 t = 1+℘
 t+1 .
 
@@ -1047,7 +1049,6 @@ a condition that we dub the ‘Weak Return Impatience Condition’ (WRIC) becaus
 ÞR < 1).
 ℘ < 1 it will hold more easily (for a larger set of parameter values) than the RIC (Þ
 The essence of the argument is that as wealth approaches zero, the overriding consideration that limits consumption is the (recursive) fear of the zero-income events.
-
 25 It would perhaps be better to call it the ‘utility-induced borrowing constraint’ as it follows from the assumptions on
 the utility function (in particular, limc↓0 u(c) = −∞); for example, no such constraint arises if utility is of the (implausible)
 Constant Absolute Risk Aversion form.
@@ -2303,142 +2304,5 @@ necessary as well as sufficient. ∗ Solution also exists for (
 feasible m ≥ 1.
 
 39
-
-References
-Abowd, John M., and David Card (1989): “On the Covariance Structure of Earnings
-and Hours Changes,” Econometrica, 57, 411–445.
-Alvarez, Fernando, and Nancy L Stokey (1998): “Dynamic programming with
-homogeneous functions,” Journal of economic theory, 82(1), 167–189.
-Attanasio, Orazio, and Guglielmo Weber (1995): “Is Consumption Growth
-Consistent with Intertemporal Optimization?
-Evidence from the Consumer
-Expenditure Survey,” Journal of Political Economy, 103(6), 1121–57.
-Bellman, Richard (1957): Dynamic Programming. Princeton University Press,
-Princeton, NJ, USA, 1 edn.
-Benhabib, Jess, Alberto Bisin, and Shenghao Zhu (2015): “The wealth
-distribution in Bewley economies with capital income risk,” Journal of Economic
-Theory, 159, 489–515, Available at https://www.nber.org/papers/w20157.pdf.
-Bewley, Truman (1977): “The Permanent Income Hypothesis:
-Formulation,” Journal of Economic Theory, 16, 252–292.
-
-A Theoretical
-
-Blanchard, Olivier J. (1985): “Debt, Deficits, and Finite Horizons,” Journal of
-Political Economy, 93(2), 223–247.
-Blundell, Richard, Hamish Low, and Ian Preston (2008): “Decomposing
-Changes in Income Risk Using Consumption Data,” Manusscript, University College
-London.
-Boyd, John H. (1990): “Recursive Utility and the Ramsey Problem,” Journal of
-Economic Theory, 50(2), 326–345.
-Brown, Jeffrey R, Jeffrey R Kling, Sendhil Mullainathan, and Marian V
-Wrobel (2008): “Why don’t people insure late-life consumption? A framing
-explanation of the under-annuitization puzzle,” American Economic Review, 98(2),
-304–09.
-Carroll, Christopher D., Karsten Chipeniuk, Kiichi Tokuoka, and
-Weifeng Wu (2020): “The Method of Moderation,” Manuscript, Johns Hopkins
-University.
-Carroll, Christopher D., Alexander M. Kaufman, Jacqueline L. Kazil,
-Nathan M. Palmer, and Matthew N. White (2018): “The Econ-ARK and
-HARK: Open Source Tools for Computational Economics,” in Proceedings of the 17th
-Python in Science Conference, ed. by Fatih Akici, David Lippa, Dillon Niederhut, and
-M Pacer, pp. 25 – 30. doi: 10.5281/zenodo.1001067.
-
-40
-
-Carroll, Christopher D., and Miles S. Kimball (1996):
-“On the
-Concavity of the Consumption Function,” Econometrica, 64(4), 981–992, http:
-//econ.jhu.edu/people/ccarroll/concavity.pdf.
-Carroll, Christopher D., and Andrew A. Samwick (1997): “The Nature of
-Precautionary Wealth,” Journal of Monetary Economics, 40(1), 41–71.
-Carroll, Christopher D, Jiri Slacalek, and Kiichi Tokuoka (2015): “Bufferstock saving in a Krusell–Smith world,” Economics Letters, 132, 97–100, At
-http://econ.jhu.edu/people/ccarroll/papers/BSinKS.pdf.
-Carroll, Christopher D., Jiri Slacalek, Kiichi Tokuoka, and
-Matthew N. White (2017):
-“The Distribution of Wealth and the
-Marginal Propensity to Consume,” Quantitative Economics, 8, 977–1020, At
-http://econ.jhu.edu/people/ccarroll/papers/cstwMPC.
-Clarida, Richard H. (1987): “Consumption, Liquidity Constraints, and Asset
-Accumulation in the Face of Random Fluctuations in Income,” International Economic
-Review, XXVIII, 339–351.
-Deaton, Angus S. (1991): “Saving and Liquidity Constraints,” Econometrica, 59,
-1221–1248, http://www.jstor.org/stable/2938366.
-(1992): Understanding Consumption. Oxford University Press, New York.
-Durán, Jorge (2003): “Discounting long run average growth in stochastic dynamic
-programs,” Economic Theory, 22(2), 395–413.
-Friedman, Milton A. (1957): A Theory of the Consumption Function. Princeton
-University Press.
-Hendricks, Lutz (2016): “Wealth Distribution and Bequests,” Lecture Notes,
-Economics 821, University of North Carolina.
-Jappelli, Tullio, and Luigi Pistaferri (2000): “Intertemporal Choice and
-Consumption Mobility,” Econometric Society World Congress 2000 Contributed Paper
-Number 0118.
-Krueger, Dirk, Kurt Mitman, and Fabrizio Perri (2016): “Macroeconomics
-and Household Heterogeneity,” Handbook of Macroeconomics, 2, 843–921.
-Li, Huiyu, and John Stachurski (2014): “Solving the income fluctuation problem
-with unbounded rewards,” Journal of Economic Dynamics and Control, 45, 353–365.
-Ma, Qingyin, John Stachurski, and Alexis Akira Toda (2018): “The Income
-Fluctuation Problem with Capital Income Risk: Optimality and Stability,” arXiv
-preprint arXiv:1812.01320.
-
-41
-
-(2020): “The Income Fluctuation Problem and the Evolution of Wealth,”
-Journal of Economic Theory, 187, 105003.
-MaCurdy, Thomas (1982): “The Use of Time Series Processes to Model the Error
-Structure of Earnings in a Longitudinal Data Analysis,” Journal of Econometrics,
-18(1), 83–114.
-Martins-da Rocha, V Filipe, and Yiannis Vailakis (2010): “Existence and
-uniqueness of a fixed point for local contractions,” Econometrica, 78(3), 1127–1141.
-Matkowski, Janusz, and Andrzej S. Nowak (2011): “On Discounted Dynamic
-Programming With Unbounded Returns,” Economic Theory, 46, 455–474.
-Modigliani, Franco (1966): “The Life Cycle Hypothesis, the Demand for Wealth,
-and the Supply of Capital,” Social Research, 33, 160–217.
-Muth, John F. (1960): “Optimal Properties of Exponentially Weighted Forecasts,”
-Journal of the American Statistical Association, 55(290), 299–306.
-Pashchenko, Svetlana (2013): “Accounting for non-annuitization,” Journal of Public
-Economics, 98, 53–67.
-Rabault, Guillaume (2002): “When do borrowing constraints bind? Some new
-results on the income fluctuation problem,” Journal of Economic Dynamics and
-Control, 26(2), 217–245.
-Ramsey, Frank (1928): “A Mathematical Theory of Saving,” Economic Journal,
-38(152), 543–559.
-Rincón-Zapatero, Juan Pablo, and Carlos Rodríguez-Palmero (2003):
-“Existence and uniqueness of solutions to the Bellman equation in the unbounded
-case,” Econometrica, 71(5), 1519–1555.
-Schechtman, Jack, and Vera Escudero (1977): “Some results on ‘An Income
-Fluctuation Problem’,” Journal of Economic Theory, 16, 151–166.
-Scheinkman, José, and Laurence Weiss (1986): “Borrowing Constraints and
-Aggregate Economic Activity,” Econometrica, 54(1), 23–46.
-Stokey, Nancy L., Robert E. Lucas, and Edward C. Prescott (1989):
-Recursive Methods in Economic Dynamics. Harvard University Press.
-Storesletten, Kjetil, Chris I. Telmer, and Amir Yaron (2004): “Consumption
-and Risk Sharing Over the Life Cycle,” Journal of Monetary Economics, 51(3), 609–
-633.
-Szeidl, Adam (2012): “Stable Invariant Distribution in Buffer-Stock Saving and
-Stochastic Growth Models,” Manuscript, Central European University.
-
-42
-
-Toche,
-Patrick
-(2005):
-“A
-Tractable
-Model
-of
-Precautionary
-Saving in Continuous Time,”
-Economics Letters,
-87(2),
-267–272,
-http://ideas.repec.org/a/eee/ecolet/v87y2005i2p267-272.html.
-Yao, Jiaxiong (2012): “The Theoretical Foundations of Buffer Stock Saving: A Note,”
-Manuscript, Johns Hopkins University.
-Zeldes, Stephen P. (1989): “Optimal Consumption with Stochastic Income:
-Deviations from Certainty Equivalence,” Quarterly Journal of Economics, 104(2),
-275–298.
-
-43
 
 
