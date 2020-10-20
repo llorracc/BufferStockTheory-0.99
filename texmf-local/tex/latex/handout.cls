@@ -111,7 +111,7 @@
   ,moreverb
   ,hhline    % Allow double hlines
   ,tipa      % Define more characters, in particular the \textthorn character
-  ,xcolor    % Superceded color, which is WAY out of date 
+  ,color
   ,accents
   ,appendix
 }
