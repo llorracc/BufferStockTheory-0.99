@@ -26,7 +26,7 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{October 20, 2020}
+\renewcommand{\forcedate}{October 21, 2020}
 \date{\forcedate}
 
 \maketitle 
@@ -410,10 +410,12 @@ foresight growth patience factor' (\PFGPF) as
   \PatPGro  & = {\Pat}/\PGro,  \label{eq:PFGPF}
 \end{align}
 and define a `perfect foresight growth impatience condition' (\PFGIC)
+\begin{verbatimwrite}{\EqDir/PFGIC}
 \begin{align}
   \label{eq:PFGIC}
   \PatPGro &  < 1
 \end{align}
+\input{\EqDir/PFGIC}
 which is equivalent to \eqref{eq:LiqConstrBinds} (exponentiate both
 sides by $1/\CRRA$).
 
@@ -451,7 +453,7 @@ which will be finite whenever
   \\ \DiscFac \Rfree \PGro^{-\CRRA}  & < \Rfree/\PGro \label{eq:PFFVAC} 
   \\ \PatPGro  & < (\Rfree/\PGro)^{1/\CRRA}, \nonumber
 \end{align}
-which we call the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  The consumer's value function is therefore nondegenerate.
+where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFFVAF})and which we call the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  The consumer's value function is therefore nondegenerate.
 
 \hypertarget{RICandFHWCFail}{}
 The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
@@ -525,7 +527,12 @@ which implies that if we wish to prevent $\mRat$ from heading to infinity (that 
     \PatPGroAdj  & < 1 \label{eq:GIC}
   \end{align}\end{verbatimwrite}
 \input{\EqDir/GIC}
-which is stronger than the perfect foresight version \eqref{eq:PFGIC} because $\PGroAdj < \PGro$ (Jensen's inequality implies that $\InvEpShkInv < 1$ for nondegenerate $\psi$).
+which is stronger than the perfect foresight version \eqref{eq:PFGIC} because
+\begin{align}
+  \PGroAdj & < \PGro \label{eq:PGroAdjLTPGro}
+\end{align}
+
+ (Jensen's inequality implies that $\InvEpShkInv < 1$ for nondegenerate $\pShk$).
 
 \hypertarget{Autarky-Value}{}
 \subsubsection{Autarky Value}
