@@ -78,44 +78,9 @@ After the warmup of constructing these conditions for the perfect foresight case
 \hypertarget{\figName}{}
 \input{\FigDir/\figName} % Read in the tex to generate the figure
 
-\begin{CDCPrivate}
-  \pagebreak
-
-  % \footnotesize
-
-  For Mateo and Xudong:
-  
-  I performed all the Google searches I could think of to see if there was an established body of practice for constructing diagrams like the ones we have constructed, but did not find any examples that were particularly close.  
-
-  But the idea of such diagrams is so useful and intuitive that I feel there must be SOME body of practice, that I should be citing (and whose conventions I should be, but may not be, following).
-
-  At first I thought that what we want to do could be done using the conventions of \href{https://mathematica.stackexchange.com/questions/8654/creating-diagrams-for-category-theory}{"category theory diagrams"}. But now I think our diagrams do NOT abide by those conventions, which is why I have labeled them above as ``Relational'' diagrams (and referred to them in the text as ``inequalities diagrams.'')
-
-  My (limited) understanding of category theory from spending a couple of days browsing the web, is that the "nodes" are sets (or some generalization of sets). I had been thinking of the nodes in our diagrams like the simple one in~\ref{fig:InequalityPFGICFHWCRIC} as quantities (numbers).  To see if I could convert the diagrams to category theoretic ones, I have worked out an interpretation in which you can think of the nodes as designating sets.
-
-  My interpretation of our diagrams, however, is one in which the content of a node depends on how you got to it. As best I can understand it, this is NOT the way category theory diagrams work.
-
-  For our diagrams, you can choose the node at which you start, and you can consider the object at that node as containing the set of all potential values of that object. That is, say in the case of $\Pat$, all of the combinations of ${R}$ and ${\beta}$ and ${\rho}$ which satisfy our intrinsic assumptions about those quantities (like ${\rho} > 1$).
-
-So then the interpretation of {\PFGIC} is that it is an operation (``morphism?'') that, for every object in $\Pat$, identifies the subset of values of the $\PGro$ set such that $\Pat$ < $\PGro$ is satisfied. This is a one-to-one mapping: For each real $\Pat$, exactly one (contiguous) set of values of $\PGro$ is identified. Or, if you start at the $\PGro$ node, then the items in that node are all possible values of $\PGro \in (0,\infty)$, and imposition of the FHWC identifies, for each $\PGro_{i}$, the set of values of ${R}$ for which $\PGro < {R}$.
-
-In this example, whether one thinks of the objects in $\PGro$ as values (if you start at $\PGro$) or sets of values indexed by $\Pat$ (e.g., for $\Pat_i$, the content of the node $\PGro$ reached by imposing $\PFGIC$ is the SET of values satisfying $\PGro_{i} $ > $\Pat_i$. This is different from what I have been able to understand about category theory diagrams, in which I believe that the nodes are supposed to contain sets whose content is not "operated upon" but simply mapped by prior operators.
-
-In any case, the diagram is not commutative (if I understand commutativity in this context) in the sense that the set of values of ${R}$ identified by the diagram depends on the route taken to get there.  If we start (and end, because it has no exiting arrows) at the ${R}$ node, its contents should be interpreted as ${R} \in \mathbb{R}_{+}$.  If we start at $\PGro$ and impose {\FHWC}, then the interpretation of the ${R}$ node is, for each $\PGro_{i}$, the set of values of ${R}$ that exceed that $\PGro_{i}$.  If we start at $\Pat$ and impose {\RIC}, when we arrive at ${R}$ it is viewed as containing the set of values that, for each feasible value of $\Pat_{i}$, is greater than that $\Pat_{i}$. And if we start at $\Pat$ and traverse the diagram by first imposing the {\PFGIC} to get to the $\PGro$ node, and then imposing the {\FHWC}, the contents of ${R}$ are doubly indexed. My understanding is that, for the diagram to be commutative, we would need (starting, say, at $\Pat$) for the operations {\RIC} and {\PFGIC} $\circ$ {\FHWC} to be equivalent in their effects on ${R}$. The inequality sign in the center of the diagram is meant to signal the noncomutativity of the paths (a notational convention I found articulated on stackexchange).
-
-Generalizing the point to the next diagram, I have put inequality signs in the upper and lower triangles to signal that the diagram is not commutative. That is, the inequality operators are intended to convey that if you reach the bottommost node by traversing the outside of the diagram (in either direction), that is NOT equivalent to imposing \PFFVAC directly.
-
-Let me emphasize that what we are doing is logically and mathematically sensible under these definitions.  What I'm not sure about is whether
-
-1. The diagram would be misunderstood by a category theorist who would assume that the structure and operations would mean something different than what we want to mean;
-
-2. There is another way to do the diagram that would be equally transparent to non-category-theorists but would satisfy the conventions of category theory.
-\end{CDCPrivate}
-
 \onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
 
 \end{document}
-
 
 % Local Variables:
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
