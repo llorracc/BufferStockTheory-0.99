@@ -98,11 +98,11 @@
 
 \label{sec:intro}
 
-In the presence of empirically realistic transitory and permanent shocks to income \textit{a la} \cite{friedmanATheory}, only one further ingredient is required to construct a testable model of optimal consumption: A description of preferences.  Modelers usually assume geometric discounting of a constant relative risk aversion utility function, because, starting with Zeldes~\citeyearpar{zeldesStochastic} and Deaton~\citeyearpar{deatonLiqConstr}, a large literature has constructed numerical solutions whose quantitative predictions match microeconomic evidence reasonably well.
+In the presence of empirically realistic transitory and permanent shocks to income \textit{a la} \cite{friedmanATheory}, only one other ingredient is required to construct a testable model of optimal consumption: A description of preferences.  Modelers usually assume geometric discounting of a constant relative risk aversion utility function, because, starting with Zeldes~\citeyearpar{zeldesStochastic} and Deaton~\citeyearpar{deatonLiqConstr}, a large literature has constructed numerical solutions whose quantitative predictions match microeconomic evidence reasonably well.
 
 A companion theoretical literature has shown that numerical solution methods provide good approximations to limiting ``true'' mathematical solutions -- but only for models more complex than the simple case with just shocks and utility.  The extra complexity has been required because standard contraction mapping theorems (beginning with \cite{bellmanDynamicProgramming} and including those building on Stokey et.~al.~\citeyearpar{slpMethods}) cannot be applied when the utility function is unbounded (like CRRA - see \hyperlink{DiffFromLit}{section \ref{subsec:Setup}}).\footnote{It is unclear whether newer methods such as those of \cite{mnUnique} could overcome this problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those methods or any others.}
 
-This paper's first technical contribution is to articulate the (loose) conditions under which the simple problem (without convenient shortcuts like a consumption floor or liquidity constraints) defines a contraction mapping with a nondegenerate consumption function.  The interesting requirement is a \hyperlink{FVAC}{`Finite Value of Autarky'} condition.  The paper's second contribution is to specify the conditions under which the resulting consumption function implies existence of a `target' wealth-to-permanent-income ratio (the model exhibits `buffer stock' saving behavior).  Buffer stock behavior arises when the model's parameters satisfy a \hyperlink{GIC}{``Growth Impatience Condition''} (equation \eqref{eq:GIC}) that relates preferences and uncertainty to predictable income growth.
+This paper's first technical contribution is to articulate the (loose) conditions under which the simple problem (without convenient shortcuts like a consumption floor or liquidity constraints) defines a contraction mapping with a nondegenerate consumption function.  The interesting requirement is a \hyperlink{FVAC}{`Finite Value of Autarky'} condition.  The paper's second contribution is to specify the conditions under which the resulting consumption function implies existence of a `target' wealth-to-permanent-income ratio (the model exhibits `buffer stock' saving behavior).  Buffer stock behavior arises when the model's parameters satisfy a \hyperlink{GIC}{``Growth Impatience Condition''} that relates preferences and uncertainty to predictable income growth.
 
 \hypertarget{KMP}{}
 
@@ -114,7 +114,7 @@ Such theoretical foundations are valuable both because they provide intuition ab
 
 The paper proceeds in three parts.
 
-The first part articulates the \hyperlink{Sufficient-Conditions}{conditions required} for the problem to define a nondegenerate limiting consumption function, and explains how the paper's model is more general than those previously considered in the literature.  The conditions required for convergence are interestingly parallel to those required for the \hyperlink{Factors-Defined-And-Compared}{liquidity constrained perfect foresight model}; that parallel is explored and explained.  Next, the paper derives some limiting properties of the consumption function as resources (`cash') approach infinity and as they approach their lower bound; then the theorem is proven explaining when the problem defines a contraction mapping.  Finally, a related class of commonly-used models (exemplified by Deaton~\citeyearpar{deatonLiqConstr}) is shown to constitute a particular limit of this paper's model.
+The first part articulates the \hyperlink{Sufficient-Conditions}{conditions required} for the problem to define a nondegenerate limiting consumption function, and explains how the paper's model is more general than those previously considered in the literature.  The conditions required for convergence are interestingly parallel to those required for the \hyperlink{Factors-Defined-And-Compared}{liquidity constrained perfect foresight model}; that parallel is explored and explained.  Next, the paper derives some limiting properties of the consumption function as resources (`cash') approach infinity, and as they approach their lower bound; then the theorem is proven explaining when the problem defines a contraction mapping.  Finally, a related class of commonly-used models (exemplified by Deaton~\citeyearpar{deatonLiqConstr}) is shown to constitute a particular limit of this paper's model.
 
 The \hyperlink{AnalysisoftheConvergedConsumptionFunction}{next section} examines five key properties of the model. First, as \hyperlink{LimitsAsmtToInfty}{cash approaches infinity} the expected growth rate of consumption and the marginal propensity to consume (MPC) converge to their values in the perfect foresight case. Second, as \hyperlink{LimitsAsmtToZero}{cash approaches zero} the expected growth rate of consumption approaches infinity, and the MPC approaches a simple analytical limit.  Third, if the consumer is `growth impatient,' a \hyperlink{onetarget}{unique target cash-to-permanent-income ratio} will exist.  Fourth, at the target cash ratio, the \hyperlink{cGroLTpGro}{expected growth rate of consumption} is slightly less than the expected growth rate of permanent (noncapital) income.  Finally, the expected growth rate of consumption \hyperlink{dcgdxneg}{is declining in the level of cash}. The first four propositions are proven under general assumptions about parameter values; the last is shown to hold if there are no transitory shocks, but may fail in extreme cases if there are both transitory and permanent shocks.
 
@@ -156,11 +156,11 @@ disarticulate the steps so that individual ingredients can be separately examine
     \aLevBF_{t}    & = \mLevBF_{t}-\cLevBF_{t}  \label{eq:DBCparts} \\
     \bLevBF_{t+1}    & = \aLevBF_{t} \Rfree \notag \\
     \pLevBF_{t+1}  & = \pLevBF_{t} \underbrace{\PGro\pShk_{t+1}}_{\equiv \PGro_{t+1}}  \notag \\
-    \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll_{t+1},  \notag
+    \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll<_{t+1},  \notag
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,\footnote{See \cite{mstCapIncFluct} for interesting new work that considers the case where capital returns are stochastic and liquidity constraints exist.  \cite{benhabibWealth} examines implications of capital income risk for the distribution of wealth.}  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight.%  The effects are more interesting for analysis of the invariant distribution (\cite{szeidlInvariant}).
-} $\mLevBF_{t+1}$ (`market resources' or `money') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; future transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in period $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{It is useful to emphasize that permanent noncapital income as defined here differs from what Deaton~\citeyearpar{deatonUnderstandingC} calls permanent income (which is often adopted in the macro literature).  Deaton defines permanent income as the amount that a perfect foresight consumer could spend while leaving total (human and nonhuman) wealth constant.  Relatedly, we refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  The `market resources' terminology is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
+} $\mLevBF_{t+1}$ (`market resources' or `money') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in period $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{It is useful to emphasize that permanent noncapital income as defined here differs from what Deaton~\citeyearpar{deatonUnderstandingC} calls permanent income (which is often adopted in the macro literature).  Deaton defines permanent income as the amount that a perfect foresight consumer could spend while leaving total (human and nonhuman) wealth constant.  Relatedly, we refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  The `market resources' terminology is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
 
 
 In future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will
@@ -294,7 +294,7 @@ where $\bLevBF$ is nonhuman wealth and $\hLevBF_{t}$ is `human wealth,' and with
 \end{align}
 
 \hypertarget{FHWC}{}
-This equation shows that in order for $\hRat \equiv \lim_{n \rightarrow
+This equation shows that in order for $\hLevBF/\pLevBF \equiv \hRat \equiv \lim_{n \rightarrow
   \infty} \hRat_{T-n}$ to be finite, we must
 impose the Finite Human Wealth Condition (`\FHWC'): 
 \begin{align}
@@ -431,7 +431,7 @@ to the unconstrained one.  If the consumer were somehow\footnote{``Somehow'' bec
   obtained by entering the period with $\bRat < 0$ which the constraint
   forbids.}
 to arrive at an $\mRat < \mRat_{\#} < 1$ the constraint would bind and
-the consumer would have to consume $\cRat=\mRat$.  The $\circ$ accent will designate the limiting
+the consumer would have to consume $\cRat=\mRat$.  Using the $\circ$ accent to designate the limiting
 constrained consumption function:
 \begin{equation}
   \mathring{\cFunc}(\mRat)=
@@ -441,7 +441,7 @@ constrained consumption function:
   \end{cases}
 \end{equation}
 
-More useful is the case where the perfect foresight growth and return impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (denoted \cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{}
+More useful is the case where the return impatience and perfect foresight growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (denoted \cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{}
 \begin{align}
   \vLevBF_{t+n}  & = \uFunc(\pLevBF_{t+n})\left(1+\DiscFac
                    \PGro^{1-\CRRA}+(\DiscFac \PGro^{1-\CRRA})^{2}+...\right) \notag
@@ -455,7 +455,7 @@ which will be finite whenever
   \\ \DiscFac \Rfree \PGro^{-\CRRA}  & < \Rfree/\PGro \label{eq:PFFVAC} 
   \\ \PatPGro  & < (\Rfree/\PGro)^{1/\CRRA},  \nonumber
 \end{align}
-where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFFVAF}) we call \eqref{eq:PFFVAC} the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  The consumer's value function is therefore nondegenerate.
+where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFFVAF}), and \eqref{eq:PFFVAC} is the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  The consumer's value function is therefore nondegenerate.
 
 \hypertarget{RICandFHWCFail}{}
 The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
@@ -467,10 +467,9 @@ where \cncl{\RIC} would suggest a degenerate limit of
 $\mathring{\cFunc}(\mRat)=0$ while \cncl{\FHWC} would suggest a
 degenerate limit of $\mathring{\cFunc}(\mRat)=\infty$.
 
-Table~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify the key points to help the reader keep them straight.
+Tables~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify the key points to help the reader keep them straight.
 
-
-An intuitive representation of the relations of the conditions is presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC} (for the perfect foresight case).  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way of writing the {\PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, and this is captured by the diagonal arrow.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, {\cncl{\FHWC}} would correspond to reversing the directon of the bottommost arrow.  This would allow us to follow the arrows in a counterclockwise direction from $\Pat$ to the bottom right node, leading to the conclusion that the combination of {\RIC} and \cncl{\FHWC} implies that the {\PFFVAC} holds.  (Readers unfamiliar with diagrams of this kind may wish to consult the expanded discussion in Appendix~\ref{sec:ApndxConditionDiagrams}).
+An intuitive representation of the relations of the conditions for the unconstrained perfect foresight case is presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way of writing the {\PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, and this is captured by the diagonal arrow.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, {\cncl{\FHWC}} would correspond to reversing the directon of the bottommost arrow.  This would allow us to follow the arrows in a counterclockwise direction from $\Pat$ to the bottom right node, leading to the conclusion that the combination of {\RIC} and \cncl{\FHWC} implies that the {\PFFVAC} holds.  (Readers unfamiliar with diagrams of this kind may wish to consult the expanded discussion in Appendix~\ref{sec:ApndxConditionDiagrams}).
 
 \providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
 \providecommand{\figFile}{\figName} %  and on filename
@@ -657,22 +656,18 @@ mapping proof.\footnote{\cite{benhabibWealth} show that the consumption function
 
 \newcommand{\NewMaxMinMPC}{\ushort{\MPC}}
 
-Assume (as discussed above) that a continuously differentiable
+Assume (as motivated above) that a continuously differentiable
 concave consumption function exists in period $t+1$, with an origin at
 $\cFunc_{t+1}(0)=0$, a minimal MPC $\NewMaxMinMPC_{t+1}>0$, and
 maximal MPC $\MaxMPC_{t+1} \leq 1$.  (If $t+1 = T$ these will be
 $\NewMaxMinMPC_{T}=\MaxMPC_{T}=1$; for earlier periods they will exist
 by recursion from the following arguments.)
 
-The MPC bound as wealth approaches infinity is easy to understand: In this case,
-under our imposed assumption that human wealth is finite, the proportion of consumption
-that will be financed out of human wealth approaches zero. The
-consequence is that the proportional difference between the solution to the
-model with uncertainty and the perfect foresight model shrinks to zero.
+The MPC bound as wealth approaches infinity is easy to understand: In this case, under our imposed assumption that human wealth is finite, the proportion of consumption that will be financed out of human wealth approaches zero. In consequence, the proportional difference between the solution to the model with uncertainty and the perfect foresight model shrinks to zero.
 
 \hypertarget{MPCnvrsLower}{}
 \hypertarget{WRICCond}{}
-In the course of proving this, appendix~\ref{sec:MPCLimits} provides a useful recursive expression for the (inverse of the) limiting MPC: 
+In the course of proving this, appendix~\ref{sec:MPCLimits} provides a useful recursive expression (used below) for the (inverse of the) limiting MPC: 
 \begin{align}
   \MinMPC_{t}^{-1}  & = 1+\MaxMPS \MinMPC_{t+1}^{-1} \label{eq:MinMPCInv}.
 \end{align}
@@ -686,7 +681,7 @@ MPC as $\mRat \downarrow 0$: appendix equation \eqref{eq:MaxMPCInvApndx}  shows 
   \MaxMPC_{t}^{-1}  & = 1+\MinMPS \MaxMPC_{t+1}^{-1} \label{eq:MaxMPCInv}.
 \end{align}
 \hypertarget{WRPF}{}  
-$\left\{\MaxMPC_{T-n}^{-1}\right\} _{n=0}^{\infty}$ is a decreasing % Correction per MNW 2016-01-30
+where $\left\{\MaxMPC_{T-n}^{-1}\right\} _{n=0}^{\infty}$ is a decreasing % Correction per MNW 2016-01-30
 convergent sequence if the `weak return patience factor' $\pZero^{1/\CRRA}\PatR$ satisfies:
 \begin{align}
   0 \leq & \pZero^{1/\CRRA} \PatR < 1 \label{eq:WRIC},
@@ -844,7 +839,7 @@ But the \textit{extent} to which the consumer feels the need to make this
 precautionary provision depends on the probability that it will turn
 out to matter.  As $\pZero \downarrow 0$, that probability becomes
 arbitrarily small, so the amount of precautionary saving approaches zero.
-But zero precautionary saving is the amount of saving that a liquidity
+But zero precautionary saving is the amount of saving that an impatient liquidity
 constrained consumer with perfect foresight would choose.
 
 Another way to understand this is just to think of the liquidity
@@ -916,7 +911,7 @@ Though the diagram looks complex, it is merely a modified version of the earlier
 \end{comment}
 
 \hypertarget{IntuitionRIC}{}
-\subsubsection{The \RIC}
+\subsubsection{Discussion of the \RIC}
 
 In the perfect foresight unconstrained problem
 (section~\ref{subsec:PFUncon}), the \RIC~was required for existence of
@@ -938,7 +933,7 @@ exhibit (given the \FVAC) if the \RIC~fails (that is, $\Rfree < (\Rfree \DiscFac
   \\  (\Rfree/\PGro)^{1-1/\CRRA}  & < \uInvEpShkuInv^{1-1/\CRRA} \label{eq:RICimplies}
 \end{align}
 but since $\uInvEpShkuInv<1$ and $0 < 1-1/\CRRA < 1$ (because we have
-assumed $\CRRA > 1$), equation \eqref{eq:RICimplies} this can hold only if $\Rfree/\PGro < 1$; that
+assumed $\CRRA > 1$), this inequality can hold only if $\Rfree/\PGro < 1$; that
 is, given the \FVAC, the \RIC~can fail only if human wealth is
 unbounded.  Unbounded human wealth is permitted here, as in the
 perfect foresight liquidity constrained problem.  But,
@@ -951,7 +946,7 @@ infinite consumption.  That is, in the presence of uncertainty,
 pathological patience (which in the perfect foresight model with
 finite wealth results in consumption of zero) plus infinite human
 wealth (which the perfect foresight model rules out because it leads
-to infinite consumption) combine here to yield a unique finite
+to infinite consumption) combine to yield a unique finite
 limiting MPC for any finite value of $\mRat$.  Note
 the close parallel to the conclusion in the perfect foresight
 liquidity constrained model in the
@@ -1087,7 +1082,7 @@ would keep $\mRat$ stable (in expectation).
     and $\PGro > \Rfree$.}
 \end{comment}
 
-Tables \ref{table:Comparison} and \ref{table:Required} present a summary of the connections between the various conditions in the presence and the absence of uncertainty.
+We have now established the points of comparison promised above between the perfect foresight solutions and the solutions under uncertainty; we have completed the remaining parts of \ref{table:Comparison} and \ref{table:Required}.
 
 \hypertarget{Factors-Defined-And-Compared}{}
 \subfile{\TableDir/Comparison-subfile}
@@ -1523,7 +1518,6 @@ define
   \pmb{\Upsilon}(\mRat_{t})  & \equiv  \PGro_{t+1} \cFunc(\Rnorm_{t+1}\aFunc(\mRat_{t})+\tShkAll_{t+1})/\cFunc(\mRat_{t})  = \cLevBF_{t+1}/\cLevBF_{t}
 \end{align*}
 and the proposition in which we are interested is
-
 \begin{align}
   (d/d\mRat_{t})\Ex_{t}[\underbrace{\pmb{\Upsilon}(\mRat_{t})}_{\equiv \pmb{\Upsilon}_{t+1}}]  & < 0  \nonumber
 \end{align}
@@ -1532,65 +1526,7 @@ or differentiating through the expectations operator, what we want is
   \Ex_{t}\left[\PGro_{t+1} \left(\frac{\cFunc^{\prime}(\mRat_{t+1})\Rnorm_{t+1}\aFunc^{\prime}(\mRat_{t})\cFunc(\mRat_{t})-\cFunc(\mRat_{t+1})\cFunc^{\prime}(\mRat_{t})}{\cFunc(\mRat_{t})^{2}}\right)\right]  & < 0 \label{eq:kappaPrimeLT0}.
 \end{align}
 
-Henceforth indicating appropriate arguments by the corresponding
-subscript (e.g.\ $\cFunc_{t+1}^{\prime} \equiv \cFunc^{\prime}(\mRat_{t+1})$), since
-$\PGro_{t+1}\Rnorm_{t+1}=\Rfree$, the portion of the LHS of equation \eqref{eq:kappaPrimeLT0} in brackets can be manipulated to yield
-\begin{align}
-  \cFunc_{t} \pmb{\Upsilon}^{\prime}_{t+1}  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \PGro_{t+1} \cFunc_{t+1}/\cFunc_{t} \nonumber
-  \\  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \pmb{\Upsilon}_{t+1} \label{eq:cPrimek}
-        .
-\end{align}
-
-Now differentiate the Euler equation with respect to $\mRat_{t}$:
-\begin{align}
-  1  & = \Rfree \DiscFac \Ex_{t}[ \pmb{\Upsilon}_{t+1}^{-\CRRA}] \notag
-  \\ 0  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1} \pmb{\Upsilon}_{t+1}^{\prime}] \notag
-  \\  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}]\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]+\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime}) \notag
-  \\ \Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]  & = -\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})/\Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}] \label{eq:covgen}
-\end{align}
-but since $\pmb{\Upsilon}_{t+1} > 0$ we can see from \eqref{eq:covgen} that \eqref{eq:kappaPrimeLT0} is equivalent to
-\begin{align}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})  & > 0 \nonumber
-\end{align}
-which, using \eqref{eq:cPrimek}, will be true if
-\begin{align}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree - \cFunc^{\prime}_{t}\pmb{\Upsilon}_{t+1})  & > 0 \notag
-\end{align}
-which in turn will be true if both
-\begin{align}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1} )  & > 0 \notag
-\end{align}
-and
-\begin{align*}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1})  & < 0. \notag
-\end{align*}
-
-The latter proposition is obviously true under our assumption $\CRRA > 1$.  The former will be true if
-\begin{align*}
-  \mbox{cov}_{t}\left((\PGro \pShk_{t+1} \cFunc(\mRat_{t+1}))^{-\CRRA-1},\cFunc^{\prime}(\mRat_{t+1}) \right)  & > 0 \nonumber.
-\end{align*}
-
-The two shocks cause two kinds of variation in $\mRat_{t+1}$.
-Variations due to $\tShkAll_{t+1}$ satisfy the proposition, since a
-higher draw of $\tShkAll$ both reduces $c_{t+1}^{-\CRRA-1}$ and
-reduces the marginal propensity to consume.  However, permanent shocks
-have conflicting effects.  On the one hand, a higher draw of
-$\pShk_{t+1}$ will reduce $\mRat_{t+1}$, thus increasing both
-$c_{t+1}^{-\CRRA-1}$ and $c_{t+1}^{\prime}$.  On the other hand, the
-$c_{t+1}^{-\CRRA-1}$ term is multiplied by $\PGro \pShk_{t+1}$, so the
-effect of a higher $\pShk_{t+1}$ could be to decrease the first term
-in the covariance, leading to a negative covariance with the second
-term.  (Analogously, a lower permanent shock $\pShk_{t+1}$ can also
-lead a negative correlation.)
-
-
-The software archive associated with this paper presents an example in
-which this perverse effect dominates.  However, extreme assumptions
-were required (in particular, a very small probability of the
-zero-income shock) and the region in which
-$\pmb{\Upsilon}_{t+1}^{\prime} > 0$ was tiny.  In practice, for
-plausible parametric choices,
-$\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]<0$ should generally hold.
+Appendix~\ref{sec:ApndxCGrowthDeclines} shows that the proposition holds true if there are only transitory (and no permanent) shocks.  But in the presence of permanent shocks, the software archive associated with this paper presents an example in which this perverse effect dominates.  However, extreme assumptions were required (in particular, a very small probability of the zero-income shock) and the region in which $\pmb{\Upsilon}_{t+1}^{\prime} > 0$ is tiny.  In practice, for plausible parametric choices, $\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]<0$ should generally hold.
 
 
 % \ifthenelse{\boolean{showBody}}{
@@ -1703,24 +1639,22 @@ But the assumption of finite lifetimes requires us to specify what happens to th
 \hypertarget{Blanchard-Lives}{}
 \subsubsection{Blanchard Lives}
 
-\cite{blanchardFinite}'s solution is to include an annuitization scheme in which estates of the dying are redistributed to survivors in proportion to survivors' wealth, giving the recipients a higher effective rate of return. This treatment has several analytical advantages, the most notable of which is that the effect of mortality on the time preference factor is the exact inverse of its effect on the (effective) interest factor:  If the probability of remaining alive is $\Alive$, then assuming that no utility accrues after death makes the effective discount factor $\hat{\DiscFac}=\DiscFac\Alive$.  But the enhancement to the rate of return from the annuity scheme yields an effective interest rate of $\hat{\Rfree}/\Alive$.  In consequence, the effective patience factor in the new economy $\hat{\Pat}$ is unchanged from its value in the infinite horizon model:
+\cite{blanchardFinite}'s solution is to include an annuitization scheme in which estates of the dying are redistributed to survivors in proportion to survivors' wealth, giving the recipients a higher effective rate of return. This treatment has several analytical advantages, the most notable of which is that the effect of mortality on the time preference factor is the exact inverse of its effect on the (effective) interest factor:  If the probability of remaining alive is $\Alive$, then assuming that no utility accrues after death makes the effective discount factor $\hat{\DiscFac}=\DiscFac\Alive$; but the enhancement to the rate of return from the annuity scheme yields an effective interest rate of $\hat{\Rfree}/\Alive$.  Combining these, the effective patience factor in the new economy $\hat{\Pat}$ is unchanged from its value in the infinite horizon model:
 \begin{equation}
   \hat{\Pat} \equiv \left(\DiscFac \Alive \Rfree / \Alive\right)^{1/\CRRA} = \left(\Rfree \DiscFac\right)^{1/\CRRA} \equiv \Pat.
 \end{equation}
-The only adjustments this requires to the analysis from prior parts of this paper are therefore to those elements that involve a role for $\Rfree$ distinct from its contribution to $\Pat$.  For example, the {\RIC}~($\Pat/(\Rfree /\Alive) < 1$) will be somewhat easier to satisfy because $\Rfree/\Alive > \Rfree$.
+The only adjustments this requires to the analysis from prior parts of this paper are therefore to those elements that involve a role for $\Rfree$ distinct from its contribution to $\Pat$.  %For example, the {\RIC}~($\Pat/(\Rfree /\Alive) < 1$) will be somewhat easier to satisfy because $\Rfree/\Alive > \Rfree$.
 
 % A further convenience of the \cite{blanchardFinite} formulation is that, because death occurs as a process independent of age (or wealth), there is no meaningful redistribution as a consequence of mortality.
 
 \hypertarget{Modigliani-Lives}{}
 \subsubsection{Modigliani Lives}
 
-\cite{blanchardFinite}'s innovation was useful because the prevailing alternative, the Life Cycle model of \cite{modiglianiWealth}, was unwieldy and difficult to use with the available computational technologies when Blanchard was writing.  But the appeal of Blanchard's assumption is undermined by the empirical fact that in practice, little annuitization actually occurs (\cite{pashchenko2013accounting}, \cite{brown2008don}).
+\cite{blanchardFinite}'s innovation was useful not only for the insight it provided into key mechanisms but also because the prevailing alternative, the Life Cycle model of \cite{modiglianiWealth}, was unwieldy and difficult to use with the available computational technologies when Blanchard was writing.  Leaving aside its value in building qualitative understanding of finite horizons, Blanchard's analytical solution has little application today; all quantitatively serious modeling now incorporates uncertainty, constraints, and other features that rule out analytical solutions anyway.  And computational models can can easily handle assumptions more realistic than Blanchard's about the disposition of assets at death.
 
-Further, aside from the insight it yields, the Blanchard model's analytical solution is of little use today; all serious modeling now incorporates uncertainty, constraints, and other features that rule out analytical solutions anyway.  Such frameworks can easily handle alternative assumptions about the disposition of assets at death.
+The simplest such models are those that follow Modigliani in assuming there is no bequest motive; any wealth remaining at death occurs accidentally (this is not implausible, given the robust finding that for the great majority of households, bequests amount to less than 2 percent of lifetime earnings, \cite{hendricksBequests,hendricksSmallBequests}).
 
-The simplest such models are those that follow Modigliani in assuming there is no bequest motive; any wealth remaining at death occurs accidentally (this is not implausible, given the robust finding that for the great majority of households, bequests amount to less than 2 percent of lifetime earnings, \cite{hendricksSmallBequests}).
-
-Some of that wealth will be absorbed by any estate tax that may exist; modelers have made a variety of assumptions about how any residue is distributed.  Here, we consider the simplest choice, because it also represents something of a polar alternative to Blanchard: We assume that there is a 100 percent estate tax and that the reveneues from the estate tax are used to fund government expenditures that yield utility in a form that is separable from utility from nondurable consumption -- say, for public goods (or, equivalently, the resources are thrown in the ocean).  In that case, the estate-related wealth effectively simply vanishes from the economy.  
+Some of that wealth will be absorbed by any estate tax that may exist; modelers have made a variety of assumptions about how any post-estate-tax residue is distributed.  Here, we consider the simplest choice, because it also represents something of a polar alternative to Blanchard: We assume that there is a 100 percent estate tax and that the revenues from the estate tax are used to fund government expenditures that yield utility in a form that is separable from utility from nondurable consumption -- say, for public goods (or, equivalently, the resources are thrown in the ocean).  In that case, the estate-related wealth effectively simply vanishes from the economy.  
 
 \begin{comment}
 
@@ -1740,7 +1674,7 @@ This approach alters the conditions under which the economy has a fixed target w
   \Alive  \Pat_{\PGro} & < 1.
 \end{align}
 
-Intuitively, the condition required to prohibit unbounded growth in the aggregate wealth-to-income ratio is the condition that prevents the wealth-to-income ratio of individual consumers from growing faster than the rate at which mortality diminishes their collective wealth.
+Intuitively, the condition required to prohibit unbounded growth in the aggregate wealth-to-income ratio is the condition that prevents the wealth-to-income ratio of individual consumers from growing faster than the rate at which mortality diminishes their collective wealth-to-income ratio.
 
 Section~\ref{sec:WhenTheGICFails} showed that the individual's problem can have a nondegenerate consumption rule for consumers who fail to satisfy the individual version of the {\GIC}.  The {\GICAgg} therefore provides a bound on preferences which can accommodate a population in which individual consumers have no upper bound on target wealth, but the aggregate economy will nevertheless settle down to an equilibrium aggregate wealth-to-income ratio.  Further analysis of these matters is beyond the scope of this paper, but the above-mentioned work of \cite{cstwMPC} presents an example of the application of this point (and the associated \href{https://github.com/econ-ark/HARK}{toolkit} reports the results not only of tests of the individual but also the aggregate versions of the {\GIC}).
 
