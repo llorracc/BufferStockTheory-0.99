@@ -26,7 +26,7 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{October 27, 2020}
+\renewcommand{\forcedate}{October 28, 2020}
 \date{\forcedate}
 
 \maketitle 
@@ -1624,7 +1624,7 @@ rate of idiosyncratic log consumption matches the growth rate of idiosyncratic l
 
   Matters are simpler if there are no permanent shocks; see Appendix~\ref{sec:ApndxCGroIsPGro} for a proof that in that case the growth rate of assets (and other variables) does eventually converge to the growth rate of aggregate permanent income.
 
-  One way of thinking about this problem is that it reflects the fact that, under our assumptions, the $\pLev$ variable does not have an ergodic distribution; the distribution of permanent income becomes forever wider and wider over time in this model.
+  One way of thinking about this problem is that it reflects the fact that, under our assumptions, the $\pLev$ variable does not have an ergodic distribution; the distribution of permanent income becomes forever wider and wider over time, because our consumers never die and each immortal person is subject to symmetric shocks to their $\log \pLevBF$.
 
 } % end ShorterYN
 % }% end showBody
@@ -1632,7 +1632,7 @@ rate of idiosyncratic log consumption matches the growth rate of idiosyncratic l
 \hypertarget{Mortality-And-Redistribution}{}
 \subsection{Mortality and Redistribution}\label{sec:Mortality-And-Redistribution}
 
-In practice most modelers incorporate a constant positive probability of death in their models, following \cite{blanchardFinite}.  \cite{cstwMPC} show that for probabilities of death that exceed a threshold that depends on the size of the permanent shocks, the distribution of permanent income has a finite variance.  In such cases, numerical results confirm the intuition that the growth rate of aggregate assets ends up matching the growth rate of permanent income.
+In practice most modelers working with infinite horizon agents incorporate a constant positive probability of death in their models, following \cite{blanchardFinite}.  \cite{cstwMPC} show that for probabilities of death that exceed a threshold that depends on the size of the permanent shocks, the distribution of permanent income has a finite variance.  In such cases, numerical results confirm the intuition that, under appropriate impatience conditions, the growth rate of aggregate assets ends up matching the growth rate of permanent income.
 
 But the assumption of finite lifetimes requires us to specify what happens to the assets of the dying consumers. 
 
@@ -1650,11 +1650,11 @@ The only adjustments this requires to the analysis from prior parts of this pape
 \hypertarget{Modigliani-Lives}{}
 \subsubsection{Modigliani Lives}
 
-\cite{blanchardFinite}'s innovation was useful not only for the insight it provided into key mechanisms but also because the prevailing alternative, the Life Cycle model of \cite{modiglianiWealth}, was unwieldy and difficult to use with the available computational technologies when Blanchard was writing.  Leaving aside its value in building qualitative understanding of finite horizons, Blanchard's analytical solution has little application today; all quantitatively serious modeling now incorporates uncertainty, constraints, and other features that rule out analytical solutions anyway.  And computational models can can easily handle assumptions more realistic than Blanchard's about the disposition of assets at death.
+\cite{blanchardFinite}'s innovation was useful not only for the insight it provided into key mechanisms but also because the prevailing alternative, the Life Cycle model of \cite{modiglianiWealth}, was unwieldy and difficult to use with the then-available computational technologies.  Leaving aside its value in building qualitative understanding of finite horizons, Blanchard's analytical solution has little application today, when all quantitatively serious modeling incorporates uncertainty, constraints, and other features that rule out analytical solutions anyway.  And such computational models can can easily handle assumptions more realistic than Blanchard's about the disposition of assets at death.
 
 The simplest such models are those that follow Modigliani in assuming there is no bequest motive; any wealth remaining at death occurs accidentally (this is not implausible, given the robust finding that for the great majority of households, bequests amount to less than 2 percent of lifetime earnings, \cite{hendricksBequests,hendricksSmallBequests}).
 
-Some of that wealth will be absorbed by any estate tax that may exist; modelers have made a variety of assumptions about how any post-estate-tax residue is distributed.  Here, we consider the simplest choice, because it also represents something of a polar alternative to Blanchard: We assume that there is a 100 percent estate tax and that the revenues from the estate tax are used to fund government expenditures that yield utility in a form that is separable from utility from nondurable consumption -- say, for public goods (or, equivalently, the resources are thrown in the ocean).  In that case, the estate-related wealth effectively simply vanishes from the economy.  
+Some bequest wealth will be absorbed by any estate tax that may exist; modelers have made a variety of assumptions about how any post-estate-tax residue is distributed.  We again consider the simplest choice, because it also represents something of a polar alternative to Blanchard: Without a bequest motive, there are no behavioral effects of a 100 percent estate tax, and we assume that the revenues are used to fund marginal government expenditures that yield utility in a form that is separable from utility from personal consumption -- say, for public goods (or, equivalently, the resources are thrown in the ocean).  In that case, the estate-related wealth effectively vanishes from the economy.
 
 \begin{comment}
 
