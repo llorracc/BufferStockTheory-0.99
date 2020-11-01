@@ -1,11 +1,11 @@
-        \node (thorn) {$\Pat$};
-        \node (gamma) [right of = thorn, xshift = 5cm] {$\PGro$};
-        \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
+        \node (thorn) {0.999};
+        \node (gamma) [right of = thorn, xshift = 5cm] {1.030};
+        \node (rfree) [below of = thorn]{1.04};
         \node (pffvacFac) [right of = rfree] 
-        {$\mathsf{\Rfree}^{1/\CRRA}\PGro^{1 - 1/\CRRA}$};
-        \node (pThorn) [left of = thorn] {$\pZero^{1/\rho}\Pat$};
-        \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{$\PGroAdj$};
-        \node (fvacFac) [right of = thorn, yshift = -2cm]{$\mathsf{\Rfree}^{1/\CRRA}\PGrouAdj^{1 - 1/\CRRA}$};
+        {1.035};
+        \node (pThorn) [left of = thorn] {0.072};
+        \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{1.02};
+        \node (fvacFac) [right of = thorn, yshift = -2cm]{1.030};
         \draw[->] (thorn) to node {${\PFGIC}$} (gamma);
         \draw[->] (thorn) to node [swap] {${\RIC}$} (rfree);
         \draw[->] (thorn) to node [swap] {${\PFFVAC}$} (pffvacFac);

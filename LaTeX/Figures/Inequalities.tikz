@@ -13,7 +13,7 @@
         \draw[->] (pffvacFac) to node {${\FHWC}$} (rfree);
         \draw[->] (pThorn) to node [above]{because $\wp < 1$} (thorn);
         \draw[->] (pThorn) to node [swap] {${\WRIC}$} (rfree);
-        \draw[->] (gamma) to node [rotate=-35,xshift=2.2cm,yshift=+0.55cm]{because $\underline{\psi} > 1$ and $\underline{\PGro} \equiv \underline{\psi} \PGro$} (compgamma);
+        \draw[->] (compgamma) to node [rotate=-35,xshift=-2.2cm,yshift=+0.05cm]{because $\underline{\psi} < 1$ and $\underline{\PGro} \equiv \underline{\psi} \PGro$} (gamma);
         \draw[->] (thorn) to node {${\GIC}$} (compgamma);
         \draw[->] (fvacFac) to node {} (pffvacFac);
         \draw[->] (thorn) to node {${\FVAC}$} (fvacFac);

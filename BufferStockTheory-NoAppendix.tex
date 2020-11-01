@@ -287,7 +287,7 @@ The familiar analytical solution to the perfect foresight specialization of the 
 The dynamic budget constraint, strictly positive marginal utility, and the can't-die-in-debt condition \eqref{eq:NoDebtAtDeath} imply an exactly-holding intertemporal budget constraint (IBC):
 \begin{align}
   \text{PDV}_{t}(\cLevBF)  & = \overbrace{\mLevBF_{t}-\pLevBF_{t}}^{\bLevBF_{t}}+\overbrace{\text{PDV}_{t}(\pLevBF)}^{\hLevBF_{t}}, \label{eq:IBCFinite}
-\end{align}
+\end{align} \hypertarget{FHWF}{}
 where $\bLevBF$ is nonhuman wealth and $\hLevBF_{t}$ is `human wealth,' and with a constant $\Rnorm \equiv \Rfree/\PGro$,
 \begin{align}
   \hLevBF_{t}  & = \pLevBF_{t}+\Rnorm^{-1} \pLevBF_{t} + \Rnorm^{-2} \pLevBF_{t} + ... + \Rnorm^{t-T} \pLevBF_{t} \notag 
@@ -328,7 +328,7 @@ patience is that if the `absolute impatience condition' (\AIC) holds,
   \Pat  & < 1,
 \end{align}
 the consumer will choose to spend an amount too large to sustain indefinitely (the
-level of consumption must fall over time).  We call such a consumer `absolutely impatient' (the key condition in \cite{bewleyPIH}).
+level of consumption must fall over time).  We call such a consumer `absolutely impatient' (the key condition in \cite{bewleyPIH}).\hypertarget{RPF}{}
 
 We next define a `return patience factor' that relates absolute patience to the return factor:
 \begin{align}
@@ -446,7 +446,7 @@ constrained consumption function:
   \end{cases}
 \end{equation}
 
-\textit{{\PFGIC} and {\RIC}.}  More useful is the case where the return impatience and PF growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{}
+\textit{{\PFGIC} and {\RIC}.}  More useful is the case where the return impatience and PF growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{} \hypertarget{PFFVAF}{}
 \begin{align}
   \vLevBF_{t+n}  & = \uFunc(\pLevBF_{t+n})\left(1+\DiscFac
                    \PGro^{1-\CRRA}+(\DiscFac \PGro^{1-\CRRA})^{2}+...\right) \notag
@@ -461,7 +461,7 @@ which will be finite whenever any of these equivalent conditions holds:
   \\ \Pat      & < \Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}  \nonumber
   \\ \PatPGro  & < (\Rfree/\PGro)^{1/\CRRA},  \nonumber
 \end{align}
-where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFFVAF}), and \eqref{eq:PFFVAC} is the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the last version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  Crucially (for intuition), at a given $\mRat$, extending the horizon further beyond $n$ has no effect on the consumer's consumption, because access to any resources beyond $n$ periods in the future is blocked by the period$-n$ constraint.  Since these arguments hold for any finite $\mRat$, the consumer's consumption function is nondegenerate.  While extending the horizon beyond $n$ periods will affect the consumer's value, the {\PFFVAC} implies that there is a finite limit to the amount by which value can be increased by horizon extensions; so the value function is also nondegenerate.
+where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFVAF}), and \eqref{eq:PFFVAC} is the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the last version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  Crucially (for intuition), at a given $\mRat$, extending the horizon further beyond $n$ has no effect on the consumer's consumption, because access to any resources beyond $n$ periods in the future is blocked by the period$-n$ constraint.  Since these arguments hold for any finite $\mRat$, the consumer's consumption function is nondegenerate.  While extending the horizon beyond $n$ periods will affect the consumer's value, the {\PFFVAC} implies that there is a finite limit to the amount by which value can be increased by horizon extensions; so the value function is also nondegenerate.
 
 \hypertarget{RICandFHWCFail}{}
 \textit{{\PFGIC} and {\cncl{\RIC}}}.  
@@ -545,13 +545,13 @@ which is stronger than the perfect foresight version \eqref{eq:PFGIC} because
  (Jensen's inequality implies that $\InvEpShkInv < 1$ for nondegenerate $\pShk$).
 
 \hypertarget{Autarky-Value}{}
-\subsubsection{Autarky Value}
+\subsubsection{Autarky Value}\hypertarget{uInvEpShkuInv}{}
 Analogously to \eqref{eq:ValuePFAnalytical}, a consumer who spent exactly their permanent income every period would have value determined by the product of the expectation of the (independent) future shocks to permanent income:
 \begin{align*}
   \vLevBF_{t}  & = \Ex_{t}\left[\uFunc(\pLevBF_{t}) + \DiscFac \uFunc(\pLevBF_{t}\PGro_{t+1}) + ... + \DiscFac^{T-t}\uFunc(\pLevBF_{t}\PGro_{t+1}...\PGro_{T})\right] \\
                & = \uFunc(\pLevBF_{t})\left(1+ \DiscFac \Ex_{t}[\PGro_{t+1}^{1-\CRRA}] +  ... + \DiscFac^{T-t}\Ex_{t}[\PGro_{t+1}^{1-\CRRA}]...\Ex_{t}[\PGro_{T}^{1-\CRRA}]\right) \\
                & = \uFunc(\pLevBF_{t})\left(\frac{1-(\DiscFac \PGro^{1-\CRRA}\Ex[\pShk^{1-\CRRA}])^{T-t+1}}{1-\DiscFac \PGro^{1-\CRRA} \Ex[\pShk^{1-\CRRA}]}\right)
-\end{align*}
+\end{align*}\hyperref{PGrouAdj}{}
 which invites the definition of a utility-compensated equivalent of the permanent shock,
 \begin{align*}
   \uInvEpShkuInv  & = (\Ex[\pShk^{1-\CRRA}])^{1/(1-\CRRA)}
@@ -631,7 +631,7 @@ resources.)
 
 \hypertarget{Symbols}{}
 
-\input{\TableDir/Calibration.tex}
+\input{\TableDir/Calibration}
 
 \providecommand{\figName}{Convergence-of-the-Consumption-Rules} % Allows generic definition of hypertargets based on title of figure
 \providecommand{\figFile}{cFuncsConverge} %  and on filename
@@ -1545,7 +1545,7 @@ Appendix~\ref{sec:ApndxCGrowthDeclines} shows that the proposition holds true if
 
 This section examines the behavior of large collections of buffer-stock consumers with identical parameter values. Such a collection can be thought of as either a subset of the population within a single country (say, members of a given education or occupation group), or as the whole population in a small open economy.\footnote{We will continue to take the aggregate interest rate as exogenous and constant. It is also possible, and only slightly more difficult, to solve for the steady-state of a closed-economy version of the model where the interest rate is endogenous.}
 
-We have assumed infinite horizons.  In practice, aggregative (macroeconomic) models of this kind usually incorporate mortality. We omit mortality in section~\ref{sec:cGroEqPGroIndQ} because its incorporation in standard ways does not meaningfully modify its derivations; but a reason for introducing mortality will appear at the end of section~\ref{subsec:cGroEqPGroQ}, so the implications of alternative assumptions about mortality is briefly examined in Section~\ref{sec:Mortality-And-Redistribution}
+We have assumed infinite horizons.  In practice, aggregative (macroeconomic) models of this kind usually incorporate mortality. We omit mortality in section~\ref{subsec:cGroEqPGroIndQ} because its incorporation in standard ways does not meaningfully modify its derivations; but a reason for introducing mortality will appear at the end of section~\ref{subsec:cGroEqPGroQ}, so the implications of alternative assumptions about mortality is briefly examined in Section~\ref{sec:Mortality-And-Redistribution}
 
 Formally, we assume a continuum of {\it ex ante} identical households
 on the unit interval, with constant total mass normalized to one and

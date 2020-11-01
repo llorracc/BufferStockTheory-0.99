@@ -1,3 +1,17 @@
+\input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths}\documentclass[../BufferStockTheory]{subfiles}\input{./econtexRoot}
+
+% This needed to be a subfile to tweak the use of the makecell \thead commands
+% without having to recompile the whole document
+\let\TableWidth\relax % Necessary to allow redefinition of tablewidth, which might already be defined
+\newlength\TableWidth
+
+\renewcommand\theadalign{tl}
+\renewcommand\theadfont{\normalsize}
+\begin{document}
+
+\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+
+\begin{verbatimwrite}{\TableDir/Calibration}
   \let\TableWidth\relax
   \newlength\TableWidth
 \newsavebox{\Calibration}
@@ -22,7 +36,7 @@ Description                                 & \multicolumn{3}{c|}{Symbol and For
 \href{https://\owner.github.io/BufferStockTheory\#RPF}{Return Patience Factor}                      & $\PatR$ & $\equiv$ & $\Pat/\Rfree $     & 0.961 \\
 \href{https://\owner.github.io/BufferStockTheory\#PFGPF}{PF Growth Patience Factor}    & $\PatPGro$ & $\equiv$ & $\Pat/\PGro $      & 0.970 \\
 \href{https://\owner.github.io/BufferStockTheory\#GPF}{\phantom{PF~} Growth Patience Factor}                      & $\PatPGroAdj$ & $\equiv$ & $ \Pat/\PGroAdj$& 0.980 \\
-\href{https://\owner.github.io/BufferStockTheory\#FVAF}{Finite Value of Autarky Factor}         & $\DiscAltuAdj $ & $\equiv$ & $ \DiscFac \PGro^{1-\CRRA}\uInvEpShkuInv^{1-\CRRA}$       & 0.941 \\
+\href{https://\owner.github.io/BufferStockTheory\#FVAF}{Finite Value of Autarky Factor}         & $\DiscAltuAdj $ & $\equiv$ & $ \DiscFac \PGro^{1-\CRRA}\uInvEpShkuInv^{1-\CRRA}$       & 0.941 \\ 
 \href{https://\owner.github.io/BufferStockTheory\#WRICCond}{Weak Impatience Factor}         & $\pZero^{1/\CRRA} \Pat $ & $\equiv$ & $ (\pZero \DiscFac \Rfree)^{1/\CRRA}$       & 0.071 \\ \hline
 \end{tabular}
 } % End \sbox
@@ -30,3 +44,26 @@ Description                                 & \multicolumn{3}{c|}{Symbol and For
 \usebox{\Calibration}
 
 \end{table}
+\end{verbatimwrite}
+\clearpage
+\input{\TableDir/Calibration}
+
+\end{document}
+% Delete up to four existing variants of BibTeX 
+% Local Variables:
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% End:
