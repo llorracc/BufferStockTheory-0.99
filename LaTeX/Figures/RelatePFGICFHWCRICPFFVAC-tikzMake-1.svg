@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="RelatePFGICFHWCRICPFFVAC-tikzMake.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="213.53964pt" height="198.85464pt" viewBox="-15.28554 -185.15538 213.53964 198.85464 "> 
+<g transform="translate(0,13.69926 ) scale(1,-1) translate(0,185.15538 )"> 
+<g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g transform="translate(110.95338,-44.8319)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.85764,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">≠</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(39.82149,-110.27332)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.85764,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">≠</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-3.93053,-3.4375)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.93053,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="wasyb" font-size="10">Þ</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(167.59152,-3.41666)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.125,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Γ</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-3.22917,-174.18874)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(3.22917,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmss" font-size="10">R</tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(146.51192,-175.15598)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(24.2046,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmss" font-size="10">R</tspan><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="7">1</tspan><tspan font-family="cmmi" font-size="7">∕ρ</tspan> </tspan> Γ<tspan baseline-shift="sub"><tspan font-family="cmr" font-size="7">1</tspan><tspan font-family="cmsy" font-size="7">−</tspan><tspan font-family="cmr" font-size="7">1</tspan><tspan font-family="cmmi" font-size="7">∕ρ</tspan> </tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 7.4635 0.0 L 160.4586 0.0  " fill="none"/>
+ <g transform="translate(160.4586,0.0)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(68.08739,3.53297)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(17.67363,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> PF-GIC</g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 0.0 -6.97047 L 0.0 -160.11139  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,0.0,-160.11139)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,-11.95256,-69.30392)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(9.09723,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> RIC</g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 6.9592 -6.97047 L 160.21683 -160.19882  " fill="none"/>
+ <g transform="matrix(0.70717,-0.70703,0.70703,0.70717,160.21681,-160.19882)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="matrix(0.7071,-0.7071,0.7071,0.7071,62.0073,-60.56879)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(22.01392,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> PF-FVAC</g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 170.71652 -6.94963 L 170.71652 -159.14415  " fill="none"/>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,170.71652,-159.14415)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="matrix(0.0,-1.0,1.0,0.0,175.83577,-68.463)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(15.62503,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> FHWC</g> </g>
+ </text> 
+</g>
+ </g>
+ <path d=" M 139.379 -170.71652 L 6.76215 -170.71652  " fill="none"/>
+ <g transform="translate(139.379,-170.71652)">
+ <path d=" M 3.59995 0.0 C 2.53328 0.2 0.79999 0.79999 -0.4 1.49997 L -0.4 -1.49997 C 0.79999 -0.79999 2.53328 -0.2 3.59995 0.0  " stroke="none"/>
+  </g>
+ <g transform="translate(59.24551,-181.8224)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(15.62503,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <img 
+src="RelatePFGICFHWCRICPFFVAC-tikzMake0x.svg" alt=" ////FHWC"  class="mathpalette" ></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                                         </g> 
+</svg> 

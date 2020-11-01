@@ -1,0 +1,17 @@
+;;; -*- coding: utf-8; -*-
+%      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{$\neq$};
+%      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{$\neq$};
+%      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{≠};
+%      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{≠};
+%      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{\ne};
+%      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{\ne};
+      \node (thorn) {$\Pat$};
+      \node (gamma) [right of = thorn] {$\PGro$};
+      \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
+%      \node (pffvacFac) [right of = rfree] {$\underbrace{\Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA}}_{\equiv \PGro} $}; % \left(\equiv (\Rfree \PGro)^{1/\CRRA}\PGro\right)
+      \node (pffvacFac) [right of = rfree] {$\Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA}$}; % \left(\equiv (\Rfree \PGro)^{1/\CRRA}\PGro\right)
+      \draw[->] (thorn) to node {${\PFGIC}$} (gamma);
+      \draw[->] (thorn) to node [swap] [rotate=-90,yshift=-0.3cm,xshift=+0.2cm]{${\RIC}$} (rfree);
+      \draw[->] (thorn) to node [swap] [rotate=-45,xshift=0.5cm,yshift=+0.4cm] {$\PFFVAC$} (pffvacFac);
+      \draw[->] (gamma) to node [rotate=-90,xshift=-0.7cm,yshift=+0.3cm]{${\FHWC}$} (pffvacFac);
+      \draw[<-] (pffvacFac) to node{\cncl{\FHWC}} (rfree); 

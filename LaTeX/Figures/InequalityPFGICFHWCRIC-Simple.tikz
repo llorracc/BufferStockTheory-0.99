@@ -1,0 +1,6 @@
+\node (thorn) {$\Pat$};
+\node (gamma) [right of = thorn] {$\PGro$};
+\node (rfree) [below of = thorn, xshift = 2cm, yshift = 2cm] {$\mathsf{\Rfree}$};
+\draw[->] (thorn) to node {\PFGIC} (gamma) ;
+\draw[->] (thorn) to node [swap] {\RIC} (rfree);
+\draw[->] (gamma) to node {\FHWC} (rfree);
