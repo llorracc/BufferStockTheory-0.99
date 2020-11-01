@@ -160,7 +160,7 @@ disarticulate the steps so that individual ingredients can be separately examine
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,\footnote{See \cite{mstCapIncFluct} for interesting new work that considers the case where capital returns are stochastic and liquidity constraints exist.  \cite{benhabibWealth} examines implications of capital income risk for the distribution of wealth.}  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight.%  The effects are more interesting for analysis of the invariant distribution (\cite{szeidlInvariant}).
-} $\mLevBF_{t+1}$ (`market resources' or `money') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in period $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{It is useful to emphasize that permanent noncapital income as defined here differs from what Deaton~\citeyearpar{deatonUnderstandingC} calls permanent income (which is often adopted in the macro literature).  Deaton defines permanent income as the amount that a perfect foresight consumer could spend while leaving total (human and nonhuman) wealth constant.  Relatedly, we refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  The `market resources' terminology is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
+} $\mLevBF_{t+1}$ (`market resources' or `money') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in period $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{Permanent noncapital income as defined here differs from what Deaton~\citeyearpar{deatonUnderstandingC} calls permanent income (which is often adopted in the macro literature).  Deaton defines permanent income as the amount that a perfect foresight consumer could spend while leaving total (human and nonhuman) wealth constant.  Relatedly, we refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  The `market resources' terminology is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
 
 
 In future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will
@@ -289,8 +289,8 @@ The dynamic budget constraint, strictly positive marginal utility, and the can't
 \end{align}
 where $\bLevBF$ is nonhuman wealth and $\hLevBF_{t}$ is `human wealth,' and with a constant $\Rnorm \equiv \Rfree/\PGro$,
 \begin{align}
-  \hLevBF_{t}  & = \pLevBF_{t}+\Rnorm^{-1} \pLevBF_{t} + \Rnorm^{-2} \pLevBF_{t} + ... + \Rnorm^{t-T} \pLevBF_{t} \label{eq:HDef}
-  \\  & = \underbrace{\left(\frac{1-\Rnorm^{-(T-t+1)}}{1-\Rnorm^{-1}}\right)}_{\equiv \hRat_{t}}\pLevBF_{t} .
+  \hLevBF_{t}  & = \pLevBF_{t}+\Rnorm^{-1} \pLevBF_{t} + \Rnorm^{-2} \pLevBF_{t} + ... + \Rnorm^{t-T} \pLevBF_{t} \notag 
+   \\  & = \underbrace{\left(\frac{1-\Rnorm^{-(T-t+1)}}{1-\Rnorm^{-1}}\right)}_{\equiv \hRat_{t}}\pLevBF_{t} \label{eq:HDef} .
 \end{align}
 
 \hypertarget{FHWC}{}
@@ -304,7 +304,8 @@ Intuitively, for human wealth to be finite, the growth rate of (noncapital) inco
 the interest rate at which that income is being discounted.
 
 \hypertarget{Unconstrained-Solution}{}
-\subsubsection{Unconstrained Solution} \label{subsec:PFUncon}
+\hypertarget{PF-Unconstrained-Solution}{}
+\subsubsection{PF Unconstrained Solution Exists Under {\RIC} and {\FHWC}} \label{subsec:PFUncon}
 
 \hypertarget{APF}{}
 \hypertarget{AIC}{}
@@ -348,9 +349,9 @@ which defines a normalized finite-horizon perfect foresight consumption function
 \end{align}
 where $\MinMPC_{t}$ is the marginal propensity to consume (MPC) because it answers the
 question `if the consumer had an extra unit of wealth, how much more would be spent.' \hypertarget{RIC}{}
-(The overbar on $\cFunc$ reflects the fact that this will be an upper bound as we modify the problem to incorporate constraints and uncertainty; analogously, the underbar for $\MPC$ indicates that it is a lower bound).
-Equation \eqref{eq:WDef} makes plain that for the limiting
-MPC to be strictly positive as $n=T-t$ goes to infinity we must impose the Return Impatience Condition (\RIC):
+($\bar{\cFunc}$'s overbar reflects the fact that this will be an upper bound as we modify the problem to incorporate constraints and uncertainty; analogously, the underbar for $\MPC$ indicates that it is a lower bound).
+
+Equation \eqref{eq:WDef} makes plain that for the limiting MPC $\MPC$ to be strictly positive as $n=T-t$ goes to infinity we must impose the Return Impatience Condition (\RIC):
 \begin{align}
   \PatR  & < 1   \label{eq:RIC},
 \end{align}
@@ -360,7 +361,7 @@ so that
                   .
 \end{align}
 
-The {\RIC} thus imposes a second kind of `impatience:' The consumer cannot be so pathologically patient as to wish, in the limit as the horizon approaches infinity, to spend nothing today out of an increase in current wealth; that is, the {\RIC} rules out the degenerate limiting solution $\bar{\cFunc}(\mRat)=0$.  We will say that a consumer who satisfies the {\RIC} is `return impatient.'
+The {\RIC} thus imposes a second kind of `impatience:' The consumer cannot be so pathologically patient as to wish, in the limit as the horizon approaches infinity, to spend nothing today out of an increase in current wealth; the {\RIC} rules out the degenerate limiting solution $\bar{\cFunc}(\mRat)=0$.  We will say that a consumer who satisfies the {\RIC} is `return impatient.'
 
 Given that the {\RIC}~holds, and defining limiting objects by the absence of a time subscript (e.g., $\bar{\cFunc}(\mRat)=\lim_{n \uparrow \infty} \bar{\cFunc}_{T-n}(\mRat)$), the limiting consumption function will be
 \begin{align}\label{eq:cFuncPFUnc}
@@ -371,9 +372,9 @@ solution $\bar{\cFunc}(\mRat) = \infty$ we need $\hRat$ to be finite; that is, w
 must impose the finite human wealth condition \eqref{eq:FHWC}.
 
 \hypertarget{ValuePFAnalytical}{}
-A final useful point is that since the perfect foresight
-growth factor for consumption is $\Pat$, $\uFunc(xy) =
-x^{1-\CRRA}\uFunc(y)$ yields an analytical expression for value:  
+A final point, used below, is that since the perfect foresight
+growth factor for consumption is $\Pat$, the fact that $\uFunc(xy) =
+x^{1-\CRRA}\uFunc(y)$ allows us to write an analytical expression for value:  
 \begin{align}
   \vRat_{t}  & = \uFunc(\cRat_{t})+\DiscFac \uFunc(\cRat_{t}\Pat)+\DiscFac^{2} \uFunc(\cRat_{t} \Pat^{2})+... \label{eq:ValuePFAnalytical}
   \\  & = \uFunc(\cRat_{t})\left(1+\DiscFac \Pat^{1-\CRRA}+(\DiscFac \Pat^{1-\CRRA})^{2}+...\right) \notag 
@@ -387,9 +388,12 @@ which asymptotes to a finite number as $n=T-t$ approaches $+\infty$ if $\DiscFac
   \end{align*}.
 } this requirement can be shown to be equivalent to the {\RIC}.  Thus, the same conditions that guarantee a nondegenerate limiting consumption function also guarantee a nondegenerate limiting value function (which, interestingly, will \textit{not} be true when we incorporate uncertainty).
 
+So, as summarized in the first panel of Table~\ref{table:Required}, the PF-Unconstrained model will have a nondegenerate solution if we impose the {\RIC} and {\FHWC}.
 
+\hypertarget{PF-Constrained-Solution}{}
 \hypertarget{Constrained-Solution}{}
-\subsubsection{Constrained Solution}
+\subsubsection{PF Constrained Solution}\label{subsec:PFCon}
+
 
 If a liquidity constraint requiring $\bRat \geq 0$ is ever to be relevant, it must be
 relevant at the lowest possible level of market resources,
@@ -421,8 +425,7 @@ and define a `perfect foresight growth impatience condition' (\PFGIC)
 which is equivalent to \eqref{eq:LiqConstrBinds} (exponentiate both
 sides by $1/\CRRA$).
 
-If the \RIC~\eqref{eq:RIC} and the \FHWC~\eqref{eq:FHWC} hold, appendix \ref{sec:ApndxLiqConstr} shows
-that, for some $0 < \mRat_{\#} < 1$, an unconstrained consumer behaving according to
+\textit{\cncl{\PFGIC} and {\RIC}.}  If the {\PFGIC} fails but the \RIC~\eqref{eq:RIC} holds, appendix \ref{sec:ApndxLiqConstr} shows that, for some $0 < \mRat_{\#} < 1$, an unconstrained consumer behaving according to
 \eqref{eq:cFuncPFUnc} would choose $\cRat < \mRat$ for all $\mRat >
 \mRat_{\#}$.  In this case the solution to the constrained consumer's problem is simple: For any $\mRat
 \geq \mRat_{\#}$ the constraint does not bind (and will never bind in
@@ -431,7 +434,7 @@ to the unconstrained one.  If the consumer were somehow\footnote{``Somehow'' bec
   obtained by entering the period with $\bRat < 0$ which the constraint
   forbids.}
 to arrive at an $\mRat < \mRat_{\#} < 1$ the constraint would bind and
-the consumer would have to consume $\cRat=\mRat$.  Using the $\circ$ accent to designate the limiting
+the consumer would consume $\cRat=\mRat$.  Using the $\circ$ accent to designate the limiting
 constrained consumption function:
 \begin{equation}
   \mathring{\cFunc}(\mRat)=
@@ -441,7 +444,7 @@ constrained consumption function:
   \end{cases}
 \end{equation}
 
-More useful is the case where the return impatience and perfect foresight growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (denoted \cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{}
+\textit{{\PFGIC} and {\RIC}.}  More useful is the case where the return impatience and PF growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{}
 \begin{align}
   \vLevBF_{t+n}  & = \uFunc(\pLevBF_{t+n})\left(1+\DiscFac
                    \PGro^{1-\CRRA}+(\DiscFac \PGro^{1-\CRRA})^{2}+...\right) \notag
@@ -449,15 +452,16 @@ More useful is the case where the return impatience and perfect foresight growth
         \PGro^{1-\CRRA})^{T-(t+n)+1}}{1-\DiscFac \PGro^{1-\CRRA}}\right),
         \notag
 \end{align}
-which will be finite whenever 
+which will be finite whenever any of these equivalent conditions holds:
 \begin{align}
   \overbrace{\DiscFac \PGro^{1-\CRRA} }^{\equiv \DiscAlt}  & < 1  \nonumber 
   \\ \DiscFac \Rfree \PGro^{-\CRRA}  & < \Rfree/\PGro \label{eq:PFFVAC} 
   \\ \PatPGro  & < (\Rfree/\PGro)^{1/\CRRA},  \nonumber
 \end{align}
-where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFFVAF}), and \eqref{eq:PFFVAC} is the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  The consumer's value function is therefore nondegenerate.
+where we call $\DiscAlt$ the `Perfect Foresight Value Of Autarky Factor' ({\PFFVAF}), and \eqref{eq:PFFVAC} is the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income will have finite value (the consumer has `finite autarky value').  Note that the last version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.  Crucially (for intuition), at a given $\mRat$, extending the horizon further beyond $n$ has no effect on the consumer's consumption, because access to any resources beyond $n$ periods in the future is blocked by the period$-n$ constraint.  Since these arguments hold for any finite $\mRat$, the consumer's consumption function is nondegenerate.  While extending the horizon beyond $n$ periods will affect the consumer's value, the {\PFFVAC} implies that there is a finite limit to the amount by which value can be increased by horizon extensions; so the value function is also nondegenerate.
 
 \hypertarget{RICandFHWCFail}{}
+\textit{{\PFGIC} and {\cncl{\RIC}}}.  
 The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
 \mathring{\MPCFunc}(\mRat) = 0$, nevertheless the limiting constrained
 consumption function $\mathring{\cFunc}(\mRat)$ is strictly positive
@@ -469,7 +473,8 @@ degenerate limit of $\mathring{\cFunc}(\mRat)=\infty$.
 
 Tables~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify the key points to help the reader keep them straight.
 
-An intuitive representation of the relations of the conditions for the unconstrained perfect foresight case is presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way of writing the {\PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, and this is captured by the diagonal arrow.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, {\cncl{\FHWC}} would correspond to reversing the directon of the bottommost arrow.  This would allow us to follow the arrows in a counterclockwise direction from $\Pat$ to the bottom right node, leading to the conclusion that the combination of {\RIC} and \cncl{\FHWC} implies that the {\PFFVAC} holds.  (Readers unfamiliar with diagrams of this kind may wish to consult the expanded discussion in Appendix~\ref{sec:ApndxConditionDiagrams}).
+An intuitive representation of the relations of the conditions for the unconstrained perfect foresight case is presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way of writing the {\PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, and this is captured by the diagonal arrow.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, the bottommost arrow going from $\Rfree$ to $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ imposes {\cncl{\FHWC}}; but we can cancel the cancellation and reverse the arrow.  This would allow us to traverse the diagram in a clockwise direction from $\Pat$ to $\Rfree$, revealing that imposition of {\PFGIC} and {\FHWC} (and, redundantly, {\FHWC} again) lets us conclude that the {\RIC} holds because the endpoint is $\Rfree$.  (Consult Appendix~\ref{sec:ApndxConDia} for a detailed exposition of the conventions of this kind of diagram).
+
 
 \providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
 \providecommand{\figFile}{\figName} %  and on filename
@@ -480,7 +485,7 @@ An intuitive representation of the relations of the conditions for the unconstra
 We now turn to the case with uncertainty.  The model without constraints but with uncertainty will turn out to be a close parallel to the model with constraints but without uncertainty.
 
 \hypertarget{Uncertainty-Modified-Conditions}{}
-\subsection{Uncertainty-Modified Conditions}
+\subsection{Uncertainty-Modified Conditions}\label{subsec:UncertaintyModifiedConditions}
 \subsubsection{Impatience}
 
 When uncertainty is introduced, the expectation of $\bRat_{t+1}$ can be rewritten as:  
@@ -856,7 +861,7 @@ foregoing intuitive discussion.
 
 The full relationship among all the conditions articulated above is represented in Figure~\ref{fig:Inequalities}.
 Though the diagram looks complex, it is merely a modified version of the earlier diagram with further 
-(mostly intermediate) inequalities inserted.  Again readers unfamiliar with such diagrams should Appendix~\ref{sec:ApndxConditionDiagrams}) for a more detailed explanation.
+(mostly intermediate) inequalities inserted.  Again readers unfamiliar with such diagrams should see Appendix~\ref{sec:ApndxConDia}) for a more detailed explanation.
 
 \renewcommand{\figName}{Inequalities} % Allows generic definition of hypertargets based on title of figure
 \renewcommand{\figFile}{\figName} %  and on filename
@@ -1669,7 +1674,7 @@ Some bequest wealth will be absorbed by any estate tax that may exist; modelers 
 
 \end{comment}
 
-This approach alters the conditions under which the economy has a fixed target wealth-to-income ratio.  Effectively, the return on aggregate wealth is lower than the contingent-on-survival return on wealth at the individual level. The condition under which an aggregate target wealth-to-income ratio will exist then becomes an aggregate version of the Growth Impatience Condtion ({\GICAgg}):
+This approach alters the conditions under which the economy has a target wealth-to-income ratio.  Effectively, the return on aggregate wealth is lower than the contingent-on-survival return on wealth at the individual level. The condition under which an aggregate target wealth-to-income ratio will exist then becomes an aggregate version of the Growth Impatience Condtion ({\GICAgg}):
 \begin{align}
   \Alive  \Pat_{\PGro} & < 1.
 \end{align}

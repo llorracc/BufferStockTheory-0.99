@@ -11,10 +11,65 @@
 
 \notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
-\begin{verbatimwrite}{\TableDir/Comparison}
   \let\TableWidth\relax
   \newlength\TableWidth
-  \newsavebox{\ComparisonSub}
+\begin{verbatimwrite}{\TableDir/LiqConstrScenarios}
+\newsavebox{\LiqConstrScenarios}
+\begin{table}[b]
+  \centering
+  \caption{Taxonomy of Perfect Foresight Liquidity Constrained Model Outcomes}\label{table:LiqConstrScenarios}
+  \sbox{\LiqConstrScenarios}{
+    \begin{tabular}{|l|rcl|l|}
+      \multicolumn{5}{c}{For constrained $\grave{c}$ and unconstrained $\bar{\cFunc}$ consumption functions } \\ \hline 
+Main Condition     &\multicolumn{3}{c|}{~}         & \\ % & Example \\
+~~~~Subcondition   & \multicolumn{3}{c|}{Math}             & \multicolumn{1}{c|}{ Outcome, Comments or Results} % & Example 
+\\ \hline
+\cncl{\PFGIC}      & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\PGro}$  & Constraint never binds for $\mRat \geq 1$ %& %$\{\Pat,\PGro\}=\{1,0.98\}$
+\\ ~~~~ and \RIC~          & $        {\Pat/\Rfree}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$  & ~~~\FHWC~holds ($\Rfree > \PGro$); $\grave{\cFunc}(\mRat) = \bar{\cFunc}(\mRat)$ for $\mRat \geq 1$ % & $\{\Rfree,\Discount, \PGro \} = $
+\\ ~~~~ and \cncl{\RIC}   & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\Rfree}$ & ~~~~$\grave{\cFunc}(\mRat)$ is degenerate: $\grave{\cFunc}(\mRat)=0$  %&
+\\ \PFGIC~            & $        {\Pat/\PGro}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\Rfree}$  & Constraint binds in finite time for any $\mRat$ % &
+\\ ~~~~ and \RIC~           & $        {\Pat/\Rfree}$  & $      {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$   & ~~~~\FHWC~may or may not hold
+\\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\bar{\cFunc}(\mRat) - \grave{\cFunc}(\mRat) = 0$ % & ~~$\{1.02,1.02^{-1},1.02\}$
+\\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\grave{\MPCFunc}(\mRat) = \MinMPC$ % & ~~$\{1.02,1.02^{-1},1.02\}$
+\\ ~~~~ and \cncl{\RIC}   &                          & $\phantom{~<~}1         ~<~ $ & $         \Pat/\Rfree$ & $\cncl{\FHWC}$
+\\ ~~~~~~             &                          &                             &                          & ~~~~~$\lim_{\mRat \uparrow \infty} \grave{\MPCFunc}(\mRat) =  0$               % & ~~$\{0.98,1.00, 0.99, 2\} $
+\\ \hline
+\end{tabular}
+} % End \sbox
+
+\settowidth\TableWidth{\usebox{\LiqConstrScenarios}}
+\usebox{\LiqConstrScenarios}
+
+\parbox{\TableWidth}{\footnotesize Conditions are applied from left to right; for example, the second row indicates conclusions in the case where \cncl{\PFGIC} and \RIC~both hold, while the third row indicates that when the \PFGIC~and the \RIC~both fail, the consumption function is degenerate; the next row indicates that whenever the \PFGIC~holds, the constraint will bind in finite time.}
+
+\end{table}
+
+
+\end{verbatimwrite}
+\clearpage
+\input{\TableDir/LiqConstrScenarios}
+
+\end{document}
+% Delete up to four existing variants of BibTeX 
+% Local Variables:
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% End:
+
+
   \begin{table}[!th]
     \centering
 \caption{Definitions and Comparisons of Conditions}\label{table:Comparison}
@@ -73,26 +128,3 @@ equivalently $\Pat/\PGro  < (\Rfree/\PGro)^{1/\CRRA}$ & \\
 \settowidth\TableWidth{\usebox{\ComparisonSub}}
 \usebox{\ComparisonSub}
 \end{table}
-\end{verbatimwrite}
-\clearpage
-\input{\TableDir/Comparison}
-
-\end{document}
-% Delete up to four existing variants of BibTeX 
-% Local Variables:
-% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
-% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
-% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
-% TeX-PDF-mode: t
-% TeX-file-line-error: t
-% TeX-debug-warnings: t
-% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
-% TeX-source-correlate-mode: t
-% TeX-source-correlate-start-server: 0
-% TeX-parse-self: t
-% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
-% End:

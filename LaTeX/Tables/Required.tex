@@ -6,31 +6,37 @@
 \sbox{\Required}{
 \begin{tabular}{|l|l|l|} \hline
 %                                            & \multicolumn{1}{c|}{Required}   & \multicolumn{1}{c|}{}  \\
-\multicolumn{1}{|c|}{Model}              & \multicolumn{1}{c|}{Conditions} & \multicolumn{1}{c|}{Comments}
+\multicolumn{1}{|c|}{Model}              & \multicolumn{1}{c|}{Conditions} & \multicolumn{1}{c|}{Comments/Logic}
 \\ \hline
    \multicolumn{1}{|l|}{PF Unconstrained}   & \RIC, \FHWC$^{\circ}$                       & \RIC~$\Rightarrow |\vFunc(\mRat)|< \infty$; \FHWC~$\Rightarrow 0 < |\vFunc(\mRat)|$
-\\                                          &                                 & \RIC~prevents $\bar{\cFunc}(\mRat)=0$
+\\ \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~Section~\ref{subsec:PFUncon}}                                         &                                 & \RIC~prevents $\bar{\cFunc}(\mRat)=0$
 \\                                          &                                 & \FHWC~prevents $\bar{\cFunc}(\mRat)=\infty$
-\\ \multicolumn{1}{|l|}{PF Constrained}     & \PFGIC$^{\ast}$             & If \RIC, $\lim_{\mRat \rightarrow \infty} \mathring{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
-\\                                          &                                 & If \cncl{\RIC}, $\lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=0$
-\\ \multicolumn{1}{|l|}{Buffer Stock Model} & \FVAC, \WRIC~                     & \FHWC~$\Rightarrow$ $\lim_{\mRat \rightarrow \infty} \mathring{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
-\\                                          &                                 & \cncl{\FHWC}+RIC~$\Rightarrow \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
+%\\                                          &                                 & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{Section~\ref{subsec:PFUncon}}
+  \\ \hline\hline \multicolumn{1}{|l|}{PF Constrained}     & \cncl{\PFGIC}, \RIC & {\FHWC} must hold $(\PGro < \Pat < \Rfree \Rightarrow \PGro < \Rfree)$
+                                                                                    \\ & & Identical to solution to PF Unconstrained for
+% \\                               &                                  & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{Section~\ref{subsec:PFCon}, Appendix~\ref{sec:ApndxLiqConstr}}
+  \\                                                                 \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~Section~\ref{subsec:PFCon}}                                                                         & & $  \mRat > \mRat_{\#}$ for some $0 < \mRat_{\#} < 1$; $\cFunc(\mRat)=\mRat$ for $\mRat \leq \mRat_{\#}$
+\\ & & (\cncl{\RIC} would yield $\mRat_{\#}=0$ so degenerate $\cFunc(\mRat)=0$)
+  \\ \cline{2-3} \href{https://\owner.github.io/BufferStockTheory\#ApndxLiqConstr}{~~Appendix~\ref{sec:ApndxLiqConstr}} & \PFGIC,\RIC & $\lim_{\mRat \rightarrow \infty} \mathring{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
+\\                                          &                                 & kinks at points where horizon to $b=0$ changes$^{\ast}$
+% \\                               &                                  & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{~~Section~\ref{subsec:PFCon}, Appendix~\ref{sec:ApndxLiqConstr}}
+  \\ \cline{2-3}                              &   \PFGIC,\cncl{\RIC}    & $\lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=0$
+\\                                          &                                 & kinks at points where horizon to $b=0$ changes$^{\ast}$
+%\\                               &                                 & See \href{https://\owner.github.io/BufferStockTheory\#PF-Constrained-Solution}{Section~\ref{subsec:PFCon}, Appendix~\ref{sec:ApndxLiqConstr}}
+\\ \hline\hline \multicolumn{1}{|l|}{Buffer Stock Model} & \FVAC, \WRIC~                     & \FHWC~$\Rightarrow$ $\lim_{\mRat \rightarrow \infty} \mathring{\cRat}(\mRat)=\bar{\cRat}(\mRat), \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
+  \\ \href{https://\owner.github.io/BufferStockTheory\#Uncertainty-Modified-Conditions}{~~Section~\ref{subsec:UncertaintyModifiedConditions}}
+                                            &                                 & \cncl{\FHWC}+RIC~$\Rightarrow \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=\MinMPC$
 \\                                          &                                 & \cncl{\FHWC}+\cncl{\RIC} $\Rightarrow \lim_{\mRat \rightarrow \infty} \mathring{\MPCFunc}(\mRat)=0$
 \\                                          &                                 & \GIC~guarantees finite target wealth ratio
 \\                                          &                                 & \FVAC~is stronger than \PFFVAC~
 \\                                          &                                 & \WRIC~is weaker than \RIC~
 \\ \hline \multicolumn{3}{c}{}
-%\\ \multicolumn{3}{l}{\footnotesize         $^{\ddagger}$A `Well-Behaved' solution is one in which nondegenerate limiting consumption}
-%\\ \multicolumn{3}{l}{\footnotesize \phantom{$^{\ddagger}$}and value functions exist: $\cFunc(m) =0$ or $\cFunc(m) = \infty$ or $\vFunc(m)=0$ or $\vFunc(m)=-\infty$}
-%\\ \multicolumn{3}{l}{\footnotesize \phantom{$^{\ddagger}$}(for all $m$) are ruled out.}
-%\\ \multicolumn{3}{l}{\footnotesize          $^{\ast}$If the \PFGIC~fails, the model's solution is identical to the unconstrained}
-%\\ \multicolumn{3}{l}{\footnotesize \phantom{$^{\ast}$}model's solution. See appendix~\ref{sec:LiqConstrAppendix} for elaboration.}
 \end{tabular}
 } % End \sbox
 
 \settowidth\TableWidth{\usebox{\Required}}
 \usebox{\Required}
 
-\parbox{\TableWidth}{\footnotesize         $^{\ddagger}$For feasible $\mRat$, the limiting consumption function defines the unique value of $\cRat$ satisfying $0 < \cRat(m) < \infty$.~~$^{\circ}$RIC, \FHWC~are necessary as well as sufficient.~~$^{\ast}$Solution also exists for \cncl{\PFGIC} and \RIC, but is identical to the unconstrained model's solution for feasible $\mRat \geq 1$.}
-
+\parbox{\TableWidth}{\footnotesize         $^{\ddagger}$For feasible $\mRat$ satisfying $0 < \mRat < \infty$, a nondegenerate limiting consumption function defines the unique value of $\cRat$ satisfying $0 < \cRat(m) < \infty$; a nondegenerate limiting value function defines a corresponding unique value of $-\infty < \vFunc(\mRat) < 0$ .~~$^{\circ}$RIC, \FHWC~are necessary as well as sufficient.~~$^{\ast}$That is, the first kink point in $\cRat(\mRat)$ is $\mRat_{\#}$ s.t. for $\mRat < \mRat_{\#}$ the constraint will bind now, while for $\mRat > \mRat_{\#}$ the constraint will bind one period in the future.  The second kink point corresponds to the $\mRat$ where the constraint will bind two periods in the future, etc.} %~~$^{\ast}$Solution also exists for \cncl{\PFGIC} and \RIC, but is identical to the unconstrained model's solution for feasible $\mRat \geq 1$.
 \end{table}
+
