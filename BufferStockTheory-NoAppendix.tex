@@ -26,13 +26,14 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{November 1, 2020}
+\renewcommand{\forcedate}{November 2, 2020}
 \date{\forcedate}
 
 \maketitle 
 \hypertarget{abstract}{}
 \begin{abstract}
-  This paper builds theoretical foundations for rigorous and intuitive understanding of `buffer stock' saving models, pairing each theoretical result with a quantitative exploration.  After describing conditions under which the consumption function exists, the paper shows that a `target' buffer stock arises only under conditions strictly stronger than those that guarantee convergence of the consumption and value functions.  Conditions under which the average growth rate of consumption equals the average growth rate of permanent income can differ from the (looser) conditions under which the growth rate of aggregate consumption matches that of aggregate income.  Together, the (provided) numerical tools and (proven) analytical results constitute a comprehensive toolkit for understanding buffer stock models.
+
+  This paper builds theoretical foundations for rigorous and intuitive understanding of `buffer stock' saving models, pairing each theoretical result with a quantitative illustration.  After describing conditions under which the consumption function exists, the paper shows that a `target' buffer stock arises only under conditions strictly stronger than those that guarantee that the problem has a (nondegenerate) solution.  Conditions under which the average growth rate of consumption equals the average growth rate of permanent income can differ from the (looser) conditions under which the growth rate of aggregate consumption matches that of aggregate income.  Together, the (provided) numerical tools and (proven) analytical results constitute a comprehensive toolkit for understanding buffer stock models.
 \end{abstract}
 
 % Various resources 
@@ -157,7 +158,7 @@ disarticulate the steps so that individual ingredients can be separately examine
     \aLevBF_{t}    & = \mLevBF_{t}-\cLevBF_{t}  \label{eq:DBCparts} \\
     \bLevBF_{t+1}    & = \aLevBF_{t} \Rfree \notag \\
     \pLevBF_{t+1}  & = \pLevBF_{t} \underbrace{\PGro\pShk_{t+1}}_{\equiv \PGro_{t+1}}  \notag \\
-    \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll<_{t+1},  \notag
+    \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll_{t+1},  \notag
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,\footnote{See \cite{mstCapIncFluct} for interesting new work that considers the case where capital returns are stochastic and liquidity constraints exist.  \cite{benhabibWealth} examines implications of capital income risk for the distribution of wealth.}  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight.%  The effects are more interesting for analysis of the invariant distribution (\cite{szeidlInvariant}).
@@ -316,12 +317,15 @@ The consumption Euler equation holds in every period; with $\uP(\cLevBF)=\cLevBF
   \cLevBF_{t+1}/\cLevBF_{t}  & = (\Rfree\DiscFac)^{1/\CRRA} \equiv \Pat   \label{eq:Pat}
 \end{align}
 where the Old English letter `thorn' represents what we will call the
-`absolute patience factor' $(\Rfree
-\DiscFac)^{1/\CRRA}$.\footnote{Impatience conditions of one kind or
+`Absolute Patience Factor,' or APF:\footnote{Impatience conditions of one kind or
   another have figured in intertemporal optimization problems since
   such problems were first formalized in economics, most notably by \cite{ramseySave}.
   Discussion of these issues was prominent in the literature of the
-  1960s and 1970s, and no brief citations here could do justice to the literature on the topic, so I refrain from the attempt.}  The sense in which $\Pat$ captures
+  1960s and 1970s, and no brief citations here could do justice to the literature on the topic, so I refrain from the attempt.}\
+\begin{align}
+  \Pat & = (\Rfree\DiscFac)^{1/\CRRA} \label{eq:APF}
+\end{align}
+The sense in which $\Pat$ captures
 patience is that if the `absolute impatience condition' (\AIC) holds,
 \begin{align}
   \label{eq:AIC}
@@ -512,14 +516,14 @@ uncertainty on the expected growth-normalized return (in the sense implicitly de
 \hypertarget{GIC}{}
 \hypertarget{GICI}{}
 \hypertarget{PGroAdj}{}
-We can now transparently generalize the \PFGIC~\eqref{eq:PFGIC} by defining a `compensated growth factor' 
+We can now transparently generalize the \PFGIC~\eqref{eq:PFGIC} by defining a `compensated growth factor' \hypertarget{GPF}{}
 \begin{verbatimwrite}{\EqDir/PGroAdj}
   \begin{align}
     \PGroAdj  & =  \PGro \InvEpShkInv \label{eq:PGroAdj}
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/PGroAdj}
-and a compensated Growth Patience Pactor (GPF):\hypertarget{GPF}{}
+and a compensated Growth Patience Pactor (GPF):
 \begin{verbatimwrite}{\EqDir/PatPGroAdj}
   \begin{align}
     \PatPGroAdj  & = \Pat/\PGroAdj  \notag
@@ -562,7 +566,7 @@ which will satisfy $\uInvEpShkuInv < 1$ for $\CRRA>1$ and nondegenerate $\pShk$ 
   \PGrouAdj = \PGro \uInvEpShkuInv 
 \end{equation}
 we can see that $\vLevBF_{t}$ will be finite as $T$ approaches $\infty$ if
-\hypertarget{FVAC}{}
+\hypertarget{FVAC}{}\hypertarget{FVAF}{}\hypertarget{\DiscAltuAdj}{}
 \begin{verbatimwrite}{\EqDir/FVAC}
   \begin{align}
     \overbrace{\DiscFac \PGrouAdj^{1-\CRRA} }^{\equiv \DiscAltuAdj}  & < 1 \notag

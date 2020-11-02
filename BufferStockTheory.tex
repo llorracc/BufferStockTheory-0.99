@@ -10,10 +10,8 @@
 \begin{document}
 
 % Command to determine whether executing in a subfile or main file
-% Used in the subfiles themselves (which redefine them)
-
-\renewcommand{\onlyinsubfile}[1]{}
-\renewcommand{\notinsubfile}[1]{#1}
+% Subfiles redefine the commands 
+\renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 
 \subfile{BufferStockTheory-NoAppendix} % First subfile (main body of paper)
 
