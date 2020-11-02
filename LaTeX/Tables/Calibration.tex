@@ -1,7 +1,9 @@
+  \let\TableWidth\relax
+  \newlength\TableWidth
 \newsavebox{\Calibration}
 \begin{table}
   \centering
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.2}
 \caption{Model Characteristics Calculated from Parameters}\label{table:Calibration}
 \sbox{\Calibration}{
 \begin{tabular}{|c|ccl|c|}
@@ -10,17 +12,18 @@
                                             & \multicolumn{3}{c|}{}                                      & Approximate \\
                                             & \multicolumn{3}{c|}{}                                       & Calculated \\
 Description                                 & \multicolumn{3}{c|}{Symbol and Formula}                       & Value \\ \hline
-Finite Human Wealth Measure                 & $\Rnorm^{-1}$ & $\equiv$ & $\PGro/\Rfree$                    & 0.990 \\
-PF Finite Value of Autarky Measure& $\beth$ & $\equiv$ & $\beta \PGro^{1-\CRRA}$                    & 0.932 \\
-Growth Compensated Permanent Shock            & $\InvEpShkInv $ & $\equiv$ & $ (\EpShkInv)^{-1}$               & 0.990 \\
-Uncertainty-Adjusted Growth                 & $\PGroAdj $ & $\equiv$ & $ \PGro \InvEpShkInv$        & 1.020 \\
-Utility Compensated Permanent Shock                & $\uInvEpShkuInv $ & $\equiv$ & $ (\Ex_{t}[\pShk^{1-\CRRA}])^{1/(1-\CRRA)}$ & 0.990 \\
-Utility Compensated Growth                     & $\PGrouAdj $ & $\equiv$ & $ \PGro \uInvEpShkuInv$        & 1.020 \\
-Absolute Patience Factor                    & $\Pat_{\phantom{\Rfree}} $ & $\equiv$ & $ (\Rfree \beta)^{1/\CRRA}$                & 0.999 \\
-Return Patience Factor                      & $\PatR$ & $\equiv$ & $\Pat/\Rfree $     & 0.961 \\
-PF Growth Patience Factor    & $\PatPGro$ & $\equiv$ & $\Pat/\PGro $      & 0.970 \\
-\phantom{PF~} Growth Patience Factor                      & $\PatPGroAdj$ & $\equiv$ & $ \Pat/\PGroAdj$& 0.980 \\
-Finite Value of Autarky Measure         & $\DiscAltuAdj $ & $\equiv$ & $ \beta \PGro^{1-\CRRA}\uInvEpShkuInv^{1-\CRRA}$       & 0.941 \\ \hline
+\href{https://\owner.github.io/BufferStockTheory\#FHWF}{Finite Human Wealth Factor}                 & $\Rnorm^{-1}$ & $\equiv$ & $\PGro/\Rfree$                    & 0.990 \\
+\href{https://\owner.github.io/BufferStockTheory\#PFFVAF}{PF Finite Value of Autarky Factor} & $\beth$ & $\equiv$ & $\DiscFac \PGro^{1-\CRRA}$                    & 0.932 \\
+\href{https://\owner.github.io/BufferStockTheory\#InvEpShkEInv}{Growth Compensated Permanent Shock}            & $\InvEpShkInv $ & $\equiv$ & $ (\EpShkInv)^{-1}$               & 0.990 \\
+\href{https://\owner.github.io/BufferStockTheory\#PGroAdj}{Uncertainty-Adjusted Growth}                 & $\PGroAdj $ & $\equiv$ & $ \PGro \InvEpShkInv$        & 1.020 \\
+\href{https://\owner.github.io/BufferStockTheory\#uInvEpShkuInv}{Utility Compensated Permanent Shock}                & $\uInvEpShkuInv $ & $\equiv$ & $ (\Ex[\pShk^{1-\CRRA}])^{1/(1-\CRRA)}$ & 0.990 \\
+\href{https://\owner.github.io/BufferStockTheory\#PGrouAdj}{Utility Compensated Growth}                     & $\PGrouAdj $ & $\equiv$ & $ \PGro \uInvEpShkuInv$        & 1.020 \\
+\href{https://\owner.github.io/BufferStockTheory\#APF}{Absolute Patience Factor}                    & $\Pat_{\phantom{\Rfree}} $ & $\equiv$ & $ (\Rfree \DiscFac)^{1/\CRRA}$                & 0.999 \\
+\href{https://\owner.github.io/BufferStockTheory\#RPF}{Return Patience Factor}                      & $\PatR$ & $\equiv$ & $\Pat/\Rfree $     & 0.961 \\
+\href{https://\owner.github.io/BufferStockTheory\#PFGPF}{PF Growth Patience Factor}    & $\PatPGro$ & $\equiv$ & $\Pat/\PGro $      & 0.970 \\
+\href{https://\owner.github.io/BufferStockTheory\#GPF}{\phantom{PF~} Growth Patience Factor}                      & $\PatPGroAdj$ & $\equiv$ & $ \Pat/\PGroAdj$& 0.980 \\
+\href{https://\owner.github.io/BufferStockTheory\#FVAF}{Finite Value of Autarky Factor}         & $\DiscAltuAdj $ & $\equiv$ & $ \DiscFac \PGro^{1-\CRRA}\uInvEpShkuInv^{1-\CRRA}$       & 0.941 \\
+\href{https://\owner.github.io/BufferStockTheory\#WRICCond}{Weak Impatience Factor}         & $\pZero^{1/\CRRA} \Pat $ & $\equiv$ & $ (\pZero \DiscFac \Rfree)^{1/\CRRA}$       & 0.071 \\ \hline
 \end{tabular}
 } % End \sbox
 \settowidth\TableWidth{\usebox{\Calibration}}

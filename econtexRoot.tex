@@ -1,4 +1,5 @@
 % LaTeX path to the root directory of the current project, from the directory in which this file resides
+% and path to econtexPaths which defines the rest of the paths like \FigDir
 \providecommand{\econtexRoot}{}\renewcommand{\econtexRoot}{.}
-\providecommand{\econtexPaths}{LaTeX}\renewcommand{\econtexPaths}{\econtexRoot/\econtexPaths}
-
+\providecommand{\econtexPaths}{LaTeX}\renewcommand{\econtexPaths}{\econtexRoot/LaTeX/econtexPaths}
+\input{\econtexPaths}

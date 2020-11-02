@@ -1,6 +1,6 @@
 \input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex}
-\usepackage{pgfkeys}\usepackage{tikz-dependency}
+
 \input{\econtexRoot/LaTeX/econtexPaths}
 \input{\ResourcesDir/owner} % Owned by llorracc or econ-ark?
 
@@ -10,15 +10,14 @@
 \begin{document}
 
 % Command to determine whether executing in a subfile or main file
-% Used in the subfiles themselves (which redefine them)
-
-\renewcommand{\onlyinsubfile}[1]{}
-\renewcommand{\notinsubfile}[1]{#1}
+% Subfiles redefine the commands 
+\renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
 
 \subfile{BufferStockTheory-NoAppendix} % First subfile (main body of paper)
 
 \hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
 \appendix \centerline{\LARGE Appendices}\vspace{0.2in}
+
 \subfile{\ApndxDir/ApndxLiqConstr}
 \subfile{\ApndxDir/ApndxConcaveCFunc}
 \subfile{\ApndxDir/ApndxEuclidian}
@@ -28,14 +27,17 @@
 \subfile{\ApndxDir/ApndxSolnMethEndogGpts}
 \subfile{\ApndxDir/ApndxSolnMethTermFunc}
 \subfile{\ApndxDir/ApndxConditionDiagrams}
+\subfile{\ApndxDir/ApndxCGrowthDeclines}
 
 \clearpage\vfill\eject
 
 \normalsize
 
-\bibliography{BufferStockTheory,economics}
+\bibliography{\LaTeXFiles/BufferStockTheory,economics}
+
 
 \end{document}
+
 % Stuff below configures compilation for AucTeX in Emacs -- last line is specialized to Skim on Mac
 
 % Local Variables:
