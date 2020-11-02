@@ -31,8 +31,8 @@ resources to the next period at return $\Rfree$:\footnote{The point at
   $\grave{\cFunc}(\mRat)=\min[\mRat,\cRat_{\#}+(\mRat-\cRat_{\#})\MinMPC
   ]$.}
 \begin{equation}\begin{gathered}\begin{aligned}
-  1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}     
-  \\ 1  & < \Rfree \Discount \PGro^{-\CRRA}  
+  1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}    \notag
+  \\ 1  & < \Rfree \Discount \PGro^{-\CRRA} \notag
   \\  \uFunc^{\prime}(1)  & < \Rfree \Discount \uFunc^{\prime}(\PGro)   \label{eq:EulerPFGICFailsEnd}.
 \end{aligned}\end{gathered}\end{equation}
 
@@ -119,9 +119,9 @@ $\cRat$ must have been growing according to $\PatPGro$, so consumption $n$ perio
 
 The PDV of consumption from $t-n$ until $t$ can thus be computed as
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ ... + (\Pat/\Rfree)^{n})  
-  % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ ... + (\PatPGro/\Rnorm)^{n})  
-  \\  & = \cRat_{\#}^{n}(1+\PatR+ ... + \PatR^{n})  
+  \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\Pat/\Rfree+ ... + (\Pat/\Rfree)^{n}) \notag
+  % \\   \mathbb{C}_{t-n}^{t}  & = \cRat_{t-n}(1+\PatPGro/\Rnorm+ ... + (\PatPGro/\Rnorm)^{n}) \notag
+  \\  & = \cRat_{\#}^{n}(1+\PatR+ ... + \PatR^{n}) \notag
   \\  & = \PatPGro^{-n}\left(\frac{1-\PatR^{n+1}}{1-\PatR}\right) \label{PDVc}
   \\  & = \left(\frac{\PatPGro^{-n}-\PatR}{1-\PatR}\right) 
 \end{aligned}\end{gathered}\end{equation}
@@ -203,7 +203,7 @@ Given failure of \FHWC, \eqref{\localorexternallabel{eq:bToInfty}} requires
 
 \begin{equation}\begin{gathered}\begin{aligned}
   % \lim_{n \rightarrow \infty} \left(\frac{\PatPGro^{-n}-\Rnorm^{-n}\PatR}{1-\PatR}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \\
-  \lim_{n \rightarrow \infty} \left(\frac{\Rnorm^{-n}\PatR-\PatPGro^{-n}}{\PatR-1}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty  
+  \lim_{n \rightarrow \infty} \left(\frac{\Rnorm^{-n}\PatR-\PatPGro^{-n}}{\PatR-1}\right) + \left(\frac{1-\Rnorm^{-(n+1)}}{\Rnorm^{-1}-1}\right)  & = \infty \notag
   \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR}{\PatR-1}-\frac{\Rnorm^{-1}}{\Rnorm^{-1}-1}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty \label{eq:FHWCfails} 
   % \\   \lim_{n \rightarrow \infty} \left(\frac{\PatR(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}-\frac{\Rnorm^{-1}(\Rnorm^{-1}-1)}{(\Rnorm^{-1}-1)(\PatR-1)}\right)\Rnorm^{-n}-\left(\frac{\PatPGro^{-n}}{\PatR-1}\right)  & = \infty. 
 \end{aligned}\end{gathered}\end{equation}
