@@ -12,7 +12,6 @@
 \providecommand{\versn}{} % Version; like, web or pdf or journal submission
 \ifthenelse{\boolean{ifWeb}}{  \renewcommand{\ushort}{\underline}\renewcommand{\versn}{Web} }{} % ushort does not work in tex4ht
 
-
 % Put tiny info header at top to make it easy track git commit that generates it
 \hfill{\tiny \jobname~\versn~\today~{at} \DTMcurrenttime, \input{\ResourcesDir/.git-source-commit}~~\input{\ResourcesDir/.git-public-commit}}
 
@@ -91,12 +90,10 @@
 
 \ifthenelse{\boolean{ifWeb}}{\thankstext}{}
 
-
 \medskip \medskip
 
 \hypertarget{Introduction}{}
 \section{Introduction}
-
 
 \label{sec:intro}
 
@@ -163,7 +160,6 @@ disarticulate the steps so that individual ingredients can be separately examine
 \end{verbatimwrite}
 \input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,\footnote{See \cite{mstCapIncFluct} for interesting new work that considers the case where capital returns are stochastic and liquidity constraints exist.  \cite{benhabibWealth} examines implications of capital income risk for the distribution of wealth.}  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight.%  The effects are more interesting for analysis of the invariant distribution (\cite{szeidlInvariant}).
 } $\mLevBF_{t+1}$ (`market resources' or `money') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in period $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{Permanent noncapital income as defined here differs from what Deaton~\citeyearpar{deatonUnderstandingC} calls permanent income (which is often adopted in the macro literature).  Deaton defines permanent income as the amount that a perfect foresight consumer could spend while leaving total (human and nonhuman) wealth constant.  Relatedly, we refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  The `market resources' terminology is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
-
 
 In future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will
 be zero (a `zero-income event'),
@@ -400,7 +396,6 @@ Our conclusions so far are summarized in the first panel of Table~\ref{table:Req
 \hypertarget{Constrained-Solution}{}
 \subsubsection{PF Constrained Solution}\label{subsec:PFCon}
 
-
 If a liquidity constraint requiring $\bRat \geq 0$ is ever to be relevant, it must be
 relevant at the lowest possible level of market resources,
 $\mRat_{t}=1$, which obtains for a consumer who enters period $t$ with
@@ -480,7 +475,6 @@ degenerate limit of $\mathring{\cFunc}(\mRat)=\infty$.
 Tables~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify the key points to help the reader keep them straight.
 
 An intuitive representation of the relations of the conditions for the unconstrained perfect foresight case is presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way we wrote the {\PFFVAC} in equation \eqref{eq:PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, and this is captured by the diagonal arrow.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, the bottommost arrow going from $\Rfree$ to $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ imposes {\cncl{\FHWC}}; but we can cancel the cancellation and reverse the arrow.  This would allow us to traverse the diagram in a clockwise direction from $\Pat$ to $\Rfree$, revealing that imposition of {\PFGIC} and {\FHWC} (and, redundantly, {\FHWC} again) lets us conclude that the {\RIC} holds because the endpoint is $\Rfree$.  (Consult Appendix~\ref{sec:ApndxConditionDiagrams} for a detailed exposition of diagrams of this type).
-
 
 \providecommand{\figName}{RelatePFGICFHWCRICPFFVAC} % Allows generic definition of hypertargets based on title of figure
 \providecommand{\figFile}{\figName} %  and on filename
@@ -615,7 +609,6 @@ the perfect foresight version \eqref{eq:PFFVAC} because $\PGrouAdj <
   Deaton~\citeyearpar{deatonLiqConstr} imposed to guarantee that his
   problem defined a contraction mapping.
 \end{comment}
-
 
 \hypertarget{Baseline-Numerical-Solution}{}
 \subsection{The Baseline Numerical Solution}
@@ -794,7 +787,6 @@ Using this, we introduce the mapping \textit{$\TMap:\mathcal{C}_{\phiFunc }\left
                                   } \max
                                   \uFunc(c_{t})+\DiscFac \left( \{\EEndMap \zFunc \}(\mRat_{t}-c_{t}) \right)  \label{definitionmappingT}.
 \end{align}
-
 
 \begin{comment}
   Unpacking the definitions, our mapping $\TMap$ can be written more explicitly as
@@ -1036,7 +1028,6 @@ The more interesting case is where the \GIC~fails.
     \DiscFac \PGro^{1-\CRRA} & < 1 < (\Rfree\DiscFac)^{1/\CRRA}/\PGro. \label{eq:PFFVACnotPFGIC}
   \end{align}
 
-
   Suppose $\PGro=1$, $\CRRA=2$ and $\pshk$ is lognormally distributed with $\sigma^{2}_{\pshk}=0.01$ (that is, $\log \pshk \sim \mathcal{N}(-\sigma_{\psi}^{2}/2,\sigma_{\psi}^{2})$) so that $\Ex_{t}[\pshk_{t+1}^{1-\CRRA}] =\Ex_{t}[\pshk_{t+1}^{-1}] =\exp(\sigma^{2}_{\psi})=e^{0.01}.$  Then the condition becomes
   \begin{align}
     \DiscFac e^{0.01} & < 1 < (\Rfree \DiscFac)^{1/2}e^{-0.01}
@@ -1256,7 +1247,6 @@ while the lower plot shows the marginal propensity to consume.
 \hypertarget{\figFile}{}
 \input{\FigDir/cFuncBounds}
 
-
 Next we establish the limit of the expected consumption growth factor
 as $\mRat_{t} \uparrow \infty$:
 \begin{align*}
@@ -1401,7 +1391,6 @@ The consumption function exists because we have imposed the conditions (the $\WR
 
 Section~\ref{sec:cExists} shows that for all $t$, $\aRat_{t-1} = {\mRat}_{t-1} -  \cRat_{t-1} > 0$.  Since ${\mRat}_{t}= {\aRat}_{t-1} \Rnorm_{t} + \yRat_{t}$, even if $\yRat_{t}$ takes on its minimum value of 0, $\aRat_{t-1} \Rnorm_{t} > 0$, since both $\aRat_{t-1}$ and $\Rnorm_{t}$ are strictly positive under our foregoing assumptions.  With $\mRat_{t} > 0$, the ratio $\Ex_t [{\mRat}_{t+1}/\mRat_t]$ inherits continuity (and, for that matter, continuous differentiability) from the consumption function.
 
-
 \subsubsection{Existence of a point where $\Ex_t [{\mRat}_{t+1}/\mRat_t]=1$.}
 The logic in section~\ref{subsec:LimitsAsmtToZero} showing that $\lim_{\mRat_t \downarrow 0} 
 \Ex_t [{\cRat}_{t+1}/\cRat_t] = \infty$ transparently implies the same proposition for $\mRat_{t}$: $\lim_{\mRat_{t}\downarrow 0} \Ex_{t}[\mRat_{t+1}] > 0$ so the ratio is unbounded. 
@@ -1469,7 +1458,6 @@ and multiplying all three elements by $\Rfree/\Pat$ gives
   \Ex_{t}\left[\frac{\Rfree}{\PGro \pShk}\right] & < \Rfree/\Pat < 1
 \end{align*}
 which satisfies our requirement in \eqref{eq:RbarBelowOne}.\footnote{An interesting sidenote is that \eqref{eq:RbarBelowOne} is a close cousin to the {\FHWC}: instead of $\Rfree/\PGro < 1$ we have $(\Rfree/\PGro)\InvEpShkInv < 1$.}
-
 
 % where the bound on the marginal propensity to consume in the third line  is guaranteed by the $RIC$ \eqref{eq:RIC} (see section~\ref{subsec:LimitsAsmtToInfty}) \textcolor{red}{Is the FHWC needed?}. Therefore, we can be sure that $\difFunc(\bullet)$ crosses 0 exactlyonce at $\mTarg$, and through \eqref{eq:difRatioEquiv} this implies that the target is unique. Additionally, we can conclude that$\difFunc({\mRat}_t)>0$ for ${\mRat}_t<\mTarg$ and $\difFunc({\mRat}_t)>0$ for ${\mRat}_t > \mTarg$, which coupled with \eqref{eq:difRatioEquiv} yields our desired stability result \eqref{eq:stability}.
 
@@ -1539,7 +1527,6 @@ or differentiating through the expectations operator, what we want is
 
 Appendix~\ref{sec:ApndxCGrowthDeclines} shows that the proposition holds true if there are only transitory (and no permanent) shocks.  But in the presence of permanent shocks, the software archive associated with this paper presents an example in which this perverse effect dominates.  However, extreme assumptions were required (in particular, a very small probability of the zero-income shock) and the region in which $\pmb{\Upsilon}_{t+1}^{\prime} > 0$ is tiny.  In practice, for plausible parametric choices, $\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]<0$ should generally hold.
 
-
 % \ifthenelse{\boolean{showBody}}{
 
 \hypertarget{The-Aggregate-and-Idiosyncratic-Relationship-Between-Consumption-Growth-and-Income-Growth}{}
@@ -1568,7 +1555,6 @@ distribution of $\mRat$ that induces invariant distributions for $\cRat$ and
 $\aRat$; designate these $\mathcal{F}^{\mRat}$, $\mathcal{F}^{\aRat}$, and
 $\mathcal{F}^{\cRat}$.\footnote{Szeidl's proof supplants simulation evidence of ergodicity
   that appeared in an earlier version of this paper.}
-
 
 \hypertarget{Consumption-and-Income-Growth-at-the-Household-Level}{}
 \subsection{Consumption and Income Growth at the Household Level}\label{subsec:cGroEqPGroIndQ}
@@ -1705,7 +1691,6 @@ Another contribution is integration of the paper's results with the open-source 
 \begin{equation*}
   \label{eq:Dummy}
 \end{equation*}
-
 
 \clearpage\vfill\eject
 
