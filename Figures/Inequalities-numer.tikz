@@ -1,0 +1,19 @@
+        \node (thorn) {0.999};
+        \node (gamma) [right of = thorn, xshift = 5cm] {1.030};
+        \node (rfree) [below of = thorn]{1.04};
+        \node (pffvacFac) [right of = rfree] 
+        {1.035};
+        \node (pThorn) [left of = thorn] {0.072};
+        \node (compgamma) [above of = gamma, xshift = -5cm, yshift = -2.5cm]{1.02};
+        \node (fvacFac) [right of = thorn, yshift = -2cm]{1.030};
+        \draw[->] (thorn) to node {${\PFGIC}$} (gamma);
+        \draw[->] (thorn) to node [swap] {${\RIC}$} (rfree);
+        \draw[->] (thorn) to node [swap] {${\PFFVAC}$} (pffvacFac);
+        \draw[->] (gamma) to node {${\FHWC}$} (pffvacFac);
+        \draw[->] (pffvacFac) to node {${\FHWC}$} (rfree);
+        \draw[->] (pThorn) to node [above]{because $\wp < 1$} (thorn);
+        \draw[->] (pThorn) to node [swap] {${\WRIC}$} (rfree);
+        \draw[->] (compgamma) to node [rotate=-35,xshift=-2.2cm,yshift=+0.05cm]{because $\underline{\psi} < 1$ and $\underline{\PGro} \equiv \underline{\psi} \PGro$} (gamma);
+        \draw[->] (thorn) to node {${\GIC}$} (compgamma);
+        \draw[->] (fvacFac) to node {} (pffvacFac);
+        \draw[->] (thorn) to node {${\FVAC}$} (fvacFac);
