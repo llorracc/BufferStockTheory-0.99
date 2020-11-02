@@ -1,10 +1,6 @@
 ;;; -*- coding: utf-8; -*-
-%      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{$\neq$};
-%      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{$\neq$};
-%      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{≠};
-%      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{≠};
-%      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{\ne};
-%      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{\ne};
+      \node (pffvafNEQpfgicPfhwc) [xshift=4cm,yshift=-1.5cm]{$\neq$};
+      \node (pffvafNEQricPcancelfhwc) [xshift=1.5cm,yshift=-3.8cm]{$\neq$};
       \node (thorn) {$\Pat$};
       \node (gamma) [right of = thorn] {$\PGro$};
       \node (rfree) [below of = thorn]{$\mathsf{\Rfree}$};
