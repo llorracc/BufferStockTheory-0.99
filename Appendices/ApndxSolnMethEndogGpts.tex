@@ -1,5 +1,6 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}
+\provideboolean{Metin}\setboolean{Metin}{true}\newcommand{\Metin}[2]{\ifthenelse{\boolean{Metin}}{\marginpar{\large Metin}\{{#1}\} $\rightarrow$ \{{#2}\}}{#2}}% PrivateMsg: Comments by Metin Uyanik
 
 \input{\LaTeXFiles/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
@@ -93,6 +94,7 @@ evaluate the function is $\mRat=0$ but $\log 0 = -\infty$ which is difficult for
   \hat{\cFunc}_{t}(\mRat)  & = \bar{\cFunc}_{t}(\mRat)-\exp(\hat{\varsigma}_{t}(\log \mRat)).
 \end{aligned}\end{gathered}\end{equation}
 \end{comment}
+
 
 %\end{verbatimwrite}%\input {\LaTeXFiles/ApndxSolnMethEndogGpts.tex}
 
