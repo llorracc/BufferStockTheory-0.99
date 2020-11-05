@@ -26,14 +26,14 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{November 2, 2020}
+\renewcommand{\forcedate}{November 4, 2020}
 \date{\forcedate}
 
 \maketitle 
 \hypertarget{abstract}{}
 \begin{abstract}
 
-  This paper builds theoretical foundations for rigorous and intuitive understanding of `buffer stock' saving models, pairing each theoretical result with a quantitative illustration.  After describing conditions under which the consumption function exists, the paper shows that a `target' buffer stock arises only under conditions strictly stronger than those that guarantee that the problem has a (nondegenerate) solution.  Conditions under which the average growth rate of consumption equals the average growth rate of permanent income can differ from the (looser) conditions under which the growth rate of aggregate consumption matches that of aggregate income.  Together, the (provided) numerical tools and (proven) analytical results constitute a comprehensive toolkit for understanding buffer stock models.
+  This paper builds theoretical foundations for rigorous and intuitive understanding of `buffer stock' saving models, pairing each theoretical result with a quantitative illustration.  After describing conditions under which a (nondegenerate) consumption function exists, the paper shows that a `target' buffer stock arises only under conditions strictly stronger than those that guarantee that the problem has a solution.  Conditions under which the average growth rate of consumption equals the average growth rate of permanent income can differ from the (looser) conditions under which the growth rate of aggregate consumption matches that of aggregate income.  Together, the (provided) numerical tools and (proven) analytical results constitute a comprehensive toolkit for understanding buffer stock models.
 \end{abstract}
 
 % Various resources 
@@ -61,7 +61,7 @@
 \end{authorsinfo}
 
 \newcommand{\thankstext}{All figures and numerical results \href{https://econ-ark.github.io/nbreproduce}{can be automatically reproduced} using the \href{https://econ-ark/HARK}{Econ-ARK/HARK} toolkit, which can be cited per our references (\cite{carroll_et_al-proc-scipy-2018}); for reference to the toolkit itself see \href{https://econ-ark.org/acknowledging/}{Acknowleding Econ-ARK}.  Thanks to the \href{https://consumerfinance.gov}{Consumer Financial Protection Bureau} for funding the original creation of the \href{https://econ-ark.org}{Econ-ARK} toolkit; and to the \href{https://sloan.org}{Sloan Foundation} for funding Econ-ARK's \href{https://sloan.org/grant-detail/8071}{extensive further development} that brought it to the point where it could be used for this project.  The toolkit can be cited with its digital object identifier, \href{https://doi.org/10.5281/zenodo.1001067}{10.5281/zenodo.1001067}, as is done in the paper's own references as \cite{carroll_et_al-proc-scipy-2018}.  
-  Thanks to James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Alexis Akira Toda, Metin Uyanik, Mateo Vel\'asquez-Giraldo, Weifeng Wu,  Jiaxiong Yao, and Xudong Zheng for comments on earlier versions of this paper, John Boyd for help
+  Thanks to Alexis Akira Toda, James Feigenbaum, Joseph Kaboski, Miles Kimball, Qingyin Ma, Misuzu Otsuka, Damiano Sandri, John Stachurski, Adam Szeidl, Alexis Akira Toda, Metin Uyanik, Mateo Vel\'asquez-Giraldo, Weifeng Wu,  Jiaxiong Yao, and Xudong Zheng for comments on earlier versions of this paper, John Boyd for help
   in applying his weighted contraction mapping theorem, Ryoji
   Hiraguchi for extraordinary mathematical insight that improved the
   paper greatly, David Zervos for early guidance to the literature,
@@ -102,7 +102,8 @@
 
 In the presence of empirically realistic transitory and permanent shocks to income \textit{a la} \cite{friedmanATheory}, only one more ingredient is required to construct a testable model of optimal consumption: A description of preferences.\footnote{Under other assumptions that are uncontroversial: The consumer understands that there is a budget constraint, and can solve the appropriate optimization problem.}  Modelers usually assume geometric discounting of a constant relative risk aversion utility function, because, starting with Zeldes~\citeyearpar{zeldesStochastic} and Deaton~\citeyearpar{deatonLiqConstr}, a large literature has constructed numerical solutions whose quantitative predictions match microeconomic evidence reasonably well.
 
-A companion theoretical literature has shown that numerical solution methods provide good approximations to limiting ``true'' mathematical solutions -- for models more complex than the case with just shocks and utility.  The extra complexity has been required because standard contraction mapping theorems (beginning with \cite{bellmanDynamicProgramming} and including those building on Stokey et.~al.~\citeyearpar{slpMethods}) cannot be applied when the utility function is unbounded (like CRRA - see \hyperlink{DiffFromLit}{section \ref{subsec:Setup}}).\footnote{It is unclear whether newer methods such as those of \cite{mnUnique} could overcome this problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those methods or any others.}
+A companion theoretical literature has shown that numerical solution methods provide good approximations to limiting ``true'' mathematical solutions -- for models more complex than the case with just shocks and utility.  The extra complexity has been required because standard contraction mapping theorems (beginning with \cite{bellmanDynamicProgramming} and including those building on Stokey et.~al.~\citeyearpar{slpMethods}) cannot be applied when the utility function is unbounded (like CRRA - see \hyperlink{DiffFromLit}{section \ref{subsec:Setup}}).
+%%%\footnote{It is unclear whether newer methods such as those of \cite{mnUnique} could overcome this problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those methods or any others.} %% AAT
 
 This paper's first technical contribution is to articulate the (loose) conditions under which the simple problem (without shortcuts like a consumption floor or liquidity constraints) defines a contraction mapping with a nondegenerate consumption function.  The interesting requirement is a \hyperlink{FVAC}{`Finite Value of Autarky'} condition.  The paper's second theoretical contribution is to specify the conditions under which the resulting consumption function implies existence of a `target' wealth-to-permanent-income ratio (the model exhibits `buffer stock' saving behavior).  Buffer stock saving arises when the model's parameters satisfy a \hyperlink{GIC}{``Growth Impatience Condition''} that relates preferences and uncertainty to predictable income growth.
 
@@ -120,7 +121,8 @@ The first part articulates the \hyperlink{Sufficient-Conditions}{conditions requ
 
 The \hyperlink{AnalysisoftheConvergedConsumptionFunction}{next section} examines five key properties of the model. First, as \hyperlink{LimitsAsmtToInfty}{cash approaches infinity} the expected growth rate of consumption and the marginal propensity to consume (MPC) converge to their values in the perfect foresight case. Second, as \hyperlink{LimitsAsmtToZero}{cash approaches zero} the expected growth rate of consumption approaches infinity, and the MPC approaches a simple analytical limit.  Third, a theorem explains why, if the consumer is `growth impatient,' a \hyperlink{onetarget}{unique target cash-to-permanent-income ratio} will exist.  Fourth, at the target cash ratio, the \hyperlink{cGroLTpGro}{expected growth rate of consumption} is slightly less than the expected growth rate of permanent (noncapital) income.  Finally, the expected growth rate of consumption \hyperlink{dcgdxneg}{is declining in the level of cash}. The first four propositions are proven under general assumptions about parameter values; the last is shown to hold if there are no transitory shocks, but may fail in extreme cases if there are both transitory and permanent shocks.
 
-Szeidl~\citeyearpar{szeidlInvariant} has shown that such an economy will be characterized by stable invariant distributions for the consumption ratio, the wealth ratio, and other variables.\footnote{Szeidl's proof supplants the analysis in an earlier draft of this paper, which conjectured the result and provided supportive simulation evidence.}  Using Szeidl's result, the final section discusses conditions under which, even with a fixed aggregate interest rate that differs from the time preference rate, an economy populated by buffer stock consumers converges to a balanced growth equilibrium in which the growth rate of consumption tends toward the (exogenous) growth rate of permanent income.
+The final section discusses conditions under which, even with a fixed aggregate interest rate that differs from the time preference rate, an economy populated by buffer stock consumers converges to a balanced growth equilibrium in which the growth rate of consumption tends toward the (exogenous) growth rate of permanent income.
+%%%\footnote{Szeidl's proof supplants the analysis in an earlier draft of this paper, which conjectured the result and provided supportive simulation evidence.}
 
 \hypertarget{The-Problem}{}
 \section{The Problem}
@@ -128,7 +130,9 @@ Szeidl~\citeyearpar{szeidlInvariant} has shown that such an economy will be char
 \subsection{Setup}
 \label{subsec:Setup}
 
-The consumer solves a standard optimization problem from the current period $t$ until the end of life at $T$: 
+We are interested in the infinite-horizon solution defined as the limit of the solution to a sequence of finite-horizon problems as we consider arbitrarily large horizons. Informally, if $\cFunc_{t}^{T}$ is the first-period-of-life consumption function for a consumer born at $t$ who will live until $t+T$, we will say that the problem has a `nondegenerate' infinite horizon solution if there is a limiting function $\cFunc = \lim_{T \uparrow \infty} \cFunc_{t}^{T}$ which is neither zero everywhere nor infinity everywhere.
+
+More specifically, the horizon-$T$ consumer's problem (dropping the inconvenient $T$ superscript) is:
 \begin{verbatimwrite}{\EqDir/supfn.tex}
   \begin{align*}%    \label{eq:supfn}
     \max~ \Ex_{t}\left[\sum_{n=0}^{T-t} \DiscFac^{n} \uFunc(\cLevBF_{t+n})\right]
@@ -147,12 +151,17 @@ is a constant relative risk aversion utility function with $\CRRA > 1$.\footnote
   solution as the limit of the finite horizon problem as the horizon
   $T-t$ approaches infinity.}  The consumer's initial condition is
 defined by market resources $\mLevBF_{t}$ (\cite{deatonLiqConstr}'s
-`cash-on-hand') and permanent noncapital income $\pLevBF_{t}$.
+`cash-on-hand') and permanent noncapital income $\pLevBF_{t}$, which
+both start out strictly positive, $\{\pLevBF_{t},\mLevBF_{t}\} \in
+(0,\infty)$, and the consumer cannot die in debt,
+\begin{align}
+  \cLevBF_{T} & \leq  \mLevBF_{T} \label{eq:NoDebtAtDeath}.
+\end{align}
 
 In the usual treatment, a dynamic budget constraint (DBC) incorporates
-several different elements that determine next period's $\mLevBF$ (given this
-period's choices); but for the detailed analysis here, it will be useful to
-disarticulate the steps so that individual ingredients can be separately examined:
+several elements that determine next period's $\mLevBF$ (given this
+period's choices); for the detailed analysis here, it will be useful to
+disarticulate the steps so that individual ingredients can be separately examined:\hypertarget{DBCParts}{}
 \begin{verbatimwrite}{\EqDir/DBCparts.tex}
   \begin{align}
     \aLevBF_{t}    & = \mLevBF_{t}-\cLevBF_{t}  \label{eq:DBCparts} \\
@@ -161,8 +170,7 @@ disarticulate the steps so that individual ingredients can be separately examine
     \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll_{t+1},  \notag
   \end{align}
 \end{verbatimwrite}
-\input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,\footnote{See \cite{mstCapIncFluct} for interesting new work that considers the case where capital returns are stochastic and liquidity constraints exist.  \cite{benhabibWealth} examines implications of capital income risk for the distribution of wealth.}  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight.%  The effects are more interesting for analysis of the invariant distribution (\cite{szeidlInvariant}).
-} $\mLevBF_{t+1}$ (`market resources' or `money') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in period $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{Permanent noncapital income as defined here differs from what Deaton~\citeyearpar{deatonUnderstandingC} calls permanent income (which is often adopted in the macro literature).  Deaton defines permanent income as the amount that a perfect foresight consumer could spend while leaving total (human and nonhuman) wealth constant.  Relatedly, we refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  The `market resources' terminology is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
+\input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight for our purposes; however, see \cite{benhabibWealth} for the implications of capital income risk for the distribution of wealth.} $\mLevBF_{t+1}$ (`market resources') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{We refer to $\mLevBF_{t}$ as `cash-on-hand' or `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  `Market' is motivated by the model's assumption that human wealth cannot be capitalized, an implication of anti-slavery laws.}$^{,}$\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
 
 
 In future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will
@@ -185,12 +193,6 @@ where $0<\ushort{\tShkEmp} \leq 1 \leq \bar{\tShkEmp}<\infty$
 (degenerately $\ushort{\tShkEmp}=\bar{\tShkEmp}=1$).\footnote{See \cite{rabaultBorrowing} and \cite{lsIncFluct} for analyses of cases where the shock processes have unbounded support.}  Call the cumulative
 distribution functions $\CDF_{\pShk}$ and $\CDF_{\tShkEmp}$ (where $\CDF_{\tShkAll}$
 is derived trivially from \eqref{eq:tShkDef} and $\CDF_{\tShkEmp}$).
-Permanent income and cash start out strictly positive, $\{\pLevBF_{t},\mLevBF_{t}\} \in
-(0,\infty)$, and as usual the consumer cannot die in
-debt, so
-\begin{align}
-  \cLevBF_{T} & \leq  \mLevBF_{T} \label{eq:NoDebtAtDeath}.
-\end{align}
 
 \hypertarget{PDV}{}
 The model looks more special than it is.  In particular, the
@@ -215,7 +217,9 @@ realization of the transitory shock is inessential, but simplifies the proofs an
   \end{align*}
 \end{comment}
 
-\hypertarget{DiffWithLit}{} This model differs from Bewley's~\citeyearpar{bewleyPIH} classic formulation in several ways. The CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well defined, or that $\uP(0)$ is well defined and finite; indeed, neither the value function nor the marginal value function will be bounded.  It differs from Schectman and Escudero~\citeyearpar{seIncFluct} in that they impose liquidity constraints and positive minimum income.  It differs from both of these in that it permits permanent growth in income, and also permanent shocks to income, which a large empirical literature finds are quantitatively important in micro data\footnote{MaCurdy~\citeyearpar{macurdyTimeseries}; Abowd and Card~\citeyearpar{acCovariance}; Carroll and Samwick~\citeyearpar{csNature}; Jappelli and Pistaferri~\citeyearpar{jpCins}; Storesletten, Telmer, and Yaron~\citeyearpar{styConsumption}; \cite{blpRisk}} and which since~\cite{friedmanATheory} have been understood to be far more consequential for household welfare than are transitory fluctuations.  It differs from Deaton~\citeyearpar{deatonLiqConstr} because liquidity constraints are absent; there are separate transitory and permanent shocks ({\it a la} \cite{muthOptimal}); and the transitory shocks here can occasionally cause income to reach zero.\footnote{Below it will become clear that the Deaton model is a particular limit of this paper's model.}  Finally, it differs from models found in Stokey et.\ al.~\citeyearpar{slpMethods} because neither liquidity constraints nor bounds on utility or marginal utility are imposed.\footnote{Similar restrictions to those in the cited literature are made in the well known papers by Scheinkman and Weiss~\citeyearpar{scheinkman&weiss:borrowing} and Clarida~\citeyearpar{claridaErgodic}.  See \cite{tocheUrisk} for an elegant analysis of a related but simpler continuous-time model.}$^{,}$\footnote{\cite{asHomogeneous} relaxed the bounds on the return function, but they address only the deterministic case.}
+\hypertarget{DiffWithLit}{} This model differs from Bewley's~\citeyearpar{bewleyPIH} classic formulation in several ways. The CRRA utility function does not satisfy Bewley's assumption that $\uFunc(0)$ is well defined, or that $\uP(0)$ is well defined and finite; indeed, neither the value function nor the marginal value function will be bounded.  It differs from Schectman and Escudero~\citeyearpar{seIncFluct} in that they impose liquidity constraints and positive minimum income.  It differs from both of these in that it permits permanent growth in income, and also permanent shocks to income, which a large empirical literature finds are quantitatively important in micro data\footnote{MaCurdy~\citeyearpar{macurdyTimeseries}; Abowd and Card~\citeyearpar{acCovariance}; Carroll and Samwick~\citeyearpar{csNature}; Jappelli and Pistaferri~\citeyearpar{jpCins}; Storesletten, Telmer, and Yaron~\citeyearpar{styConsumption}; \cite{blpRisk}} and which since~\cite{friedmanATheory} have been understood to be far more consequential for household welfare than are transitory fluctuations.  It differs from Deaton~\citeyearpar{deatonLiqConstr} because liquidity constraints are absent; there are separate transitory and permanent shocks ({\it a la} \cite{muthOptimal}); and the transitory shocks here can occasionally cause income to reach zero.\footnote{Below it will become clear that the Deaton model is a particular limit of this paper's model.}  It differs from models found in Stokey et.\ al.~\citeyearpar{slpMethods} because neither liquidity constraints nor bounds on utility or marginal utility are imposed.\footnote{Similar restrictions to those in the cited literature are made in the well known papers by Scheinkman and Weiss~\citeyearpar{scheinkman&weiss:borrowing} and Clarida~\citeyearpar{claridaErgodic}.  See \cite{tocheUrisk} for an elegant analysis of a related but simpler continuous-time model.}$^{,}$\footnote{\cite{asHomogeneous} relaxed the bounds on the return function, but they address only the deterministic case.}  \cite{cwcUnderUncert} impose bounded utility (ruling out the CRRA utility function considered here.  \cite{lsIncFluct} show how to allow unbounded returns by using policy function iteration, but also impose constraints.
+
+The paper with the most in common with this one is \cite{mstIncFluct}, henceforth MST, who establish the existence and uniqueness of a solution to a general income fluctuation problem with capital income risk in a Markovian setting.  The most important differences are that MST impose liquidity constraints, assume that $\uFunc^{\prime}(0)=0$, and  assume that for every possible realization of income $Y$, expected marginal utility is finite ($\Ex[\uFunc^{\prime}(Y)<\infty ~\forall~Y)$.  These assumptions are not consistent with the CRRA utility function and income processes used here,\footnote{Unless other restrictions are imposed, like the consumption floor or liquidity constraints mentioned above.} whose properties are key to the derivation of a number of the results.
 
 The incorporation of permanent shocks rules out application of the tools of \cite{mnUnique}, who followed and corrected an error in the fundamental work on the local contraction mapping method developed in \cite{rrExistence}.  \cite{mvExistence} provides a correction to \cite{rrExistence}, and provides conditions that are easier to verify, but again only addresses the deterministic case.  
 
@@ -271,12 +275,11 @@ from:
 \hypertarget{Definition-of-a-Nondegenerate-Solution}{}
 \subsection{Definition of a Nondegenerate Solution}
 
-We say that this problem has a nondegenerate solution if, as the number of remaining periods of life gets arbitrarily large, the backward-iterating solution defines a unique limiting consumption function $\cFunc(\bullet)$ that satisfies
+We can now provide a more formal definition of degeneracy:  We say that the problem has a nondegenerate solution if, as the horizon $T$ gets arbitrarily large, the solution for the first period of life $\cFunc_{t}(\mRat)$ defines a unique limiting consumption function $\cFunc(\bullet)$ that satisfies
 \begin{align}
   0 & < \cFunc(\mRat) <  \infty 
 \end{align}
-for every $0 < \mRat < \infty.$ (`Degenerate' limits will be cases
-where the limiting consumption function is $\cFunc(\mRat)=0$ or $\cFunc(\mRat)=\infty$.)
+for every $0 < \mRat < \infty.$ (`Degenerate' limits will be cases where the limiting consumption function is $\cFunc(\mRat)=0$ or $\cFunc(\mRat)=\infty$.)
 
 \hypertarget{Perfect-Foresight-Benchmarks}{}
 \subsection{Perfect Foresight Benchmarks}
@@ -355,7 +358,7 @@ which defines a normalized finite-horizon perfect foresight consumption function
 \end{align}
 where $\MinMPC_{t}$ is the marginal propensity to consume (MPC) because it answers the
 question `if the consumer had an extra unit of wealth, how much more would be spent.' \hypertarget{RIC}{}
-($\bar{\cFunc}$'s overbar reflects the fact that this function will be an upper bound as we modify the problem to incorporate constraints and uncertainty; analogously, the underbar for $\MPC$ indicates that it is a lower bound).
+($\bar{\cFunc}$'s overbar signfies that this function will be an upper bound as we modify the problem to incorporate constraints and uncertainty; analogously, the underbar for $\MPC$ indicates that $\MinMPC$ is a lower bound).
 
 Equation \eqref{eq:WDef} makes plain that for the limiting MPC $\underbar{\MPC}$ to be strictly positive as $n=T-t$ goes to infinity we must impose the Return Impatience Condition (\RIC):
 \begin{align}
@@ -575,7 +578,7 @@ as $T$ approaches $\infty$ if\hypertarget{FVAC}{}
 \input{\EqDir/FVAC}
 which we call the `finite value of autarky' \hypertarget{FVAF}{}
 condition (\FVAC) because it guarantees that value is finite for a consumer who always consumes their 
-(now stochastic) permanent income ($\DiscAltuAdj$ is the Finite Value of Autarky Factor, FVAF).  For nondegenerate $\pShk$, this 
+(now stochastic) permanent income (and we will call $\DiscAltuAdj$ the `Finite Value of Autarky Factor,' FVAF).\footnote{In a stationary environment -- that is, with $\PGrouAdj=1$ -- this corresponds to an impatience condition imposed by \cite{mstIncFluct}.}  For nondegenerate $\pShk$, this 
 condition is stronger
 (harder to satisfy in the sense of requiring lower $\DiscFac$) than
 the perfect foresight version \eqref{eq:PFFVAC} because $\PGrouAdj <
@@ -663,7 +666,7 @@ to have limiting slopes as $\mRat \downarrow 0$ and as $\mRat \uparrow
 slopes, which also turn out to be useful in the contraction
 mapping proof.\footnote{\cite{benhabibWealth} show that the consumption function
   becomes linear as wealth approaches infinity in a model with capital income risk and liquidity
-  constraints; their results should generalize to the limits derived here if capital income risk were added to the model.}$^{,}$\footnote{\cite{MaStachurskiToda2020JET} establish the existence and uniqueness of a solution to a general income fluctuation problem with capital income risk in a Markovian setting and use such a model to study the tail behavior of wealth in the presence of risky returns to capital.}
+  constraints; \cite{maTodaRich} show that these results generalize to the limits derived here if capital income is added to the model.}
 
 \newcommand{\NewMaxMinMPC}{\ushort{\MPC}}
 
@@ -823,7 +826,7 @@ are now in position to state the central theorem of the paper.
 \begin{theorem}
   \label{thm:contmap} $\TMap$ is a contraction mapping if
   the restrictions on parameter values \eqref{eq:WRIC} and
-  \eqref{eq:FVAC} are true (that is, if the weak return impatience condition and the finite value of autarky condition hold).
+  \eqref{eq:FVAC} are true (that is, if the weak return impatience condition and the finite value of autarky condition hold).\footnote{As mentioned above, the \eqref{eq:FVAC} corresponds to a condition also required by \cite{mstIncFluct}. Their remaining conditions differ because their problem differs and their method of proof differs.}
 \end{theorem}
 
 Intuitively, Boyd's theorem shows that if you can find a $\phiFunc$ that is everywhere finite but goes to infinity `as fast or faster' than the function you are normalizing with $\phiFunc$, the normalized problem defines a contraction mapping.  The intuition for the {\FVAC} condition is just that, with an infinite horizon, with any initial amount of bank balances $\bRat_{0}$, in the limit your value can always be made greater than you would get by consuming exactly your permanent income every period (say, by consuming $(\rfree/\Rfree)\bRat_{0}-\epsilon$ for some small $\epsilon>0$).
@@ -831,7 +834,7 @@ Intuitively, Boyd's theorem shows that if you can find a $\phiFunc$ that is ever
 The details of the proof are cumbersome, and are therefore relegated to
 appendix~\ref{sec:Tcomplete}.  Given that the value function
 converges, appendix~\ref{subsec:cConverges} shows that the consumption
-functions converge.
+functions converge.\footnote{MST's proof is for convergence of the consumption policy function directly, rather than of the value function, which is why their conditions are on $\uFunc^{\prime}$, which governs behavior.}
 
 \hypertarget{The-Liquidity-Constrained-Solution-as-a-Limit}{}
 \subsection{The Liquidity Constrained Solution as a Limit} \label{sec:deatonIsLimit}
@@ -1547,7 +1550,7 @@ Appendix~\ref{sec:ApndxCGrowthDeclines} shows that the proposition holds true if
 
 This section examines the behavior of large collections of buffer-stock consumers with identical parameter values. Such a collection can be thought of as either a subset of the population within a single country (say, members of a given education or occupation group), or as the whole population in a small open economy.\footnote{We will continue to take the aggregate interest rate as exogenous and constant. It is also possible, and only slightly more difficult, to solve for the steady-state of a closed-economy version of the model where the interest rate is endogenous.}
 
-We have assumed infinite horizons.  In practice, aggregative (macroeconomic) models of this kind usually incorporate mortality. We omit mortality in section~\ref{subsec:cGroEqPGroIndQ} because its incorporation in standard ways does not meaningfully modify its derivations; but a reason for introducing mortality will appear at the end of section~\ref{subsec:cGroEqPGroQ}, so the implications of alternative assumptions about mortality is briefly examined in Section~\ref{sec:Mortality-And-Redistribution}
+We have assumed infinite horizons.  In practice, aggregative (macroeconomic) models of this kind usually incorporate mortality. We omit mortality in section~\ref{subsec:cGroEqPGroIndQ} because its incorporation in standard ways does not meaningfully modify its derivations; but a reason for introducing mortality will appear at the end of section~\ref{subsec:cGroEqPGroQ}, so the implications of alternative assumptions about mortality are briefly examined in Section~\ref{sec:Mortality-And-Redistribution}
 
 Formally, we assume a continuum of {\it ex ante} identical households
 on the unit interval, with constant total mass normalized to one and
