@@ -50,6 +50,7 @@
 \setbeamersize{text margin left=3mm}
 \setbeamersize{text margin right=3mm}
 
+
 %_____________ Opening slide _______________________
 
 \title[Buffer Stock Theory]{Theoretical Foundations of Buffer Stock Saving}
@@ -63,12 +64,14 @@
   \titlepage
 \end{frame}
 
+
 %_____________ 1st section  ____________
 \section{Introduction}
 \subsection{Motivation}
 
 \begin{frame}
 \frametitle{Drawbacks of Numerical Solutions}
+
 
 \pause A Black Box \pause
 \begin{itemize}
@@ -88,6 +91,8 @@
 \item Have Done A Good Deal Of Work With Them Myself
 \item But As A Result, Have Felt All These Drawbacks Keenly
 \end{itemize}
+
+
 
 \end{frame}
 
@@ -228,6 +233,8 @@ Return Impatience Condition:
 
 \end{frame}
 
+
+
 \subsection{The Real Problem}
 \begin{frame}
 \frametitle{Contraction Mapping Requirements}
@@ -254,6 +261,8 @@ Adjusted Growth Patience Factor:
 
 Growth Impatience Condition:
 \input \EqDir/GIC~
+
+
 
 Why?  Because it can be shown that
 \begin{eqnarray}
@@ -300,6 +309,8 @@ Why?  Because it can be shown that
 \centerline{\includegraphics[width=4in]{\FigDir/cRatTargetFig.pdf}}
 \end{frame}
 
+
+
 \section{A Small Open Buffer Stock Economy}
 
 \subsection{The Invariant Distribution}
@@ -311,7 +322,10 @@ $\mRat, \cRat, \aRat,$ etc.
 
 \centerline{\includegraphics[height=2.5in]{\FigDir/SimCDFsConverge.pdf}}
 
+
+
 \end{frame}
+
 
 \subsection{Balanced Growth Equilbrium}
 \begin{frame}
@@ -328,12 +342,13 @@ Fisherian Separation Fails, Even Without Liquidity Constraints!
 \pause Insight:
 \begin{itemize}
 \item  Precautionary Saving $\approx$ Liquidity Constraints
-\item If $\grave{\cFunc}(m)$ is solution for constrained consumer, 
+\item If $\constr{\cFunc}(m)$ is solution for constrained consumer, 
 \end{itemize}
 \pause
 \begin{equation}
-\lim_{ \wp \downarrow 0} \cFunc(m;\wp) = \grave{\cFunc}(m)
+\lim_{ \wp \downarrow 0} \cFunc(m;\wp) = \constr{\cFunc}(m)
 \end{equation}
+
 
 \end{frame}
 
