@@ -1,4 +1,4 @@
-\documentclass[BufferStockTheory]{subfiles}\input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile}
+\documentclass[BufferStockTheory]{subfiles}\input{./econtexRoot}%\input{\LaTeXFiles/econtex_onlyinsubfile}
 % WARNING: Different execution depending on whether
 % 0. Being compiled as standalone document
 % * Compile this file, then main, then this one again
@@ -431,17 +431,17 @@ to the unconstrained one.  If the consumer were somehow\footnote{``Somehow'' bec
   obtained by entering the period with $\bRat < 0$ which the constraint
   forbids.}
 to arrive at an $\mRat < \mRat_{\#} < 1$ the constraint would bind and
-the consumer would consume $\cRat=\mRat$.  Using the $\circ$ accent to designate the limiting
-constrained consumption function:
+the consumer would consume $\cRat=\mRat$.  Using the $\constr{\bullet}$ accent to designate version of a function
+in the presence of constraints:
 \begin{equation}
-  \mathring{\cFunc}(\mRat)=
+  \constr{\cFunc}(\mRat)=
   \begin{cases}
     \mRat & \text{if $\mRat < \mRat_{\#}$} \\
     \bar{\cFunc}(\mRat)  & \text{if $\mRat \geq \mRat_{\#}$.}
   \end{cases}
 \end{equation}
 
-\textit{{\PFGIC} and {\RIC}.}  More useful is the case where the return impatience and PF growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\mathring{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\mathring{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\mathring{\MPCFunc}(\mRat) \equiv \mathring{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\mathring{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using the same steps as for equation \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{} \hypertarget{PFFVAF}{}
+\textit{{\PFGIC} and {\RIC}.}  More useful is the case where the return impatience and PF growth-impatience conditions both hold.  In this case appendix \ref{sec:ApndxLiqConstr} shows that the limiting constrained consumption function is piecewise linear, with $\constr{\cFunc}(\mRat)=\mRat$ up to a first `kink point' at $\mRat_{\#}^{1}>1$, and with discrete declines in the MPC at a set of kink points $\{\mRat_{\#}^{1},\mRat_{\#}^{2},...\}$.  As $\mRat \uparrow \infty$ the constrained consumption function $\constr{\cFunc}(\mRat)$ becomes arbitrarily close to the unconstrained $\bar{\cFunc}(\mRat)$, and the marginal propensity to consume function $\constr{\MPCFunc}(\mRat) \equiv \constr{\cFunc}^{\prime}(\mRat)$ limits to $\MinMPC$.  Similarly, the value function $\constr{\vFunc}(\mRat)$ is nondegenerate and limits into the value function of the unconstrained consumer.  This logic holds even when the finite human wealth condition fails (\cncl{\FHWC}):  A solution exists because the constraint prevents the consumer from borrowing against infinite human wealth to finance infinite current consumption.  Under these circumstances, the consumer who starts with any amount of resources $\bRat_{t} > 1$ will, over time, run those resources down so that by some finite number of periods $n$ in the future the consumer will reach $\bRat_{t+n} = 0$, and thereafter will set $\cRat = \mRat = 1$ for eternity, a policy that will (using the same steps as for equation \eqref{eq:ValuePFAnalytical}) yield value of \hypertarget{PFFVAC}{} \hypertarget{PFFVAF}{}
 \begin{align*}
   \vLevBF_{t+n} % & = \uFunc(\pLevBF_{t+n})\left(1+\DiscFac \PGro^{1-\CRRA}+(\DiscFac \PGro^{1-\CRRA})^{2}+...\right) 
  & = \PGro^{n(1-\CRRA)} \uFunc(\pLevBF_{t})\left(\frac{1-(\DiscFac
@@ -464,13 +464,13 @@ where we call $\DiscAlt$\footnote{This is another kind of discount factor, so we
 \hypertarget{RICandFHWCFail}{}
 \textit{{\PFGIC} and {\cncl{\RIC}}}.  
 The most peculiar possibility occurs when the \RIC~fails.  Under these circumstances the \FHWC~must also fail (Appendix~\ref{sec:ApndxLiqConstr}), and the constrained consumption function is nondegenerate.  (See appendix Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} for a numerical example).  While it is true that $\lim_{m \uparrow \infty}
-\mathring{\MPCFunc}(\mRat) = 0$, nevertheless the limiting constrained
-consumption function $\mathring{\cFunc}(\mRat)$ is strictly positive
+\constr{\MPCFunc}(\mRat) = 0$, nevertheless the limiting constrained
+consumption function $\constr{\cFunc}(\mRat)$ is strictly positive
 and strictly increasing in $\mRat$.  This result interestingly
 reconciles the conflicting intuitions from the unconstrained case,
 where \cncl{\RIC} would suggest a degenerate limit of
-$\mathring{\cFunc}(\mRat)=0$ while \cncl{\FHWC} would suggest a
-degenerate limit of $\mathring{\cFunc}(\mRat)=\infty$.
+$\constr{\cFunc}(\mRat)=0$ while \cncl{\FHWC} would suggest a
+degenerate limit of $\constr{\cFunc}(\mRat)=\infty$.
 
 \hypertarget{RelatePFGICFHWCRICPFFVACText}{}
 Tables~\ref{table:Comparison} and \ref{table:Required} (and appendix table~\ref{table:LiqConstrScenarios}) codify these points.  Perhaps more useful is the intuitive representation of the relations of the conditions for the unconstrained perfect foresight case presented in Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC}.  Each node represents a quantity considered in the foregoing analysis.  The arrow associated with each inequality condition reflects the imposition of that condition.  For example, one way we wrote the {\PFFVAC} in equation \eqref{eq:PFFVAC} is $\Pat < \Rfree^{1/\CRRA} \PGro^{1-1/\CRRA}$, so imposition of the {\PFFVAC} is captured by the diagonal arrow connecting $\Pat$ and $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$.  Traversing the diagram clockwise starting at $\Pat$ involves imposing first the {\PFGIC} then the {\FHWC}, and the consequent arrival at the bottom right node tells us that these two conditions jointly imply that the {\PFFVAC} holds.  Reversal of a condition will reverse the arrow's direction; so, for example, the bottommost arrow going from $\Rfree$ to $\Rfree^{1/\CRRA}\PGro^{1-1/\CRRA}$ imposes {\cncl{\FHWC}}; but we can cancel the cancellation and reverse the arrow.  This would allow us to traverse the diagram in a clockwise direction from $\Pat$ to $\Rfree$, revealing that imposition of {\PFGIC} and {\FHWC} (and, redundantly, {\FHWC} again) lets us conclude that the {\RIC} holds because the starting point is $\Pat$ and the endpoint is $\Rfree$, and this is a chain of inequalities.  (Consult Appendix~\ref{sec:ApndxConditionDiagrams} for a detailed exposition of diagrams of this type).

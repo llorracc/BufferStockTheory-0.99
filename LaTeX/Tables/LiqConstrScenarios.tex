@@ -4,19 +4,19 @@
   \caption{Taxonomy of Perfect Foresight Liquidity Constrained Model Outcomes}\label{table:LiqConstrScenarios}
   \sbox{\LiqConstrScenarios}{
     \begin{tabular}{|l|rcl|l|}
-      \multicolumn{5}{c}{For constrained $\grave{c}$ and unconstrained $\bar{\cFunc}$ consumption functions } \\ \hline
+      \multicolumn{5}{c}{For constrained $\constr{c}$ and unconstrained $\bar{\cFunc}$ consumption functions } \\ \hline
 Main Condition     &\multicolumn{3}{c|}{~}         & \\ % & Example \\
 ~~~~Subcondition   & \multicolumn{3}{c|}{Math}             & \multicolumn{1}{c|}{ Outcome, Comments or Results} % & Example
 \\ \hline
 \cncl{\PFGIC}      & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\PGro}$  & Constraint never binds for $\mRat \geq 1$ %& %$\{\Pat,\PGro\}=\{1,0.98\}$
-\\ ~~~~ and \RIC~          & $        {\Pat/\Rfree}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$  & ~~~\FHWC~holds ($\Rfree > \PGro$); $\grave{\cFunc}(\mRat) = \bar{\cFunc}(\mRat)$ for $\mRat \geq 1$ % & $\{\Rfree,\Discount, \PGro \} = $
-\\ ~~~~ and \cncl{\RIC}   & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\Rfree}$ & ~~~~$\grave{\cFunc}(\mRat)$ is degenerate: $\grave{\cFunc}(\mRat)=0$  %&
+\\ ~~~~ and \RIC~          & $        {\Pat/\Rfree}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$  & ~~~\FHWC~holds ($\Rfree > \PGro$); $\constr{\cFunc}(\mRat) = \bar{\cFunc}(\mRat)$ for $\mRat \geq 1$ % & $\{\Rfree,\Discount, \PGro \} = $
+\\ ~~~~ and \cncl{\RIC}   & $\phantom{\Pat/\Rfree}$ & $\phantom{~<~}1        {~<~}$ & $        {\Pat/\Rfree}$ & ~~~~$\constr{\cFunc}(\mRat)$ is degenerate: $\constr{\cFunc}(\mRat)=0$  %&
 \\ \PFGIC~            & $        {\Pat/\PGro}$ & $        {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\Rfree}$  & Constraint binds in finite time for any $\mRat$ % &
 \\ ~~~~ and \RIC~           & $        {\Pat/\Rfree}$  & $      {~<~}1\phantom{~<~}$ & $\phantom{\Pat/\PGro}$   & ~~~~\FHWC~may or may not hold
-\\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\bar{\cFunc}(\mRat) - \grave{\cFunc}(\mRat) = 0$ % & ~~$\{1.02,1.02^{-1},1.02\}$
-\\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\grave{\MPCFunc}(\mRat) = \MinMPC$ % & ~~$\{1.02,1.02^{-1},1.02\}$
+\\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\bar{\cFunc}(\mRat) - \constr{\cFunc}(\mRat) = 0$ % & ~~$\{1.02,1.02^{-1},1.02\}$
+\\ ~~~~               &                          &                             &                          & ~~~~~~~$\lim_{m \uparrow \infty}\constr{\MPCFunc}(\mRat) = \MinMPC$ % & ~~$\{1.02,1.02^{-1},1.02\}$
 \\ ~~~~ and \cncl{\RIC}   &                          & $\phantom{~<~}1         ~<~ $ & $         \Pat/\Rfree$ & $\cncl{\FHWC}$
-\\ ~~~~~~             &                          &                             &                          & ~~~~~$\lim_{\mRat \uparrow \infty} \grave{\MPCFunc}(\mRat) =  0$               % & ~~$\{0.98,1.00, 0.99, 2\} $
+\\ ~~~~~~             &                          &                             &                          & ~~~~~$\lim_{\mRat \uparrow \infty} \constr{\MPCFunc}(\mRat) =  0$               % & ~~$\{0.98,1.00, 0.99, 2\} $
 \\ \hline
 \end{tabular}
 } % End \sbox

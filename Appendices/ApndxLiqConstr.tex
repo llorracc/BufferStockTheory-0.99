@@ -10,7 +10,7 @@
 
 Under perfect foresight in the presence of a liquidity constraint requiring $\bRat
 \geq 0$, this appendix taxonomizes the varieties of the limiting
-consumption function $\grave{\cFunc}(\mRat)$ that arise under various parametric conditions.  Results are summarized in table~\ref{table:LiqConstrScenarios}.
+consumption function $\constr{\cFunc}(\mRat)$ that arise under various parametric conditions.  Results are summarized in table~\ref{table:LiqConstrScenarios}.
 
 \input{\TableDir/LiqConstrScenarios.tex}
 
@@ -28,7 +28,7 @@ resources to the next period at return $\Rfree$:\footnote{The point at
   \Discount \uFunc^{\prime}(\PGro)$ which is $\cRat_{\#} =
   \PGro/(\Rfree \Discount)^{1/\CRRA}$ and the consumption function
   will be defined by
-  $\grave{\cFunc}(\mRat)=\min[\mRat,\cRat_{\#}+(\mRat-\cRat_{\#})\MinMPC
+  $\constr{\cFunc}(\mRat)=\min[\mRat,\cRat_{\#}+(\mRat-\cRat_{\#})\MinMPC
   ]$.}
 \begin{equation}\begin{gathered}\begin{aligned}
   1  & < (\Rfree \Discount)^{1/\CRRA}\PGro^{-1}    \notag
@@ -46,19 +46,19 @@ unconstrained case examined in the main text.
 holds, the limiting value of this consumption function as $n \uparrow
 \infty$ is the degenerate function
 \begin{equation}\begin{gathered}\begin{aligned}
-  \grave{\cFunc}_{T-n}(\mRat)  & = 0 (\bRat_{t}+\hRat).
+  \constr{\cFunc}_{T-n}(\mRat)  & = 0 (\bRat_{t}+\hRat).
 \end{aligned}\end{gathered}\end{equation}
 (that is, consumption is zero for any level of human or nonhuman wealth).
 
 \hypertarget{cnclPFGICcnclRICcnclFHWC}{}
 \textit{{\RIC}~fails, {\FHWC}~fails}. {\cncl{\FHWC}} implies that human wealth limits to $\hRat =
 \infty$ so the consumption function limits to either
-$\grave{\cFunc}_{T-n}(\mRat) = 0$ or
-$\grave{\cFunc}_{T-n}(\mRat) = \infty$ depending on the relative
+$\constr{\cFunc}_{T-n}(\mRat) = 0$ or
+$\constr{\cFunc}_{T-n}(\mRat) = \infty$ depending on the relative
 speeds with which the MPC approaches zero and human wealth approaches
 $\infty$.\footnote{The knife-edge case is where $\Pat = \PGro$, in
   which case the two quantites counterbalance and the limiting
-  function is $\grave{\cFunc}(\mRat)=\min[\mRat,1]$.}
+  function is $\constr{\cFunc}(\mRat)=\min[\mRat,1]$.}
 
 \let\TableWidth\relax
 \newlength\TableWidth
@@ -77,7 +77,7 @@ choose $\cRat = \mRat$ from equation \eqref{\localorexternallabel{eq:cFuncPFUnc}
 which (under these assumptions) satisfies $0 < \mRat_{\#} < 1$.\footnote{Note that $0 < \mRat_{\#}$ is implied by \RIC~and $ \mRat_{\#}<1$ is implied by \cncl{\PFGIC}.}  For
 $\mRat < \mRat_{\#}$ the unconstrained consumer would choose to
 consume more than $\mRat$; for such $\mRat$, the constrained consumer
-is obliged to choose $\grave{\cFunc}(\mRat) = \mRat$.\footnote{As an
+is obliged to choose $\constr{\cFunc}(\mRat) = \mRat$.\footnote{As an
   illustration, consider a consumer for whom $\Pat = 1$, $\Rfree
   =1.01$ and $\PGro = 0.99$.  This consumer will save the amount
   necessary to ensure that growth in market wealth exactly offsets the
@@ -144,9 +144,9 @@ $\bRat_{t}=0$:
 \end{aligned}\end{gathered}\end{equation}
 
 Defining $\mRat_{\#}^{n}=\bRat_{\#}^{n}+1$, consider the function
-$\grave{\cFunc}(\mRat)$ defined by linearly connecting the points
+$\constr{\cFunc}(\mRat)$ defined by linearly connecting the points
 $\{\mRat_{\#}^{n},\cRat_{\#}^{n}\}$ for integer values of $n \geq 0$
-(and setting $\grave{\cFunc}(\mRat)=\mRat$ for $\mRat<1$).  This
+(and setting $\constr{\cFunc}(\mRat)=\mRat$ for $\mRat<1$).  This
 function will return, for any value of $\mRat$, the optimal value of
 $\cRat$ for a liquidity constrained consumer with an infinite horizon.
 The function is piecewise linear with `kink points' where the slope
@@ -179,7 +179,7 @@ vanishingly small, because the date at which the constraint binds
 becomes arbitrarily distant, so the effect of that constraint on current
 behavior shrinks to nothing.  That is,
 \begin{equation}\begin{gathered}\begin{aligned}
-  \lim_{m \rightarrow \infty}\grave{\cFunc}(m) - \bar{\cFunc}(m) = 0.
+  \lim_{m \rightarrow \infty}\constr{\cFunc}(m) - \bar{\cFunc}(m) = 0.
 \end{aligned}\end{gathered}\end{equation}
 
 % Finally, the main text shows that the \PFGIC~is a stronger condition than the PF-FVR; that is, \PFGIC~$\Rightarrow$ PF-FVR.
@@ -230,7 +230,7 @@ which with a bit of algebra\footnote{
     \left(\frac{\PatPGro^{-n}}{\PatPGro^{-n}/(1-\PatR) - (1-\Rnorm^{-1}\Rnorm^{-n})/(1-\Rnorm^{-1})}\right)  & = \left(\frac{1}{1/(1-\PatR) + \Rnorm^{-n}\Rnorm^{-1}/(1-\Rnorm^{-1})}\right)
   \end{aligned}\end{gathered}\end{equation}} can be shown to asymptote to the MPC in the perfect foresight model:\footnote{For an example of this configuration of parameters, see the notebook \texttt{doApndxLiqConstr.nb} in the Mathematica software  archive.}
 \begin{equation}\begin{gathered}\begin{aligned}
-  \lim_{m \rightarrow \infty} \grave{\pmb{\MPC}}(\mRat)  & = 1-\PatR.
+  \lim_{m \rightarrow \infty} \constr{\pmb{\MPC}}(\mRat)  & = 1-\PatR.
 \end{aligned}\end{gathered}\end{equation}
 
 \noindent {\bf If \RIC~Fails}.  Consider now the \cncl{\RIC} case, $\PatR > 1$.  We can rearrange \eqref{\localorexternallabel{eq:FHWCfails}}as
@@ -266,11 +266,11 @@ Thus, surprisingly, the problem has a well defined solution with
 infinite human wealth if the \RIC~fails.  It remains true that \cncl{\RIC}
 implies a limiting MPC of zero,
 \begin{equation}\begin{gathered}\begin{aligned}
-  \lim_{\mRat \rightarrow \infty} \grave{\pmb{\MPC}}(\mRat)   & = 0,
+  \lim_{\mRat \rightarrow \infty} \constr{\pmb{\MPC}}(\mRat)   & = 0,
 \end{aligned}\end{gathered}\end{equation}
 but that limit is approached gradually, starting from a positive
 value, and consequently the consumption function is {\it not} the
-degenerate $\grave{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
+degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
 
 
 % \input{\FigDir/PFGICHoldsFHWCFailsRICFails}
