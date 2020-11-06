@@ -29,3 +29,41 @@
 
 \renewcommand{\Pat}{\textbf{\Thorn}}
 \newcommand\cncl[1]{\ensuremath{\cancel{#1}}}
+
+\provideboolean{ifWeb}
+\setboolean{ifWeb}{true}
+\setboolean{ifWeb}{false}
+
+\ifthenelse{\boolean{ifWeb}}{}{
+\usepackage[normalem]{ulem}
+
+\makeatletter
+\newcommand*{\saved@uline}{}
+\let\saved@uline\uline
+
+\newcommand*{\mathuline}{%
+  \mathpalette{\math@uline\saved@uline}%
+}
+\newcommand*{\math@uline}[3]{%
+  % #1: ulem command
+  % #2: math style
+  % #3: contents
+  \mbox{#1{$#2#3\m@th$}}%
+}
+
+% optional
+\renewcommand*{\uline}{%
+  \relax  
+  \ifmmode
+    \expandafter\mathuline
+  \else
+    \expandafter\saved@uline
+  \fi
+}
+\makeatother
+\renewcommand{\PGroAdj}{\uline{\Gamma}}
+\renewcommand{\PGrouAdj}{\underline{\uline{\Gamma}}}
+%\renewcommand{\InvEpShkInv}{\uline{\uline{\Gamma}}}
+\renewcommand{\DiscAltuAdj}{\underline{\uline{\beth}}}
+\renewcommand{\PatPGroAdj}{\Pat_{\uline{\Gamma}}}
+}
