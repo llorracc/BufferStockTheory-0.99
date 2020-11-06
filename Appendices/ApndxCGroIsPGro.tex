@@ -18,33 +18,33 @@ Suppose the population starts in period $t$ with an arbitrary value for
  \newcommand{\AMPS}{\bar{\acute{\aFunc}}}:
 \begin{equation}\begin{gathered}\begin{aligned}
  \AMPS(\Delta)  & =  \Delta^{-1}\int_{\mSS}^{\mSS+\Delta} \aFunc^{\prime}(z)
- dz \label{eq:checkaFunc} \nonumber
+ dz \label{eq:checkaFunc}  
 \end{aligned}\end{gathered}\end{equation}
 where the combination of the bar and the $\acute{}$ are meant to signify that this is the average value of the derivative over the interval.
 Since $\pShk_{t+1,i}=1$, $\Rnorm_{t+1,i}$ is a constant at $\Rnorm$, if we define $\aSS$ as the value of $\aRat$ corresponding to $\mRat = \mSS$, we can write
 \begin{equation}\begin{gathered}\begin{aligned}
   a_{t+1,i} 
 & =   \aSS+(\mRat_{t+1,i}-\mSS)\AMPS(\overbrace{\Rnorm
-    a_{t,i}+\tShkAll_{t+1,i}}^{\mRat_{t+1,i}}-\mSS) \nonumber
+    a_{t,i}+\tShkAll_{t+1,i}}^{\mRat_{t+1,i}}-\mSS)  
 \end{aligned}\end{gathered}\end{equation}
 so
 \begin{equation}\begin{gathered}\begin{aligned}
 \mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})
  & = \mbox{cov}_{t}\left(\AMPS(\Rnorm  a_{t,i}+\tShkAll_{t+1,i}-\mSS)
-  ,\PGro   \pLevBF_{t,i}\right). \nonumber
+  ,\PGro   \pLevBF_{t,i}\right).  
 \end{aligned}\end{gathered}\end{equation}
 
 But since ${\Rfree}^{-1}(\pZero  \Rfree\DiscFac)^{1/\CRRA} < \AMPS(\mRat) < \PatR $,
 \begin{equation}
   |\mbox{cov}_{t}((\pZero  \Rfree\DiscFac)^{1/\CRRA}a_{t+1,i},\pLevBF_{t+1,i})| <
   |\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})| <
-  |\mbox{cov}_{t}({\Pat}a_{t+1,i},\pLevBF_{t+1,i})| \nonumber
+  |\mbox{cov}_{t}({\Pat}a_{t+1,i},\pLevBF_{t+1,i})|  
 \end{equation}
 and for the version of the model with no permanent shocks the \GIC~says that
 ${\Pat} < \PGro, $ while the {\FHWC} says that $\PGro < \Rfree$
 \begin{equation}\begin{gathered}\begin{aligned}
   |\mbox{cov}_{t}(a_{t+1,i},\pLevBF_{t+1,i})| < \PGro
-  |\mbox{cov}_{t}(a_{t,i},\pLevBF_{t,i})|. \nonumber
+  |\mbox{cov}_{t}(a_{t,i},\pLevBF_{t,i})|.  
 \end{aligned}\end{gathered}\end{equation}
 
 
@@ -61,7 +61,7 @@ To see the problem clearly, define $\breve{\Rnorm }=\Mean\left[\Rnorm _{t+1,i}\r
 \begin{align*}
   \AMPS_{t+1,i} & \approx 
   \AMPS(\mTarg_{t+1,i})+\AMPS^{\prime}(\mTarg_{t+1,i})\left(\mRat_{t+1,i}-\mTarg_{t+1,i}\right)
- \nonumber.
+  .
 \end{align*}
 
 
