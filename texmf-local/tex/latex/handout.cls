@@ -111,7 +111,7 @@
   ,moreverb
   ,hhline    % Allow double hlines
   ,tipa      % Define more characters, in particular the \textthorn character
-  ,color
+  ,xcolor    % Superceded color, which is WAY out of date 
   ,accents
   ,appendix
 }
@@ -217,8 +217,6 @@
 % titlepage with title, author(s), and date
 
 \renewcommand{\maketitle}{
-  \ifthenelse{ \isundefined\@forcedate }{ 
-    \ClassWarningNoLine{handout}{{\protect\forcedate} is undefined in the .tex file; please define it and rerun}}{}
   \ifthenelse{\equal{\theIncludeTitlePage}{1}}{
     \let\footnotesize\scriptsize
     \thispagestyle{empty}
