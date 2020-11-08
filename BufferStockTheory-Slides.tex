@@ -1,8 +1,8 @@
-\input{./econtexRoot}\input{\econtexRoot/LaTeX/econtexPaths}\documentclass[pdflatex]{beamer}\providecommand{\texname}{BufferStockTheory-Slides}% Indicate the keyname for the bibtex entry corresponding to this document
+\input{./econtexRoot}\input{\econtexPaths}\documentclass[pdflatex]{beamer}\providecommand{\texname}{BufferStockTheory-Slides}% Indicate the keyname for the bibtex entry corresponding to this document
 \newif\ifdvi\dvifalse
 
 %\usepackage{optional}
-\usepackage{ifthen}%\usepackage{../BufferStockTheory}
+\usepackage{ifthen}%\usepackage{\econtexRoot/BufferStockTeory}
 
 % Can't read in BufferStockTheory.sty because some packages conflict with Beamer
 % So need to redefine everything here
@@ -398,7 +398,7 @@ Paper Proves:
 
 \tiny 
 
-\bibliography{economics,\LaTeXFiles/\texname}
+\bibliography{economics,\LaTeXGenerated/\texname}
 
 \end{frame}
 

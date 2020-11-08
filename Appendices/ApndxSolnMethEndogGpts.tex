@@ -2,11 +2,11 @@
 \input{./econtexRoot}
 \provideboolean{Metin}\setboolean{Metin}{true}\newcommand{\Metin}[2]{\ifthenelse{\boolean{Metin}}{\marginpar{\large Metin}\{{#1}\} $\rightarrow$ \{{#2}\}}{#2}}% PrivateMsg: Comments by Metin Uyanik
 
-\input{\LaTeXFiles/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\input{\LaTeXGenerated/econtex_onlyinsubfile}
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
-%\begin{verbatimwrite}{\LaTeXFiles/ApndxSolnMethEndogGpts.tex}
+%\begin{verbatimwrite}{\LaTeXGenerated/ApndxSolnMethEndogGpts.tex}
 \section{Endogenous Gridpoints Solution Method}\label{sec:ApndxSolnMethEndogGpts}
 
 The model is solved using an extension of the method of endogenous gridpoints (\cite{carrollEGM}): A grid of possible values of end-of-period assets $\vec{\aRat}$ is defined, and at these points, marginal end-of-period-$t$ value is computed as the discounted next-period expected marginal utility of consumption (which the Envelope theorem says matches expected marginal value).  The results are then used to identify the corresponding levels of consumption at the beginning of the period:\footnote{The software can also solve a version of the model with explicit liquidity constraints, where the Envelope condition does not hold.}
@@ -16,7 +16,7 @@ The model is solved using an extension of the method of endogenous gridpoints (\
   \cFunc_{t+1}(\Rnorm_{t+1}\vec{\aRat} + \tShk_{t+1}))] \label{eq:cEulerEndog}
 \\ \vec{c}_{t} \equiv \cEndFunc_{t}(\vec{\aRat})  & = \left(\Rfree \beta \Ex_{t}\left[ \left(\PGro_{t+1}
       \cFunc_{t+1}(\Rnorm_{t+1}\vec{\aRat} +
-      \tShk_{t+1})\right)^{-\CRRA}\right]\right)^{-1/\CRRA}.  
+      \tShk_{t+1})\right)^{-\CRRA}\right]\right)^{-1/\CRRA}. \notag
 \end{aligned}\end{gathered}\end{equation}
 
 The dynamic budget constraint can then be used to generate the corresponding $\mRat$'s:
@@ -33,8 +33,8 @@ with respect to $\aRat$ (and dropping policy function arguments for
 simplicity) yields a marginal propensity to {\it have consumed} $\cEndFunc^{\aRat}$ at
 each gridpoint:
 \begin{equation}\begin{gathered}\begin{aligned}
-\uPP(\cEndFunc_{t})\cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1})\PGro_{t+1} \cFunc^{\mRat}_{t+1}\Rnorm_{t+1}]  
-\\  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}]  
+\uPP(\cEndFunc_{t})\cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1})\PGro_{t+1} \cFunc^{\mRat}_{t+1}\Rnorm_{t+1}] \notag
+\\  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}] \notag
 \\ \cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1}  \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}]/\uPP(\cEndFunc_{t}) \label{eq:MPTHC}
 \end{aligned}\end{gathered}\end{equation}
 and the marginal propensity to consume at the beginning of the period is obtained from the marginal
@@ -96,10 +96,10 @@ evaluate the function is $\mRat=0$ but $\log 0 = -\infty$ which is difficult for
 \end{comment}
 
 
-%\end{verbatimwrite}%\input {\LaTeXFiles/ApndxSolnMethEndogGpts.tex}
+%\end{verbatimwrite}%\input {\LaTeXGenerated/ApndxSolnMethEndogGpts.tex}
 
 % When compiling main file, bibliography goes at the end of document, not at the end of this appendix
-\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,economics}}
 
 \end{document}
 % Local Variables:

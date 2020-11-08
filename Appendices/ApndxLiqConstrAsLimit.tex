@@ -1,7 +1,7 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile}
+\input{./econtexRoot}\input{\LaTeXGenerated/econtex_onlyinsubfile}
 
-\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
   \section{The Perfect Foresight Liquidity Constrained Solution as a Limit}
@@ -47,7 +47,7 @@ As usual, the envelope theorem tells us that
 $\vFunc_{T}^{\prime}(\mRat)=\uP(\cFunc_{T}(\mRat))$ so the expected marginal
 value of ending period $T-1$ with assets $\aRat$ can be defined as
 \begin{equation}\begin{gathered}\begin{aligned}
-  \constr{\mathfrak{v}}_{T-1}^{\prime}(a)  & \equiv  \int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \uP(\cFunc_{T}(a+\tShkEmp)) d\CDF_{\tShkEmp},  
+  \constr{\mathfrak{v}}_{T-1}^{\prime}(a)  & \equiv  \int_{\underline{\tShkEmp}}^{\bar{\tShkEmp}} \uP(\cFunc_{T}(a+\tShkEmp)) d\CDF_{\tShkEmp}, \notag
 \end{aligned}\end{gathered}\end{equation}
 and the solution to \eqref{\localorexternallabel{eq:vUnconstr}} will satisfy
 \begin{equation}\begin{gathered}\begin{aligned}
@@ -62,13 +62,13 @@ the restrained consumer's income process remains different from the
 process for the unrestrained consumer so long as $\pZero>0$.)  The
 restrained consumer's actual asset position will be
  \begin{equation}\begin{gathered}\begin{aligned}
-  \constr{\aFunc}_{T-1}(\mRat)  & = \max[0,\constr{\aFunc}^{*}_{T-1}(\mRat)],  
+  \constr{\aFunc}_{T-1}(\mRat)  & = \max[0,\constr{\aFunc}^{*}_{T-1}(\mRat)], \notag
 \end{aligned}\end{gathered}\end{equation}
 reflecting the inability of the restrained consumer to spend more than
 current resources, and note (as pointed out by
 Deaton~\citeyearpar{deatonLiqConstr}) that
  \begin{equation}\begin{gathered}\begin{aligned}
-  \mRat^{1}_{\#}  & = \left( \constr{\mathfrak{v}}_{T-1}^{\prime}(0)\right)^{-1/\CRRA}  
+  \mRat^{1}_{\#}  & = \left( \constr{\mathfrak{v}}_{T-1}^{\prime}(0)\right)^{-1/\CRRA} \notag
  \end{aligned}\end{gathered}\end{equation}
 is the cusp value of $\mRat$ at which the constraint makes the
 transition between binding and non-binding in period $T-1$.
@@ -135,6 +135,6 @@ which makes sense because the marginal propensity to consume for a
 constrained restrained consumer is 1 by our definitions of
 `constrained' and `restrained.'
 
-\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,economics}}
 
 \end{document}

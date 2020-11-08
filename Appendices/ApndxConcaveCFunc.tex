@@ -1,7 +1,7 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile} % \usepackage{\LaTeXFiles/onlyinsubfile}
+\input{./econtexRoot}\input{\LaTeXGenerated/econtex_onlyinsubfile} % \usepackage{\LaTeXGenerated/onlyinsubfile}
 
-\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \section{Existence of a Concave Consumption Function}\label{sec:ApndxcExists}
@@ -166,13 +166,13 @@ Consider condition (1). For this problem,
 [\MinMinMPC \mRat_{t}, \MaxMPC \mRat_{t}]
 }\max \left\{
 \uFunc(c_{t})+\DiscFac \Ex_{t}\left[ {\PGro}_{t+1}^{1-\CRRA }{\mathfrak{\xFunc}}
-\left( {\mRat}_{t+1}\right) \right] \right\}     \label{eq:condition1}
+\left( {\mRat}_{t+1}\right) \right] \right\}  \notag  \label{eq:condition1}
 \\
 \{\TMap{\mathfrak{\yFunc}}\}(\mRat_{t}) &\mbox{~is}\underset{\cRat_{t} \in
 [\MinMinMPC \mRat_{t}, \MaxMPC \mRat_{t}]
 }\max \left\{
 \uFunc(c_{t})+\DiscFac \Ex_{t}\left[ {\PGro}_{t+1}^{1-\CRRA }{\mathfrak{\yFunc}}
-\left( {\mRat}_{t+1}\right) \right] \right\} ,   
+\left( {\mRat}_{t+1}\right) \right] \right\} ,  \notag
 \end{align*}%
 so ${\mathfrak{\xFunc}}(\bullet) \leq {\mathfrak{\yFunc}}(\bullet)$ implies $\{\TMap{\mathfrak{\xFunc}}\}(\mRat_{t}) \leq \{\TMap{\mathfrak{\yFunc}} \}(\mRat_{t})$ by inspection.\footnote{For a fixed $\mRat_{t}$, recall that ${\mRat}_{t+1}$ is just a function of $c_{t}$ and the
 stochastic shocks.}
@@ -241,15 +241,15 @@ which by imposing \PFFVAC~(equation \eqref{\localorexternallabel{eq:PFFVAC}}, wh
 But since $\eta$ is an arbitrary constant that we can pick, the proof thus reduces to showing that the numerator of \eqref{\localorexternallabel{eq:KeyCondition}} is bounded from above:
 \begin{equation}\begin{gathered}\begin{aligned}%
   \lefteqn{\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA} ~~~}  \\ 
+ +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}\notag~~~}  \\ 
  ~~~\leq & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\pZero\DiscFac\Rfree^{1-\CRRA}((1-\MaxMPC)\mRat_{t})^{1-\CRRA}-\mRat_{t}^{1-\CRRA} \\
+ +\pZero\DiscFac\Rfree^{1-\CRRA}((1-\MaxMPC)\mRat_{t})^{1-\CRRA}-\mRat_{t}^{1-\CRRA}\notag\\
  ~~~= & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\mRat_{t}^{1-\CRRA}\left(\pZero\DiscFac\Rfree^{1-\CRRA}\left(\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}\right)^{1-\CRRA}-1\right) \\
+ +\mRat_{t}^{1-\CRRA}\left(\pZero\DiscFac\Rfree^{1-\CRRA}\left(\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}\right)^{1-\CRRA}-1\right)\notag\\
  ~~~ =  & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
  +\mRat_{t}^{1-\CRRA}\left(\underbrace{\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}}_{<1~\text{by
        \WRIC}}-1\right) \label{eq:WRICBites} \\
- ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\underline{\tShkEmp}/\pNotZero)^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA}  
+ ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\underline{\tShkEmp}/\pNotZero)^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA} \notag
  .
 \end{aligned}\end{gathered}\end{equation}
 
@@ -316,7 +316,7 @@ defined by $\TMap$.\footnote{It seems likely that convergence of the
   of the enterprise of this paper and is therefore left for future
   work.}
 
-\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,economics}}
 
 
 \end{document}

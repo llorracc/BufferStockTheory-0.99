@@ -1,6 +1,6 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}}
+\input{./econtexRoot}\input{\LaTeXGenerated/econtex_onlyinsubfile}
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}}
 
 \newcommand{\BSTlinkTo}{https://\owner.github.io/BufferStockTheory}
 \renewcommand{\FHWC}{\href{{\BSTlinkTo}FHWC}{\textrm{FHWC}}}
@@ -43,10 +43,10 @@ Negation of a condition is indicated by the reversal of the corresponding arrow.
 
 If we were to start at $\Rfree$ and then impose $\cncl{\FHWC}$, that would reverse the arrow connecting $\Rfree$ and $\PGro$, but the $\PGro$ node would then have no exiting arrows so no further deductions could be made.  However, if we \textit{also} reversed $\PFGIC$ (that is, if we imposed $\cncl{\PFGIC}$), that would take us to the $\Pat$ node, and we could deduce $\Rfree > \Pat$.  However, we would have to stop traversing the diagram at this point, because the arrow exiting from the $\Pat$ node points back to our starting point, which (if valid) would lead us to the conclusion that $\Rfree > \Rfree$.  Thus, the reversal of the two earlier conditions (imposition of $\cncl{\FHWC}$ and $\cncl{\PFGIC}$) requires us also to reverse the final condition, giving us $\cncl{\RIC}$.\footnote{The corresponding algebra is
 \begin{equation}\begin{gathered}\begin{aligned}
-  \cncl{\FHWC}:~~~~  \Rfree & < \PGro    
+  \cncl{\FHWC}:~~~~  \Rfree & < \PGro \notag  
   \\ \cncl{\PFGIC}:~~~~ \PGro & < \Pat %~\left(\equiv (\Rfree \DiscFac)^{1/\CRRA}\right)
                                 \label{eq:cnclRIC}
-  \\ \Rightarrow \cncl{\RIC}:~~~~\Rfree & < \Pat  ,
+  \\ \Rightarrow \cncl{\RIC}:~~~~\Rfree & < \Pat \notag,
 \end{aligned}\end{gathered}\end{equation}.}
 
 Under these conventions, Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC} in the main text presents a modified version of the diagram extended to incorporate the {\PFFVAC} \href{https://econ-ark.github.io/BufferStockTheory/#RelatePFGICFHWCRICPFFVAC}{(reproduced here for convenient reference)}.
@@ -68,9 +68,9 @@ This diagram can be interpreted, for example, as saying  that, starting at the $
 which leads to the negation of both of the conditions leading into $\Pat$.  \cncl{\PFGIC} is obtained directly as the last line in \eqref{eq:cnclPFGIC} and \cncl{\PFFVAC} follows if we start by multipling the Return Patience Factor ({\RPF}=$\Pat/\Rfree$) by the \FHWF (=$\PGro/\Rfree$) raised to the power $1/\CRRA-1$, which is negative since we imposed $\CRRA > 1$.  {\FHWC} implies {\FHWF} $< 1$ so when {\FHWF} is raised to a negative power the result is greater than one.
 Multiplying the {\RPF} (which exceeds 1 because \cncl{\RIC}) by another number greater than one yields a product that must be greater than one:
 \begin{equation}\begin{gathered}\begin{aligned}
-  1  & < \overbrace{\left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{\Rfree}\right)}^{>1 \text{~from~}\cncl{\RIC}}\overbrace{\left(\PGro/\Rfree\right)^{1/\CRRA-1}}^{\phantom{...}>1~\text{~from~} \FHWC}  
+  1  & < \overbrace{\left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{\Rfree}\right)}^{>1 \text{~from~}\cncl{\RIC}}\overbrace{\left(\PGro/\Rfree\right)^{1/\CRRA-1}}^{\phantom{...}>1~\text{~from~} \FHWC} \notag
   \\ 1  & < \left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{(\Rfree/\PGro)^{1/\CRRA}\Rfree\PGro/\Rfree}\right) \label{eq:cnclFHWFAndcnclRICImplycnclPFFVAC}
-  \\ \Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} = (\Rfree/\PGro)^{1/\CRRA} \PGro  & < \Pat  
+  \\ \Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} = (\Rfree/\PGro)^{1/\CRRA} \PGro  & < \Pat \notag
 \end{aligned}\end{gathered}\end{equation}
 which is one way of writing $\cncl{\PFFVAC}$.
 
@@ -85,7 +85,7 @@ After the warmup of constructing these conditions for the perfect foresight case
   \caption{Relation of All Inequality Conditions} \label{fig:InequalitiesApp}
 \end{figure}
 
-\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,economics}}
 
 \end{document}
 
