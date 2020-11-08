@@ -1,5 +1,5 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
+\input{./econtexRoot}\usepackage{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
@@ -15,6 +15,8 @@ and the Euler equation \eqref{\localorexternallabel{eq:scaledeuler}} can be rewr
 \\  & = \phantom{ + }\pNotZero \DiscFac \Rfree \mRat_{t}^{\CRRA} \Ex_{t}\left[ \left(\eFunc_{t+1}(\mRat_{t+1}) \mRat_{t+1}\PGro_{t+1}\right)^{-\CRRA} |~ \tShkAll_{t+1}>0 \right] \notag
 \\ &  + \pZero  \DiscFac \Rfree^{1-\CRRA} \Ex_{t}\left[\left(\eFunc_{t+1}(\mathcal{R}_{t+1}\aFunc_{t}(\mRat_{t}))\frac{\mRat_t-\cFunc_{t}(\mRat_{t})}{\mRat_{t}}\right)^{-\CRRA} |~ \tShkAll_{t+1} = 0 \right]   .
 \end{aligned}\end{gathered}\end{equation}
+
+
 
 Consider the first conditional expectation in \eqref{\localorexternallabel{eq:eFuncEuler}},
 recalling that if $\tShkAll_{t+1}>0$ then $\tShkAll_{t+1} \equiv

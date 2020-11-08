@@ -1,0 +1,274 @@
+
+PF-GIC(≡ Þ < Γ)
+
+Γ
+
+6=
+(Þ < R ≡) RIC
+
+FHWC (≡ Γ < R)
+
+R
+
+Figure 1 Inequality Conditions for Perfect Foresight Model
+(Start at a node and follow arrows)
+
+1 Relational Diagrams for the Inequality Conditions
+This appendix explains in detail the paper’s ‘inequalities’ diagrams (Figures 1,3).
+
+1.1 The Unconstrained Perfect Foresight Model
+A simple illustration is presented in Figure 1, whose three nodes represent values of
+the absolute patience factor Þ , the permanent-income growth factor Γ, and the riskfree interest factor R. The arrows represent imposition of the labeled inequality condition (like, the uppermost arrow, pointing from Þ to Γ, reflects imposition of the
+PF-GIC condition (clicking PF-GIC should take you to its definition at https://econark.github.io/BufferStockTheory#PFGIC; definitions of other conditions are also linked
+below).1 Annotations inside parenthetical expressions containing ≡ have no content:
+They are there to make the diagram readable for someone who may not immediately
+remember terms and definitions from the main text. (Such a reader might also want to
+be reminded that R, β, and Γ are all in R++ , and that ρ > 1).
+Navigation of the diagram is simple: Start at any node, and deduce a chain of
+inequalities by following any arrow that exits that node, and any arrows that exit from
+successive nodes. Traversal must stop upon arrival at a node with no exiting arrows. So,
+for example, we can start at the Þ node and impose the PF-GIC and then the FHWC,
+and see that imposition of these conditions allows us to conclude that Þ < R.
+One could also impose Þ < R directly (without imposing PF-GIC and FHWC) by
+following the downward-sloping diagonal arrow exiting Þ . Although alternate routes
+Þ < R, in this case),
+from one node to another, all justify the same core conclusion (Þ
+6= symbol in the center is meant to convey that these routes are not identical in other
+
+1
+
+For convenience, the equivalent (≡) mathematical statement of each condition is expressed nearby
+in parentheses.
+
+respects. This notational convention is used in category theory diagrams,2 to indicate
+that the diagram is not commutative.3
+Negation of a condition is indicated by the reversal of the corresponding arrow. For
+ ≡ Þ > R, would be represented by moving the
+
+example, negation of the RIC, 
+RIC
+arrowhead from the bottom right to the top left of the line segment connecting Þ and
+R.
+ that would reverse the arrow
+If we were to start at R and then impose 
+FHWC,
+connecting R and Γ, but the Γ node would then have no exiting arrows so no further
+deductions could be made. However, if we also reversed PF-GIC (that is, if we imposed
+(
+(((
+(
+PF-GIC),
+that would take us to the Þ node, and we could deduce R > Þ. However,
+we would have to stop traversing the diagram at this point, because the arrow exiting
+from the Þ node points back to our starting point, which (if valid) would lead us to the
+conclusion that R > R. Thus, the reversal of the two earlier conditions (imposition of
+(
+4
+
+(((
+ and (
+FHWC
+PF-GIC)
+requires us also to reverse the final condition, giving us 
+RIC.
+
+Under these conventions, Figure 1 in the main text presents a modified version of
+the diagram extended to incorporate the PF-FVAC (reproduced here for convenient
+reference).
+This diagram can be interpreted, for example, as saying that, starting at the Þ node,
+it is possible to derive the PF-FVAC5 by imposing both the PF-GIC and the FHWC; or
+ Or, starting at the Γ node, we can follow the imposition
+by imposing RIC and 
+FHWC.
+ to reach the
+
+ and then 
+of the FHWC (twice - reversing the arrow labeled 
+FHWC)
+RIC
+conclusion that Þ < Γ. Algebraically,
+FHWC :
+:
+
+
+RIC
+
+Γ<R
+R<Þ
+Γ<Þ
+
+(1)
+(
+
+((( is obtained
+PF-GIC
+which leads to the negation of both of the conditions leading into Þ . (
+(
+(
+(((
+PF-FVAC
+follows if we start by multipling the Return
+directly as the last line in (1) and (
+Þ/R) by the FHWF(=Γ/R) raised to the power 1/ρ − 1, which
+Patience Factor (RPF=Þ
+is negative since we imposed ρ > 1. FHWC implies FHWF < 1 so when FHWF is
+raised to a negative power the result is greater than one. Multiplying the RPF (which
+ by another number greater than one yields a product that must
+
+exceeds 1 because 
+RIC)
+
+2
+
+For a popular introduction to category theory, see Riehl (2017).
+But the rest of our notation does not necessarily abide by the other conventions of category theory
+diagrams.
+4
+The corresponding algebra is
+
+
+FHWC
+:
+R<Γ
+
+(
+(
+(
+(
+PF-GIC :
+Γ<Þ
+
+⇒
+RIC :
+R < Þ,
+.
+5
+in the form Þ < (R/Γ)1/ρ Γ
+3
+
+2
+
+PF-GIC
+
+Þ
+
+Γ
+
+6=
+C
+VA
+
+FHWC
+
+-F
+PF
+
+RIC
+6=
+
+R
+
+R1/ρ Γ1−1/ρ
+
+
+
+FHWC
+
+
+Figure 2 Relation of PF-GIC, FHWC, RIC, and PF-FVAC
+An arrowhead points to the larger of the two quantities being compared. For example, the diagonal
+arrow indicates that Þ < R1/ρ Γ1−1/ρ , which is an alternative way of writing the PF-FVAC, (28)
+
+be greater than one:
+
+>1 from 
+RIC
+
+}| { >1 from FHWC
+z }| {
+(Rβ)1/ρ
+1<
+(Γ/R)1/ρ−1
+R
+
+
+(Rβ)1/ρ
+1<
+(R/Γ)1/ρ RΓ/R
+= (R/Γ)1/ρ Γ < Þ
+z
+
+R1/ρ Γ1−1/ρ
+
+(
+(
+
+(((
+which is one way of writing (
+PF-FVAC.
+The complexity of this algebraic calculation illustrates the usefulness of the diagram,
+in which one merely needs to follow arrows to reach the same result.
+After the warmup of constructing these conditions for the perfect foresight case, we
+can represent the relationships between all the conditions in both the perfect foresight
+case and the case with uncertainty as shown in Figure 3 in the paper (reproduced here).
+
+References
+Riehl, Emily (2017): Category theory in context. Courier Dover Publications.
+
+3
+
+Γ
+
+be
+
+ca
+us
+eψ
+
+GIC
+
+℘1/ρ Þ
+
+because ℘ < 1
+
+<
+
+1a
+
+nd
+
+Γ
+
+≡
+
+PF-GIC
+
+Þ
+
+Γ
+
+FVAC
+
+R1/ρ Γ1−1/ρ
+
+WRIC
+
+RIC
+
+FHWC
+
+PF-FVAC
+
+R
+
+FHWC
+
+R1/ρ Γ1−1/ρ
+
+Figure 3 Relation of All Inequality Conditions
+
+4
+
+ψΓ
+
+
