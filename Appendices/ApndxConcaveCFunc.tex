@@ -1,7 +1,7 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-\input{./econtexRoot}\input{\LaTeXFiles/econtex_onlyinsubfile} % \usepackage{\LaTeXFiles/onlyinsubfile}
+\input{./econtexRoot}\input{\LaTeXGenerated/econtex_onlyinsubfile} % \usepackage{\LaTeXGenerated/onlyinsubfile}
 
-\onlyinsubfile{\externaldocument{\LaTeXFiles/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 \section{Existence of a Concave Consumption Function}\label{sec:ApndxcExists}
@@ -23,6 +23,7 @@ To show that \eqref{\localorexternallabel{eq:veqn}} defines a sequence of contin
 
 \end{enumerate}
 \end{quote}
+
 
 (Notice that an implication of niceness is that $\lim_{z \downarrow 0} \nFunc^{\prime}(z) = \infty.$)
 
@@ -69,6 +70,7 @@ solution that satisfies
 \begin{equation}
 \uFunc^{\prime }(\cFunc_{t}(\mRat))=\mathfrak{v}_{t}^{\prime }(\mRat-\cFunc_{t}(\mRat))  \label{eq:consumptionf}.
 \end{equation}
+
 
 Since both $\uFunc$ and $\mathfrak{v}_{t}$ are strictly concave, both
 $\cFunc_{t}(\mRat)$ and $\aFunc_{t}(\mRat)=\mRat-\cFunc_{t}(\mRat)$
@@ -314,7 +316,8 @@ defined by $\TMap$.\footnote{It seems likely that convergence of the
   of the enterprise of this paper and is therefore left for future
   work.}
 
-\onlyinsubfile{\bibliography{\LaTeXFiles/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,economics}}
+
 
 \end{document}
 % Local Variables:
