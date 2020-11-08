@@ -3,5 +3,5 @@
 
 scriptDir="$(dirname "$0")"
 
-./reproduce_compute.sh # All BufferStockTheory results can be reproduced quickly
+./reproduce_computed.sh # All BufferStockTheory results can be reproduced quickly
 

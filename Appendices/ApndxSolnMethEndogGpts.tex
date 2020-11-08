@@ -2,8 +2,8 @@
 \input{./econtexRoot}
 \provideboolean{Metin}\setboolean{Metin}{true}\newcommand{\Metin}[2]{\ifthenelse{\boolean{Metin}}{\marginpar{\large Metin}\{{#1}\} $\rightarrow$ \{{#2}\}}{#2}}% PrivateMsg: Comments by Metin Uyanik
 
-\input{\LaTeXInputs/econtex_onlyinsubfile}
-\onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
+\usepackage{\LaTeXInputs/econtex_onlyinsubfile}
+\externaldocument{\LaTeXGenerated/BufferStockTheory} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 \begin{document}
 
 %\begin{verbatimwrite}{\LaTeXGenerated/ApndxSolnMethEndogGpts.tex}
