@@ -1,4 +1,4 @@
-\input{./econtexRoot}\input{\econtexPaths}\documentclass[\econtexRoot/BufferStockTeory]{subfiles}\input{./econtexRoot}
+\input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTeory]{subfiles}\input{./econtexRoot}
 
 % This needed to be a subfile to tweak the use of the makecell \thead commands
 % without having to recompile the whole document
@@ -9,7 +9,7 @@
 \renewcommand\theadfont{\normalsize}
 \begin{document}
 
-\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+%\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
 \begin{verbatimwrite}{\TableDir/Comparison}
   \let\TableWidth\relax

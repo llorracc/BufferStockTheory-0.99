@@ -1,0 +1,104 @@
+1 The Terminal/Limiting Consumption Function
+For any set of parameter values that satisfy the conditions required for convergence,
+the problem can be solved by setting the terminal consumption function to cT (m) =
+m and constructing {cT −1 , cT −2 , ...} by time iteration (a method that will converge to
+c(m) by standard theorems). But cT (m) = m is very far from the final converged
+consumption rule c(m),1 and thus many periods of iteration will likely be required to
+obtain a candidate rule that even remotely resembles the converged function.
+A natural alternative choice for the terminal consumption rule is the solution to the
+perfect foresight liquidity constrained problem, to which the model’s solution converges
+(under specified parametric restrictions) as all forms of uncertainty approach zero (as
+discussed in the main text). But a difficulty with this idea is that the perfect foresight
+liquidity constrained solution is ‘kinked:’ The slope of the consumption function changes
+discretely at the points {m1# , m2# , ...}. This is a practical problem because it rules out
+the use of derivatives of the consumption function in the approximate representation of
+c(m), thereby preventing the enormous increase in efficiency obtainable from a higherorder approximation.
+Our solution is simple: The formulae in another appendix that identify kink points on
+c̊(m) for integer values of n (e.g., cn# = Þ−n
+Γ ) are continuous functions of n; the conclusion
+that c̊(m) is piecewise linear between the kink points does not require that the terminal
+consumption rule (from which time iteration proceeds) also be piecewise linear. Thus,
+for values n ≥ 0 we can construct a smooth function c̆(m) that matches the true perfect
+foresight liquidity constrained consumption function at the set of points corresponding
+to integer periods in the future, but satisfies the (continuous, and greater at non-kink
+points) consumption rule defined from the appendix’s formulas by noninteger values of
+n at other points.2
+This strategy generates a smooth limiting consumption function – except at the
+remaining kink point defined by {m0# , c0# }. Below this point, the solution must match
+c(m) = m because the constraint is binding. At m = m0# the MPC discretely drops
+(that is, limm↑m0# c0 (m) = 1 while limm↓m0# c0 (m) = κ0# < 1).
+Such a kink point causes substantial problems for numerical solution methods (like the
+one we use, described below) that rely upon the smoothness of the limiting consumption
+function.
+Our solution is to use, as the terminal consumption rule, a function that is identical
+to the (smooth) continuous consumption rule c̆(m) above some n ≥ n, but to replace
+c̆(m) between m0# and mn# with the unique polynomial function ĉ(m) that satisfies the
+following criteria:
+1. ĉ(m0# ) = c0#
+2. ĉ0 (m0# ) = 1
+1
+
+Unless β ≈ +0.
+In practice, we calculate the first and second derivatives of c̊ and use piecewise polynomial
+approximation methods that match the function at these points.
+2
+
+3. ĉ0 (mn# ) = (dcn# /dn)(dmn# /dn)−1 |n=n
+n
+) = (d2 cn# /dn2 )(d2 mn# /dn2 )−1 |n=n
+4. ĉ00 (m#
+
+where n is chosen judgmentally in a way calculated to generate a good compromise
+between smoothness of the limiting consumption function c̆(m) and fidelity of that
+function to the c̊(m) (see the actual code for details).
+We thus define the terminal function as
+
+0
+
+m
+0 < m ≤ m#
+n
+0
+(6)
+cT (m) = m# < m < m# c̆(m)
+
+ n
+c̊(m)
+m# < m
+Since the precautionary motive implies that in the presence of uncertainty the optimal
+level of consumption is below the level that is optimal without uncertainty, and since
+c̆(m) ≥ c̊(m), implicitly defining m = eµ (so that µ = log m), we can construct
+χt (µ) = log(1 − ct (eµ )/cT (eµ ))
+
+(7)
+
+which must be a number between −∞ and +∞ (since 0 < ct (m) < c̆(m) for m > 0).
+This function turns out to be much better behaved (as a numerical observation; no formal
+proof is offered) than the level of the optimal consumption rule ct (m). In particular,
+χt (µ) is well approximated by linear functions both as m ↓ 0 and as m ↑ ∞.
+Differentiating with respect to µ and dropping consumption function arguments yields
+  c0 c −c c0  
+− t Tc2 t T eµ
+T
+0
+
+(8)
+χt (µ) = 
+1 − ct /cT
+which can be solved for
+c0t = (ct c0T /cT ) − ((cT − ct )/m)χ0t .
+
+(9)
+
+Similarly, we can solve (7) for
+
+ct (m) = 1 − eχt (log m) cT (m).
+
+(10)
+
+Thus, having approximated χt , we can recover from it the level and derivative(s) of
+ct .
+
+2
+
+

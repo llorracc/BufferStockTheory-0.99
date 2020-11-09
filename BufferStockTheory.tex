@@ -1,7 +1,5 @@
-\input{./econtexRoot}\input{\econtexPaths} % Set paths for root and various resources
+\input{./econtexRoot} % Set paths for root and various resources
 \documentclass[titlepage]{\econtex}
-
-\input{\econtexPaths}
 \input{\ResourcesDir/owner} % Owned by llorracc or econ-ark?
 
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
@@ -35,7 +33,7 @@
 
 \renewcommand{\baselinestretch}{1.0}
 
-\bibliography{\LaTeXGenerated/BufferStockTheory,economics}
+\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib/economics}
 
 
 \end{document}

@@ -5,7 +5,8 @@
 % * Keep iterating until neither file changes
 % 0. Being compiled as subfile of main document
 
-\externaldocument{BufferStockTheory} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+%\usepackage{\LaTeXInputs/econtex_onlyinsubfile}
+\externaldocument{\econtexRoot/BufferStockTheory} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
 
 \begin{document}
 
@@ -134,12 +135,12 @@ The final section discusses conditions under which, even with a fixed aggregate 
 We are interested in the infinite-horizon solution, which we define as the limit of the solution to a sequence of finite-horizon problems as the horizon becomes arbitrarily large.  For expositional purposes, it will be useful to fix a terminal date $T$ and consider the problem of a consumer who begins life in period $T-1$, then the problem of a consumer who begins life in $T-2$, and so on.  Informally, we will say that the problem has a `nondegenerate' infinite horizon solution if there is a limiting consumption function $\cFunc = \lim_{n \uparrow \infty} \cFunc_{T-n}$ which is neither zero everywhere nor infinity everywhere.
 
 Specifically, a consumer born $n$ periods before date $T$ solves the problem
-\begin{verbatimwrite}{\EqDir/supfn.tex}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/supfn}
   \begin{align*}%    \label{eq:supfn}
     \max~ \Ex_{t}\left[\sum_{i=0}^{n} \DiscFac^{i} \uFunc(\cLevBF_{t+i})\right]
   \end{align*}
 \end{verbatimwrite}
-\input{\EqDir/supfn.tex}
+\input{\EqDir/supfn}
 where
 \begin{align}
   \uFunc(\bullet)=\bullet^{1-\CRRA}/(1-\CRRA) \label{eq:crrautil}
@@ -161,7 +162,7 @@ In the usual treatment, a dynamic budget constraint (DBC) incorporates
 several elements that determine next period's $\mLevBF$ (given this
 period's choices); for the detailed analysis here, it will be useful to
 disarticulate the steps so that individual ingredients can be separately examined:\hypertarget{DBCParts}{}
-\begin{verbatimwrite}{\EqDir/DBCparts.tex}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/DBCparts}
   \begin{align}
     \aLevBF_{t}    & = \mLevBF_{t}-\cLevBF_{t}  \label{eq:DBCparts} \\
     \bLevBF_{t+1}    & = \aLevBF_{t} \Rfree \notag \\
@@ -169,11 +170,11 @@ disarticulate the steps so that individual ingredients can be separately examine
     \mLevBF_{t+1}  & =  \bLevBF_{t+1} +\pLevBF_{t+1}\tShkAll_{t+1},  \notag
   \end{align}
 \end{verbatimwrite}
-\input{\EqDir/DBCparts.tex} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight for our purposes; however, see \cite{benhabibWealth}, \cite{maTodaRich}, and \cite{mstIncFluct} for the implications of capital income risk for the distribution of wealth and other questions not considered here.} $\mLevBF_{t+1}$ (`market resources') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
+\input{\EqDir/DBCparts} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight for our purposes; however, see \cite{benhabibWealth}, \cite{maTodaRich}, and \cite{mstIncFluct} for the implications of capital income risk for the distribution of wealth and other questions not considered here.} $\mLevBF_{t+1}$ (`market resources') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
 %%% \footnote{We refer to $\mLevBF_{t}$ as `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  `Market' is motivated by the model's assumption that human wealth cannot be capitalized, an implication, in part, of anti-slavery laws.}$^{,}$
 
 Following~\cite{zeldesStochastic}, in future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will be zero (a `zero-income event'),
-\begin{verbatimwrite}{\EqDir/tShkDef}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/tShkDef}
   \begin{equation}
     \tShkAll _{t+n}=
     \begin{cases}
@@ -182,7 +183,7 @@ Following~\cite{zeldesStochastic}, in future periods $t+n ~\forall~ n \geq 1$ th
     \end{cases} \label{eq:tShkDef}
   \end{equation}
 \end{verbatimwrite}
-\input{\EqDir/tShkDef.tex}
+\input{\EqDir/tShkDef}
 where $\tShkEmp_{t+n}$ is an iid mean-one random variable
 ($\Ex_{t}[{\tShkEmp}_{t+n}]=1~\forall~n>0$)
 whose distribution satisfies $\tShkEmp \in \lbrack \ushort{\tShkEmp},\bar{\tShkEmp}\rbrack$
@@ -413,7 +414,7 @@ foresight growth patience factor' (\PFGPF) as
   \PatPGro  & = {\Pat}/\PGro,  \label{eq:PFGPF}
 \end{align}
 and define a `perfect foresight growth impatience condition' (\PFGIC)
-\begin{verbatimwrite}{\EqDir/PFGIC}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/PFGIC}
 \begin{align}
   \PatPGro &  < 1   \label{eq:PFGIC}
 \end{align}
@@ -510,14 +511,14 @@ uncertainty on the expected growth-normalized return (in the sense implicitly de
 \hypertarget{GICI}{}
 \hypertarget{PGroAdj}{}
 We can now transparently generalize the \PFGIC~\eqref{eq:PFGIC} by defining a `compensated growth factor' \hypertarget{GPF}{}
-\begin{verbatimwrite}{\EqDir/PGroAdj}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/PGroAdj}
   \begin{align}
     \PGroAdj  & =  \PGro \InvEpShkInv \label{eq:PGroAdj}
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/PGroAdj}
 and a compensated Growth Patience Pactor (GPF):
-\begin{verbatimwrite}{\EqDir/PatPGroAdj}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/PatPGroAdj}
   \begin{align}
     \PatPGroAdj  & = \Pat/\PGroAdj = \Ex[\Pat/\PGro\pShk]  \label{eq:GPF} 
   \end{align}
@@ -528,7 +529,7 @@ and a straightforward derivation (\eqref{eq:xtp1toinfty} below) yields the concl
   \lim_{\mRat_{t} \rightarrow \infty} \Ex_{t}[\mRat_{t+1}/\mRat_{t}]  & = \PatPGroAdj,
 \end{align*}
 which implies that if we wish to prevent $\mRat$ from heading to infinity (that is, if we want $m$ to be expected to fall for some large enough value of $m$) we must impose a generalized version of the Perfect Foresight Growth Impatience Condition \eqref{eq:PFGIC}; we call the `Growth Impatience Condition' (\GIC) the requirement that the Growth Patience Factor~\eqref{eq:GPF} must be less than 1:\footnote{Equation \eqref{eq:GIC} is a bit easier to satisfy than the similar condition imposed by Deaton~\citeyearpar{deatonLiqConstr}: $\left(\Ex[\pShk^{-\CRRA}]\right)^{1/\CRRA} \PatPGro < 1$ to guarantee that his problem defined a contraction mapping.}  
-\begin{verbatimwrite}{\EqDir/GIC}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/GIC}
   \begin{align}
     \PatPGroAdj  & < 1 \label{eq:GIC}
   \end{align}\end{verbatimwrite}
@@ -560,7 +561,7 @@ defining
 \end{equation}
 we can see that $\vLevBF_{t}$ will be finite 
 as $T$ approaches $\infty$ if\hypertarget{FVAC}{}
-\begin{verbatimwrite}{\EqDir/FVAC}
+\begin{verbatimwrite}{\rootFromOut/\EqDir/FVAC}
   \begin{align}
     \overbrace{\DiscFac \PGrouAdj^{1-\CRRA} }^{\equiv \DiscAltuAdj}  & < 1 \notag
     \\ \DiscFac  & < \PGrouAdj^{\CRRA-1} \label{eq:FVAC}
@@ -584,7 +585,7 @@ the perfect foresight version \eqref{eq:PFFVAC} because $\PGrouAdj <
 
 \begin{comment}
   A useful alternative version is
-  \begin{verbatimwrite}{\EqDir/FVACAlt}
+  \begin{verbatimwrite}{\rootFromOut/\EqDir/FVACAlt}
     \begin{align}
       \DiscFac \Rfree \PGro^{-\CRRA} \uInvEpShkuInv^{1-\CRRA}   & < \Rfree/\PGro \nonumber
       \\ \PatPGro \uInvEpShkuInv^{1/\CRRA-1}  & < (\Rfree/\PGro)^{1/\CRRA} \label{eq:FVACAlt}.
@@ -622,7 +623,7 @@ resources.)
 
 \hypertarget{Calibration}{}
 
-\input{\TableDir/Parameters.tex}
+\input{\TableDir/Parameters}
 
 \hypertarget{Symbols}{}
 
@@ -1087,7 +1088,7 @@ We have now established the points of comparison promised above between the perf
 
 \hypertarget{Sufficient-Conditions}{}
 \hypertarget{Sufficient-Conditions-For-Nondegenerate-Solution}{}
-\input{\TableDir/Required.tex}
+\input{\TableDir/Required}
 
 \begin{comment}
   To help interpret our condition, consider an infinite horizon perfect
@@ -1664,7 +1665,7 @@ Another contribution is integration of the paper's results with the open-source 
 
 \clearpage\vfill\eject
 
-\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib/economics}}
 
 \end{document}
 
