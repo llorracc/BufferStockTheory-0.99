@@ -104,7 +104,6 @@
 In the presence of empirically realistic transitory and permanent shocks to income \textit{a la} \cite{friedmanATheory}, only one more ingredient is required to construct a testable model of optimal consumption: A description of preferences.  Modelers usually assume geometric discounting of a constant relative risk aversion utility function, because, starting with Zeldes~\citeyearpar{zeldesStochastic}, a large literature has constructed numerical solutions whose quantitative predictions match microeconomic evidence reasonably well; results are similar whether or not liquidity constraints are imposed.\footnote{For life cycle models without constraints, see \cite{carrollBSLCPIH}; \cite{gpLifeCycle}; for an infinite horizon model without constraints that resembles \cite{deatonLiqConstr}'s constrained model, see \cite{carrollBrookings}.}
 
 A companion theoretical literature has derived analytical properties of limiting ``true'' (nonnumerical) mathematical solutions -- but only for models more complex than the case with just shocks and utility.  The extra complexity has been required because standard contraction mapping theorems (beginning with \cite{bellmanDynamicProgramming} and including those building on Stokey et.~al.~\citeyearpar{slpMethods}) cannot be applied when the utility function and resources are both unbounded (see \hyperlink{DiffFromLit}{the fuller discussion} at the end of section \ref{subsec:Setup}).
-%%%\footnote{It is unclear whether newer methods such as those of \cite{mnUnique} could overcome this problem, or how difficult it would be to do so; but in any case this particular problem does not seem to have been tackled by those methods or any others.} %% AAT
 
 This paper's first technical contribution is to articulate the (loose) conditions under which the simple problem (without shortcuts like a consumption floor or liquidity constraints) defines a contraction mapping with a nondegenerate consumption function.  The interesting requirement is a \hyperlink{FVAC}{`Finite Value of Autarky'} condition.  The paper's second theoretical contribution is to specify the conditions under which the resulting consumption function implies existence of a `target' wealth-to-permanent-income ratio (the model exhibits `buffer stock' saving behavior).  Buffer stock saving arises when the model's parameters satisfy a \hyperlink{GIC}{``Growth Impatience Condition''} that relates preferences and uncertainty to predictable income growth.
 
@@ -124,7 +123,6 @@ The \hyperlink{AnalysisoftheConvergedConsumptionFunction}{next section} examines
 
 The final section discusses conditions under which, even with a fixed aggregate interest rate that differs from the time preference rate, an economy populated by buffer stock consumers converges to a balanced growth equilibrium in which consumption, income, and wealth all converge to the exogenous growth rate of permanent income (equivalent, here, to productivity). In the terms of \cite{schmitt2003closing}, buffer stock saving is a method of `closing' a small open economy model, and one that is attractive because it requires no controversial assumptions: Not even liquidity constraints.
 
-%%%\footnote{Szeidl's proof supplants the analysis in an earlier draft of this paper, which conjectured the result and provided supportive simulation evidence.}
 
 \hypertarget{The-Problem}{}
 \section{The Problem}
@@ -171,7 +169,6 @@ disarticulate the steps so that individual ingredients can be separately examine
   \end{align}
 \end{verbatimwrite}
 \input{\EqDir/DBCparts} where $\aLevBF_{t}$ indicates the consumer's assets at the end of period $t$, which grow by a fixed interest factor $\Rfree =(1+\rfree)$ between periods,  so that $\bLevBF_{t+1}$ is the consumer's financial (`bank') balances before next period's consumption choice;\footnote{Allowing a stochastic interest factor is straightforward but adds little insight for our purposes; however, see \cite{benhabibWealth}, \cite{maTodaRich}, and \cite{mstIncFluct} for the implications of capital income risk for the distribution of wealth and other questions not considered here.} $\mLevBF_{t+1}$ (`market resources') is the sum of financial wealth $\bLevBF_{t+1}$ and noncapital income $\pLevBF_{t+1}\tShkAll_{t+1}$ (permanent noncapital income $\pLevBF_{t+1}$ multiplied by a mean-one iid transitory income shock factor $\tShkAll_{t+1}$; transitory shocks are assumed to satisfy $\Ex_{t}[{\tShkAll}_{t+n}]=1~\forall~n\geq 1$). Permanent noncapital income in $t+1$ is equal to its previous value, multiplied by a growth factor $\PGro$, modified by a mean-one iid shock $\pShk_{t+1}$, $\Ex_{t}[{\pShk}_{t+n}]=1~\forall~n \geq 1$ satisfying $\pShk \in [\ushort{\pShk},\bar{\pShk}]$ for $0 < \ushort{\pShk} \leq 1 \leq \bar{\pShk} < \infty$ (and $\ushort{\pShk}=\bar{\pShk}=1$ is the degenerate case with no permanent shocks).\footnote{Hereafter for brevity we occasionally drop time subscripts, e.g.\ $\Ex[\pShk^{-\CRRA}]$ signifies $\Ex_{t}[\pShk_{t+1}^{-\CRRA}]$.}
-%%% \footnote{We refer to $\mLevBF_{t}$ as `market resources' rather than as wealth to avoid any confusion for readers accustomed to thinking of the discounted value of future noncapital income as a part of wealth.  `Market' is motivated by the model's assumption that human wealth cannot be capitalized, an implication, in part, of anti-slavery laws.}$^{,}$
 
 Following~\cite{zeldesStochastic}, in future periods $t+n ~\forall~ n \geq 1$ there is a small probability $\pZero$ that income will be zero (a `zero-income event'),
 \begin{verbatimwrite}{\rootFromOut/\EqDir/tShkDef}
@@ -458,9 +455,6 @@ which will be finite whenever any of these equivalent conditions holds:
 where we call $\DiscAlt$\footnote{This is another kind of discount factor, so we use the Hebrew `bet' which is a cognate of the Greek `beta'.} the `Perfect Foresight Finite Value Of Autarky Factor' ({\PFVAF}), and \eqref{eq:PFFVAC} is the Perfect Foresight Finite Value of Autarky Condition, \PFFVAC, because it guarantees that a consumer who always spends all permanent income `has finite autarky value.'  Note that the last version of the \PFFVAC~in \eqref{eq:PFFVAC} implies the \PFGIC~$\PatPGro < 1$ whenever \cncl{\FHWC} ($\Rfree < \PGro$) holds.  So, if \cncl{\FHWC}, value for any finite $\mRat$ will be the sum of two finite numbers: The component due to the unconstrained consumption choice made over the finite horizon leading up to $\bRat_{t+n} = 0$, and the finite component due to the value of consuming all $\pLevBF_{t+n}$ thereafter.
 
 
-%%% \begin{CDCPrivate}
-%%%   Crucially (for intuition), at a given $\mRat$, extending the horizon further beyond $n$ has no effect on the consumer's consumption, because access to any resources beyond $n$ periods in the future is blocked by the period-n constraint.  Since these arguments hold for any finite $\mRat$, the consumer's consumption function is nondegenerate.  While extending the horizon beyond $n$ periods will affect the consumer's value, the {\PFFVAC} implies that there is a finite limit to the amount by which value can be increased by horizon extensions; so the value function is also nondegenerate.
-%%%   \end{CDCPrivate}
 
 \hypertarget{RICandFHWCFail}{}
 \textit{{\PFGIC} and {\cncl{\RIC}}}.  
@@ -699,7 +693,6 @@ We are now in position to observe that the optimal consumption function must sat
 \end{align}
 because consumption starts at zero and is continuously differentiable (as argued above), is strictly concave (\cite{ckConcavity}), and always exhibits a slope between $\MinMinMPC_{t}$ and $\MaxMPC_{t}$ (the formal proof is provided in appendix \ref{sec:Tcomplete}).
 
-%% These limits are useful because they can be hard-wired into a solution algorithm for the model, which has the potential to make the solution more efficient (cf.\ \cite{cctwMoM}).  Alternatively, they can provide a check on the accuracy of a solution algorithm that does not impose them directly.
 
 \begin{comment}
   If the \FHWC~does not hold, we make do with a less useful bound on the minimal MPC: It is
@@ -1454,7 +1447,6 @@ and multiplying all three elements by $\Rfree/\Pat$ gives
 \end{align*}
 which satisfies our requirement in \eqref{eq:RbarBelowOne}.
 
-%%% \footnote{An interesting sidenote is that \eqref{eq:RbarBelowOne} is a close cousin to the {\FHWC}: instead of $\Rfree/\PGro < 1$ we have $(\Rfree/\PGro)\InvEpShkInv < 1$.}
 
 
 % where the bound on the marginal propensity to consume in the third line  is guaranteed by the $RIC$ \eqref{eq:RIC} (see section~\ref{subsec:LimitsAsmtToInfty}) \textcolor{red}{Is the FHWC needed?}. Therefore, we can be sure that $\difFunc(\bullet)$ crosses 0 exactlyonce at $\mTarg$, and through \eqref{eq:difRatioEquiv} this implies that the target is unique. Additionally, we can conclude that$\difFunc({\mRat}_t)>0$ for ${\mRat}_t<\mTarg$ and $\difFunc({\mRat}_t)>0$ for ${\mRat}_t > \mTarg$, which coupled with \eqref{eq:difRatioEquiv} yields our desired stability result \eqref{eq:stability}.

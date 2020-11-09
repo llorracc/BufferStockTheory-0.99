@@ -1,5 +1,4 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
-%%%\usepackage[abspath]{currfile}
 \input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
 
@@ -7,7 +6,6 @@
 
 \let\TableWidth\relax
 \newlength\TableWidth
-%%%\providecommand{\FigDir}{\econtexRoot/Code/Mathematica/Results/BufferStockTheory/Figures}
 
 \section{Perfect Foresight Liquidity Constrained Solution}\label{sec:ApndxLiqConstr}
 
@@ -275,10 +273,6 @@ but that limit is approached gradually, starting from a positive
 value, and consequently the consumption function is {\it not} the
 degenerate $\constr{\cFunc}(\mRat)=0$.  (Figure~\ref{fig:PFGICHoldsFHWCFailsRICFails} presents an example for $\CRRA=2$, $\Rfree=0.98$, $\Discount = 1.00$, $\PGro = 0.99$; note that the horizontal axis is bank balances $\bRat = \mRat-1$; the part of the consumption function below the depicted points is uninteresting -- $\cRat = \mRat$ -- so not worth plotting).
 
-%%% dir: \getpwd
-%%% \thepwd
-%%% \renewcommand{\FigDir}{../Figures}
-%%% \texttt{\footnotesize{\thepwd\FigDir/PFGICHoldsFHWCFailsRICFails}}
 
 \input{\FigDir/PFGICHoldsFHWCFailsRICFails}
 
