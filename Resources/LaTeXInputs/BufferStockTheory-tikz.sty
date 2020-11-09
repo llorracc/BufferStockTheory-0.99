@@ -1,41 +1,19 @@
+% tikz is very finicky and so let's pull in a minimal set of needed packages 
 \RequirePackage{wasysym
-,psibycus % Greek language package, including koppa 
-,ushort
-,ifthen
-,tipa
-,cancel
+  ,psibycus % Greek language package, including koppa 
+  ,ushort
+  ,ifthen
+  ,tipa
+  ,cancel
 }
 
+\usepackage{econtexShortcuts} % Lots of macros 
 
-\usepackage{econtexShortcuts}%\usepackage{econtexSetup}
-
-% Define the handles for the various conditions
-\newcommand{\PFGPF}{{\mbox{PF-GPF}}}
-\newcommand{\PFGIC}{{\mbox{PF-GIC}}}
-\newcommand{\AIC}{{\mbox{AIC}}}
-\newcommand{\PFFVAC}{{\mbox{PF-FVAC}}}
-\newcommand{\PFVAF}{{\mbox{PF-FVAF}}}
-\newcommand{\FVAC}{{\mbox{FVAC}}}
-\newcommand{\FVAF}{{\mbox{FVAF}}}
-\newcommand{\GIC}{{\mbox{GIC}}}
-\newcommand{\GICAgg}{{\mbox{GIC-Agg}}}
-\newcommand{\RIC}{{\mbox{RIC}}}
-\newcommand{\WRIC}{{\mbox{WRIC}}}
-\newcommand{\FHWC}{{\mbox{FHWC}}}
-\newcommand{\RPF}{{\mbox{RPF}}}
-\newcommand{\GPF}{{\mbox{GPF}}}
-\newcommand{\GPFAgg}{{\mbox{GPF-Agg}}}
-\newcommand{\FHWF}{\mbox{FHWF}}
-
+% Math mode Pat does not play nicely with tikz for some reason
 \renewcommand{\Pat}{\textbf{\Thorn}}
-\newcommand\cncl[1]{\ensuremath{\cancel{#1}}}
 
-\provideboolean{ifWeb}
-\setboolean{ifWeb}{true}
-\setboolean{ifWeb}{false}
-
-\ifthenelse{\boolean{ifWeb}}{}{
-\usepackage[normalem]{ulem}
+% Special underlining 
+\usepackage[normalem]{ulem}   
 
 \makeatletter
 \newcommand*{\saved@uline}{}
@@ -51,19 +29,18 @@
   \mbox{#1{$#2#3\m@th$}}%
 }
 
-% optional
 \renewcommand*{\uline}{%
   \relax  
   \ifmmode
-    \expandafter\mathuline
+  \expandafter\mathuline
   \else
-    \expandafter\saved@uline
+  \expandafter\saved@uline
   \fi
 }
 \makeatother
+
 \renewcommand{\PGroAdj}{\uline{\Gamma}}
 \renewcommand{\PGrouAdj}{\underline{\uline{\Gamma}}}
-%\renewcommand{\InvEpShkInv}{\uline{\uline{\Gamma}}}
+% \renewcommand{\InvEpShkInv}{\uline{\uline{\Gamma}}}
 \renewcommand{\DiscAltuAdj}{\underline{\uline{\beth}}}
 \renewcommand{\PatPGroAdj}{\Pat_{\uline{\Gamma}}}
-}

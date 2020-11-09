@@ -1,5 +1,6 @@
 % ls-R -- filename database for kpathsea; do not change this line.
 ./:
+README.md
 bibtex
 ls-R
 tex
@@ -91,4 +92,3 @@ svg-set-size-to-1p3x1p01.mk4~
 
 ./web2c:
 texmf.cnf
-texmf_orig.cnf
