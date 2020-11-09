@@ -1,6 +1,5 @@
 \input{./econtexRoot} % Set paths for root and various resources
-\documentclass[titlepage]{\econtex}
-\input{\ResourcesDir/owner} % Owned by llorracc or econ-ark?
+\documentclass[titlepage]{econtex}
 
 \providecommand{\texname}{BufferStockTheory}% Keyname for the paper
 \usepackage{\LaTeXInputs/BufferStockTheory}% Styling for whole paper (and subfiles)
@@ -29,9 +28,9 @@
 
 \clearpage\vfill\eject
 
-\small
-
-\renewcommand{\baselinestretch}{1.0}
+% References 
+\small % Small font 
+\renewcommand{\baselinestretch}{1.0} % Single spaced
 
 \bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}
 

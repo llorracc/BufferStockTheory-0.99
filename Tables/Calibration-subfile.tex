@@ -1,16 +1,12 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTeory]{subfiles}
-\input{./econtexRoot}
-\input{\LaTeXInputs/econtex_onlyinsubfile}
+\input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}}
+
 \begin{document}
 
-hi
+%\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
-\end{document}
-
-\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
-
-\begin{verbatimwrite}{\TableDir/Calibration}
+%\begin{verbatimwrite}{\TableDir/Calibration-Raw}
   \let\TableWidth\relax
   \newlength\TableWidth
 \newsavebox{\Calibration}
@@ -43,9 +39,9 @@ Description                                 & \multicolumn{3}{c|}{Symbol and For
 \usebox{\Calibration}
 
 \end{table}
-\end{verbatimwrite}
-\clearpage
-\input{\TableDir/Calibration}
+%\end{verbatimwrite}
+%\clearpage
+%\input{\TableDir/Calibration-Raw}
 
 \end{document}
 % Delete up to four existing variants of BibTeX 
