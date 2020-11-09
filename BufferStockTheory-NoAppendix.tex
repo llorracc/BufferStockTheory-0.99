@@ -1,17 +1,20 @@
 \documentclass[BufferStockTheory]{subfiles}\input{./econtexRoot}
+\input{\LaTeXInputs/econtex_onlyinsubfile}
 % WARNING: Different execution depending on whether
 % 0. Being compiled as standalone document
 % * Compile this file, then main, then this one again
 % * Keep iterating until neither file changes
 % 0. Being compiled as subfile of main document
 
-%\usepackage{\LaTeXInputs/econtex_onlyinsubfile}
-\externaldocument{\econtexRoot/BufferStockTheory} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
+\onlyinsubfile{\externaldocument{\LaTeXInputs/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled; 
 
 \begin{document}
 
 \providecommand{\versn}{} % Version; like, web or pdf or journal submission
-\ifthenelse{\boolean{ifWeb}}{  \renewcommand{\ushort}{\underline}\renewcommand{\versn}{Web} }{} % ushort does not work in tex4ht
+\ifthenelse{\boolean{ifWeb}}{
+  \renewcommand{\ushort}{\underline}\renewcommand{\versn}{Web}
+  \renewcommand{\rootFromOut}{.}\renewcommand{\TableDir}{.}
+}{} % ushort does not work in tex4ht
 
 
 % Put tiny info header at top to make it easy track git commit that generates it
@@ -27,7 +30,7 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{November 8, 2020}
+\renewcommand{\forcedate}{November 9, 2020}
 \date{\forcedate}
 
 \maketitle 
@@ -1077,7 +1080,7 @@ would keep $\mRat$ stable (in expectation).
 We have now established the points of comparison promised above between the perfect foresight solutions and the solutions under uncertainty; these are codified in the remaining parts of Tables~\ref{table:Comparison} and \ref{table:Required}.
 
 \hypertarget{Factors-Defined-And-Compared}{}
-\subfile{\TableDir/Comparison-subfile}
+\input{\TableDir/Comparison}
 
 \hypertarget{Sufficient-Conditions}{}
 \hypertarget{Sufficient-Conditions-For-Nondegenerate-Solution}{}
@@ -1657,7 +1660,7 @@ Another contribution is integration of the paper's results with the open-source 
 
 \clearpage\vfill\eject
 
-\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib/economics}}
+\onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
 
 \end{document}
 

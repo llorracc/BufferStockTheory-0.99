@@ -1,15 +1,12 @@
-\input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTeory]{subfiles}\input{./econtexRoot}
-
-% This needed to be a subfile to tweak the use of the makecell \thead commands
+% -*- enable-local-variables: :all; -*-
+\input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
+\input{./econtexRoot}\input{\LaTeXInputs/econtex_onlyinsubfile}
+% This needed to be a subfile to tweak the use of the makecell 
 % without having to recompile the whole document
-\let\TableWidth\relax % Necessary to allow redefinition of tablewidth, which might already be defined
-\newlength\TableWidth
 
-\renewcommand\theadalign{tl}
-\renewcommand\theadfont{\normalsize}
 \begin{document}
 
-\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
+%\notinsubfile{\renewcommand{\TableDir}{./Tables}} % Not sure why this needs to be redefined here; if not, tries to write to ../../Tables
 
   \let\TableWidth\relax
   \newlength\TableWidth
@@ -128,3 +125,22 @@ equivalently $\Pat/\PGro  < (\Rfree/\PGro)^{1/\CRRA}$ & \\
 \settowidth\TableWidth{\usebox{\ComparisonSub}}
 \usebox{\ComparisonSub}
 \end{table}
+
+% Delete up to four existing variants of BibTeX 
+% Local Variables:
+% eval: (setq TeX-command-list  (remove '("Biber" "biber %s" TeX-run-Biber nil  (plain-tex-mode latex-mode doctex-mode ams-tex-mode texinfo-mode)  :help "Run Biber") TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
+% eval: (setq TeX-command-list  (assq-delete-all (car (assoc "Biber"  TeX-command-list)) TeX-command-list))
+% eval: (add-to-list 'TeX-command-list	'("BibTeX" "%(bibtex) ../LaTeX/%s" TeX-run-BibTeX nil t :help "Run BibTeX") t)
+% TeX-PDF-mode: t
+% TeX-file-line-error: t
+% TeX-debug-warnings: t
+% LaTeX-command-style: (("" "%(PDF)%(latex) %(file-line-error) %(extraopts) -output-directory=../LaTeX %S%(PDFout)"))
+% TeX-source-correlate-mode: t
+% TeX-source-correlate-start-server: 0
+% TeX-parse-self: t
+% eval: (cond ((string-equal system-type "darwin") (progn (setq TeX-view-program-list '(("Skim" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n ../LaTeX/%o %b"))))))
+% End:
