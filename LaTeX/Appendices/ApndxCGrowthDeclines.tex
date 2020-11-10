@@ -10,38 +10,38 @@ Henceforth indicating appropriate arguments by the corresponding
 subscript (e.g.\ $\cFunc_{t+1}^{\prime} \equiv \cFunc^{\prime}(\mRat_{t+1})$), since
 $\PGro_{t+1}\Rnorm_{t+1}=\Rfree$, the portion of the LHS of equation \eqref{eq:kappaPrimeLT0} in brackets can be manipulated to yield
 \begin{equation}\begin{gathered}\begin{aligned}
-  \cFunc_{t} \pmb{\Upsilon}^{\prime}_{t+1}  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \PGro_{t+1} \cFunc_{t+1}/\cFunc_{t} \nonumber
+  \cFunc_{t} \pmb{\Upsilon}^{\prime}_{t+1}  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \PGro_{t+1} \cFunc_{t+1}/\cFunc_{t}  
   \\  & = \cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree-\cFunc^{\prime}_{t} \pmb{\Upsilon}_{t+1} \label{eq:cPrimek}
         .
 \end{aligned}\end{gathered}\end{equation}
 
 Now differentiate the Euler equation with respect to $\mRat_{t}$:
 \begin{equation}\begin{gathered}\begin{aligned}
-  1  & = \Rfree \DiscFac \Ex_{t}[ \pmb{\Upsilon}_{t+1}^{-\CRRA}] \notag
-  \\ 0  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1} \pmb{\Upsilon}_{t+1}^{\prime}] \notag
-  \\  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}]\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]+\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime}) \notag
+  1  & = \Rfree \DiscFac \Ex_{t}[ \pmb{\Upsilon}_{t+1}^{-\CRRA}]  
+  \\ 0  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1} \pmb{\Upsilon}_{t+1}^{\prime}]  
+  \\  & = \Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}]\Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]+\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})  
   \\ \Ex_{t}[\pmb{\Upsilon}_{t+1}^{\prime}]  & = -\mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})/\Ex_{t}[\pmb{\Upsilon}_{t+1}^{-\CRRA-1}] \label{eq:covgen}
 \end{aligned}\end{gathered}\end{equation}
 but since $\pmb{\Upsilon}_{t+1} > 0$ we can see from \eqref{eq:covgen} that \eqref{eq:kappaPrimeLT0} is equivalent to
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})  & > 0 \nonumber
+  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1}^{\prime})  & > 0  
 \end{aligned}\end{gathered}\end{equation}
 which, using \eqref{eq:cPrimek}, will be true if
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree - \cFunc^{\prime}_{t}\pmb{\Upsilon}_{t+1})  & > 0 \notag
+  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1}\aFunc^{\prime}_{t}\Rfree - \cFunc^{\prime}_{t}\pmb{\Upsilon}_{t+1})  & > 0  
 \end{aligned}\end{gathered}\end{equation}
 which in turn will be true if both
 \begin{equation}\begin{gathered}\begin{aligned}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1} )  & > 0 \notag
+  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\cFunc^{\prime}_{t+1} )  & > 0  
 \end{aligned}\end{gathered}\end{equation}
 and
 \begin{align*}
-  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1})  & < 0. \notag
+  \mbox{cov}_{t}(\pmb{\Upsilon}_{t+1}^{-\CRRA-1},\pmb{\Upsilon}_{t+1})  & < 0.  
 \end{align*}
 
 The latter proposition is obviously true under our assumption $\CRRA > 1$.  The former will be true if
 \begin{align*}
-  \mbox{cov}_{t}\left((\PGro \pShk_{t+1} \cFunc(\mRat_{t+1}))^{-\CRRA-1},\cFunc^{\prime}(\mRat_{t+1}) \right)  & > 0 \nonumber.
+  \mbox{cov}_{t}\left((\PGro \pShk_{t+1} \cFunc(\mRat_{t+1}))^{-\CRRA-1},\cFunc^{\prime}(\mRat_{t+1}) \right)  & > 0  .
 \end{align*}
 
 The two shocks cause two kinds of variation in $\mRat_{t+1}$.
