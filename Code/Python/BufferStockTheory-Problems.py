@@ -56,7 +56,7 @@
 # %% [markdown]
 # <a id='interactive-dashboard'></a>
 #
-# [This notebook](https://econ-ark.org/BufferStockTheory/#launch) uses the [Econ-ARK/HARK](https://github.com/econ-ark/HARK) toolkit to reproduce and illustrate key results of the paper [Theoretical Foundations of Buffer Stock Saving](http://llorracc.github.io/BufferStockTheory/BufferStockTheory).
+# [This notebook](https://econ-ark.org/BufferStockTheory/#launch) uses the [Econ-ARK/HARK](https://github.com/econ-ark/HARK) toolkit to reproduce and illustrate key results of the paper [Theoretical Foundations of Buffer Stock Saving](http://econ-ark.github.io/BufferStockTheory/BufferStockTheory).
 #
 # #### An [interactive dashboard](https://econ-ark.org/BufferStockStockTheory/#Dashboard) allows you to modify parameters to see how the figures change. 
 #
@@ -114,7 +114,7 @@ from HARK.utilities import plotFuncsDer, plotFuncs
 
 
 # %% [markdown]
-# ## [The Problem](http://llorracc.github.io/BufferStockTheory/BufferStockTheory/#The-Problem)
+# ## [The Problem](http://econ-ark.github.io/BufferStockTheory/BufferStockTheory/#The-Problem)
 #
 # The paper defines and calibrates a small set of parameters:
 #
@@ -158,7 +158,7 @@ from HARK.utilities import plotFuncsDer, plotFuncs
 #     \mathbf{m}_{t+1} &=& \mathbf{a}_{t}\mathsf{R} +\mathbf{p}_{t+1}\theta_{t+1}.  \notag
 # \end{eqnarray}
 #
-# When the consumer has a CRRA utility function $u(\mathbf{c})=\frac{\mathbf{c}^{1-\rho}}{1-\rho}$, the paper shows that the problem can be written in terms of ratios (nonbold font) of level (bold font) variables to permanent income, e.g. $m_{t} \equiv \mathbf{m}_{t}/\mathbf{p}_{t}$, and the Bellman form of [the problem reduces to](https://llorracc.github.io/BufferStockTheory/#The-Related-Problem):
+# When the consumer has a CRRA utility function $u(\mathbf{c})=\frac{\mathbf{c}^{1-\rho}}{1-\rho}$, the paper shows that the problem can be written in terms of ratios (nonbold font) of level (bold font) variables to permanent income, e.g. $m_{t} \equiv \mathbf{m}_{t}/\mathbf{p}_{t}$, and the Bellman form of [the problem reduces to](https://econ-ark.github.io/BufferStockTheory/#The-Related-Problem):
 #
 # \begin{eqnarray*}
 # v_t(m_t) &=& \max_{c_t}~~ u(c_t) + \beta~\mathbb{E}_{t} [(\Gamma\psi_{t+1})^{1-\rho} v_{t+1}(m_{t+1}) ] \\
@@ -196,7 +196,7 @@ base_params['BoroCnstArt']  = None    # No artificial borrowing constraint
 # %% [markdown]
 # ## Convergence of the Consumption Rules
 #
-# Under the given parameter values, [the paper's first figure](https://llorracc.github.io/BufferStockTheory/#Convergence-of-the-Consumption-Rules) depicts the successive consumption rules that apply in the last period of life $(c_{T}(m))$, the second-to-last period, and earlier periods $(c_{T-n})$.  The consumption function to which these converge is $c(m)$:
+# Under the given parameter values, [the paper's first figure](https://econ-ark.github.io/BufferStockTheory/#Convergence-of-the-Consumption-Rules) depicts the successive consumption rules that apply in the last period of life $(c_{T}(m))$, the second-to-last period, and earlier periods $(c_{T-n})$.  The consumption function to which these converge is $c(m)$:
 #
 # $$
 # c(m) = \lim_{n \uparrow \infty} c_{T-n}(m) \notag
@@ -257,7 +257,7 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # %% [markdown] {"heading_collapsed": true}
 # ### PROBLEM: Natural Borrowing Constraint Approaches Artificial Constraint
 #
-# Show numerically the result that is proven analytically in [The-Liquidity-Constrained-Solution-as-a-Limit](https://llorracc.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit), by solving the model for successively smaller values of $\wp$.
+# Show numerically the result that is proven analytically in [The-Liquidity-Constrained-Solution-as-a-Limit](https://econ-ark.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit), by solving the model for successively smaller values of $\wp$.
 #    * You need only to solve for the second-to-last period of life to do this
 #       * `TwoPeriodModel = IndShockConsumerType(**base_params)`
 #       * `TwoPeriodModel.cycles = 2   # Make this type have a two period horizon (Set T = 2)`
@@ -271,7 +271,7 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # %% [markdown]
 # ## Factors and Conditions
 #
-# ### [The Finite Human Wealth Condition](http://llorracc.github.io/BufferStockTheory/#Human-Wealth)
+# ### [The Finite Human Wealth Condition](http://econ-ark.github.io/BufferStockTheory/#Human-Wealth)
 #
 # Human wealth for a perfect foresight consumer is the present discounted value of future income:
 #
@@ -279,13 +279,13 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # \mathbf{h}_{t} & = & \mathbb{E}_{t}[\mathbf{p}_{t} + \mathsf{R}^{-1} \mathbf{p}_{t+1} + \mathsf{R}^{2} \mathbf{p}_{t+2} ... ] \\ \notag 
 #       & = & \mathbf{p}_{t} \left(1 + (\Gamma/\mathsf{R}) + (\Gamma/\mathsf{R})^{2} ... \right) 
 # \end{eqnarray}
-# which approaches infinity as the horizon extends if $\Gamma/\mathsf{R} \geq 1$.  We say that the 'Finite Human Wealth Condition' [(FHWC)](https://llorracc.github.io/BufferStockTheory/#FHWC) holds if
+# which approaches infinity as the horizon extends if $\Gamma/\mathsf{R} \geq 1$.  We say that the 'Finite Human Wealth Condition' [(FHWC)](https://econ-ark.github.io/BufferStockTheory/#FHWC) holds if
 # $0 \leq (\Gamma/\mathsf{R}) < 1$.
 
 # %% [markdown]
-# ### [Absolute Patience and the AIC](https://llorracc.github.io/BufferStockTheory/#AIC)
+# ### [Absolute Patience and the AIC](https://econ-ark.github.io/BufferStockTheory/#AIC)
 #
-# The paper defines the Absolute Patience Factor [(APF)](https://llorracc.github.io/BufferStockTheory/#APF) as being equal to the ratio $\mathbf{c}_{t+1}/\mathbf{c}_{t}$ for a perfect foresight consumer.  The Old English character <span style="font-size:larger;">"&#222;"</span> used for this object in the paper cannot currently be rendered conveniently in Jupyter notebooks, so we will substitute $\Phi$ here:
+# The paper defines the Absolute Patience Factor [(APF)](https://econ-ark.github.io/BufferStockTheory/#APF) as being equal to the ratio $\mathbf{c}_{t+1}/\mathbf{c}_{t}$ for a perfect foresight consumer.  The Old English character <span style="font-size:larger;">"&#222;"</span> used for this object in the paper cannot currently be rendered conveniently in Jupyter notebooks, so we will substitute $\Phi$ here:
 #
 # \begin{equation}
 # \Phi = (\mathsf{R} \beta)^{1/\rho}
@@ -296,26 +296,26 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 #
 
 # %% [markdown]
-# ### [Growth Patience and the GIC](https://llorracc.github.io/BufferStockTheory/#GIC)
+# ### [Growth Patience and the GIC](https://econ-ark.github.io/BufferStockTheory/#GIC)
 #
-# For a [perfect foresight consumer](http://econ.jhu.edu/people/ccarroll/public/lecturenotes/consumption/PerfForesightCRRA), whether the ratio $c$=__**c**__/__**p**__ is rising, constant, or falling depends on the relative growth rates of consumption and permanent income; that ratio is measured by the [Perfect Foresight Growth Patience Factor](https://llorracc.github.io/BufferStockTheory/#PFGPF):
+# For a [perfect foresight consumer](http://econ.jhu.edu/people/ccarroll/public/lecturenotes/consumption/PerfForesightCRRA), whether the ratio $c$=__**c**__/__**p**__ is rising, constant, or falling depends on the relative growth rates of consumption and permanent income; that ratio is measured by the [Perfect Foresight Growth Patience Factor](https://econ-ark.github.io/BufferStockTheory/#PFGPF):
 #
 # \begin{eqnarray}
 # \Phi_{\Gamma} & = & \Phi/\Gamma
 # \end{eqnarray}
 # and whether the $c$ is falling or rising over time depends on whether $\Phi_{\Gamma}$ is below or above 1.
 #
-# An analogous condition can be defined when there is uncertainty about permanent income.  Defining $\tilde{\Gamma} = (\mathbb{E}[\psi^{-1}])^{-1}\Gamma$, the 'Growth Impatience Condition' [(GIC)](https://llorracc.github.io/BufferStockTheory/#GIC) determines whether, \textit{in expectation}, the stochastic value of $c$ is rising, constant, or falling over time:
+# An analogous condition can be defined when there is uncertainty about permanent income.  Defining $\tilde{\Gamma} = (\mathbb{E}[\psi^{-1}])^{-1}\Gamma$, the 'Growth Impatience Condition' [(GIC)](https://econ-ark.github.io/BufferStockTheory/#GIC) determines whether, \textit{in expectation}, the stochastic value of $c$ is rising, constant, or falling over time:
 # \begin{eqnarray}
 #   \Phi/\tilde{\Gamma} & < & 1
 # \end{eqnarray}
 
 # %% [markdown]
-# ### [The Finite Value of Autarky Condition (FVAC)](https://llorracc.github.io/BufferStockTheory/#Autarky-Value)
+# ### [The Finite Value of Autarky Condition (FVAC)](https://econ-ark.github.io/BufferStockTheory/#Autarky-Value)
 
 
 # %% [markdown]
-# The paper [shows](https://llorracc.github.io/BufferStockTheory/#Autarky-Value) that a consumer who planned to spend his permanent income $\{ \mathbf{p}_{t}, \mathbf{p}_{t+1}, ...\} $ in every period would have value defined by
+# The paper [shows](https://econ-ark.github.io/BufferStockTheory/#Autarky-Value) that a consumer who planned to spend his permanent income $\{ \mathbf{p}_{t}, \mathbf{p}_{t+1}, ...\} $ in every period would have value defined by
 #
 # \begin{equation*}
 # \mathbf{v}_{t}^{\text{autarky}} = u(\mathbf{p}_{t})\left(\frac{1}{1-\beta \Gamma^{1-\rho} \mathbb{E}[\psi^{1-\rho}]}\right)
@@ -328,9 +328,9 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # \end{equation*}
 
 # %% [markdown]
-# ### [The Weak Return Impatience Condition (WRIC)](https://llorracc.github.io/BufferStockTheory/#WRIC)
+# ### [The Weak Return Impatience Condition (WRIC)](https://econ-ark.github.io/BufferStockTheory/#WRIC)
 #
-# The [Return Impatience Condition](https://llorracc.github.io/BufferStockTheory/#RIC) $\Phi/\mathsf{R} < 1$ has long been understood to be required for the perfect foresight model to have a nondegenerate solution (a common special case is when $\rho=1$; in this case $\Phi = \mathsf{R} \beta$ so $\Phi<1$ reduces to $\beta < \mathsf{R}$).  
+# The [Return Impatience Condition](https://econ-ark.github.io/BufferStockTheory/#RIC) $\Phi/\mathsf{R} < 1$ has long been understood to be required for the perfect foresight model to have a nondegenerate solution (a common special case is when $\rho=1$; in this case $\Phi = \mathsf{R} \beta$ so $\Phi<1$ reduces to $\beta < \mathsf{R}$).  
 #
 # If the RIC does not hold, the consumer is so patient that the optimal consumption function approaches zero as the horizon extends indefinitely.
 #
@@ -343,12 +343,12 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # %% [markdown]
 # # Key Results
 #
-# ## [Nondegenerate Solution Requires FVAC and WRIC](https://llorracc.github.io/BufferStockTheory/#Sufficient-Conditions-For-Nondegenerate-Solution)
+# ## [Nondegenerate Solution Requires FVAC and WRIC](https://econ-ark.github.io/BufferStockTheory/#Sufficient-Conditions-For-Nondegenerate-Solution)
 #
 # A main result of the paper is that the conditions required for the model to have a nondegenerate solution ($0 < c(m) < \infty$ for feasible $m$) are that the Finite Value of Autarky (FVAC) and Weak Return Impatience Condition (WRIC) hold.
 
 # %% [markdown]
-# ## [Natural Borrowing Constraint limits to Artificial Borrowing Constraint](https://llorracc.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit)
+# ## [Natural Borrowing Constraint limits to Artificial Borrowing Constraint](https://econ-ark.github.io/BufferStockTheory/#The-Liquidity-Constrained-Solution-as-a-Limit)
 
 # %% [markdown]
 # Defining $\chi(\wp)$ as the consumption function associated with any particular value of $\wp$, and defining $\hat{\chi}$ as the consumption function that would apply in the absence of the zero-income shocks but in the presence of an 'artificial' borrowing constraint requiring $a \geq 0$ (_a la_ Deaton (1991)), the paper shows that
@@ -357,10 +357,10 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # \lim_{\wp \downarrow 0}~\chi(\wp) & = & \hat{\chi}
 # \end{eqnarray}
 #
-# That is, as $\wp$ approaches zero the problem with uncertainty becomes identical to the problem that instead has constraints.  (See [Precautionary Saving and Liquidity Constraints](https://llorracc.github.io/LiqConstr) for a full treatment of the relationship between precautionary saving and liquidity constraints).
+# That is, as $\wp$ approaches zero the problem with uncertainty becomes identical to the problem that instead has constraints.  (See [Precautionary Saving and Liquidity Constraints](https://econ-ark.github.io/LiqConstr) for a full treatment of the relationship between precautionary saving and liquidity constraints).
 
 # %% [markdown]
-# ## [$c(m)$ can be Finite Even When Human Wealth Is Infinite](https://llorracc.github.io/BufferStockTheory/#When-The-GIC-Fails)
+# ## [$c(m)$ can be Finite Even When Human Wealth Is Infinite](https://econ-ark.github.io/BufferStockTheory/#When-The-GIC-Fails)
 #
 # In the perfect foresight model, if $\mathsf{R} < \Gamma$ the PDV of future labor income approaches infinity and so the limiting consumption function is $c(m) = \infty$ for all $m$.  Many models have no well-defined solution when human wealth is infinite.
 #
@@ -369,14 +369,14 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # This is because uncertainty imposes a "natural borrowing constraint" that deters the consumer from borrowing against their unbounded (but uncertain) future labor income.
 
 # %% [markdown]
-# A [table](https://llorracc.github.io/BufferStockTheory/#Sufficient-Conditions-For-Nondegenerate-Solution) puts this result in the context of implications of other conditions and restrictions.
+# A [table](https://econ-ark.github.io/BufferStockTheory/#Sufficient-Conditions-For-Nondegenerate-Solution) puts this result in the context of implications of other conditions and restrictions.
 #
 #
 
 # %% [markdown]
-# ## [If the GIC Holds, $\exists$ a finite 'target' $m$](https://llorracc.github.io/BufferStockTheory/#onetarget)
+# ## [If the GIC Holds, $\exists$ a finite 'target' $m$](https://econ-ark.github.io/BufferStockTheory/#onetarget)
 #
-# Section [There Is Exactly One Target $m$ Ratio, Which Is Stable](https://llorracc.github.io/BufferStockTheory/#onetarget) shows that, under parameter values for which the limiting consumption function exists, if the GIC holds then there will be a value $\check{m}$ such that:
+# Section [There Is Exactly One Target $m$ Ratio, Which Is Stable](https://econ-ark.github.io/BufferStockTheory/#onetarget) shows that, under parameter values for which the limiting consumption function exists, if the GIC holds then there will be a value $\check{m}$ such that:
 #
 # \begin{eqnarray*}
 # \mathbb{E}[m_{t+1}] & > & m_{t}~\text{if $m_{t} < \check{m}$} \\
@@ -385,9 +385,9 @@ make('cFuncsConverge') # Comment out if you want to run uninterrupted
 # \end{eqnarray*}
 
 # %% [markdown]
-# ## [If the GIC Fails, Target Wealth is Infinite ](https://llorracc.github.io/BufferStockTheory/#The-GIC)
+# ## [If the GIC Fails, Target Wealth is Infinite ](https://econ-ark.github.io/BufferStockTheory/#The-GIC)
 #
-# [A figure](https://llorracc.github.io/BufferStockTheory/#FVACnotGIC) depicts a solution when the **FVAC** (Finite Value of Autarky Condition) and **WRIC** hold (so that the model has a solution) but the **GIC** (Growth Impatience Condition) fails.  In this case the target wealth ratio is infinity.
+# [A figure](https://econ-ark.github.io/BufferStockTheory/#FVACnotGIC) depicts a solution when the **FVAC** (Finite Value of Autarky Condition) and **WRIC** hold (so that the model has a solution) but the **GIC** (Growth Impatience Condition) fails.  In this case the target wealth ratio is infinity.
 #
 # The parameter values in this specific example are:
 #
@@ -885,7 +885,7 @@ make('MPCLimits')
 # %% [markdown]
 # # Summary
 #
-# [Two tables in the paper](https://llorracc.github.io/BufferStockTheory/#Factors-Defined-And-Compared) summarize the various definitions, and then articulate conditions required for the problem to have a nondegenerate solution.  Among the nondegenerate cases, the most interesting result is that if the Growth Impatience Condition holds there will be a target level of wealth.
+# [Two tables in the paper](https://econ-ark.github.io/BufferStockTheory/#Factors-Defined-And-Compared) summarize the various definitions, and then articulate conditions required for the problem to have a nondegenerate solution.  Among the nondegenerate cases, the most interesting result is that if the Growth Impatience Condition holds there will be a target level of wealth.
 
 # %% [markdown]
 # ### Appendix: Options for Interacting With This Notebook <a id='optionsForInstalling'></a>
