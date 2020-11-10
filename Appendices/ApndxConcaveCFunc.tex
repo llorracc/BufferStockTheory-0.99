@@ -24,6 +24,7 @@ To show that \eqref{\localorexternallabel{eq:veqn}} defines a sequence of contin
 \end{enumerate}
 \end{quote}
 
+
 (Notice that an implication of niceness is that $\lim_{z \downarrow 0} \nFunc^{\prime}(z) = \infty.$)
 
 Assume that some $\vFunc_{t+1}$ is nice.  Our objective is to show that this
@@ -69,6 +70,7 @@ solution that satisfies
 \begin{equation}
 \uFunc^{\prime }(\cFunc_{t}(\mRat))=\mathfrak{v}_{t}^{\prime }(\mRat-\cFunc_{t}(\mRat))  \label{eq:consumptionf}.
 \end{equation}
+
 
 Since both $\uFunc$ and $\mathfrak{v}_{t}$ are strictly concave, both
 $\cFunc_{t}(\mRat)$ and $\aFunc_{t}(\mRat)=\mRat-\cFunc_{t}(\mRat)$
@@ -164,13 +166,13 @@ Consider condition (1). For this problem,
 [\MinMinMPC \mRat_{t}, \MaxMPC \mRat_{t}]
 }\max \left\{
 \uFunc(c_{t})+\DiscFac \Ex_{t}\left[ {\PGro}_{t+1}^{1-\CRRA }{\mathfrak{\xFunc}}
-\left( {\mRat}_{t+1}\right) \right] \right\}     \label{eq:condition1}
+\left( {\mRat}_{t+1}\right) \right] \right\}  \notag  \label{eq:condition1}
 \\
 \{\TMap{\mathfrak{\yFunc}}\}(\mRat_{t}) &\mbox{~is}\underset{\cRat_{t} \in
 [\MinMinMPC \mRat_{t}, \MaxMPC \mRat_{t}]
 }\max \left\{
 \uFunc(c_{t})+\DiscFac \Ex_{t}\left[ {\PGro}_{t+1}^{1-\CRRA }{\mathfrak{\yFunc}}
-\left( {\mRat}_{t+1}\right) \right] \right\} ,   
+\left( {\mRat}_{t+1}\right) \right] \right\} ,  \notag
 \end{align*}%
 so ${\mathfrak{\xFunc}}(\bullet) \leq {\mathfrak{\yFunc}}(\bullet)$ implies $\{\TMap{\mathfrak{\xFunc}}\}(\mRat_{t}) \leq \{\TMap{\mathfrak{\yFunc}} \}(\mRat_{t})$ by inspection.\footnote{For a fixed $\mRat_{t}$, recall that ${\mRat}_{t+1}$ is just a function of $c_{t}$ and the
 stochastic shocks.}
@@ -239,15 +241,15 @@ which by imposing \PFFVAC~(equation \eqref{\localorexternallabel{eq:PFFVAC}}, wh
 But since $\eta$ is an arbitrary constant that we can pick, the proof thus reduces to showing that the numerator of \eqref{\localorexternallabel{eq:KeyCondition}} is bounded from above:
 \begin{equation}\begin{gathered}\begin{aligned}%
   \lefteqn{\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA} ~~~}  \\ 
+ +\pZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\hat{\aRat}_{t}\Rnorm_{t+1})^{1-\CRRA}\right]-\mRat_{t}^{1-\CRRA}\notag~~~}  \\ 
  ~~~\leq & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\pZero\DiscFac\Rfree^{1-\CRRA}((1-\MaxMPC)\mRat_{t})^{1-\CRRA}-\mRat_{t}^{1-\CRRA} \\
+ +\pZero\DiscFac\Rfree^{1-\CRRA}((1-\MaxMPC)\mRat_{t})^{1-\CRRA}-\mRat_{t}^{1-\CRRA}\notag\\
  ~~~= & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
- +\mRat_{t}^{1-\CRRA}\left(\pZero\DiscFac\Rfree^{1-\CRRA}\left(\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}\right)^{1-\CRRA}-1\right) \\
+ +\mRat_{t}^{1-\CRRA}\left(\pZero\DiscFac\Rfree^{1-\CRRA}\left(\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}\right)^{1-\CRRA}-1\right)\notag\\
  ~~~ =  & \pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}((1-\MaxMPC)\mRat_{t}\Rnorm_{t+1}+\tShkEmp_{t+1}/\pNotZero)^{1-\CRRA}\right]
  +\mRat_{t}^{1-\CRRA}\left(\underbrace{\pZero^{1/\CRRA}\frac{(\Rfree\DiscFac)^{1/\CRRA}}{\Rfree}}_{<1~\text{by
        \WRIC}}-1\right) \label{eq:WRICBites} \\
- ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\underline{\tShkEmp}/\pNotZero)^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA}  
+ ~~~< &\pNotZero\DiscFac\Ex_{t}\left[{\PGro}_{t+1}^{1-\CRRA}(\underline{\tShkEmp}/\pNotZero)^{1-\CRRA}\right]=\DiscAlt\pNotZero^{\CRRA}\underline{\tShkEmp}^{1-\CRRA} \notag
  .
 \end{aligned}\end{gathered}\end{equation}
 
@@ -315,6 +317,7 @@ defined by $\TMap$.\footnote{It seems likely that convergence of the
   work.}
 
 \onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
+
 
 \end{document}
 % Local Variables:

@@ -1,4 +1,13 @@
 #!/bin/bash
+# This script will only run on a system on which LaTeX has the ability to write to
+# parent directories in the filesystem.
+# This is controlled by parameters in the texmf.cnf file:
+# 
+#    openout_any = a
+#    shell_escape = t
+#
+# Google LaTeX write permissions to determine how to set these on your system
+# Or change the output directory from LaTeX to /tmp here and elsewhere in the documents
 
 scriptDir="$(dirname "$0")"
 
