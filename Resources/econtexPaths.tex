@@ -4,16 +4,13 @@
 \providecommand{\econtexShortcuts}{\econtexRoot/Resources/texmf-local/tex/latex/econtexShortcuts}
 \providecommand{\econtexBibMake}{\econtexRoot/Resources/texmf-local/tex/latex/econtexBibMake}
 \providecommand{\econtexBibStyle}{\econtexRoot/Resources/texmf-local/bibtex/bst/econtex}
-\providecommand{\econtexBib}{\econtexRoot/Resources/texmf-local/bibtex/bib/economics}
+\providecommand{\econtexBib}{economics}
 \providecommand{\notes}{\econtexRoot/Resources/texmf-local/tex/latex/handout}
 \providecommand{\handoutSetup}{\econtexRoot/Resources/texmf-local/tex/latex/handoutSetup}
 \providecommand{\handoutShortcuts}{\econtexRoot/Resources/texmf-local/tex/latex/handoutShortcuts}
 \providecommand{\handoutBibMake}{\econtexRoot/Resources/texmf-local/tex/latex/handoutBibMake}
 \providecommand{\handoutBibStyle}{\econtexRoot/Resources/texmf-local/bibtex/bst/handout}
 
-\providecommand{\rootFromOut}{..} % Path back to root directory from output-directory
-
-\providecommand{\EqDir}{\econtexRoot/Equations}
 \providecommand{\FigDir}{\econtexRoot/Figures}
 \providecommand{\CodeDir}{\econtexRoot/Code}
 \providecommand{\DataDir}{\econtexRoot/Data}
@@ -23,10 +20,13 @@
 
 \providecommand{\ResourcesDir}{\econtexRoot/Resources}
 \ifnum\pdfshellescape=1
+\providecommand{\rootFromOut}{..} % Path back to root directory from output-directory
 \providecommand{\LaTeXGenerated}{\econtexRoot/LaTeX} % Put generated files in subdirectory
+\providecommand{\EqDir}{\econtexRoot/Equations} % Put generated files in subdirectory
 \else
+\providecommand{\rootFromOut}{.} % Path back to root directory 
 \providecommand{\LaTeXGenerated}{\econtexRoot/} % Put generated files in main directory (because not allowed in subdirectory)
-\renewccommand{\EqDir}{\econtexRoot/Equations}
+\providecommand{\EqDir}{\econtexRoot/} % Put generated files in main directory
 \fi
 \providecommand{\econtexPaths}{\econtexRoot/Resources/econtexPaths}
 \providecommand{\LaTeXInputs}{\econtexRoot/Resources/LaTeXInputs}
