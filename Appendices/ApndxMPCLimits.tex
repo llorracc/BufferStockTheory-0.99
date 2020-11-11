@@ -12,9 +12,11 @@ and $\aFunc_{t}(\mRat_{t})=\mRat_{t}-\cFunc_{t}(\mRat_{t})$
 and the Euler equation \eqref{\localorexternallabel{eq:scaledeuler}} can be rewritten
 \begin{equation}\begin{gathered}\begin{aligned}
  \eFunc_{t}(\mRat_{t})^{-\CRRA}  & = \DiscFac \Rfree \Ex_{t}\left[\left(\eFunc_{t+1}({\mRat}_{t+1})\left(\frac{\overbrace{\Rfree \aFunc_{t}(\mRat_{t})+{\PGro}_{t+1}{\tShkAll}_{t+1}}^{=\mRat_{t+1}\PGro_{t+1}}}{\mRat_{t}}\right)\right)^{-\CRRA }\right] \label{eq:eFuncEuler}
-\\  & = \phantom{ + }\pNotZero \DiscFac \Rfree \mRat_{t}^{\CRRA} \Ex_{t}\left[ \left(\eFunc_{t+1}(\mRat_{t+1}) \mRat_{t+1}\PGro_{t+1}\right)^{-\CRRA} |~ \tShkAll_{t+1}>0 \right]  
+\\  & = \phantom{ + }\pNotZero \DiscFac \Rfree \mRat_{t}^{\CRRA} \Ex_{t}\left[ \left(\eFunc_{t+1}(\mRat_{t+1}) \mRat_{t+1}\PGro_{t+1}\right)^{-\CRRA} |~ \tShkAll_{t+1}>0 \right] \notag
 \\ &  + \pZero  \DiscFac \Rfree^{1-\CRRA} \Ex_{t}\left[\left(\eFunc_{t+1}(\mathcal{R}_{t+1}\aFunc_{t}(\mRat_{t}))\frac{\mRat_t-\cFunc_{t}(\mRat_{t})}{\mRat_{t}}\right)^{-\CRRA} |~ \tShkAll_{t+1} = 0 \right]   .
 \end{aligned}\end{gathered}\end{equation}
+
+
 
 Consider the first conditional expectation in \eqref{\localorexternallabel{eq:eFuncEuler}},
 recalling that if $\tShkAll_{t+1}>0$ then $\tShkAll_{t+1} \equiv
@@ -36,15 +38,15 @@ the limiting $\MaxMPC_{t}$ satisfies $\MaxMPC_{t}^{-\CRRA }=\DiscFac
 _{t})^{-\CRRA }.$ Exponentiating by $\CRRA$, we can conclude that
 \begin{equation}\begin{gathered}\begin{aligned}
 \MaxMPC_{t} & = \pZero^{-1/\CRRA} (\DiscFac
-\Rfree)^{-1/\CRRA}\Rfree(1-\MaxMPC _{t})\MaxMPC _{t+1}  
+\Rfree)^{-1/\CRRA}\Rfree(1-\MaxMPC _{t})\MaxMPC _{t+1} \notag
 \\ \underbrace{\pZero^{1/\CRRA}\overbrace{{\Rfree}^{-1}(\DiscFac
     \Rfree)^{1/\CRRA}}^{\PatR}}_{\equiv \MinMPS}
 \MaxMPC_{t} & = (1-\MaxMPC _{t})\MaxMPC _{t+1} \label{eq:MinMPSDef}
 \end{aligned}\end{gathered}\end{equation}
 which yields a useful recursive formula for the maximal marginal propensity to consume:
 \begin{equation}\begin{gathered}\begin{aligned}
-  (\MinMPS \MaxMPC_{t})^{-1}  & = (1-\MaxMPC_{t})^{-1}\MaxMPC_{t+1}^{-1}   
-\\ \MaxMPC_{t}^{-1}(1-\MaxMPC_{t})  & = \MinMPS \MaxMPC_{t+1}^{-1}    
+  (\MinMPS \MaxMPC_{t})^{-1}  & = (1-\MaxMPC_{t})^{-1}\MaxMPC_{t+1}^{-1}  \notag
+\\ \MaxMPC_{t}^{-1}(1-\MaxMPC_{t})  & = \MinMPS \MaxMPC_{t+1}^{-1}   \notag
 \\ \MaxMPC_{t}^{-1}  & = 1+\MinMPS \MaxMPC_{t+1}^{-1} \label{eq:MaxMPCInvApndx}.
 \end{aligned}\end{gathered}\end{equation}
 

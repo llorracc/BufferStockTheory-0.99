@@ -33,20 +33,20 @@ This appendix explains in detail the paper's `inequalities' diagrams (Figures~\r
 
 \subsection{The Unconstrained Perfect Foresight Model}
 
-A simple illustration is presented in Figure~\ref{fig:InequalityPFGICFHWCRIC}, whose three nodes represent values of the absolute patience factor $\Pat$, the permanent-income growth factor $\PGro$, and the riskfree interest factor $\Rfree$.  The arrows represent imposition of the labeled inequality condition  (like,  the uppermost arrow, pointing from {$\Pat$} to $\PGro$, reflects imposition of the {\PFGIC} condition (clicking {\PFGIC} should take you to its definition at {\PFGICFull}; definitions of other conditions are also linked below).\footnote{For convenience, the equivalent ($\equiv$) mathematical statement of each condition is expressed nearby in parentheses.}  Annotations inside parenthetical expressions containing $\equiv$ have no content: They are there to make the diagram readable for someone who may not immediately remember terms and definitions from the main text.  (Such a reader might also want to be reminded that $\Rfree, \DiscFac, $ and $\Gamma$ are all in $\mathbb{R}_{++}$, and that $\CRRA>1$).
+A simple illustration is presented in Figure~\ref{fig:InequalityPFGICFHWCRIC}, whose three nodes represent values of the absolute patience factor $\Pat$, the permanent-income growth factor $\PGro$, and the riskfree interest factor $\Rfree$.  The arrows represent imposition of the labeled inequality condition  (like,  the uppermost arrow, pointing from {$\Pat$} to $\PGro$, reflects imposition of the {\PFGIC} condition (clicking {\PFGIC} should take you to its definition; definitions of other conditions are also linked below).\footnote{For convenience, the equivalent ($\equiv$) mathematical statement of each condition is expressed nearby in parentheses.}  Annotations inside parenthetical expressions containing $\equiv$ are there to make the diagram readable for someone who may not immediately remember terms and definitions from the main text.  (Such a reader might also want to be reminded that $\Rfree, \DiscFac, $ and $\Gamma$ are all in $\mathbb{R}_{++}$, and that $\CRRA>1$).
 
 Navigation of the diagram is simple: Start at any node, and deduce a chain of inequalities by following any arrow that exits that node, and any arrows that exit from successive nodes.  Traversal must stop upon arrival at a node with no exiting arrows.  So, for example, we can start at the $\Pat$ node and impose the {\PFGIC} and then the {\FHWC}, and see that imposition of these conditions allows us to conclude that $\Pat < \Rfree$.
 
-One could also impose $\Pat < \Rfree$ directly (without imposing $\PFGIC$ and $\FHWC$) by following the downward-sloping diagonal arrow exiting $\Pat$.  Although alternate routes from one node to another, all justify the same core conclusion ($\Pat < \Rfree$, in this case), $\neq$ symbol in the center is meant to convey that these routes are not identical in other respects.  This notational convention is used in \href{https://en.wikipedia.org/wiki/Diagram_(category_theory)}{category theory diagrams},\footnote{For a popular introduction to category theory, see \cite{riehl2017category}.} to indicate that the diagram is not \href{https://en.wikipedia.org/wiki/Commutative_diagram}{commutative}.\footnote{But the rest of our notation does not necessarily abide by the other conventions of category theory diagrams.}
+One could also impose $\Pat < \Rfree$ directly (without imposing $\PFGIC$ and $\FHWC$) by following the downward-sloping diagonal arrow exiting $\Pat$.  Although alternate routes from one node to another all justify the same core conclusion ($\Pat < \Rfree$, in this case), $\neq$ symbol in the center is meant to convey that these routes are not identical in other respects.  This notational convention is used in \href{https://en.wikipedia.org/wiki/Diagram_(category_theory)}{category theory diagrams},\footnote{For a popular introduction to category theory, see \cite{riehl2017category}.} to indicate that the diagram is not \href{https://en.wikipedia.org/wiki/Commutative_diagram}{commutative}.\footnote{But the rest of our notation does not necessarily abide by the other conventions of category theory diagrams.}
 
 Negation of a condition is indicated by the reversal of the corresponding arrow.  For example, negation of the {\RIC},  $\cncl{\RIC} \equiv \Pat > \Rfree$, would be represented by moving the arrowhead from the bottom right to the top left of the line segment connecting {$\Pat$} and $\Rfree$.
 
 If we were to start at $\Rfree$ and then impose $\cncl{\FHWC}$, that would reverse the arrow connecting $\Rfree$ and $\PGro$, but the $\PGro$ node would then have no exiting arrows so no further deductions could be made.  However, if we \textit{also} reversed $\PFGIC$ (that is, if we imposed $\cncl{\PFGIC}$), that would take us to the $\Pat$ node, and we could deduce $\Rfree > \Pat$.  However, we would have to stop traversing the diagram at this point, because the arrow exiting from the $\Pat$ node points back to our starting point, which (if valid) would lead us to the conclusion that $\Rfree > \Rfree$.  Thus, the reversal of the two earlier conditions (imposition of $\cncl{\FHWC}$ and $\cncl{\PFGIC}$) requires us also to reverse the final condition, giving us $\cncl{\RIC}$.\footnote{The corresponding algebra is
 \begin{equation}\begin{gathered}\begin{aligned}
-  \cncl{\FHWC}:~~~~  \Rfree & < \PGro    
+  \cncl{\FHWC}:~~~~  \Rfree & < \PGro \notag  
   \\ \cncl{\PFGIC}:~~~~ \PGro & < \Pat %~\left(\equiv (\Rfree \DiscFac)^{1/\CRRA}\right)
                                 \label{eq:cnclRIC}
-  \\ \Rightarrow \cncl{\RIC}:~~~~\Rfree & < \Pat  ,
+  \\ \Rightarrow \cncl{\RIC}:~~~~\Rfree & < \Pat \notag,
 \end{aligned}\end{gathered}\end{equation}.}
 
 Under these conventions, Figure~\ref{fig:RelatePFGICFHWCRICPFFVAC} in the main text presents a modified version of the diagram extended to incorporate the {\PFFVAC} \href{https://econ-ark.github.io/BufferStockTheory/#RelatePFGICFHWCRICPFFVAC}{(reproduced here for convenient reference)}.
@@ -68,9 +68,9 @@ This diagram can be interpreted, for example, as saying  that, starting at the $
 which leads to the negation of both of the conditions leading into $\Pat$.  \cncl{\PFGIC} is obtained directly as the last line in \eqref{eq:cnclPFGIC} and \cncl{\PFFVAC} follows if we start by multipling the Return Patience Factor ({\RPF}=$\Pat/\Rfree$) by the \FHWF (=$\PGro/\Rfree$) raised to the power $1/\CRRA-1$, which is negative since we imposed $\CRRA > 1$.  {\FHWC} implies {\FHWF} $< 1$ so when {\FHWF} is raised to a negative power the result is greater than one.
 Multiplying the {\RPF} (which exceeds 1 because \cncl{\RIC}) by another number greater than one yields a product that must be greater than one:
 \begin{equation}\begin{gathered}\begin{aligned}
-  1  & < \overbrace{\left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{\Rfree}\right)}^{>1 \text{~from~}\cncl{\RIC}}\overbrace{\left(\PGro/\Rfree\right)^{1/\CRRA-1}}^{\phantom{...}>1~\text{~from~} \FHWC}  
+  1  & < \overbrace{\left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{\Rfree}\right)}^{>1 \text{~from~}\cncl{\RIC}}\overbrace{\left(\PGro/\Rfree\right)^{1/\CRRA-1}}^{\phantom{...}>1~\text{~from~} \FHWC} \notag
   \\ 1  & < \left(\frac{(\Rfree \DiscFac)^{1/\CRRA}}{(\Rfree/\PGro)^{1/\CRRA}\Rfree\PGro/\Rfree}\right) \label{eq:cnclFHWFAndcnclRICImplycnclPFFVAC}
-  \\ \Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} = (\Rfree/\PGro)^{1/\CRRA} \PGro  & < \Pat  
+  \\ \Rfree^{1/\CRRA}\PGro^{1 - 1/\CRRA} = (\Rfree/\PGro)^{1/\CRRA} \PGro  & < \Pat \notag
 \end{aligned}\end{gathered}\end{equation}
 which is one way of writing $\cncl{\PFFVAC}$.
 
@@ -85,9 +85,18 @@ After the warmup of constructing these conditions for the perfect foresight case
   \caption{Relation of All Inequality Conditions} \label{fig:InequalitiesApp}
 \end{figure}
 
+Finally, the next diagram substitutes the values of the various objects in the diagram under the baseline parameter values and verifies that all of the asserted inequality conditions hold true.
+\begin{figure}[h]
+  \centerline{
+    \includegraphics[width=6in]{\FigDir/Inequalities-numer}
+  }
+  \caption{Numerical Relation of All Inequality Conditions} \label{fig:InequalitiesAppNumer}
+\end{figure}
+
 \onlyinsubfile{\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}}
 
 \end{document}
+
 
 % Local Variables:
 % eval: (setq TeX-command-list  (assq-delete-all (car (assoc "BibTeX" TeX-command-list)) TeX-command-list))
