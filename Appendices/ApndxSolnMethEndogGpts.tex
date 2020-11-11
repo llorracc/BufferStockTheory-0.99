@@ -1,6 +1,5 @@
 \input{./econtexRoot}\documentclass[\econtexRoot/BufferStockTheory]{subfiles}
 \input{./econtexRoot}
-\provideboolean{Metin}\setboolean{Metin}{true}\newcommand{\Metin}[2]{\ifthenelse{\boolean{Metin}}{\marginpar{\large Metin}\{{#1}\} $\rightarrow$ \{{#2}\}}{#2}}% PrivateMsg: Comments by Metin Uyanik
 
 \input{\LaTeXInputs/econtex_onlyinsubfile}
 \onlyinsubfile{\externaldocument{\LaTeXGenerated/BufferStockTheory}} % Get xrefs -- esp to appendix -- from main file; only works properly if main file has already been compiled;
@@ -16,7 +15,7 @@ The model is solved using an extension of the method of endogenous gridpoints (\
   \cFunc_{t+1}(\Rnorm_{t+1}\vec{\aRat} + \tShk_{t+1}))] \label{eq:cEulerEndog}
 \\ \vec{c}_{t} \equiv \cEndFunc_{t}(\vec{\aRat})  & = \left(\Rfree \beta \Ex_{t}\left[ \left(\PGro_{t+1}
       \cFunc_{t+1}(\Rnorm_{t+1}\vec{\aRat} +
-      \tShk_{t+1})\right)^{-\CRRA}\right]\right)^{-1/\CRRA}. \notag
+      \tShk_{t+1})\right)^{-\CRRA}\right]\right)^{-1/\CRRA}.  
 \end{aligned}\end{gathered}\end{equation}
 
 The dynamic budget constraint can then be used to generate the corresponding $\mRat$'s:
@@ -33,8 +32,8 @@ with respect to $\aRat$ (and dropping policy function arguments for
 simplicity) yields a marginal propensity to {\it have consumed} $\cEndFunc^{\aRat}$ at
 each gridpoint:
 \begin{equation}\begin{gathered}\begin{aligned}
-\uPP(\cEndFunc_{t})\cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1})\PGro_{t+1} \cFunc^{\mRat}_{t+1}\Rnorm_{t+1}] \notag
-\\  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}] \notag
+\uPP(\cEndFunc_{t})\cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1})\PGro_{t+1} \cFunc^{\mRat}_{t+1}\Rnorm_{t+1}]  
+\\  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1} \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}]  
 \\ \cEndFunc_{t}^{\aRat}  & = \Rfree \beta \Ex_{t}[\uPP(\PGro_{t+1}  \cFunc_{t+1}) \Rfree \cFunc^{\mRat}_{t+1}]/\uPP(\cEndFunc_{t}) \label{eq:MPTHC}
 \end{aligned}\end{gathered}\end{equation}
 and the marginal propensity to consume at the beginning of the period is obtained from the marginal
@@ -94,7 +93,6 @@ evaluate the function is $\mRat=0$ but $\log 0 = -\infty$ which is difficult for
   \hat{\cFunc}_{t}(\mRat)  & = \bar{\cFunc}_{t}(\mRat)-\exp(\hat{\varsigma}_{t}(\log \mRat)).
 \end{aligned}\end{gathered}\end{equation}
 \end{comment}
-
 
 %\end{verbatimwrite}%\input {\LaTeXGenerated/ApndxSolnMethEndogGpts.tex}
 
