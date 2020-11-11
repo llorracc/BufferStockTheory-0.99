@@ -4,7 +4,7 @@
 \providecommand{\econtexShortcuts}{\econtexRoot/Resources/texmf-local/tex/latex/econtexShortcuts}
 \providecommand{\econtexBibMake}{\econtexRoot/Resources/texmf-local/tex/latex/econtexBibMake}
 \providecommand{\econtexBibStyle}{\econtexRoot/Resources/texmf-local/bibtex/bst/econtex}
-\providecommand{\econtexBib}{\econtexRoot/Resources/texmf-local/bibtex/bib/economics}
+\providecommand{\econtexBib}{economics}
 \providecommand{\notes}{\econtexRoot/Resources/texmf-local/tex/latex/handout}
 \providecommand{\handoutSetup}{\econtexRoot/Resources/texmf-local/tex/latex/handoutSetup}
 \providecommand{\handoutShortcuts}{\econtexRoot/Resources/texmf-local/tex/latex/handoutShortcuts}
@@ -22,6 +22,11 @@
 \providecommand{\ApndxDir}{\econtexRoot/Appendices}
 
 \providecommand{\ResourcesDir}{\econtexRoot/Resources}
-\providecommand{\LaTeXGenerated}{\econtexRoot/LaTeX}
+\ifnum\pdfshellescape=1
+\providecommand{\LaTeXGenerated}{\econtexRoot/LaTeX} % Put generated files in subdirectory
+\else
+\providecommand{\LaTeXGenerated}{\econtexRoot/} % Put generated files in main directory (because not allowed in subdirectory)
+\renewccommand{\EqDir}{\econtexRoot/Equations}
+\fi
 \providecommand{\econtexPaths}{\econtexRoot/Resources/econtexPaths}
 \providecommand{\LaTeXInputs}{\econtexRoot/Resources/LaTeXInputs}
