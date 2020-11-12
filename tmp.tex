@@ -6,33 +6,11 @@
 
 \begin{document}
 
-% Command to determine whether executing in a subfile or main file
-% Subfiles redefine the commands 
-\renewcommand{\onlyinsubfile}[1]{}\renewcommand{\notinsubfile}[1]{#1}
-
-\subfile{BufferStockTheory-NoAppendix} % First subfile (main body of paper)
-
-\hypertarget{Appendices}{} % Allows link to [url-of-paper]#Appendices
-\appendix \centerline{\LARGE Appendices}\vspace{0.2in}
-
-\subfile{\ApndxDir/ApndxLiqConstr}
-\subfile{\ApndxDir/ApndxConcaveCFunc}
-\subfile{\ApndxDir/ApndxEuclidian}
-\subfile{\ApndxDir/ApndxCGroIsPGro}
-\subfile{\ApndxDir/ApndxMPCLimits}
-\subfile{\ApndxDir/ApndxLiqConstrAsLimit}
-\subfile{\ApndxDir/ApndxSolnMethEndogGpts}
-\subfile{\ApndxDir/ApndxSolnMethTermFunc}
-\subfile{\ApndxDir/ApndxConditionDiagrams}
-\subfile{\ApndxDir/ApndxCGrowthDeclines}
-
-\clearpage\vfill\eject
-
-% References 
-\small % Small font 
-\renewcommand{\baselinestretch}{1.0} % Single spaced
-
-\bibliography{\LaTeXGenerated/BufferStockTheory,\econtexBib}
+\ifnum\pdfshellescape=2
+pdfshellescapeIstwo
+\else
+pdfshellescapeIsNotTwo
+\fi
 
 \end{document}
 
