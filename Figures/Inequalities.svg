@@ -16,6 +16,10 @@
 <font-face font-family='cmss10' units-per-em='1000' ascent='759' descent='250'/>
 <glyph unicode='R' horiz-adv-x='645' vert-adv-y='645' glyph-name='R' d='M419 326C522 356 589 427 589 508C589 607 480 694 337 694H96V0H182V317H340L528 0H617L419 326ZM182 378V638H326C442 638 508 579 508 508S444 378 326 378H182Z'/>
 </font>
+<font id='cmr7' horiz-adv-x='0'>
+<font-face font-family='cmr7' units-per-em='1000' ascent='750' descent='250'/>
+<glyph unicode='1' horiz-adv-x='569' vert-adv-y='569' glyph-name='one' d='M335 636C335 663 333 664 305 664C241 601 150 600 109 600V564C133 564 199 564 254 592V82C254 49 254 36 154 36H116V0C134 1 257 4 294 4C325 4 451 1 473 0V36H435C335 36 335 49 335 82V636Z'/>
+</font>
 <font id='cmmi7' horiz-adv-x='0'>
 <font-face font-family='cmmi7' units-per-em='1000' ascent='750' descent='250'/>
 <glyph unicode='ρ' horiz-adv-x='592' vert-adv-y='592' glyph-name='rho' d='M54-161C50-176 50-181 50-182C50-204 68-214 84-214C120-214 128-184 135-152C149-100 177 14 187 52C196 37 228-10 297-10C425-10 561 126 561 272C561 378 490 441 402 441C304 441 183 355 148 214L54-161ZM296 18C222 18 200 92 200 105C200 107 206 129 209 141C239 264 245 287 274 331C310 384 360 413 400 413C441 413 480 384 480 312C480 266 454 155 423 105C377 34 327 18 296 18Z'/>
@@ -24,10 +28,6 @@
 <font id='cmsy10' horiz-adv-x='0'>
 <font-face font-family='cmsy10' units-per-em='1000' ascent='775' descent='960'/>
 <glyph unicode='≡' horiz-adv-x='777' vert-adv-y='777' glyph-name='equivalence' d='M686 424C703 424 722 424 722 444S704 464 687 464H90C73 464 55 464 55 444S75 424 91 424H686ZM687 36C704 36 722 36 722 56S703 76 686 76H91C75 76 55 76 55 56S73 36 90 36H687ZM687 230C704 230 722 230 722 250S704 270 687 270H90C73 270 55 270 55 250S73 230 90 230H687Z'/>
-</font>
-<font id='cmr7' horiz-adv-x='0'>
-<font-face font-family='cmr7' units-per-em='1000' ascent='750' descent='250'/>
-<glyph unicode='1' horiz-adv-x='569' vert-adv-y='569' glyph-name='one' d='M335 636C335 663 333 664 305 664C241 601 150 600 109 600V564C133 564 199 564 254 592V82C254 49 254 36 154 36H116V0C134 1 257 4 294 4C325 4 451 1 473 0V36H435C335 36 335 49 335 82V636Z'/>
 </font>
 <font id='cmr10' horiz-adv-x='0'>
 <font-face font-family='cmr10' units-per-em='1000' ascent='750' descent='250'/>
