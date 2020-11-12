@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd Code/Python
-ipython BufferStockTheory.ipynb
+ipython BufferStockTheory-Problems-and-Solutions-Source.ipynb
 
